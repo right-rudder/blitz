@@ -15,16 +15,12 @@ export const navbarLinks = [
         link: "/programs/commercial-pilot",
       },
       {
-        name: "Multi-Engine Rating",
-        link: "/programs/multi-engine-rating",
-      },
-      {
         name: "Certified Flight Instructor",
         link: "/programs/cfi",
       },
       {
-        name: "Helicopter Pilot Training",
-        link: "/programs/helicopter-pilot-training",
+        name: "Certified Flight Instructor Instrument",
+        link: "/programs/cfii",
       },
     ],
   },
@@ -44,16 +40,8 @@ export const navbarLinks = [
         link: "/about/our-team",
       },
       {
-        name: "Our Fixed-Wing Fleet",
-        link: "/about/our-fixed-wing-fleet",
-      },
-      {
-        name: "Our Rotary-Wing Fleet",
-        link: "/about/our-rotary-wing-fleet",
-      },
-      {
-        name: "Our Simulators",
-        link: "/about/our-simulators",
+        name: "Our Fleet",
+        link: "/about/our-fleet",
       },
     ],
   },

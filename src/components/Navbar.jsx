@@ -5,7 +5,6 @@ import { FaPhone } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import completeLogo from "../assets/logos/blitz-logo.webp";
 import companyLogo from "../assets/logos/blitz-logo.webp";
-import textLogo from "../assets/logos/blitz-logo.webp";
 import {
   FACEBOOK_URL,
   INSTAGRAM_URL,
@@ -37,10 +36,22 @@ const Navbar = ({ pathname }) => {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", changeBackground);
-    return () => {
-      window.removeEventListener("scroll", changeBackground);
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 60) {
+        setNavbar(true);
+      } else {
+        setNavbar(false);
+      }
+
+      lastScrollY = currentScrollY;
     };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -81,7 +92,7 @@ const Navbar = ({ pathname }) => {
   return (
     <nav className="w-full h-0 fixed top-0 z-50 tracking-wider">
       <div
-        className={`${navBar || openMobile ? "" : ""} duration-300 bg-white`}
+        className={`${navBar || openMobile ? "-translate-y-20" : ""} duration-300 bg-white`}
       >
         <div className="px-5 max-w-7xl mx-auto ">
           <div
@@ -116,7 +127,7 @@ const Navbar = ({ pathname }) => {
                       )}
                       {item.submenu && item.submenu.length > 0 && (
                         <ul
-                          className={`absolute z-10 top-12 bg-black rounded-xl overflow-hidden whitespace-nowrap text-white left-0 duration-500 ${
+                          className={`absolute z-10 top-[52px] bg-white border border-main-blue-800 overflow-hidden whitespace-nowrap text-black left-0 duration-300 ${
                             hoveredIndex === index
                               ? "h-auto w-auto opacity-100"
                               : "h-0 w-0 opacity-0 overflow-hidden"
@@ -129,7 +140,7 @@ const Navbar = ({ pathname }) => {
                                 isActive(subitem, pathname)
                                   ? "bg-main-blue-800"
                                   : ""
-                              } relative hover:bg-main-blue-800/90 duration-300`}
+                              } relative hover:bg-main-blue-800 duration-300 hover:text-white`}
                               onMouseEnter={() => setSubHoveredIndex(subIndex)}
                               onMouseLeave={() => setSubHoveredIndex(null)}
                             >
@@ -188,23 +199,22 @@ const Navbar = ({ pathname }) => {
               <a href="/" className="flex items-center gap-4">
                 <img
                   src={companyLogo.src}
-                  alt="Ideal Aviation Logo"
-                  className="w-12 lg:w-16"
+                  alt="Blitz Aviation Logo"
+                  className="w-12 lg:w-16 rounded"
                 />
               </a>
 
-              <a
-                href=""
-                className="hidden lg:block text-black text-right flex-1 font-semibold duration-300 hover:underline decoration-main-blue-800 decoration-2 underline-offset-[10px] py-12 border-main-blue-800 whitespace-nowrap group-last:btn-primary group-last:hover:no-underline "
-              >
-                Contact Us
-              </a>
+              <div className="hidden lg:flex flex-1 justify-end">
+                <a href="" className=" text-black text-right btn-primary">
+                  Contact Us
+                </a>
+              </div>
             </div>
 
             <div className="absolute inset-y-0 right-0 flex items-center lg:hidden">
               <button
                 type="button"
-                className="mobile-menu-button relative inline-flex items-center justify-center rounded-md p-2 text-black"
+                className="mobile-menu-button relative inline-flex items-center justify-center rounded p-2 text-black"
                 aria-controls="mobile-menu"
                 aria-expanded="false"
                 onClick={handleHamburgerClick}
@@ -280,7 +290,7 @@ const Navbar = ({ pathname }) => {
         >
           <img
             src={completeLogo.src}
-            alt="Ideal Aviation logo"
+            alt="Blitz Aviation logo"
             className="w-40"
           />
         </a>

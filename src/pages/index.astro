@@ -1,23 +1,16 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import Navbar from '../components/Navbar';
-const { pathname } = Astro.url;
-import './src/styles/global.css'
+import HomepageHeader from "../components/HomepageHeader.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<!doctype html>
-<html lang="en" class="scroll-smooth">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Navbar pathname={pathname} client:load />
-		<main>
+<BaseLayout>
+  <HomepageHeader slot="header" />
 
-		</main>
-
-	</body>
-</html>
+  <iframe
+    class="w-full aspect-video pointer-events-none"
+    src="https://www.youtube.com/embed/JsE8JQfYLGA?autoplay=1&loop=1&mute=1&iv_load_policy=3&controls=0&disablekb=1&fs=0&playlist=JsE8JQfYLGA"
+    title="YouTube video player"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen></iframe>
+</BaseLayout>

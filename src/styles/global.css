@@ -1,7 +1,34 @@
 @import "tailwindcss";
 
 @theme {
-  --color-main-black: #121063;
-  --color-tahiti: #3ab7bf;
-  --color-main-blue: #78dcca;
+  --color-main-blue-50: #f0f5fe;
+  --color-main-blue-100: #dce9fd;
+  --color-main-blue-200: #c1d9fc;
+  --color-main-blue-300: #97c1f9;
+  --color-main-blue-400: #66a0f4;
+  --color-main-blue-500: #3876ee;
+  --color-main-blue-600: #2d5fe3;
+  --color-main-blue-700: #244ad1;
+  --color-main-blue-800: #243ea9;
+  --color-main-blue-900: #223886;
+  --color-main-blue-950: #192452;
+  --color-main-accent-50: #fdfbe9;
+  --color-main-accent-100: #fbf5c6;
+  --color-main-accent-200: #f7e991;
+  --color-main-accent-300: #f2d552;
+  --color-main-accent-400: #eec432;
+  --color-main-accent-500: #dda715;
+  --color-main-accent-600: #be8210;
+  --color-main-accent-700: #985d10;
+  --color-main-accent-800: #7e4b15;
+  --color-main-accent-900: #6b3d18;
+  --color-main-accent-950: #3f1f09;
+}
+
+body {
+  font-family: "Outfit Variable", sans-serif;
+}
+
+.btn {
+  @apply rounded-full bg-white text-black py-2 px-4 font-medium hover:brightness-75 duration-100;
 }

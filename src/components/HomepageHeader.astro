@@ -1,0 +1,43 @@
+---
+import { Image } from "astro:assets";
+import HeroImage1 from "../assets/images/cfi-cambrie-foster.jpg";
+import HeroImage2 from "../assets/images/cfi-andrew-zilka.jpg";
+---
+
+<header class="relative isolate overflow-hidden h-screen flex">
+  <div class="flex-1">
+    <Image
+      src={HeroImage1}
+      alt="Ideal Airplane in Hangar"
+      class="h-full object-cover"
+      loading="eager"
+    />
+  </div>
+  <div class="flex-1">
+    <Image
+      src={HeroImage2}
+      alt="Ideal Airplane in Hangar"
+      class="h-full object-cover"
+      loading="eager"
+    />
+  </div>
+
+  <div
+    class="flex px-5 absolute top-0 backdrop-brightness-50 bottom-0 right-0 left-0 text-white items-center justify-center text-center"
+  >
+    <div class="flex flex-col gap-3 sm:translate-y-48">
+      <h1
+        class="text-6xl max-w-2xl lg:text-8xl font-black lg:max-w-6xl uppercase italic"
+      >
+        Blitz Aviation
+      </h1>
+      <h2 class="text-xl max-w-xl lg:text-2xl lg:max-w-3xl">
+        Your flight school at Salt Lake City, Utah
+      </h2>
+      <div class="flex gap-5 flex-col sm:flex-row justify-center mt-2">
+        <a href="/contact" class="btn">Start Flying</a>
+        <a href="/first-time-pilots" class="btn">More Info</a>
+      </div>
+    </div>
+  </div>
+</header>

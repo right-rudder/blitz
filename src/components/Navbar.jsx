@@ -6,7 +6,6 @@ import { MdEmail } from "react-icons/md";
 import completeLogo from "../assets/logos/blitz-logo.webp";
 import companyLogo from "../assets/logos/blitz-logo.webp";
 import textLogo from "../assets/logos/blitz-logo.webp";
-import "../styles/global.css";
 import {
   FACEBOOK_URL,
   INSTAGRAM_URL,
@@ -55,11 +54,11 @@ const Navbar = ({ pathname }) => {
           item.link + "/" === pathname ||
           item.subsubmenu?.some(
             (subItem) =>
-              subItem.link === pathname || subItem.link + "/" === pathname
-          )
+              subItem.link === pathname || subItem.link + "/" === pathname,
+          ),
       ) ||
       menuItem?.subsubmenu?.some(
-        (item) => item.link === pathname || item.link + "/" === pathname
+        (item) => item.link === pathname || item.link + "/" === pathname,
       ) ||
       menuItem.link === pathname ||
       menuItem.link + "/" === pathname;
@@ -80,38 +79,24 @@ const Navbar = ({ pathname }) => {
   };
 
   return (
-    <nav className="w-full h-0 absolute top-0 lg:top-5 z-50 tracking-wider">
+    <nav className="w-full h-0 fixed top-0 z-50 tracking-wider">
       <div
-        className={`${
-          navBar || openMobile ? "" : ""
-        } duration-300 bg-transparent`}
+        className={`${navBar || openMobile ? "" : ""} duration-300 bg-white`}
       >
         <div className="px-5 max-w-7xl mx-auto ">
           <div
-            className={`lg:h-32 relative flex h-20 items-center justify-between transition-all`}
+            className={`lg:h-20 relative flex h-20 items-center justify-between transition-all`}
             id="navbar"
           >
             <div className="flex w-full items-center justify-between">
-              <a href="/" className="flex items-center gap-4">
-                <img
-                  src={companyLogo.src}
-                  alt="Ideal Aviation Logo"
-                  className="w-12 lg:w-20"
-                />
-                <img
-                  src={textLogo.src}
-                  alt="Ideal Aviation Text Logo"
-                  className="w-12 lg:w-20"
-                />
-              </a>
-              <div className="hidden lg:flex gap-8 items-center">
+              <div className="hidden lg:flex gap-8 items-center flex-1">
                 <ul className="flex gap-3 xl:gap-5 items-center">
                   {navbarLinks.map((item, index) => (
                     <li
                       key={index}
                       className={`${
                         isActive(item, pathname)
-                          ? "underline decoration-main-blue decoration-2 underline-offset-[10px]"
+                          ? "underline decoration-main-blue-800 decoration-2 underline-offset-[10px]"
                           : ""
                       } relative group last:no-underline`}
                       onMouseEnter={() => setHoveredIndex(index)}
@@ -120,18 +105,18 @@ const Navbar = ({ pathname }) => {
                       {item.link ? (
                         <a
                           href={item.link}
-                          className="text-main-black font-semibold duration-300 hover:underline decoration-main-blue decoration-2 underline-offset-[10px] py-12 border-main-blue whitespace-nowrap group-last:btn-primary group-last:hover:no-underline "
+                          className="text-black font-semibold duration-300 hover:underline decoration-main-blue-800 decoration-2 underline-offset-[10px] py-12 border-main-blue-800 whitespace-nowrap group-last:btn-primary group-last:hover:no-underline "
                         >
                           {item.name}
                         </a>
                       ) : (
-                        <span className="font-semibold cursor-default text-main-black duration-300 hover:underline decoration-main-blue decoration-2 underline-offset-[10px] py-12 border-main-blue whitespace-nowrap">
+                        <span className="font-semibold cursor-default text-black duration-300 hover:underline decoration-main-blue-800 decoration-2 underline-offset-[10px] py-12 border-main-blue-800 whitespace-nowrap">
                           {item.name}
                         </span>
                       )}
                       {item.submenu && item.submenu.length > 0 && (
                         <ul
-                          className={`absolute z-10 top-12 bg-main-black rounded-xl overflow-hidden whitespace-nowrap text-white left-0 duration-500 ${
+                          className={`absolute z-10 top-12 bg-black rounded-xl overflow-hidden whitespace-nowrap text-white left-0 duration-500 ${
                             hoveredIndex === index
                               ? "h-auto w-auto opacity-100"
                               : "h-0 w-0 opacity-0 overflow-hidden"
@@ -142,9 +127,9 @@ const Navbar = ({ pathname }) => {
                               key={subIndex}
                               className={`${
                                 isActive(subitem, pathname)
-                                  ? "bg-main-blue"
+                                  ? "bg-main-blue-800"
                                   : ""
-                              } relative hover:bg-main-blue/90 duration-300`}
+                              } relative hover:bg-main-blue-800/90 duration-300`}
                               onMouseEnter={() => setSubHoveredIndex(subIndex)}
                               onMouseLeave={() => setSubHoveredIndex(null)}
                             >
@@ -164,7 +149,7 @@ const Navbar = ({ pathname }) => {
                               {subitem.subsubmenu &&
                                 subitem.subsubmenu.length > 0 && (
                                   <ul
-                                    className={`absolute z-20 top-0 bg-main-black whitespace-nowrap left-full duration-500 ${
+                                    className={`absolute z-20 top-0 bg-black whitespace-nowrap left-full duration-500 ${
                                       subHoveredIndex === subIndex
                                         ? "h-auto w-auto opacity-100"
                                         : "h-0 w-0 opacity-0 overflow-hidden"
@@ -176,9 +161,9 @@ const Navbar = ({ pathname }) => {
                                           key={subsubIndex}
                                           className={`${
                                             isActive(subsubitem, pathname)
-                                              ? "bg-main-blue"
+                                              ? "bg-main-blue-800"
                                               : ""
-                                          } relative hover:bg-main-blue/90`}
+                                          } relative hover:bg-main-blue-800/90`}
                                         >
                                           <a
                                             href={subsubitem.link}
@@ -187,7 +172,7 @@ const Navbar = ({ pathname }) => {
                                             {subsubitem.name}
                                           </a>
                                         </li>
-                                      )
+                                      ),
                                     )}
                                   </ul>
                                 )}
@@ -199,12 +184,27 @@ const Navbar = ({ pathname }) => {
                   ))}
                 </ul>
               </div>
+
+              <a href="/" className="flex items-center gap-4">
+                <img
+                  src={companyLogo.src}
+                  alt="Ideal Aviation Logo"
+                  className="w-12 lg:w-16"
+                />
+              </a>
+
+              <a
+                href=""
+                className="hidden lg:block text-black text-right flex-1 font-semibold duration-300 hover:underline decoration-main-blue-800 decoration-2 underline-offset-[10px] py-12 border-main-blue-800 whitespace-nowrap group-last:btn-primary group-last:hover:no-underline "
+              >
+                Contact Us
+              </a>
             </div>
 
             <div className="absolute inset-y-0 right-0 flex items-center lg:hidden">
               <button
                 type="button"
-                className="mobile-menu-button relative inline-flex items-center justify-center rounded-md p-2 text-main-black"
+                className="mobile-menu-button relative inline-flex items-center justify-center rounded-md p-2 text-black"
                 aria-controls="mobile-menu"
                 aria-expanded="false"
                 onClick={handleHamburgerClick}
@@ -252,7 +252,7 @@ const Navbar = ({ pathname }) => {
       <div
         className={`${
           openMobile ? "max-h-screen" : "max-h-0 delay-300"
-        } overflow-x-hidden duration-300 ease-in-out h-screen lg:hidden absolute w-full bg-main-black z-50 top-0`}
+        } overflow-x-hidden duration-300 ease-in-out h-screen lg:hidden absolute w-full bg-black z-50 top-0`}
         id="mobile-menu"
       >
         <div className="flex justify-end pl-5 pr-[26px] py-6">
@@ -301,24 +301,26 @@ const Navbar = ({ pathname }) => {
               {item.link ? (
                 <a
                   href={item.link}
-                  className="font-semibold p-5 block text-white text-lg duration-300 border-main-blue whitespace-nowrap group-last:bg-main-blue group-last:py-4 group-last:px-8 group-last:rounded-full group-last:mt-4 group-last:text-center group-last:mx-5"
+                  className="font-semibold p-5 block text-white text-lg duration-300 border-main-blue-800 whitespace-nowrap group-last:bg-main-blue-800 group-last:py-4 group-last:px-8 group-last:rounded-full group-last:mt-4 group-last:text-center group-last:mx-5"
                 >
                   {item.name}
                 </a>
               ) : (
-                <div className="font-semibold p-5 w-full justify-between flex cursor-pointer text-white text-lg duration-300  border-main-blue whitespace-nowrap">
+                <div className="font-semibold p-5 w-full justify-between flex cursor-pointer text-white text-lg duration-300  border-main-blue-800 whitespace-nowrap">
                   <p>{item.name}</p>
                   <div
                     className={`p-1 pointer-events-none duration-300 rounded-full ${
                       hoveredIndex === index
                         ? "bg-white -rotate-90"
-                        : "bg-main-blue rotate-90"
+                        : "bg-main-blue-800 rotate-90"
                     } 
                     `}
                   >
                     <IoIosArrowForward
                       className={`${
-                        hoveredIndex === index ? "text-main-blue" : "text-white"
+                        hoveredIndex === index
+                          ? "text-main-blue-800"
+                          : "text-white"
                       } size-5`}
                     />
                   </div>
@@ -326,7 +328,7 @@ const Navbar = ({ pathname }) => {
               )}
               {item.submenu && item.submenu.length > 0 && (
                 <ul
-                  className={`z-10 ml-5 bg-main-black whitespace-nowrap text-white left-0 duration-500 overflow-hidden ${
+                  className={`z-10 ml-5 bg-black whitespace-nowrap text-white left-0 duration-500 overflow-hidden ${
                     hoveredIndex === index ? "max-h-[28rem]" : "max-h-0"
                   }`}
                 >
@@ -344,20 +346,20 @@ const Navbar = ({ pathname }) => {
                           {subitem.name}
                         </a>
                       ) : (
-                        <div className="font-semibold p-5 w-full justify-between flex cursor-pointer text-white text-lg duration-300  border-main-blue whitespace-nowrap">
+                        <div className="font-semibold p-5 w-full justify-between flex cursor-pointer text-white text-lg duration-300  border-main-blue-800 whitespace-nowrap">
                           <p>{subitem.name}</p>
                           <div
                             className={`p-1 pointer-events-none duration-300 rounded-full ${
                               subHoveredIndex === subIndex
                                 ? "bg-white rotate-90"
-                                : "bg-main-blue -rotate-90"
+                                : "bg-main-blue-800 -rotate-90"
                             } 
                     `}
                           >
                             <IoIosArrowForward
                               className={`${
                                 subHoveredIndex === subIndex
-                                  ? "text-main-blue"
+                                  ? "text-main-blue-800"
                                   : "text-white"
                               } size-5`}
                             />
@@ -367,7 +369,7 @@ const Navbar = ({ pathname }) => {
 
                       {subitem.subsubmenu && subitem.subsubmenu.length > 0 && (
                         <ul
-                          className={`z-20 ml-8 bg-main-black whitespace-nowrap left-full duration-500 overflow-hidden ${
+                          className={`z-20 ml-8 bg-black whitespace-nowrap left-full duration-500 overflow-hidden ${
                             subHoveredIndex === subIndex
                               ? "max-h-32"
                               : "max-h-0"
@@ -399,7 +401,7 @@ const Navbar = ({ pathname }) => {
               href={`mailto:${EMAIL_ADDRESS}`}
               className="border p-2 w-fit border-white rounded-full bg-white cursor-pointer"
             >
-              <MdEmail className="size-3 text-main-blue" />
+              <MdEmail className="size-3 text-main-blue-800" />
             </a>
             <a href={`mailto:${EMAIL_ADDRESS}`}>{EMAIL_ADDRESS}</a>
           </div>
@@ -408,7 +410,7 @@ const Navbar = ({ pathname }) => {
               href={`tel:${PHONE_NUMBER}`}
               className="border p-2 w-fit border-white rounded-full bg-white"
             >
-              <FaPhone className="size-3 text-main-blue" />
+              <FaPhone className="size-3 text-main-blue-800" />
             </a>
             <a href={`tel:${PHONE_NUMBER}`}>{PHONE_NUMBER}</a>
           </div>
@@ -417,7 +419,7 @@ const Navbar = ({ pathname }) => {
             <a href={FACEBOOK_URL} target="_blank">
               <span className="sr-only">Facebook</span>
               <svg
-                className="size-6 text-main-blue"
+                className="size-6 text-main-blue-800"
                 fill="currentColor"
                 viewBox="0 0 24 24"
                 aria-hidden="true"
@@ -432,7 +434,7 @@ const Navbar = ({ pathname }) => {
             <a href={INSTAGRAM_URL} target="_blank">
               <span className="sr-only">Instagram</span>
               <svg
-                className="size-6 text-main-blue"
+                className="size-6 text-main-blue-800"
                 fill="currentColor"
                 viewBox="0 0 24 24"
                 aria-hidden="true"
@@ -447,7 +449,7 @@ const Navbar = ({ pathname }) => {
             <a href={TIKTOK_URL} target="_blank">
               <span className="sr-only">TikTok</span>
 
-              <svg className="size-6 text-main-blue" viewBox="0 0 24 24">
+              <svg className="size-6 text-main-blue-800" viewBox="0 0 24 24">
                 <path
                   fill="currentColor"
                   d="M16.6 5.82s.51.5 0 0A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6c0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64c0 3.33 2.76 5.7 5.69 5.7c3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48"
@@ -456,7 +458,7 @@ const Navbar = ({ pathname }) => {
             </a>
             <a href={YOUTUBE_URL} target="_blank">
               <span className="sr-only">YouTube</span>
-              <svg className="size-6 text-main-blue" viewBox="0 0 24 24">
+              <svg className="size-6 text-main-blue-800" viewBox="0 0 24 24">
                 <path
                   fill="currentColor"
                   d="m10 15l5.19-3L10 9zm11.56-7.83c.13.47.22 1.1.28 1.9c.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83c-.25.9-.83 1.48-1.73 1.73c-.47.13-1.33.22-2.65.28c-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44c-.9-.25-1.48-.83-1.73-1.73c-.13-.47-.22-1.1-.28-1.9c-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83c.25-.9.83-1.48 1.73-1.73c.47-.13 1.33-.22 2.65-.28c1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44c.9.25 1.48.83 1.73 1.73"

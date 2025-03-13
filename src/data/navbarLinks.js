@@ -1,11 +1,6 @@
 export const navbarLinks = [
   {
-    name: "First-Time Pilots",
-    link: "/first-time-pilots",
-    submenu: [],
-  },
-  {
-    name: "Programs",
+    name: "Flight Training",
     submenu: [
       {
         name: "Private Pilot",
@@ -34,11 +29,11 @@ export const navbarLinks = [
     ],
   },
   {
-    name: "News",
-    link: "/news",
+    name: "Our Fleet",
+    link: "/fleet",
   },
   {
-    name: "About Us",
+    name: "More Info",
     submenu: [
       {
         name: "Our Story",
@@ -61,10 +56,5 @@ export const navbarLinks = [
         link: "/about/our-simulators",
       },
     ],
-  },
-  {
-    name: "Contact Us",
-    link: "/contact",
-    submenu: [],
   },
 ];

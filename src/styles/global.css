@@ -36,3 +36,11 @@ body {
 .btn-secondary {
   @apply rounded bg-white text-black py-2 px-4 font-medium hover:brightness-75 duration-100;
 }
+/* 
+h1 {
+  text-shadow:
+    -4px 0 #243ea9,
+    0 4px #243ea9,
+    4px 0 #243ea9,
+    0 -4px #243ea9;
+} */

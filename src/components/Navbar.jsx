@@ -27,14 +27,6 @@ const Navbar = ({ pathname }) => {
     }
   };
 
-  const changeBackground = () => {
-    if (window.scrollY >= 60) {
-      setNavbar(true);
-    } else {
-      setNavbar(false);
-    }
-  };
-
   useEffect(() => {
     let lastScrollY = window.scrollY;
 

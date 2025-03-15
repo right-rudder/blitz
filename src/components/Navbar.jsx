@@ -86,7 +86,7 @@ const Navbar = ({ pathname }) => {
       <div
         className={`${navBar || openMobile ? "-translate-y-20" : ""} duration-300 bg-white`}
       >
-        <div className="px-5 max-w-7xl mx-auto ">
+        <div className="lg:px-10 px-5 mx-auto ">
           <div
             className={`lg:h-20 relative flex h-20 items-center justify-between transition-all`}
             id="navbar"
@@ -197,7 +197,7 @@ const Navbar = ({ pathname }) => {
               </a>
 
               <div className="hidden lg:flex flex-1 justify-end">
-                <a href="" className=" text-black text-right btn-primary">
+                <a href="" className="btn-primary scale-110">
                   Contact Us
                 </a>
               </div>

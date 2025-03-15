@@ -1,16 +1,79 @@
 ---
 import HomepageHeader from "../components/HomepageHeader.astro";
+import ImageComp from "../components/ImageComp.astro";
+import ServicesCard from "../components/ServicesCard.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import services from "../data/services";
 ---
 
 <BaseLayout>
   <HomepageHeader slot="header" />
 
-  <iframe
+  <!-- <iframe
     class="w-full aspect-video pointer-events-none"
     src="https://www.youtube.com/embed/JsE8JQfYLGA?autoplay=1&loop=1&mute=1&iv_load_policy=3&controls=0&disablekb=1&fs=0&playlist=JsE8JQfYLGA"
     title="YouTube video player"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     referrerpolicy="strict-origin-when-cross-origin"
-    allowfullscreen></iframe>
+    allowfullscreen></iframe> -->
+
+  <section>
+    <div
+      class="max-w-xl lg:max-w-7xl mx-auto px-5 py-24 flex flex-col-reverse lg:flex-row gap-20 items-center"
+    >
+      <div class="flex-1 flex justify-center flex-col gap-5">
+        <h3
+          class="max-w-lg text-pretty text-4xl font-bold tracking-wide text-main-black sm:text-5xl"
+        >
+          Why Choose Blitz?
+        </h3>
+        <h4 class="text-blue-800 font-semibold text-2xl tracking-wide italic">
+          Where passion meets practicality, and your aviation dreams take flight
+          in Salt Lake City
+        </h4>
+        <p class="tracking-wider font-light">
+          At Blitz Aviation, we make flight training smarter, not harder.
+          Located in the heart of Salt Lake City, Utah, our school offers expert
+          instruction from seasoned pilots with years of real-world
+          experience—all without the sky-high price tag. Whether you choose a
+          full course or pay as you go, our flexible options are designed to fit
+          your lifestyle and budget.
+        </p>
+        <p class="tracking-wider font-light">
+          Our streamlined, no-fluff approach focuses on what truly matters,
+          helping you master the skills you need efficiently and affordably.
+          Learn at your own pace, save on costs, and avoid hidden fees—because
+          becoming a pilot should be an exciting journey, not a financial
+          burden.
+        </p>
+        <a href="/discovery-flight" class="btn-primary w-fit mt-3"
+          >Book a Discovery Flight</a
+        >
+      </div>
+      <div class="flex-1 relative h-fit">
+        <ImageComp
+          src="/src/assets/images/cfi-andrew-zilka.jpg"
+          alt="Helicopter Commercial Checkride"
+          classes="rounded z-10 relative"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="mx-auto px-5 lg:px-10 pb-24">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-20 mt-10">
+        {
+          services.map((service) => (
+            <ServicesCard
+              imageSrc={service.imageSrc}
+              headline={service.headline}
+              title={service.title}
+              description={service.description}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </section>
 </BaseLayout>

@@ -30,7 +30,7 @@ body {
 }
 
 .btn-primary {
-  @apply rounded bg-main-blue-600 text-white py-2 px-4 font-medium hover:brightness-75 duration-100;
+  @apply rounded  bg-gradient-to-br from-main-blue-600 to-main-blue-800 text-white py-2 px-4 font-medium hover:brightness-75 duration-100;
 }
 
 .btn-secondary {

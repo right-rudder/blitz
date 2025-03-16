@@ -2,12 +2,12 @@ import { FaFileMedical } from "react-icons/fa";
 import { FaRegEdit } from "react-icons/fa";
 import { FaRegPaperPlane } from "react-icons/fa";
 
-const cfii = {
+const multiEngine = {
   data: {
-    title: "Certified Flight Instructor Instrument",
-    url: "/programs/cfii",
-    slug: "cfii",
-    siteTitle: "Certified Flight Instructor Instrument | Blitz Aviation",
+    title: "Multi-Engine",
+    url: "/programs/multi-engine",
+    slug: "multi-engine",
+    siteTitle: "Multi-Engine | Blitz Aviation",
     siteDescription:
       "Experience the power and precision of multi engine aircraft as our expert instructors guide you through comprehensive training. With advanced systems, twin engines, and enhanced performance capabilities, Blitz Aviation's Piper Seminole provides an exceptional platform for honing your multi engine skills.",
     intro: [
@@ -42,4 +42,4 @@ const cfii = {
   },
 };
 
-export default cfii;
+export default multiEngine;

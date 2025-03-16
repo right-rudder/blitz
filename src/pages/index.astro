@@ -62,9 +62,32 @@ import ProgramsCard from "../components/ProgramsCard.astro";
     </div>
   </section>
 
+  <section
+    class="relative bg-[url(/src/assets/images/mycah-pittman.webp)] bg-cover bg-center bg-fixed text-white flex flex-col"
+  >
+    <div
+      class="absolute bg-gradient-to-br from-main-blue-700/60 to-main-blue-900/60 w-full h-full z-10"
+    >
+    </div>
+    <div
+      class="px-5 md:px-10 lg:px-20 flex flex-col py-20 lg:py-40 relative z-20 gap-10"
+    >
+      <h3 class="text-5xl font-bold">Follow Mycah Steps</h3>
+
+      <p class="text-xl lg:text-2xl font-light tracking-wider max-w-7xl">
+        Ready to turn your aviation dreams into reality? Follow Mycah’s proven
+        path from <strong class="font-bold">zero to hero</strong>. Starting as a
+        private pilot and advancing all the way to CFII.
+      </p>
+      <a href="#" class="btn-secondary w-fit lg:text-xl"
+        >Explore Our Zero-to-Hero Flight Training Program</a
+      >
+    </div>
+  </section>
+
   <section>
-    <div class="mx-auto px-5 md:px-10 lg:px-20 pb-24">
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-20 mt-10">
+    <div class="mx-auto px-5 md:px-10 lg:px-20 py-24">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-20">
         {
           services.map((service) => (
             <ServicesCard
@@ -79,8 +102,31 @@ import ProgramsCard from "../components/ProgramsCard.astro";
     </div>
   </section>
 
+  <section
+    class="relative bg-[url(/src/assets/images/pexels-junerydocto-15543665.jpg)] bg-cover bg-center text-white flex flex-col"
+  >
+    <div
+      class="absolute bg-gradient-to-br from-main-blue-700/60 to-main-blue-900/60 w-full h-full z-10"
+    >
+    </div>
+    <div
+      class="px-5 md:px-10 lg:px-20 flex flex-col py-20 lg:py-40 relative z-20 gap-10"
+    >
+      <h3 class="text-5xl font-bold">Take to the Skies!</h3>
+
+      <p class="text-xl lg:text-2xl font-light tracking-wider max-w-7xl">
+        Experience the thrill of flying with our discovery flights or enroll in
+        our comprehensive flight training programs today.
+      </p>
+      <div class="flex gap-5">
+        <a href="#" class="btn-secondary w-fit lg:text-xl">Book</a>
+        <a href="#" class="btn-secondary w-fit lg:text-xl">Explore</a>
+      </div>
+    </div>
+  </section>
+
   <section>
-    <div class="mx-auto px-10 md:px-20 py-24">
+    <div class="mx-auto px-5 md:px-10 lg:px-20 py-24">
       <h3 class="text-6xl font-bold italic">Blitz Training Programs</h3>
       <div class="flex flex-col gap-20 md:gap-[12rem] mt-10">
         {

@@ -4,10 +4,10 @@ import { FaRegPaperPlane } from "react-icons/fa";
 
 const multiEngine = {
   data: {
-    title: "Multi-Engine",
+    title: "Multi-Engine Rating",
     url: "/programs/multi-engine",
     slug: "multi-engine",
-    siteTitle: "Multi-Engine | Blitz Aviation",
+    siteTitle: "Multi-Engine Rating | Blitz Aviation",
     siteDescription:
       "Experience the power and precision of multi engine aircraft as our expert instructors guide you through comprehensive training. With advanced systems, twin engines, and enhanced performance capabilities, Blitz Aviation's Piper Seminole provides an exceptional platform for honing your multi engine skills.",
     intro: [

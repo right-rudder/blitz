@@ -127,8 +127,10 @@ import ProgramsCard from "../components/ProgramsCard.astro";
 
   <section>
     <div class="mx-auto px-5 md:px-10 lg:px-20 py-24">
-      <h3 class="text-6xl font-bold italic">Blitz Training Programs</h3>
-      <div class="flex flex-col gap-20 md:gap-[12rem] mt-10">
+      <h3 class="text-6xl font-bold text-center italic">
+        Blitz Training Programs
+      </h3>
+      <div class="flex flex-col gap-20 md:gap-[10rem] mt-20">
         {
           programs.map((program) => (
             <ProgramsCard

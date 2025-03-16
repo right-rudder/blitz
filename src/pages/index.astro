@@ -4,6 +4,8 @@ import ImageComp from "../components/ImageComp.astro";
 import ServicesCard from "../components/ServicesCard.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import services from "../data/services";
+import programs from "../data/programs";
+import ProgramsCard from "../components/ProgramsCard.astro";
 ---
 
 <BaseLayout>
@@ -19,7 +21,7 @@ import services from "../data/services";
 
   <section>
     <div
-      class="max-w-xl lg:max-w-7xl mx-auto px-5 py-24 flex flex-col-reverse lg:flex-row gap-20 items-center"
+      class="max-w-xl lg:max-w-7xl mx-auto px-5 md:px-10 lg:px-20 py-24 flex flex-col-reverse lg:flex-row gap-20 items-center"
     >
       <div class="flex-1 flex justify-center flex-col gap-5">
         <h3
@@ -54,14 +56,14 @@ import services from "../data/services";
         <ImageComp
           src="/src/assets/images/cfi-andrew-zilka.jpg"
           alt="Helicopter Commercial Checkride"
-          classes="rounded z-10 relative"
+          classes="z-10 relative"
         />
       </div>
     </div>
   </section>
 
   <section>
-    <div class="mx-auto px-5 lg:px-10 pb-24">
+    <div class="mx-auto px-5 md:px-10 lg:px-20 pb-24">
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-20 mt-10">
         {
           services.map((service) => (
@@ -70,6 +72,24 @@ import services from "../data/services";
               headline={service.headline}
               title={service.title}
               description={service.description}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="mx-auto px-10 md:px-20 py-24">
+      <h3 class="text-6xl font-bold italic">Blitz Training Programs</h3>
+      <div class="flex flex-col gap-20 md:gap-[12rem] mt-10">
+        {
+          programs.map((program) => (
+            <ProgramsCard
+              imageSrc={program.data.primaryImage}
+              headline={program.data.title}
+              title={program.data.title}
+              description={program.data.intro[0]}
             />
           ))
         }

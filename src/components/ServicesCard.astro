@@ -9,11 +9,11 @@ const { imageSrc, headline, title, description } = Astro.props;
       <ImageComp
         src={imageSrc}
         alt="title"
-        classes="rounded group-hover:scale-125 duration-500 h-80 w-full object-cover"
+        classes="group-hover:scale-125 duration-500 h-80 w-full object-cover"
       />
     </div>
     <h5 class="text-gray-700 mt-5 font-bold">{headline}</h5>
-    <h6 class="text-xl text-main-blue-800 font-medium">{title}</h6>
+    <h6 class="text-xl text-main-blue-800 font-semibold italic">{title}</h6>
     <p class="font-light tracking-wider">{description}</p>
   </div>
   <div class="mt-3 flex justify-end">

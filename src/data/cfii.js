@@ -7,15 +7,14 @@ const cfii = {
     title: "Certified Flight Instructor Instrument",
     url: "/programs/cfii",
     slug: "cfii",
-    siteTitle: "Certified Flight Instructor Instrument | Ideal Aviation",
+    siteTitle: "Certified Flight Instructor Instrument | Blitz Aviation",
     siteDescription:
-      "Experience the power and precision of multi engine aircraft as our expert instructors guide you through comprehensive training. With advanced systems, twin engines, and enhanced performance capabilities, Ideal Aviation's Piper Seminole provides an exceptional platform for honing your multi engine skills.",
+      "Experience the power and precision of multi engine aircraft as our expert instructors guide you through comprehensive training. With advanced systems, twin engines, and enhanced performance capabilities, Blitz Aviation's Piper Seminole provides an exceptional platform for honing your multi engine skills.",
     intro: [
-      "Experience the power and precision of multi engine aircraft as our expert instructors guide you through comprehensive training. With advanced systems, twin engines, and enhanced performance capabilities, Ideal Aviation's Piper Seminole provides an exceptional platform for honing your multi engine skills.",
-      "Whether you're aspiring to become a professional pilot or seeking to expand your horizons, our multi engine training program at Ideal Aviation will equip you with the expertise and confidence needed to conquer the skies. Elevate your flying abilities and soar towards success with us.",
+      "Experience the power and precision of multi engine aircraft as our expert instructors guide you through comprehensive training. With advanced systems, twin engines, and enhanced performance capabilities, Blitz Aviation's Piper Seminole provides an exceptional platform for honing your multi engine skills.",
+      "Whether you're aspiring to become a professional pilot or seeking to expand your horizons, our multi engine training program at Blitz Aviation will equip you with the expertise and confidence needed to conquer the skies. Elevate your flying abilities and soar towards success with us.",
     ],
-    primaryImage:
-      "/src/assets/images/multi-engine-instructor-pass-checkride.webp",
+    primaryImage: "/src/assets/images/pexels-tracvu-5741643.jpg",
     primaryAlt: "Multi engine instructor pass checkride",
     prerequisites: [
       "Hold a current private pilot certificate",

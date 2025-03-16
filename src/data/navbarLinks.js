@@ -25,8 +25,8 @@ export const navbarLinks = [
     ],
   },
   {
-    name: "Our Fleet",
-    link: "/fleet",
+    name: "Follow Micah Steps",
+    link: "/micah-steps",
   },
   {
     name: "More Info",

@@ -86,7 +86,7 @@ const Navbar = ({ pathname }) => {
       <div
         className={`${navBar || openMobile ? "-translate-y-20" : ""} duration-300 bg-white`}
       >
-        <div className="lg:px-10 px-5 mx-auto ">
+        <div className="px-5 md:px-10 lg:px-20 mx-auto ">
           <div
             className={`lg:h-20 relative flex h-20 items-center justify-between transition-all`}
             id="navbar"
@@ -192,12 +192,12 @@ const Navbar = ({ pathname }) => {
                 <img
                   src={companyLogo.src}
                   alt="Blitz Aviation Logo"
-                  className="w-12 lg:w-16 rounded"
+                  className="w-12 lg:w-16"
                 />
               </a>
 
               <div className="hidden lg:flex flex-1 justify-end">
-                <a href="" className="btn-primary scale-110">
+                <a href="" className="btn-primary">
                   Contact Us
                 </a>
               </div>

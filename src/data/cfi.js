@@ -14,7 +14,7 @@ const cfi = {
       "Our CFI Training program offers you the opportunity to share your knowledge and love for flying with aspiring pilots. As a CFI, you'll play a vital role in shaping the next generation of aviators, and we're here to provide you with the training and support you need to excel in this rewarding role.",
       "With our experienced team of instructors and comprehensive training curriculum, you'll develop the instructional skills and aviation expertise necessary to guide and inspire future pilots. Join Blitz Aviation's CFI Training program and embark on a fulfilling journey of teaching, mentorship, and professional growth in the dynamic field of aviation.",
     ],
-    primaryImage: "/src/assets/images/pexels-tracvu-5741643.jpg",
+    primaryImage: "/src/assets/images/pexels-felix-57767809-29170959.jpg",
     primaryAlt: "Blitz CFI with private pilot",
     prerequisites: [
       "Hold either a commercial pilot certificate or an airline transport pilot certificate with an instrument rating",

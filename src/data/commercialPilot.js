@@ -14,7 +14,7 @@ const commercialPilot = {
       "Fly for hire or compensation. If you're looking to make a career out of flying, then getting your commerical pilot certificate is the certificate you need to start getting paid to fly. If you're looking to instruct in the near future, then getting your commerical out of the way and complete one more prerequisite. If you're looking to go to the airlines, fly corporate or charter, or even thinking of something else - Blitz Aviation is here to support you and your goals.",
       "Blitz Aviation is the place in St. Louis to get your commercial certicate. Blitz Aviation is the place for pilots. We're here to support you and help you acheive your aviation goals.",
     ],
-    primaryImage: "/src/assets/images/pexels-tracvu-5741643.jpg",
+    primaryImage: "/src/assets/images/pexels-josephmartin-5785741.jpg",
     primaryAlt: "Student pilot recieves certificate",
     prerequisites: [
       "Hold a current private pilot certificate",

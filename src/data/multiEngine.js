@@ -13,7 +13,7 @@ const multiEngine = {
     intro: [
       "lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     ],
-    primaryImage: "/src/assets/images/pexels-tracvu-5741643.jpg",
+    primaryImage: "/src/assets/images/pexels-kokorevas-5313876.jpg",
     primaryAlt: "Multi engine instructor pass checkride",
     prerequisites: [
       "Hold a current private pilot certificate",

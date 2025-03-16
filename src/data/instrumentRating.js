@@ -14,7 +14,7 @@ const instrumentRating = {
       "Blitz Aviation is committed to helping you become a proficient instrument pilot, whether you're a private pilot looking to enhance your abilities or an aspiring professional pilot. Through a blend of comprehensive ground school instruction and hands on flight training, you'll acquire the knowledge and skills needed to confidently navigate and operate aircraft using instrument references alone.",
       "Gain the expertise to fly in diverse weather conditions and execute precise instrument approaches. Take charge of your aviation journey and open doors to exciting new opportunities with our Instrument Training program at Blitz Aviation.",
     ],
-    primaryImage: "/src/assets/images/pexels-tracvu-5741643.jpg",
+    primaryImage: "/src/assets/images/pexels-junerydocto-15543665.jpg",
     primaryAlt: "Pilot flying on IFR flight",
     prerequisites: [
       "Hold a current private pilot certificate or apply for one alongside the instrument rating.",

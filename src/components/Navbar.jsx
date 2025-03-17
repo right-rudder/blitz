@@ -3,8 +3,7 @@ import { useEffect, useState } from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import { FaPhone } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import completeLogo from "../assets/logos/blitz-logo.webp";
-import companyLogo from "../assets/logos/blitz-logo.webp";
+import companyLogo from "../assets/logos/blitz-aviation-logo.png";
 import {
   FACEBOOK_URL,
   INSTAGRAM_URL,
@@ -28,22 +27,11 @@ const Navbar = ({ pathname }) => {
   };
 
   useEffect(() => {
-    let lastScrollY = window.scrollY;
-
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-
-      if (currentScrollY > lastScrollY && currentScrollY > 60) {
-        setNavbar(true);
-      } else {
-        setNavbar(false);
-      }
-
-      lastScrollY = currentScrollY;
+    setNavbar(window.scrollY >= 60);
+    window.addEventListener("scroll", changeBackground);
+    return () => {
+      window.removeEventListener("scroll", changeBackground);
     };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -68,6 +56,14 @@ const Navbar = ({ pathname }) => {
     return selected;
   };
 
+  const changeBackground = () => {
+    if (window.scrollY >= 60) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
+
   const handleItemClick = (index) => {
     if (hoveredIndex == index) {
       setHoveredIndex(null);
@@ -84,7 +80,7 @@ const Navbar = ({ pathname }) => {
   return (
     <nav className="w-full h-0 fixed top-0 z-50 tracking-wider">
       <div
-        className={`${navBar || openMobile ? "-translate-y-20" : ""} duration-300 bg-white`}
+        className={`${navBar || openMobile ? "from-main-blue-700 to-main-blue-900" : "from-transparent to-transparent"} bg-gradient-to-br duration-300 `}
       >
         <div className="px-5 md:px-10 lg:px-20 mx-auto ">
           <div
@@ -108,12 +104,12 @@ const Navbar = ({ pathname }) => {
                       {item.link ? (
                         <a
                           href={item.link}
-                          className="text-black font-semibold duration-300 hover:underline decoration-main-blue-800 decoration-2 underline-offset-[10px] py-12 border-main-blue-800 whitespace-nowrap group-last:btn-primary group-last:hover:no-underline "
+                          className="text-white font-semibold duration-300 hover:underline decoration-main-blue-800 decoration-2 underline-offset-[10px] py-12 border-main-blue-800 whitespace-nowrap group-last:btn-primary group-last:hover:no-underline "
                         >
                           {item.name}
                         </a>
                       ) : (
-                        <span className="font-semibold cursor-default text-black duration-300 hover:underline decoration-main-blue-800 decoration-2 underline-offset-[10px] py-12 border-main-blue-800 whitespace-nowrap">
+                        <span className="font-semibold cursor-default text-white duration-300 hover:underline decoration-main-blue-800 decoration-2 underline-offset-[10px] py-12 border-main-blue-800 whitespace-nowrap">
                           {item.name}
                         </span>
                       )}
@@ -192,12 +188,12 @@ const Navbar = ({ pathname }) => {
                 <img
                   src={companyLogo.src}
                   alt="Blitz Aviation Logo"
-                  className="w-12 lg:w-16"
+                  className={` ${navBar ? "w-12" : "w-18 translate-y-6"} duration-200`}
                 />
               </a>
 
               <div className="hidden lg:flex flex-1 justify-end">
-                <a href="" className="btn-primary">
+                <a href="" className="btn-secondary">
                   Contact Us
                 </a>
               </div>
@@ -206,7 +202,7 @@ const Navbar = ({ pathname }) => {
             <div className="absolute inset-y-0 right-0 flex items-center lg:hidden">
               <button
                 type="button"
-                className="mobile-menu-button relative inline-flex items-center justify-center rounded p-2 text-black"
+                className="mobile-menu-button relative inline-flex items-center justify-center rounded p-2"
                 aria-controls="mobile-menu"
                 aria-expanded="false"
                 onClick={handleHamburgerClick}
@@ -215,7 +211,7 @@ const Navbar = ({ pathname }) => {
                 <span className="sr-only">Open main menu</span>
 
                 <svg
-                  className={`${openMobile ? "hidden" : "block"} h-6 w-6`}
+                  className={`${openMobile ? "hidden" : "block"} h-6 w-6 text-white`}
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
@@ -281,17 +277,17 @@ const Navbar = ({ pathname }) => {
           className="text-white px-10 w-fit mx-auto block leading-none uppercase font-semibold text-lg z-40 relative"
         >
           <img
-            src={completeLogo.src}
+            src={companyLogo.src}
             alt="Blitz Aviation logo"
             className="w-40"
           />
         </a>
 
-        <div
+        {/* <div
           className={`absolute w-full h-32 bg-white top-16 z-30 duration-300  ${
             openMobile ? "translate-x-0 delay-300" : "-translate-x-full "
           }`}
-        ></div>
+        ></div> */}
 
         <ul className="px-4 pb-3 mt-5 pt-2 flex flex-col">
           {navbarLinks.map((item, index) => (
@@ -314,14 +310,14 @@ const Navbar = ({ pathname }) => {
                     className={`p-1 pointer-events-none duration-300 rounded-full ${
                       hoveredIndex === index
                         ? "bg-white -rotate-90"
-                        : "bg-main-blue-800 rotate-90"
+                        : "bg-main-blue-500 rotate-90"
                     } 
                     `}
                   >
                     <IoIosArrowForward
                       className={`${
                         hoveredIndex === index
-                          ? "text-main-blue-800"
+                          ? "text-main-blue-500"
                           : "text-white"
                       } size-5`}
                     />
@@ -354,14 +350,14 @@ const Navbar = ({ pathname }) => {
                             className={`p-1 pointer-events-none duration-300 rounded-full ${
                               subHoveredIndex === subIndex
                                 ? "bg-white rotate-90"
-                                : "bg-main-blue-800 -rotate-90"
+                                : "bg-main-blue-500 -rotate-90"
                             } 
                     `}
                           >
                             <IoIosArrowForward
                               className={`${
                                 subHoveredIndex === subIndex
-                                  ? "text-main-blue-800"
+                                  ? "text-main-blue-500"
                                   : "text-white"
                               } size-5`}
                             />
@@ -403,7 +399,7 @@ const Navbar = ({ pathname }) => {
               href={`mailto:${EMAIL_ADDRESS}`}
               className="border p-2 w-fit border-white rounded-full bg-white cursor-pointer"
             >
-              <MdEmail className="size-3 text-main-blue-800" />
+              <MdEmail className="size-3 text-main-blue-500" />
             </a>
             <a href={`mailto:${EMAIL_ADDRESS}`}>{EMAIL_ADDRESS}</a>
           </div>
@@ -412,7 +408,7 @@ const Navbar = ({ pathname }) => {
               href={`tel:${PHONE_NUMBER}`}
               className="border p-2 w-fit border-white rounded-full bg-white"
             >
-              <FaPhone className="size-3 text-main-blue-800" />
+              <FaPhone className="size-3 text-main-blue-500" />
             </a>
             <a href={`tel:${PHONE_NUMBER}`}>{PHONE_NUMBER}</a>
           </div>
@@ -421,7 +417,7 @@ const Navbar = ({ pathname }) => {
             <a href={FACEBOOK_URL} target="_blank">
               <span className="sr-only">Facebook</span>
               <svg
-                className="size-6 text-main-blue-800"
+                className="size-6 text-main-blue-500"
                 fill="currentColor"
                 viewBox="0 0 24 24"
                 aria-hidden="true"
@@ -436,7 +432,7 @@ const Navbar = ({ pathname }) => {
             <a href={INSTAGRAM_URL} target="_blank">
               <span className="sr-only">Instagram</span>
               <svg
-                className="size-6 text-main-blue-800"
+                className="size-6 text-main-blue-500"
                 fill="currentColor"
                 viewBox="0 0 24 24"
                 aria-hidden="true"
@@ -451,7 +447,7 @@ const Navbar = ({ pathname }) => {
             <a href={TIKTOK_URL} target="_blank">
               <span className="sr-only">TikTok</span>
 
-              <svg className="size-6 text-main-blue-800" viewBox="0 0 24 24">
+              <svg className="size-6 text-main-blue-500" viewBox="0 0 24 24">
                 <path
                   fill="currentColor"
                   d="M16.6 5.82s.51.5 0 0A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6c0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64c0 3.33 2.76 5.7 5.69 5.7c3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48"
@@ -460,7 +456,7 @@ const Navbar = ({ pathname }) => {
             </a>
             <a href={YOUTUBE_URL} target="_blank">
               <span className="sr-only">YouTube</span>
-              <svg className="size-6 text-main-blue-800" viewBox="0 0 24 24">
+              <svg className="size-6 text-main-blue-500" viewBox="0 0 24 24">
                 <path
                   fill="currentColor"
                   d="m10 15l5.19-3L10 9zm11.56-7.83c.13.47.22 1.1.28 1.9c.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83c-.25.9-.83 1.48-1.73 1.73c-.47.13-1.33.22-2.65.28c-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44c-.9-.25-1.48-.83-1.73-1.73c-.13-.47-.22-1.1-.28-1.9c-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83c.25-.9.83-1.48 1.73-1.73c.47-.13 1.33-.22 2.65-.28c1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44c.9.25 1.48.83 1.73 1.73"

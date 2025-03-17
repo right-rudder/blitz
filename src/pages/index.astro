@@ -21,7 +21,7 @@ import ProgramsCard from "../components/ProgramsCard.astro";
 
   <section>
     <div
-      class="max-w-xl lg:max-w-7xl mx-auto px-5 md:px-10 lg:px-20 py-24 flex flex-col-reverse lg:flex-row gap-20 items-center"
+      class="mx-auto px-5 md:px-10 lg:px-20 py-24 flex flex-col-reverse md:flex-row gap-10 lg:gap-40 items-center"
     >
       <div class="flex-1 flex justify-center flex-col gap-5">
         <h3
@@ -33,7 +33,7 @@ import ProgramsCard from "../components/ProgramsCard.astro";
           Where passion meets practicality, and your aviation dreams take flight
           in Salt Lake City
         </h4>
-        <p class="tracking-wider font-light">
+        <p class="lg:text-lg tracking-wider font-light">
           At Blitz Aviation, we make flight training smarter, not harder.
           Located in the heart of Salt Lake City, Utah, our school offers expert
           instruction from seasoned pilots with years of real-world
@@ -41,7 +41,7 @@ import ProgramsCard from "../components/ProgramsCard.astro";
           full course or pay as you go, our flexible options are designed to fit
           your lifestyle and budget.
         </p>
-        <p class="tracking-wider font-light">
+        <p class="lg:text-lg tracking-wider font-light">
           Our streamlined, no-fluff approach focuses on what truly matters,
           helping you master the skills you need efficiently and affordably.
           Learn at your own pace, save on costs, and avoid hidden fees—because
@@ -52,11 +52,11 @@ import ProgramsCard from "../components/ProgramsCard.astro";
           >Book a Discovery Flight</a
         >
       </div>
-      <div class="flex-1 relative h-fit">
+      <div class="flex-1 relative max-w-[30rem]">
         <ImageComp
           src="/src/assets/images/cfi-andrew-zilka.jpg"
           alt="Helicopter Commercial Checkride"
-          classes="z-10 relative"
+          classes="z-10 relative aspect-square object-cover max-h-[30rem]"
         />
       </div>
     </div>
@@ -119,8 +119,8 @@ import ProgramsCard from "../components/ProgramsCard.astro";
         our comprehensive flight training programs today.
       </p>
       <div class="flex gap-5">
-        <a href="#" class="btn-secondary w-fit lg:text-xl">Book</a>
-        <a href="#" class="btn-secondary w-fit lg:text-xl">Explore</a>
+        <a href="#" class="btn-secondary-lg w-fit">Book</a>
+        <a href="#" class="btn-secondary-lg w-fit">Explore</a>
       </div>
     </div>
   </section>

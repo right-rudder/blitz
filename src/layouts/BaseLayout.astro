@@ -6,6 +6,7 @@ import Navbar from "../components/Navbar";
 const { pathname } = Astro.url;
 const { siteTitle, siteDescription } = Astro.props;
 import "@fontsource-variable/outfit";
+import ContactUs from "../components/ContactUs.astro";
 ---
 
 <!doctype html>
@@ -21,6 +22,7 @@ import "@fontsource-variable/outfit";
     <slot name="header" />
     <main>
       <slot />
+      <ContactUs />
     </main>
     <Footer />
   </body>

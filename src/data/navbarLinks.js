@@ -29,8 +29,8 @@ export const navbarLinks = [
     ],
   },
   {
-    name: "Follow Mycah Steps",
-    link: "/mycah-steps",
+    name: "The Blitz Program",
+    link: "/the-blitz-program",
   },
   {
     name: "More Info",

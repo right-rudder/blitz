@@ -1,0 +1,116 @@
+---
+import { PHONE_NUMBER, EMAIL_ADDRESS } from "../consts";
+import ContactUsForm from "../components/ContactUsForm.astro";
+---
+
+<section
+  class="relative border-t-[12px] border-main-blue-700 py-20 px-5 md:px-10 lg:px-20 bg-[url(/src/assets/images/blitz-hangar.jpg)] bg-center bg-cover bg-fixed text-white scroll-my-20 lg:scroll-my-28"
+  id="contactUs"
+>
+  <!-- bg-overlay to darken -->
+  <div class="absolute bg-black/70 inset-0 z-0"></div>
+
+  <div class="relative z-10 mx-auto">
+    <div class="w-full flex flex-col md:items-center">
+      <h2
+        class="md:text-center text-5xl lg:text-6xl font-bold italic uppercase"
+      >
+        Contact Us
+      </h2>
+    </div>
+
+    <div class="flex flex-col lg:flex-row mt-10 gap-10 lg:gap-20 items-center">
+      <!-- Text Section -->
+      <div class="flex-1">
+        <div class="flex flex-col text-lg gap-5">
+          <h3 class="text-3xl md:text-4xl font-medium tracking-wider mb-3">
+            Start Your Journey Today!
+          </h3>
+
+          <p class="text-xl lg:text-2xl tracking-wider">
+            We're here to help! Fill out the form or reach us via email or
+            phone. Our team is available to help you get the best experience
+            with Blitz Aviation.
+          </p>
+
+          <p class="text-xl lg:text-2xl tracking-wider">
+            Everyone receives a personal response from us. Whether you’re
+            curious about our programs, services, or anything else, we’re here
+            to provide the answers you need.
+          </p>
+
+          <div
+            class="flex flex-col xl:flex-row gap-5 justify-between mt-5 font-semibold"
+          >
+            <div class="flex flex-row">
+              <div class="text-white">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="ml-5">
+                <a href=`tel:${PHONE_NUMBER}`>{PHONE_NUMBER}</a><br />
+              </div>
+            </div>
+
+            <div class="flex flex-row">
+              <div class="text-white">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+                  ></path>
+                </svg>
+              </div>
+              <div class="ml-5">
+                <a href={`mailto:${EMAIL_ADDRESS}`}>{EMAIL_ADDRESS}</a>
+              </div>
+            </div>
+
+            <div class="flex flex-row">
+              <div class="fill-white">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 -960 960 960"
+                  width="24"
+                  ><path
+                    d="m612-292 56-56-148-148v-184h-80v216l172 172ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-400Zm0 320q133 0 226.5-93.5T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160Z"
+                  ></path></svg
+                >
+              </div>
+              <div class="ml-5 p-text text-white">
+                Monday to Friday<br />
+                9:00 AM to 5:00 PM
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form Section -->
+      <div class="flex-1">
+        <ContactUsForm />
+      </div>
+    </div>
+  </div>
+</section>

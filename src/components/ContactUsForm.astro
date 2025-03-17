@@ -1,0 +1,154 @@
+---
+const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
+---
+
+<form method="POST" id="contact_form" action="" data-astro-reload>
+  <div class="grid grid-cols-1 gap-x-8 gap-y-2 sm:grid-cols-2">
+    <div>
+      <div class="mt-2.5">
+        <input
+          type="text"
+          name="first-name"
+          id="first-name"
+          autocomplete="given-name"
+          placeholder="First Name"
+          required
+          class="block w-full focus:border-main-blue-500 py-2 text-white shadow-sm ring-inset ring-gray-300 placeholder:text-gray-200 bg-transparent border-b-[2px] border-gray-300 sm:leading-6 outline-none"
+        />
+      </div>
+    </div>
+    <div>
+      <div class="mt-2.5">
+        <input
+          type="text"
+          name="last-name"
+          id="last-name"
+          autocomplete="family-name"
+          placeholder="Last Name"
+          required
+          class="block w-full focus:border-main-blue-500 py-2 text-white shadow-sm ring-inset ring-gray-300 placeholder:text-gray-200 bg-transparent border-b-[2px] border-gray-300 sm:leading-6 outline-none"
+        />
+      </div>
+    </div>
+    <div class="sm:col-span-2">
+      <div class="mt-2.5">
+        <input
+          type="email"
+          name="email"
+          id="email"
+          autocomplete="email"
+          placeholder="Email Address"
+          required
+          class="block w-full focus:border-main-blue-500 py-2 text-white shadow-sm ring-inset ring-gray-300 placeholder:text-gray-200 bg-transparent border-b-[2px] border-gray-300 sm:leading-6 outline-none"
+        />
+      </div>
+    </div>
+    <p class="hidden">
+      <label>
+        Don't fill this out if you're human: <input name="confirm-email" />
+      </label>
+    </p>
+    <div class="sm:col-span-2">
+      <div class="relative mt-2.5">
+        <input
+          type="tel"
+          name="phone-number"
+          id="phone-number"
+          autocomplete="tel"
+          placeholder="Phone Number"
+          required
+          class="block w-full focus:border-main-blue-500 py-2 text-white shadow-sm ring-inset ring-gray-300 placeholder:text-gray-200 bg-transparent border-b-[2px] border-gray-300 sm:leading-6 outline-none"
+        />
+      </div>
+    </div>
+    <div class="sm:col-span-2">
+      <div class="mt-2.5">
+        <textarea
+          name="message"
+          id="message"
+          rows="4"
+          placeholder="How can we help?"
+          required
+          class="block w-full focus:border-main-blue-500 py-2 text-white shadow-sm ring-inset ring-gray-300 placeholder:text-gray-200 bg-transparent border-b-[2px] border-gray-300 sm:leading-6 outline-none"
+        ></textarea>
+      </div>
+    </div>
+    <div class="flex gap-x-4 sm:col-span-2 mt-5">
+      <div class="flex h-6 items-center">
+        <input
+          type="checkbox"
+          id="agree-terms"
+          name="agree-terms"
+          class="h-4 w-4 cursor-pointer rounded border-gray-300 bg-white text-gray-900 focus:ring-2 focus:ring-gray-900"
+        />
+        <label for="agree-terms" class="ml-2 text-sm leading-6 text-gray-200">
+          I agree to <a href="#" class="underline">terms & conditions</a> provided
+          by the company. By providing my phone number, I agree to receive text messages
+          from the business.
+        </label>
+      </div>
+    </div>
+    <div class="mt-10">
+      <button type="submit" class="btn-primary">Submit</button>
+    </div>
+  </div>
+
+  <script define:vars={{ CONTACT_US_FORM_WEBHOOK_URL }}>
+    // Wait for the DOM content to be fully loaded
+    document.addEventListener("DOMContentLoaded", function () {
+      // Get the contact form
+      const contactForm = document.getElementById("contact_form");
+
+      // Check if the contact form element exists
+      if (contactForm !== null) {
+        // Add submit event listener to the contact form
+        contactForm.addEventListener("submit", function (event) {
+          // Prevent the default form submission
+          event.preventDefault();
+
+          // Serialize the form data
+          const formData = new FormData(contactForm);
+
+          // Check the value of the honeypot field
+          const confirmEmailValue = formData.get("confirm-email");
+          if (confirmEmailValue === "" || confirmEmailValue === null) {
+            // If the honeypot field is empty, it's a human
+            // Set the form action to the URL for processing the form and redirecting to thank you
+            contactForm.action = CONTACT_US_FORM_WEBHOOK_URL;
+          }
+
+          // Convert FormData to URLSearchParams
+          const urlSearchParams = new URLSearchParams();
+          for (const pair of formData.entries()) {
+            urlSearchParams.append(pair[0], pair[1]);
+          }
+
+          // Send an AJAX request to submit the form
+          const xhr = new XMLHttpRequest();
+          xhr.open("POST", contactForm.action);
+          xhr.setRequestHeader(
+            "Content-Type",
+            "application/x-www-form-urlencoded",
+          );
+          xhr.onload = function () {
+            // Check if the request was successful (status 200)
+            if (xhr.status === 200) {
+              // Redirect the user after a successful form submission
+              window.location.href = "/contact-confirmation";
+            } else {
+              // Handle errors if any
+              console.error("Form submission failed:", xhr.statusText);
+            }
+          };
+          xhr.onerror = function () {
+            // Handle network errors
+            console.error("Network error occurred while submitting the form.");
+          };
+          xhr.send(urlSearchParams);
+        });
+      } else {
+        console.error("Contact form element not found.");
+      }
+    });
+  </script>
+</form>

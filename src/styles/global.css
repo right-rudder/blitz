@@ -40,3 +40,7 @@ body {
 .btn-secondary {
   @apply block bg-white text-black py-2 px-4 font-medium hover:brightness-75 duration-100 text-center;
 }
+
+.btn-secondary-lg {
+  @apply block bg-white text-black py-4 px-6 font-medium text-lg hover:brightness-75 duration-100 text-center;
+}

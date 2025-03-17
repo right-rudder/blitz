@@ -16,6 +16,7 @@ import {
 const Navbar = ({ pathname }) => {
   const [openMobile, setOpenMobile] = useState(false);
   const [navBar, setNavbar] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true);
 
   const handleHamburgerClick = () => {
     setOpenMobile(() => !openMobile);
@@ -28,9 +29,24 @@ const Navbar = ({ pathname }) => {
 
   useEffect(() => {
     setNavbar(window.scrollY >= 60);
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 60) {
+        setShowNavbar(true);
+      } else {
+        setShowNavbar(false);
+      }
+
+      lastScrollY = currentScrollY;
+    };
     window.addEventListener("scroll", changeBackground);
+    window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", changeBackground);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -80,7 +96,7 @@ const Navbar = ({ pathname }) => {
   return (
     <nav className="w-full h-0 fixed top-0 z-50 tracking-wider">
       <div
-        className={`${navBar || openMobile ? "from-main-blue-700 to-main-blue-900" : "from-transparent to-transparent"} bg-gradient-to-br duration-300 `}
+        className={`${navBar || openMobile ? "from-main-blue-700 to-main-blue-900" : "from-transparent to-transparent"} ${showNavbar ? "-translate-y-20" : ""} bg-gradient-to-br duration-300 `}
       >
         <div className="px-5 md:px-10 lg:px-20 mx-auto ">
           <div

@@ -17,6 +17,8 @@ const { imageSrc, headline, title, description } = Astro.props;
     <p class="font-light tracking-wider">{description}</p>
   </div>
   <div class="mt-3 flex justify-end">
-    <p class="font-bold text-main-blue-800">Learn More</p>
+    <p class="font-bold text-main-blue-800 group-hover:scale-110 duration-300">
+      {headline} More
+    </p>
   </div>
 </a>

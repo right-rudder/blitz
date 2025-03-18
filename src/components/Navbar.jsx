@@ -96,7 +96,7 @@ const Navbar = ({ pathname }) => {
   return (
     <nav className="w-full h-0 fixed top-0 z-50 tracking-wider">
       <div
-        className={`${navBar || openMobile ? "from-main-blue-700 to-main-blue-900" : "from-transparent to-transparent"} ${showNavbar ? "-translate-y-20" : ""} bg-gradient-to-br duration-300 `}
+        className={`${navBar || openMobile ? "from-main-blue-700 to-main-blue-900" : "from-transparent to-transparent"} ${showNavbar ? "-translate-y-28" : ""} bg-gradient-to-br duration-300 `}
       >
         <div className="px-5 md:px-10 lg:px-20 mx-auto ">
           <div

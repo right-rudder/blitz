@@ -16,7 +16,7 @@ import {
 const Navbar = ({ pathname }) => {
   const [openMobile, setOpenMobile] = useState(false);
   const [navBar, setNavbar] = useState(false);
-  const [showNavbar, setShowNavbar] = useState(true);
+  const [showNavbar, setShowNavbar] = useState(false);
 
   const handleHamburgerClick = () => {
     setOpenMobile(() => !openMobile);

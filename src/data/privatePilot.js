@@ -12,9 +12,8 @@ const privatePilot = {
       "Blitz Aviation believes that anyone with a passion for flying can become a pilot with the right training, dedication, and support. Watch our video by Bill Macon that outlines the three main tests you need to pass to obtain your pilot's license: the medical exam, written test, and flight test (check ride). We believe that the key to your success lies in our commitment to providing the highest quality flight training available, with a focus on safety, professionalism, and individual attention.",
     primaryImage: "/src/assets/images/pexels-tracvu-5741643.jpg",
     primaryAlt: "Pilot flying on IFR flight",
-    intro: [
-      "Blitz Aviation believes that anyone with a passion for flying can become a pilot with the right training, dedication, and support. Private Pilot training is the first step in your aviation journey, and we're here to help you achieve your dream of flight. Our experienced instructors will guide you through the process of obtaining your private pilot's license, providing you with the knowledge and skills you need to fly safely and confidently.",
-    ],
+    intro:
+      "The Private Pilot License (PPL) is your first step toward professional training and qualifies you to fly for personal or recreational purposes. At Blitz Aviation, our Private Pilot course integrates flight training and ground instruction through a structured syllabus, accelerating your learning and laying the foundation for future advanced ratings and certifications.",
     prerequisites: [
       "Be able to read, speak, write, and understand the English language.",
       "Be at least 17 years old.",

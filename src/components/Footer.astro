@@ -12,7 +12,7 @@ import {
   SITE_TITLE,
 } from "../consts";
 import { Image } from "astro:assets";
-import companyLogo from "../assets/logos/blitz-logo.webp";
+import companyLogo from "../assets/logos/blitz-aviation-logo.png";
 
 import { navbarLinks } from "../data/navbarLinks";
 
@@ -22,30 +22,27 @@ const today = new Date();
 ---
 
 <footer
-  class="bg-gradient-to-r from-main-blue-900 via-main-blue-700 to-main-blue-900 text-white"
+  class="bg-gradient-to-br from-main-blue-700 to-main-blue-900 text-white"
 >
-  <div class="py-12 px-5">
-    <div class="max-w-xl lg:max-w-7xl mx-auto">
+  <div class="pb-8 pt-24 px-5 md:px-10 lg:px-20">
+    <div class="mx-auto">
       <div class="flex gap-10 flex-col lg:flex-row justify-between">
         <div class="flex flex-col gap-5 lg:w-1/3">
           <a
             href="/"
             class="text-4xl font-bold uppercase flex items-center gap-2"
           >
-            <Image
-              src={companyLogo}
-              alt="Blitz Aviation Logo"
-              class="w-20 rounded"
-            />
+            <Image src={companyLogo} alt="Blitz Aviation Logo" class="w-20" />
           </a>
 
           <p class="text-sm">
-            At Blitz Aviation, we make flight training smarter, not harder.
-            Located in the heart of Salt Lake City, Utah, our school offers
-            expert instruction from seasoned pilots with years of real-world
-            experience—all without the sky-high price tag. Whether you choose a
-            full course or pay as you go, our flexible options are designed to
-            fit your lifestyle and budget.
+            Blitz Aviation offers premier flight training at Salt Lake City
+            International Airport (KSLC) in Utah. Specializing in private pilot
+            training, we provide expert, no-fluff instruction tailored to your
+            pace and budget. With flexible payment options and a streamlined
+            curriculum, we make achieving your aviation dreams efficient and
+            affordable. Book an intro flight over Utah’s stunning landscapes or
+            visit our Salt Lake City school today!
           </p>
 
           <div class="flex space-x-6">

@@ -2,18 +2,17 @@ import { FaFileMedical } from "react-icons/fa";
 import { FaRegEdit } from "react-icons/fa";
 import { FaRegPaperPlane } from "react-icons/fa";
 
-const cfii = {
+const multiEngine = {
   data: {
-    title: "Certified Flight Instructor Instrument",
-    url: "/programs/cfii",
-    slug: "cfii",
-    siteTitle: "Certified Flight Instructor Instrument | Blitz Aviation",
+    title: "Multi-Engine Rating",
+    url: "/programs/multi-engine",
+    slug: "multi-engine",
+    siteTitle: "Multi-Engine Rating | Blitz Aviation",
     siteDescription:
       "Experience the power and precision of multi engine aircraft as our expert instructors guide you through comprehensive training. With advanced systems, twin engines, and enhanced performance capabilities, Blitz Aviation's Piper Seminole provides an exceptional platform for honing your multi engine skills.",
     intro:
-      "Becoming a Certified Flight Instructor - Instrument (CFII) takes your teaching skills to the next level, enabling you to instruct students in instrument flying techniques. Our CFII program at Blitz Aviation equips you with the expertise to teach instrument rating candidates, further refining your own instrument flying skills and deepening your understanding of IFR procedures.",
-    primaryImage:
-      "/src/assets/images/pexels-iryna-liabiodkina-75708745-8578729.jpg",
+      "A Multi-Engine Rating qualifies you to fly multi-engine aircraft, a prerequisite for most commercial airline roles, and prepares you to handle complex scenarios like engine failures. At Blitz Aviation, our multi-engine training emphasizes precision, safety, and operational excellence, enhancing your credentials and expanding career opportunities in airline operations.",
+    primaryImage: "/src/assets/images/pexels-kokorevas-5313876.jpg",
     primaryAlt: "Multi engine instructor pass checkride",
     prerequisites: [
       "Hold a current private pilot certificate",
@@ -42,4 +41,4 @@ const cfii = {
   },
 };
 
-export default cfii;
+export default multiEngine;

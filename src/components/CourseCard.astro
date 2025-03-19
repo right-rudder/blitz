@@ -1,0 +1,23 @@
+---
+import ImageComp from "./ImageComp.astro";
+const { imageSrc, delay, title, duration } = Astro.props;
+---
+
+<div
+  data-aos="fade-right"
+  data-aos-delay={delay}
+  class="bg-main-blue-500/50 flex-1 2xl:max-w-[80rem] text-right text-white flex flex-col justify-between"
+>
+  <ImageComp src={imageSrc} alt="title" classes="object-cover aspect-square" />
+  <div
+    class="absolute inset-0 bg-main-blue-950/70 flex justify-between p-3 text-right flex-col"
+  >
+    <h6 class="text-2xl md:text-xl font-semibold">
+      {title} Course
+    </h6>
+    <p class="text-3xl md:text-2xl font-semibold">
+      Average duration: <br />
+      {duration}
+    </p>
+  </div>
+</div>

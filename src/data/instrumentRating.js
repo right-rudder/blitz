@@ -7,20 +7,19 @@ const instrumentRating = {
     title: "Instrument Rating",
     url: "/programs/instrument-rating",
     slug: "instrument-rating",
-    siteTitle: "Instrument Rating | Ideal Aviation",
+    siteTitle: "Instrument Rating | Blitz Aviation",
     siteDescription:
-      "Ideal Aviation is committed to helping you become a proficient instrument pilot, whether you're a private pilot looking to enhance your abilities or an aspiring professional pilot. Through a blend of comprehensive ground school instruction and hands on flight training, you'll acquire the knowledge and skills needed to confidently navigate and operate aircraft using instrument references alone.",
-    intro: [
-      "Ideal Aviation is committed to helping you become a proficient instrument pilot, whether you're a private pilot looking to enhance your abilities or an aspiring professional pilot. Through a blend of comprehensive ground school instruction and hands on flight training, you'll acquire the knowledge and skills needed to confidently navigate and operate aircraft using instrument references alone.",
-      "Gain the expertise to fly in diverse weather conditions and execute precise instrument approaches. Take charge of your aviation journey and open doors to exciting new opportunities with our Instrument Training program at Ideal Aviation.",
-    ],
-    primaryImage: "/src/assets/images/pilot-flying-on-ifr-flight.webp",
+      "Blitz Aviation is committed to helping you become a proficient instrument pilot, whether you're a private pilot looking to enhance your abilities or an aspiring professional pilot. Through a blend of comprehensive ground school instruction and hands on flight training, you'll acquire the knowledge and skills needed to confidently navigate and operate aircraft using instrument references alone.",
+    intro:
+      "Earning an Instrument Rating (IR) enables you to fly in low visibility and adverse weather conditions using instruments. At Blitz Aviation, our IR training emphasizes precision in IFR operations, preparing you for commercial aviation and airline operations.",
+    primaryImage: "/src/assets/images/pexels-junerydocto-15543665.jpg",
     primaryAlt: "Pilot flying on IFR flight",
     prerequisites: [
       "Hold a current private pilot certificate or apply for one alongside the instrument rating.",
       "Accumulate a specific amount of flight time, including: 50 hours of cross-country PIC (Pilot in Command) time. 40 hours of instrument training",
       "Hold a valid FAA 3rd Class Medical Certificate or a higher class",
     ],
+    duration: "2 months, 3-5 times/week",
     steps: [
       {
         title: "Start Flight Training",

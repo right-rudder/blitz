@@ -7,18 +7,19 @@ const privatePilot = {
     title: "Private Pilot",
     url: "/programs/private-pilot",
     slug: "private-pilot",
-    siteTitle: "Private Pilot | Ideal Aviation",
+    siteTitle: "Private Pilot | Blitz Aviation",
     siteDescription:
-      "Ideal Aviation believes that anyone with a passion for flying can become a pilot with the right training, dedication, and support. Watch our video by Bill Macon that outlines the three main tests you need to pass to obtain your pilot's license: the medical exam, written test, and flight test (check ride). We believe that the key to your success lies in our commitment to providing the highest quality flight training available, with a focus on safety, professionalism, and individual attention.",
-    video_url: "https://www.youtube.com/embed/1g6J1Jfj8ZQ",
-    intro: [
-      "Ideal Aviation believes that anyone with a passion for flying can become a pilot with the right training, dedication, and support. Watch our video by Bill Macon that outlines the three main tests you need to pass to obtain your pilot's license: the medical exam, written test, and flight test (check ride). We believe that the key to your success lies in our commitment to providing the highest quality flight training available, with a focus on safety, professionalism, and individual attention.",
-    ],
+      "Blitz Aviation believes that anyone with a passion for flying can become a pilot with the right training, dedication, and support. Watch our video by Bill Macon that outlines the three main tests you need to pass to obtain your pilot's license: the medical exam, written test, and flight test (check ride). We believe that the key to your success lies in our commitment to providing the highest quality flight training available, with a focus on safety, professionalism, and individual attention.",
+    primaryImage: "/src/assets/images/cfi-cambrie-foster.jpg",
+    primaryAlt: "Pilot flying on IFR flight",
+    intro:
+      "The Private Pilot License (PPL) is your first step toward professional training and qualifies you to fly for personal or recreational purposes. At Blitz Aviation, our Private Pilot course integrates flight training and ground instruction through a structured syllabus, accelerating your learning and laying the foundation for future advanced ratings and certifications.",
     prerequisites: [
       "Be able to read, speak, write, and understand the English language.",
       "Be at least 17 years old.",
       "Obtain a valid FAA 3rd Class Medical Certificate or a higher class",
     ],
+    duration: "3 months, 2-3 times/week",
     steps: [
       {
         title: "Medical Exam",

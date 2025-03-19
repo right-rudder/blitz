@@ -19,6 +19,7 @@ const instrumentRating = {
       "Accumulate a specific amount of flight time, including: 50 hours of cross-country PIC (Pilot in Command) time. 40 hours of instrument training",
       "Hold a valid FAA 3rd Class Medical Certificate or a higher class",
     ],
+    duration: "2 months, 3-5 times/week",
     steps: [
       {
         title: "Start Flight Training",

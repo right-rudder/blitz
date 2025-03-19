@@ -19,6 +19,7 @@ const commercialPilot = {
       "Have a minimum of 250 hours of flight time, including 100 hours of pilot-in-command time",
       "Obtain a valid FAA 2nd Class Medical Certificate or a higher class",
     ],
+    duration: "3 months, 3-5 times/week",
     steps: [
       {
         title: "Build the Flight Hours",

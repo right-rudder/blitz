@@ -19,6 +19,7 @@ const privatePilot = {
       "Be at least 17 years old.",
       "Obtain a valid FAA 3rd Class Medical Certificate or a higher class",
     ],
+    duration: "3 months, 2-3 times/week",
     steps: [
       {
         title: "Medical Exam",

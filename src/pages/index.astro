@@ -6,6 +6,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import services from "../data/services";
 import programs from "../data/programs";
 import ProgramsCard from "../components/ProgramsCard.astro";
+import CourseCard from "../components/CourseCard.astro";
 ---
 
 <BaseLayout>
@@ -18,6 +19,41 @@ import ProgramsCard from "../components/ProgramsCard.astro";
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     referrerpolicy="strict-origin-when-cross-origin"
     allowfullscreen></iframe> -->
+
+  <section
+    class="bg-gradient-to-br from-main-blue-700 to-main-blue-900 text-white"
+  >
+    <div
+      class="mx-auto px-5 md:px-10 lg:px-20 py-16 flex flex-col 2xl:flex-row items-center gap-10 justify-between"
+    >
+      <div class="flex flex-col gap-5">
+        <h2 class="text-5xl font-semibold uppercase max-w-xl">
+          Become a Commercial Pilot in Just 7 Months!
+        </h2>
+        <p class="lg:text-lg tracking-wider font-light">
+          Our accelerated flight training programs are designed to help you
+          achieve your aviation goals quickly and affordably. Whether you’re
+          looking to become a private pilot or pursue a career in aviation, we
+          have the training you need to succeed.
+        </p>
+        <a href="#" class="btn-secondary w-fit">Learn More</a>
+      </div>
+      <div class="flex flex-col md:flex-row gap-10 justify-between text-white">
+        {
+          programs
+            .slice(0, 3)
+            .map((program, index) => (
+              <CourseCard
+                imageSrc={program.data.primaryImage}
+                title={program.data.title}
+                duration={program.data.duration}
+                delay={index * 150}
+              />
+            ))
+        }
+      </div>
+    </div>
+  </section>
 
   <section>
     <div

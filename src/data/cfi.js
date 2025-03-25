@@ -12,6 +12,10 @@ const cfi = {
       "Our CFI Training program offers you the opportunity to share your knowledge and love for flying with aspiring pilots. As a CFI, you'll play a vital role in shaping the next generation of aviators, and we're here to provide you with the training and support you need to excel in this rewarding role.",
     intro:
       "Becoming a Certified Flight Instructor (CFI) is a strategic step for aspiring airline pilots, enabling you to build flight hours while earning a income. Our tailored CFI programs at Blitz Aviation equip you with confidence, professionalism, and refined skills to instruct effectively and accelerate your airline career.",
+    description: [
+      "The Certified Flight Instructor (CFI) certificate is a valuable qualification that allows you to teach and mentor aspiring pilots. Whether you're looking to build flight hours, share your passion for aviation, or prepare for a career with the airlines, the CFI certificate is an essential step in your journey. At Blitz Aviation, our CFI program provides you with the knowledge and skills needed to excel as a flight instructor.",
+      "Our CFI program is designed to enhance your teaching abilities, deepen your understanding of aviation regulations, and refine your flight skills. With a focus on professionalism and safety, our program prepares you to guide students through the complexities of flight training. By combining expert instruction with hands-on experience, we'll help you become a skilled and effective CFI.",
+    ],
     primaryImage: "/src/assets/images/pexels-felix-57767809-29170959.jpg",
     primaryAlt: "Blitz CFI with private pilot",
     prerequisites: [

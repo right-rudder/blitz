@@ -12,6 +12,10 @@ const cfii = {
       "Experience the power and precision of multi engine aircraft as our expert instructors guide you through comprehensive training. With advanced systems, twin engines, and enhanced performance capabilities, Blitz Aviation's Piper Seminole provides an exceptional platform for honing your multi engine skills.",
     intro:
       "Becoming a Certified Flight Instructor - Instrument (CFII) takes your teaching skills to the next level, enabling you to instruct students in instrument flying techniques. Our CFII program at Blitz Aviation equips you with the expertise to teach instrument rating candidates, further refining your own instrument flying skills and deepening your understanding of IFR procedures.",
+    description: [
+      "The Certified Flight Instructor - Instrument (CFII) rating is a valuable addition to your qualifications, allowing you to teach students the intricacies of instrument flight. Whether you're looking to enhance your teaching abilities, build your instrument proficiency, or expand your career opportunities, the CFII rating is a critical step in your journey. At Blitz Aviation, our CFII program provides you with the knowledge and skills needed to excel as an instrument flight instructor.",
+      "Our CFII program is designed to enhance your understanding of instrument flight and deepen your proficiency in IFR operations. With a focus on teaching techniques, instrument procedures, and flight safety, our program prepares you to guide students through the complexities of instrument flying. By combining advanced flight training with expert instruction, we'll help you become a skilled and effective CFII.",
+    ],
     primaryImage:
       "/src/assets/images/pexels-iryna-liabiodkina-75708745-8578729.jpg",
     primaryAlt: "Multi engine instructor pass checkride",

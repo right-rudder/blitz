@@ -12,6 +12,10 @@ const commercialPilot = {
       "Fly for hire or compensation. If you're looking to make a career out of flying, then getting your commerical pilot certificate is the certificate you need to start getting paid to fly. If you're looking to instruct in the near future, then getting your commerical out of the way and complete one more prerequisite. If you're looking to go to the airlines, fly corporate or charter, or even thinking of something else - Blitz Aviation is here to support you and your goals.",
     intro:
       "The Commercial Pilot Certificate (CPL) elevates your skills to professional standards, enabling you to receive compensation for flying services. Our CPL program at Blitz Aviation focuses on advanced maneuvers, complex aircraft operations, and aviation professionalism, unlocking opportunities in passenger transport, cargo, and specialized aviation fields.",
+    description: [
+      "The Commercial Pilot Certificate (CPL) is the gateway to a career in aviation, allowing you to fly for hire or compensation. Whether you're looking to become a flight instructor, fly for a charter company, or pursue a career with the airlines, the CPL is a critical step in your journey. At Blitz Aviation, our comprehensive program prepares you for the challenges and opportunities of professional flying.",
+      "Our CPL program is designed to build on your existing skills and experience, taking you to the next level of proficiency and professionalism. With a focus on advanced flight maneuvers, complex aircraft operations, and aviation regulations, our program equips you with the knowledge and skills needed to succeed in the competitive world of commercial aviation.",
+    ],
     primaryImage: "/src/assets/images/pexels-josephmartin-5785741.jpg",
     primaryAlt: "Student pilot recieves certificate",
     prerequisites: [

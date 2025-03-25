@@ -12,6 +12,10 @@ const multiEngine = {
       "Experience the power and precision of multi engine aircraft as our expert instructors guide you through comprehensive training. With advanced systems, twin engines, and enhanced performance capabilities, Blitz Aviation's Piper Seminole provides an exceptional platform for honing your multi engine skills.",
     intro:
       "A Multi-Engine Rating qualifies you to fly multi-engine aircraft, a prerequisite for most commercial airline roles, and prepares you to handle complex scenarios like engine failures. At Blitz Aviation, our multi-engine training emphasizes precision, safety, and operational excellence, enhancing your credentials and expanding career opportunities in airline operations.",
+    description: [
+      "The Multi-Engine Rating is a valuable qualification that allows you to fly multi-engine aircraft, opening up new opportunities in commercial aviation. Whether you're looking to pursue a career with the airlines, fly charter flights, or enhance your piloting skills, the Multi-Engine Rating is an essential step in your journey. At Blitz Aviation, our comprehensive program provides you with the knowledge and skills needed to excel as a multi-engine pilot.",
+      "Our Multi-Engine Rating program is designed to deepen your understanding of multi-engine flight and enhance your proficiency in complex aircraft operations. With a focus on precision and safety, our program prepares you to handle the challenges of multi-engine flight, including engine failures and emergency procedures. By combining expert instruction with hands-on experience, we'll help you become a skilled and confident multi-engine pilot.",
+    ],
     primaryImage: "/src/assets/images/pexels-kokorevas-5313876.jpg",
     primaryAlt: "Multi engine instructor pass checkride",
     prerequisites: [

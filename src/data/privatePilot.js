@@ -14,6 +14,10 @@ const privatePilot = {
     primaryAlt: "Pilot flying on IFR flight",
     intro:
       "The Private Pilot License (PPL) is your first step toward professional training and qualifies you to fly for personal or recreational purposes. At Blitz Aviation, our Private Pilot course integrates flight training and ground instruction through a structured syllabus, accelerating your learning and laying the foundation for future advanced ratings and certifications.",
+    description: [
+      "The Private Pilot License (PPL) is the first step in your journey to becoming a pilot. Whether you're looking to fly for personal enjoyment or pursue a career in aviation, the PPL is the foundation of your training. At Blitz Aviation, our comprehensive program is designed to provide you with the knowledge and skills needed to become a safe and proficient pilot.",
+      "Our PPL program combines ground instruction with flight training to give you a well-rounded education in aviation. With a focus on safety, professionalism, and individual attention, our program prepares you to pass the FAA written and practical exams and earn your pilot's license. Whether you're a beginner or an experienced pilot looking to advance your skills, our program is tailored to meet your needs and help you achieve your goals.",
+    ],
     prerequisites: [
       "Be able to read, speak, write, and understand the English language.",
       "Be at least 17 years old.",

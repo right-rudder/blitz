@@ -12,6 +12,10 @@ const instrumentRating = {
       "Blitz Aviation is committed to helping you become a proficient instrument pilot, whether you're a private pilot looking to enhance your abilities or an aspiring professional pilot. Through a blend of comprehensive ground school instruction and hands on flight training, you'll acquire the knowledge and skills needed to confidently navigate and operate aircraft using instrument references alone.",
     intro:
       "Earning an Instrument Rating (IR) enables you to fly in low visibility and adverse weather conditions using instruments. At Blitz Aviation, our IR training emphasizes precision in IFR operations, preparing you for commercial aviation and airline operations.",
+    description: [
+      "The Instrument Rating (IR) is a critical qualification that allows you to fly in low visibility and adverse weather conditions using instruments. Whether you're looking to enhance your private pilot skills or pursue a career in commercial aviation, the IR is an essential step in your journey. At Blitz Aviation, our IR program provides you with the knowledge and skills needed to excel as an instrument-rated pilot.",
+      "Our IR program is designed to deepen your understanding of instrument flight and enhance your proficiency in IFR operations. With a focus on precision and safety, our program prepares you to navigate and operate aircraft using instrument references alone. By combining expert instruction with hands-on experience, we'll help you become a skilled and confident instrument-rated pilot.",
+    ],
     primaryImage: "/src/assets/images/pexels-junerydocto-15543665.jpg",
     primaryAlt: "Pilot flying on IFR flight",
     prerequisites: [

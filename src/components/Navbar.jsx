@@ -9,7 +9,7 @@ import {
   INSTAGRAM_URL,
   PHONE_NUMBER,
   EMAIL_ADDRESS,
-  TIKTOK_URL,
+  YELP_URL,
   YOUTUBE_URL,
 } from "../consts.ts";
 
@@ -142,7 +142,7 @@ const Navbar = ({ pathname }) => {
                               key={subIndex}
                               className={`${
                                 isActive(subitem, pathname)
-                                  ? "bg-main-blue-800"
+                                  ? "bg-main-blue-800 text-white"
                                   : ""
                               } relative hover:bg-main-blue-800 duration-300 hover:text-white`}
                               onMouseEnter={() => setSubHoveredIndex(subIndex)}
@@ -209,7 +209,7 @@ const Navbar = ({ pathname }) => {
               </a>
 
               <div className="hidden lg:flex flex-1 justify-end">
-                <a href="" className="btn-secondary">
+                <a href="/contact-us" className="btn-secondary">
                   Contact Us
                 </a>
               </div>
@@ -407,6 +407,14 @@ const Navbar = ({ pathname }) => {
               )}
             </li>
           ))}
+          <li className="relative group">
+            <a
+              href="/contact-us"
+              className="font-semibold p-5 block text-white text-lg duration-300 border-main-blue-800 whitespace-nowrap group-last:bg-main-blue-800 group-last:py-4 group-last:px-8 group-last:mt-4 group-last:text-center group-last:mx-5"
+            >
+              Contact Us
+            </a>
+          </li>
         </ul>
 
         <div className="p-5 px-10 text-white flex flex-col gap-3 overflow-hidden">
@@ -430,21 +438,6 @@ const Navbar = ({ pathname }) => {
           </div>
 
           <div className="flex gap-3 mt-2">
-            <a href={FACEBOOK_URL} target="_blank">
-              <span className="sr-only">Facebook</span>
-              <svg
-                className="size-6 text-main-blue-500"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </a>
             <a href={INSTAGRAM_URL} target="_blank">
               <span className="sr-only">Instagram</span>
               <svg
@@ -460,22 +453,21 @@ const Navbar = ({ pathname }) => {
                 />
               </svg>
             </a>
-            <a href={TIKTOK_URL} target="_blank">
-              <span className="sr-only">TikTok</span>
-
-              <svg className="size-6 text-main-blue-500" viewBox="0 0 24 24">
+            <a href={YELP_URL} target="_blank">
+              <span className="sr-only">Yelp</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                className="size-6 text-main-blue-500"
+              >
                 <path
-                  fill="currentColor"
-                  d="M16.6 5.82s.51.5 0 0A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6c0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64c0 3.33 2.76 5.7 5.69 5.7c3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48"
-                ></path>
-              </svg>
-            </a>
-            <a href={YOUTUBE_URL} target="_blank">
-              <span className="sr-only">YouTube</span>
-              <svg className="size-6 text-main-blue-500" viewBox="0 0 24 24">
-                <path
-                  fill="currentColor"
-                  d="m10 15l5.19-3L10 9zm11.56-7.83c.13.47.22 1.1.28 1.9c.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83c-.25.9-.83 1.48-1.73 1.73c-.47.13-1.33.22-2.65.28c-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44c-.9-.25-1.48-.83-1.73-1.73c-.13-.47-.22-1.1-.28-1.9c-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83c.25-.9.83-1.48 1.73-1.73c.47-.13 1.33-.22 2.65-.28c1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44c.9.25 1.48.83 1.73 1.73"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="1.5"
+                  d="M4.12 12.496a8 8 0 0 0-.103 1.899c.053.801.08 1.202.47 1.467c.388.265.831.118 1.716-.176l.81-.27c1.967-.652 2.95-.979 2.986-1.639s-.905-1.093-2.788-1.96l-.777-.36c-.848-.39-1.272-.585-1.688-.365s-.486.615-.626 1.404m14.203-.178l-.472.114c-2.228.544-3.343.816-3.738.27c-.396-.545.275-1.429 1.617-3.195l.282-.37c.566-.746.85-1.119 1.337-1.136c.488-.018.755.282 1.289.882q.503.565.882 1.216c.4.685.599 1.027.405 1.451s-.663.538-1.602.768M17.94 19.1q.317-.42.581-.885c.379-.667.568-1 .438-1.444l-.017-.054c-.152-.434-.547-.579-1.336-.869c-2.057-.755-3.085-1.133-3.47-.595l-.043.065c-.344.571.287 1.553 1.549 3.517c.484.753.726 1.13 1.142 1.163l.052.002c.417.005.646-.297 1.104-.9m-5.94.977v-.298c0-2.341 0-3.512-.585-3.744c-.585-.231-1.234.683-2.53 2.51l-.167.234c-.531.75-.797 1.124-.697 1.593c.1.47.43.64 1.09.977q.556.285 1.157.458c.704.203 1.056.304 1.394.007c.338-.296.338-.776.338-1.737m0-16.195v2.682c0 2.813 0 4.22-.777 4.415c-.778.196-1.573-1.01-3.163-3.421L6.633 5.394c-.486-.738-.73-1.106-.597-1.513c.132-.406.507-.574 1.257-.908a12 12 0 0 1 2.601-.819c.88-.169 1.321-.253 1.714.037c.392.29.392.757.392 1.69"
+                  color="currentColor"
                 ></path>
               </svg>
             </a>

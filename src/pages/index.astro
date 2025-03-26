@@ -12,14 +12,6 @@ import CourseCard from "../components/CourseCard.astro";
 <BaseLayout>
   <HomepageHeader slot="header" />
 
-  <!-- <iframe
-    class="w-full aspect-video pointer-events-none"
-    src="https://www.youtube.com/embed/JsE8JQfYLGA?autoplay=1&loop=1&mute=1&iv_load_policy=3&controls=0&disablekb=1&fs=0&playlist=JsE8JQfYLGA"
-    title="YouTube video player"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    referrerpolicy="strict-origin-when-cross-origin"
-    allowfullscreen></iframe> -->
-
   <section
     class="bg-gradient-to-br from-main-blue-700 to-main-blue-900 text-white"
   >
@@ -174,6 +166,7 @@ import CourseCard from "../components/CourseCard.astro";
               headline={program.data.title}
               title={program.data.title}
               description={program.data.intro}
+              url={program.data.url}
             />
           ))
         }

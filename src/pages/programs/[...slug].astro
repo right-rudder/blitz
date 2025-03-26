@@ -19,5 +19,6 @@ const { data } = Astro.props;
 ---
 
 <BaseLayout siteTitle={data.siteTitle} siteDescription={data.siteDescription}>
+  <Header slot="header" data={data} />
   <CourseLayout data={data} />
 </BaseLayout>

@@ -38,7 +38,7 @@ body {
 }
 
 .btn-secondary {
-  @apply block bg-white text-black py-2 px-4 font-medium hover:brightness-75 duration-100 text-center;
+  @apply block bg-white text-black py-3 px-5 font-medium hover:brightness-75 duration-100 text-center;
 }
 
 .btn-secondary-lg {

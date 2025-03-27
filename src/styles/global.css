@@ -23,6 +23,8 @@
   --color-main-accent-800: #7e4b15;
   --color-main-accent-900: #6b3d18;
   --color-main-accent-950: #3f1f09;
+
+  --background-image-blitz-program: url("/mycah-pittman.webp");
 }
 
 body {

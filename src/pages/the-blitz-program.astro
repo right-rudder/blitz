@@ -1,0 +1,88 @@
+---
+import Header from "../components/Header.astro";
+import ImageComp from "../components/ImageComp.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const headerData = {
+  title: "The Blitz Program",
+  primaryImage: "/src/assets/images/pexels-kelly-1179532-2618118.webp",
+  primaryAlt: "The Blitz Program",
+};
+---
+
+<BaseLayout>
+  <Header slot="header" data={headerData} />
+
+  <section>
+    <div
+      class="mx-auto px-5 md:px-10 lg:px-20 py-24 flex flex-col gap-10 lg:gap-20 items-center max-w-7xl"
+    >
+      <div class="relative w-full">
+        <ImageComp
+          src="/src/assets/images/cfi-andrew-zilka.jpg"
+          alt="Helicopter Commercial Checkride"
+          classes="z-10 relative aspect-video object-cover w-full"
+        />
+      </div>
+
+      <div class="flex justify-center flex-col gap-5">
+        <h3
+          class="text-4xl font-bold tracking-wide text-main-black sm:text-5xl"
+        >
+          About the Blitz Program
+        </h3>
+        <h4 class="text-blue-800 font-semibold text-2xl tracking-wide italic">
+          Your path to becoming a pilot in the most efficient way possible
+        </h4>
+        <p class="lg:text-lg tracking-wider font-light">
+          The Blitz Program is designed to help you achieve your aviation goals
+          quickly and affordably. Whether you’re starting from scratch or
+          looking to advance your skills, our comprehensive training program
+          will take you from zero to hero in no time.
+        </p>
+        <p class="lg:text-lg tracking-wider font-light">
+          Our accelerated flight training programs are tailored to your pace and
+          budget, providing expert instruction and hands-on experience to help
+          you build the skills and confidence you need to succeed. With flexible
+          payment options and a streamlined curriculum, we make achieving your
+          aviation goals efficient and affordable.
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-5 w-full">
+        <h3
+          class="text-3xl font-semibold tracking-wide text-main-black sm:text-4xl"
+        >
+          What To Expect
+        </h3>
+        <p class="lg:text-lg tracking-wider font-light">
+          Our programs focus on efficiency and hands-on learning, helping you
+          build skills and confidence quickly. With personalized instruction,
+          well-maintained aircraft, and a structured curriculum, we ensure you
+          get the training you need to fly with confidence.
+        </p>
+        <p class="lg:text-lg tracking-wider font-light">
+          At Blitz Aviation, we make flight training smarter, not harder.
+          Located in the heart of Ogden, Utah, our school offers expert
+          instruction from seasoned pilots with years of real-world experience.
+          Whether you choose a full course or pay as you go, our flexible
+          options are designed to fit your lifestyle and budget.
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-5 w-full">
+        <h3
+          class="text-3xl font-semibold tracking-wide text-main-black sm:text-4xl"
+        >
+          What You'll Learn
+        </h3>
+        <ul class="list-disc pl-5 lg:text-lg tracking-wider font-light">
+          <li>Private Pilot License</li>
+          <li>Instrument Rating</li>
+          <li>Commercial Pilot License</li>
+        </ul>
+        <a href="/discovery-flight" class="btn-primary w-fit mt-3">Start Now</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,11 +1,12 @@
 ---
 import ImageComp from "./ImageComp.astro";
 
-const { name, image, certificatesAndRatings, bio } = Astro.props;
+const { name, image, certificatesAndRatings, bio, instagram, facebook, x } =
+  Astro.props;
 ---
 
 <div class="flex gap-5 flex-col lg:flex-row">
-  <div class="flex-3/4">
+  <div class="flex-1">
     <ImageComp
       src={image}
       alt={name}
@@ -14,7 +15,7 @@ const { name, image, certificatesAndRatings, bio } = Astro.props;
   </div>
 
   <div
-    class="flex flex-col gap-1 bg-main-blue-100 p-8 text-center lg:text-start justify-center"
+    class="flex flex-[2_2_0] flex-col gap-1 bg-main-blue-100 p-8 text-center lg:text-start justify-center"
   >
     <h2 class="text-pretty text-2xl font-medium tracking-wide sm:text-2xl">
       {name}
@@ -27,7 +28,8 @@ const { name, image, certificatesAndRatings, bio } = Astro.props;
     <div class="flex justify-center lg:justify-start gap-5 mt-5">
       <a
         class="border border-gray-500 rounded-full p-2 hover:bg-blue-400 duration-100"
-        href="#"
+        href={facebook}
+        target="_blank"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +43,8 @@ const { name, image, certificatesAndRatings, bio } = Astro.props;
       </a>
       <a
         class="border border-gray-500 rounded-full p-2 hover:bg-blue-400 duration-100"
-        href="#"
+        href={instagram}
+        target="_blank"
       >
         <svg
           class="size-5"
@@ -57,7 +60,8 @@ const { name, image, certificatesAndRatings, bio } = Astro.props;
       </a>
       <a
         class="border border-gray-500 rounded-full p-2 hover:bg-blue-400 duration-100"
-        href="#"
+        href={x}
+        target="_blank"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

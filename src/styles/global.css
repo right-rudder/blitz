@@ -30,17 +30,17 @@ body {
 }
 
 .btn-primary {
-  @apply block bg-gradient-to-br from-main-blue-600 to-main-blue-800 text-white py-3 px-5 font-medium hover:brightness-75 duration-100 text-center;
+  @apply block cursor-pointer bg-gradient-to-br from-main-blue-600 to-main-blue-800 text-white py-3 px-5 font-medium hover:brightness-75 duration-100 text-center;
 }
 
 .btn-primary-lg {
-  @apply block bg-gradient-to-br from-main-blue-600 to-main-blue-800 text-white py-4 px-6 text-lg font-medium hover:brightness-75 duration-100 text-center;
+  @apply block cursor-pointer bg-gradient-to-br from-main-blue-600 to-main-blue-800 text-white py-4 px-6 text-lg font-medium hover:brightness-75 duration-100 text-center;
 }
 
 .btn-secondary {
-  @apply block bg-white text-black py-3 px-5 font-medium hover:brightness-75 duration-100 text-center;
+  @apply block cursor-pointer bg-white text-black py-3 px-5 font-medium hover:brightness-75 duration-100 text-center;
 }
 
 .btn-secondary-lg {
-  @apply block bg-white text-black py-4 px-6 font-medium text-lg hover:brightness-75 duration-100 text-center;
+  @apply block cursor-pointer bg-white text-black py-4 px-6 font-medium text-lg hover:brightness-75 duration-100 text-center;
 }

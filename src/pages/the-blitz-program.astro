@@ -1,4 +1,5 @@
 ---
+import { FaDotCircle } from "react-icons/fa";
 import Header from "../components/Header.astro";
 import ImageComp from "../components/ImageComp.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
@@ -19,7 +20,7 @@ const headerData = {
     >
       <div class="relative w-full">
         <ImageComp
-          src="/src/assets/images/cfi-andrew-zilka.jpg"
+          src="/src/assets/images/pexels-sevenstormphotography-728824.webp"
           alt="Helicopter Commercial Checkride"
           classes="z-10 relative aspect-video object-cover w-full"
         />
@@ -32,20 +33,27 @@ const headerData = {
           About the Blitz Program
         </h3>
         <h4 class="text-blue-800 font-semibold text-2xl tracking-wide italic">
-          Your path to becoming a pilot in the most efficient way possible
+          Your fastest path from zero to hero in aviation
         </h4>
         <p class="lg:text-lg tracking-wider font-light">
-          The Blitz Program is designed to help you achieve your aviation goals
-          quickly and affordably. Whether you’re starting from scratch or
-          looking to advance your skills, our comprehensive training program
-          will take you from zero to hero in no time.
+          The Blitz Program is an accelerated flight training course designed to
+          take you from zero experience to a fully licensed commercial pilot in
+          as little as seven months. By combining structured training, expert
+          instruction, and efficient scheduling, we make achieving your aviation
+          dreams faster and more accessible than ever.
         </p>
         <p class="lg:text-lg tracking-wider font-light">
-          Our accelerated flight training programs are tailored to your pace and
-          budget, providing expert instruction and hands-on experience to help
-          you build the skills and confidence you need to succeed. With flexible
-          payment options and a streamlined curriculum, we make achieving your
-          aviation goals efficient and affordable.
+          This program covers everything from your first flight lesson to
+          earning your Private Pilot License (PPL), Instrument Rating (IR), and
+          Commercial Pilot License (CPL). With personalized instruction and
+          hands-on experience, you'll gain the skills and confidence to fly
+          professionally—all in a streamlined, cost-effective manner.
+        </p>
+        <p class="lg:text-lg tracking-wider font-light">
+          Your progress depends on factors like flight instructor availability,
+          weather conditions, and your own commitment, but our program is
+          designed for maximum efficiency, helping you reach your goals in
+          record time.
         </p>
       </div>
 
@@ -56,17 +64,16 @@ const headerData = {
           What To Expect
         </h3>
         <p class="lg:text-lg tracking-wider font-light">
-          Our programs focus on efficiency and hands-on learning, helping you
-          build skills and confidence quickly. With personalized instruction,
-          well-maintained aircraft, and a structured curriculum, we ensure you
-          get the training you need to fly with confidence.
+          The Blitz Program is structured for efficiency, ensuring you gain
+          real-world experience while progressing at a steady pace. With access
+          to experienced instructors and well-maintained aircraft, you’ll
+          receive top-tier training in a supportive learning environment.
         </p>
         <p class="lg:text-lg tracking-wider font-light">
-          At Blitz Aviation, we make flight training smarter, not harder.
-          Located in the heart of Ogden, Utah, our school offers expert
-          instruction from seasoned pilots with years of real-world experience.
-          Whether you choose a full course or pay as you go, our flexible
-          options are designed to fit your lifestyle and budget.
+          Located in the heart of Ogden, Utah, Blitz Aviation offers an
+          immersive training experience tailored to your schedule and budget.
+          Whether you enroll in the full program or train at your own pace, our
+          flexible options allow you to customize your flight training journey.
         </p>
       </div>
 
@@ -76,12 +83,34 @@ const headerData = {
         >
           What You'll Learn
         </h3>
-        <ul class="list-disc pl-5 lg:text-lg tracking-wider font-light">
-          <li>Private Pilot License</li>
-          <li>Instrument Rating</li>
-          <li>Commercial Pilot License</li>
+        <ul class="lg:text-lg tracking-wider font-light">
+          <li class="flex gap-2">
+            <FaDotCircle className="text-main-blue-700 size-3 shrink-0 mt-2" />
+            <p>
+              <strong>Private Pilot License (PPL)</strong> – Your foundation in aviation,
+              requiring 45 hours of flight time and 29 hours of instruction. You'll
+              learn the basics of flight, airspace navigation, and safety procedures.
+            </p>
+          </li>
+          <li class="flex gap-2">
+            <FaDotCircle className="text-main-blue-700 size-3 shrink-0 mt-2" />
+            <p>
+              <strong>Instrument Rating (IR)</strong> – Focuses on flying in low-visibility
+              conditions using instruments alone. Requires 40 hours of flight time
+              and 15 hours of instruction.
+            </p>
+          </li>
+          <li class="flex gap-2">
+            <FaDotCircle className="text-main-blue-700 size-3 shrink-0 mt-2" />
+            <p>
+              <strong>Commercial Pilot License (CPL)</strong> – Prepares you for
+              a career in aviation, requiring 150 hours of flight time and 20 hours
+              of advanced instruction. You'll refine your skills and learn commercial
+              flight operations.
+            </p>
+          </li>
         </ul>
-        <a href="/discovery-flight" class="btn-primary w-fit mt-3">Start Now</a>
+        <a href="#contactUs" class="btn-primary w-fit mt-3">Start Now</a>
       </div>
     </div>
   </section>

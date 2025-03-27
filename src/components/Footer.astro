@@ -10,6 +10,7 @@ import {
   YELP_URL,
   INSTAGRAM_URL,
   SITE_TITLE,
+  GOOGLE_MAPS_URL,
 } from "../consts";
 import { Image } from "astro:assets";
 import companyLogo from "../assets/logos/blitz-aviation-logo.png";
@@ -36,13 +37,13 @@ const today = new Date();
           </a>
 
           <p class="text-sm">
-            Blitz Aviation offers premier flight training at Salt Lake City
-            International Airport (KSLC) in Utah. Specializing in private pilot
-            training, we provide expert, no-fluff instruction tailored to your
-            pace and budget. With flexible payment options and a streamlined
-            curriculum, we make achieving your aviation dreams efficient and
-            affordable. Book an intro flight over Utah’s stunning landscapes or
-            visit our Salt Lake City school today!
+            Blitz Aviation offers premier flight training at Ogden-Hinckley
+            Airport (KOGD) in Utah. Specializing in private pilot training, we
+            provide expert, no-fluff instruction tailored to your pace and
+            budget. With flexible payment options and a streamlined curriculum,
+            we make achieving your aviation goals efficient and affordable. Book
+            an intro flight over Utah’s stunning landscapes or visit our Ogden
+            training center today!
           </p>
 
           <div class="flex space-x-6">
@@ -150,7 +151,7 @@ const today = new Date();
                 />
                 <a
                   class="group-hover:text-main-blue duration-200"
-                  href="https://maps.app.goo.gl/EkxRux52SAxEkUJLA"
+                  href={GOOGLE_MAPS_URL}
                   target="_blank"
                 >
                   <p>{ADDRESS_LINE_1}</p>

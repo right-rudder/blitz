@@ -1,0 +1,98 @@
+---
+import Header from "../../components/Header.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import team from "../../data/team";
+import TeamCard from "../../components/TeamCard.astro";
+import ImageComp from "../../components/ImageComp.astro";
+
+const headerData = {
+  title: "Our Story",
+  primaryImage:
+    "/src/assets/images/pexels-iryna-liabiodkina-75708745-8578729.jpg",
+  primaryAlt: "Our Story",
+};
+---
+
+<BaseLayout>
+  <Header slot="header" data={headerData} />
+
+  <section>
+    <div
+      class="mx-auto px-5 md:px-10 lg:px-20 py-24 flex flex-col-reverse md:flex-row gap-10 lg:gap-40 items-center"
+    >
+      <div class="flex-1 flex justify-center flex-col gap-5">
+        <h3
+          class="max-w-lg text-pretty text-4xl font-bold tracking-wide text-main-black sm:text-5xl"
+        >
+          Our Story
+        </h3>
+        <h4 class="text-blue-800 font-semibold text-2xl tracking-wide italic">
+          The beginning of a new era in aviation
+        </h4>
+        <p class="lg:text-lg tracking-wider font-light">
+          Blitz Aviation was founded with a simple mission: to make flight
+          training accessible to everyone. Our team of experienced pilots and
+          instructors is committed to helping you achieve your aviation goals
+          through accelerated, affordable programs. Whether you're aiming for a
+          private pilot’s license or a professional aviation career, we provide
+          the training and support you need to succeed.
+        </p>
+        <p class="lg:text-lg tracking-wider font-light">
+          Our programs focus on efficiency and hands-on learning, helping you
+          build skills and confidence quickly. With personalized instruction,
+          well-maintained aircraft, and a structured curriculum, we ensure you
+          get the training you need to fly with confidence.
+        </p>
+        <a href="/programs/private-pilot" class="btn-primary w-fit mt-3"
+          >Start Training</a
+        >
+      </div>
+      <div class="flex-1 relative max-w-[30rem]">
+        <ImageComp
+          src="/src/assets/images/mycah-pittman-at-blitz-aviation-receiving-certification.webp"
+          alt="Mycah Pittman at Blitz Aviation receiving certification"
+          classes="z-10 relative aspect-square object-cover max-h-[30rem]"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section
+    class="bg-gradient-to-br from-main-blue-700 to-main-blue-900 text-white"
+  >
+    <div
+      class="mx-auto px-5 md:px-10 lg:px-20 py-24 flex flex-col-reverse md:flex-row gap-10 lg:gap-40"
+    >
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8570.796812000563!2d-112.00949248811187!3d41.19359464275503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87530f7f7d2ca05b%3A0x713e2fd356ac2a9!2sBlitz%20aviation!5e0!3m2!1sen!2sca!4v1743089064739!5m2!1sen!2sca"
+        class="w-full min-h-96 flex-1"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+      <div class="flex-1 flex justify-center flex-col gap-5">
+        <h3
+          class="max-w-lg text-pretty text-4xl font-bold tracking-wide text-main-black sm:text-5xl"
+        >
+          Our Location
+        </h3>
+        <p class="lg:text-lg tracking-wider font-light">
+          Blitz Aviation is conveniently located at Ogden-Hinckley Airport
+          (KOGD), providing easy access for students from Ogden, Salt Lake City,
+          Provo, Park City, and surrounding areas. Our facilities and
+          well-maintained aircraft create a professional and comfortable
+          training environment.
+        </p>
+        <p class="lg:text-lg tracking-wider font-light">
+          With stunning mountain views and a variety of training areas nearby,
+          our location offers the perfect backdrop for flight training. Whether
+          you're flying over the Great Salt Lake or practicing maneuvers in the
+          Wasatch Mountains, you'll enjoy a scenic and challenging training
+          experience.
+        </p>
+        <a href="#contactUs" class="btn-secondary w-fit mt-3">Visit Us</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

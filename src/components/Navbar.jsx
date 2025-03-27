@@ -209,7 +209,7 @@ const Navbar = ({ pathname }) => {
               </a>
 
               <div className="hidden lg:flex flex-1 justify-end">
-                <a href="/contact-us" className="btn-secondary">
+                <a href="#contactUs" className="btn-secondary">
                   Contact Us
                 </a>
               </div>

@@ -1,0 +1,22 @@
+---
+import Header from "../../components/Header.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PlaneCard from "../../components/PlaneCard.astro";
+import aircraft from "../../data/aircraft";
+
+const headerData = {
+  title: "Our Fleet",
+  primaryImage: "/src/assets/images/pexels-josephmartin-5785741.jpg",
+  primaryAlt: "Our Fleet",
+};
+---
+
+<BaseLayout>
+  <Header slot="header" data={headerData} />
+
+  <section
+    class="mx-auto px-5 md:px-10 lg:px-20 py-16 gap-10 lg:gap-28 flex flex-col max-w-7xl"
+  >
+    {aircraft.map((plane) => <PlaneCard {...plane} />)}
+  </section>
+</BaseLayout>

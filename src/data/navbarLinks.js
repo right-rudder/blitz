@@ -29,7 +29,7 @@ export const navbarLinks = [
     ],
   },
   {
-    name: "The Blitz Program",
+    name: "Zero-to-Hero",
     link: "/the-blitz-program",
   },
   {

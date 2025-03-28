@@ -22,9 +22,11 @@ import ImageComp from "./ImageComp.astro";
       >
         {data.title}
       </h1>
-      <!-- <h2 class="text-xl max-w-xl lg:text-2xl lg:max-w-3xl">
-        Your flight school at Salt Lake City, Utah
-      </h2> -->
+      {
+        data.subtitle && (
+          <h2 class="text-2xl lg:text-3xl font-semibold">{data.subtitle}</h2>
+        )
+      }
     </div>
   </div>
 </header>

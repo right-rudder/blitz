@@ -1,5 +1,5 @@
 {
-  "name": "Blitz Aviation",
+  "name": "blitz",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -25,6 +25,7 @@
     "tailwindcss": "^4.0.13"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.16",
     "prettier": "3.5.3",
     "prettier-plugin-astro": "0.14.1"
   }

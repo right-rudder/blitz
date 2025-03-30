@@ -47,6 +47,10 @@ export const navbarLinks = [
         name: "Our Fleet",
         link: "/about/our-fleet",
       },
+      {
+        name: "Blog",
+        link: "/blog",
+      },
     ],
   },
 ];

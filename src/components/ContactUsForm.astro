@@ -80,6 +80,7 @@ const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
           id="agree-terms"
           name="agree-terms"
           class="h-4 w-4 cursor-pointer rounded border-gray-300 bg-white text-gray-900 focus:ring-2 focus:ring-gray-900"
+          required
         />
         <label for="agree-terms" class="ml-2 text-sm leading-6 text-gray-200">
           I agree to <a href="#" class="underline">terms & conditions</a> provided
@@ -89,41 +90,32 @@ const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
       </div>
     </div>
     <div class="mt-10">
-      <button type="submit" class="btn-secondary">Submit</button>
+      <button id="submit-button" type="submit" class="btn-secondary"
+        >Submit</button
+      >
     </div>
   </div>
 
   <script define:vars={{ CONTACT_US_FORM_WEBHOOK_URL }}>
-    // Wait for the DOM content to be fully loaded
     document.addEventListener("DOMContentLoaded", function () {
-      // Get the contact form
       const contactForm = document.getElementById("contact_form");
 
-      // Check if the contact form element exists
       if (contactForm !== null) {
-        // Add submit event listener to the contact form
         contactForm.addEventListener("submit", function (event) {
-          // Prevent the default form submission
           event.preventDefault();
 
-          // Serialize the form data
           const formData = new FormData(contactForm);
 
-          // Check the value of the honeypot field
           const confirmEmailValue = formData.get("confirm-email");
           if (confirmEmailValue === "" || confirmEmailValue === null) {
-            // If the honeypot field is empty, it's a human
-            // Set the form action to the URL for processing the form and redirecting to thank you
             contactForm.action = CONTACT_US_FORM_WEBHOOK_URL;
           }
 
-          // Convert FormData to URLSearchParams
           const urlSearchParams = new URLSearchParams();
           for (const pair of formData.entries()) {
             urlSearchParams.append(pair[0], pair[1]);
           }
 
-          // Send an AJAX request to submit the form
           const xhr = new XMLHttpRequest();
           xhr.open("POST", contactForm.action);
           xhr.setRequestHeader(
@@ -131,17 +123,13 @@ const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
             "application/x-www-form-urlencoded",
           );
           xhr.onload = function () {
-            // Check if the request was successful (status 200)
             if (xhr.status === 200) {
-              // Redirect the user after a successful form submission
               window.location.href = "/contact-confirmation";
             } else {
-              // Handle errors if any
               console.error("Form submission failed:", xhr.statusText);
             }
           };
           xhr.onerror = function () {
-            // Handle network errors
             console.error("Network error occurred while submitting the form.");
           };
           xhr.send(urlSearchParams);
@@ -150,5 +138,18 @@ const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
         console.error("Contact form element not found.");
       }
     });
+
+    // const checkbox = document.getElementById("agree-terms");
+    // const submitButton = document.getElementById("submit-button");
+
+    // checkbox.addEventListener("change", function () {
+    //   if (checkbox.checked) {
+    //     submitButton.disabled = false;
+    //     submitButton.classList.remove("!cursor-not-allowed");
+    //   } else {
+    //     submitButton.disabled = true;
+    //     submitButton.classList.add("!cursor-not-allowed");
+    //   }
+    // });
   </script>
 </form>

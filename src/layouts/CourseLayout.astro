@@ -1,23 +1,9 @@
 ---
-import { Image } from "astro:assets";
 import { FaDotCircle } from "react-icons/fa";
 import { IoMdAirplane } from "react-icons/io";
-import type { ImageMetadata } from "astro";
+import ImageComp from "../components/ImageComp.astro";
 
 const { data } = Astro.props;
-const images = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/assets/images/*.{jpeg,jpg,png,gif,webp}",
-);
-
-const info = {
-  title: "About the program",
-  sidebarTitle: "What do you need to start?",
-  primaryButton: "Sign Up",
-  secondaryButton: "Schedule Now",
-  sidebarTitle2: "Discovery Flight",
-  sidebarText:
-    "If you are not sure about starting the program, you can schedule a discovery flight with us.",
-};
 ---
 
 <section class="my-24 mx-auto max-w-2xl lg:max-w-7xl">
@@ -26,7 +12,7 @@ const info = {
       <div
         class="bg-gradient-to-br from-main-blue-700 to-main-blue-800 p-10 flex flex-col gap-5 shadow-sm text-white"
       >
-        <h4 class="text-3xl">{info.sidebarTitle}</h4>
+        <h4 class="text-3xl">Prerequisites</h4>
         <hr />
         <ul class="flex flex-col gap-2 my-3">
           {
@@ -41,7 +27,7 @@ const info = {
         <a
           href="/contact"
           class="btn-secondary w-full"
-          >{info.primaryButton}</a
+          >Sign Up</a
         >
       </div>
 
@@ -51,22 +37,22 @@ const info = {
         <div class="bg-blue-700 w-fit rounded-full p-3">
           <IoMdAirplane className="size-10 text-white" />
         </div>
-        <h4 class="text-3xl">{info.sidebarTitle2}</h4>
+        <h4 class="text-3xl">Discovery Flight</h4>
         <hr />
         <p class="text-sm lg:text-base tracking-wider font-light">
-          {info.sidebarText}
+          If you are not sure about starting the program, you can schedule a discovery flight with us.
         </p>
         <a href="/discovery-flight" class="btn-primary w-full"
-          >{info.secondaryButton}</a
+          >Schedule Now</a
         >
       </div>
     </aside>
     <div class="flex-[2_2_0] flex flex-col gap-5">
       
-      <Image
-        src={images[data.primaryImage]()}
+      <ImageComp
+        src={data.primaryImage}
         alt={data.primaryAlt}
-        class="aspect-video object-cover w-full"
+        classes="aspect-video object-cover w-full"
       />
 
       <div class="flex flex-col gap-5 mt-5">
@@ -90,7 +76,7 @@ const info = {
 
       {data.steps && (
         <h3 class="text-3xl">
-          How to get your {data.title.toLowerCase()} certificate?
+          What steps will you be taking to complete the program?
         </h3>
         <ul class="flex flex-col gap-7">
           {
@@ -117,6 +103,5 @@ const info = {
         </ul>
       )}
     </div>
-    
   </div>
 </section>

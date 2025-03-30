@@ -1,0 +1,55 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { PHONE_NUMBER, EMAIL_ADDRESS } from "../consts";
+import Header from "../components/Header.astro";
+
+const data = {
+  siteTitle: "Thank you for contacting us | Blitz Aviation",
+  siteDescription:
+    "Thank you for contacting Blitz Aviation. We are excited to work with you soon.",
+};
+
+const headerData = {
+  title: "Thank you for contacting us",
+  primaryImage: "/src/assets/images/pexels-josephmartin-5785741.jpg",
+  primaryAlt: "Thank you for contacting us",
+};
+---
+
+<BaseLayout siteTitle={data.siteTitle} siteDescription={data.siteDescription}>
+  <Header data={headerData} />
+  <section class="py-20 flex justify-center">
+    <div
+      class="absolute top-0 w-full h-[20vh] bg-gradient-to-bl from-0% via-30% from-main-blue via-transparent"
+    >
+    </div>
+    <div class="text-center lg:w-3/5 md:w-4/5">
+      <h2 class="font-bold text-4xl py-10">Thank you for contacting us</h2>
+
+      <div class="flex flex-row justify-center">
+        <div class="bg-green-200 rounded-full py-3 px-4 mb-10">
+          <div class="text-green-700 text-5xl">✓</div>
+        </div>
+      </div>
+
+      <p class="px-5">
+        Thank you for contacting Blitz Aviation. We are excited to work with you
+        soon. We will review your message and respond within 1-5 business days.
+        You can also call us at <a
+          href=`tel:${PHONE_NUMBER}`
+          class="hover:underline hover:text-main-color">{PHONE_NUMBER}</a
+        >
+        or email us at <a
+          href=`mailto:${EMAIL_ADDRESS}`
+          class="hover:underline hover:text-main-color">{EMAIL_ADDRESS}</a
+        >
+      </p>
+
+      <div class="pt-10 flex flex-row justify-center">
+        <a href="/">
+          <div class="btn-primary mb-10 w-52">HOME</div>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

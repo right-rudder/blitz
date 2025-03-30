@@ -21,7 +21,6 @@ const privatePilot = {
     prerequisites: [
       "Be able to read, speak, write, and understand the English language.",
       "Be at least 17 years old.",
-      "Obtain a valid FAA 3rd Class Medical Certificate or a higher class",
     ],
     duration: "3 months, 2-3 times/week",
     steps: [
@@ -42,23 +41,6 @@ const privatePilot = {
         icon: FaRegPaperPlane,
         description:
           "The flight test, also known as the check ride, is the final step in the process of obtaining your pilot's license. During the check ride, you will demonstrate your flying skills to an FAA examiner. If you pass the check ride, you will be issued your pilot's license.",
-      },
-    ],
-    faqs: [
-      {
-        question: "¿Cuál es la duración de la carrera?",
-        answer:
-          "<p>4 meses de curso teórico y, al finalizar el curso teórico:</p><ul className='list-disc ml-5'><li>41 horas de vuelo</li><li>10 horas de simulador</li></ul>",
-      },
-      {
-        question: "¿Qué incluye la carrera?",
-        answer:
-          "<ul className='list-disc ml-5'><li>Teoría</li><li>41 horas de vuelo</li><li>10 horas de simulador</li></ul>",
-      },
-      {
-        question: "¿Qué credencial obtengo al finalizar la carrera?",
-        answer:
-          "<ul className='list-disc ml-5'><li>Licencia de piloto comercial de ala fija</li></ul>",
       },
     ],
   },

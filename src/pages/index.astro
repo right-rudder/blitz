@@ -76,8 +76,10 @@ import CourseCard from "../components/CourseCard.astro";
           becoming a pilot should be an exciting journey, not a financial
           burden.
         </p>
-        <a href="/discovery-flight" class="btn-primary w-fit mt-3"
-          >Book a Discovery Flight</a
+        <a
+          href="/discovery-flight"
+          class="btn-primary w-fit mt-3"
+          target="_blank">Book a Discovery Flight</a
         >
       </div>
       <div class="flex-1 relative max-w-[30rem]">
@@ -116,16 +118,7 @@ import CourseCard from "../components/CourseCard.astro";
   <section>
     <div class="mx-auto px-5 md:px-10 lg:px-20 py-24">
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-20">
-        {
-          services.map((service) => (
-            <ServicesCard
-              imageSrc={service.imageSrc}
-              headline={service.headline}
-              title={service.title}
-              description={service.description}
-            />
-          ))
-        }
+        {services.map((service) => <ServicesCard {...service} />)}
       </div>
     </div>
   </section>
@@ -147,13 +140,15 @@ import CourseCard from "../components/CourseCard.astro";
         our comprehensive flight training programs today.
       </p>
       <div class="flex gap-5">
-        <a href="#" class="btn-secondary w-fit">Book</a>
-        <a href="#" class="btn-secondary w-fit">Explore</a>
+        <a href="discovery-flight" class="btn-secondary w-fit" target="_blank"
+          >Request</a
+        >
+        <!-- <a href="#" class="btn-secondary w-fit">Explore</a> -->
       </div>
     </div>
   </section>
 
-  <section>
+  <section id="trainingPrograms">
     <div class="mx-auto px-5 md:px-10 lg:px-20 py-24">
       <h3 class="text-6xl font-bold text-center italic">
         Blitz Training Programs

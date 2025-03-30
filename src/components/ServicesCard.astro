@@ -1,9 +1,9 @@
 ---
 import ImageComp from "./ImageComp.astro";
-const { imageSrc, headline, title, description } = Astro.props;
+const { imageSrc, headline, title, description, url } = Astro.props;
 ---
 
-<a href="#" class="flex flex-col group h-full justify-between">
+<a href={url} class="flex flex-col group h-full justify-between">
   <div>
     <div class="overflow-hidden">
       <ImageComp

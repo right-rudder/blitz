@@ -8,16 +8,12 @@ type Props = CollectionEntry<"blog">["data"];
 const { title, description, pubDate, heroImage } = Astro.props;
 ---
 
-<article class="prose lg:prose-xl max-w-3xl mx-auto py-20 px-5">
-  <div class="max-h-[30rem] flex mb-10">
-    <ImageComp
-      src={heroImage}
-      alt={title}
-      classes="object-cover w-full rounded-2xl"
-    />
+<article class="prose lg:prose-xl max-w-3xl mx-auto py-10 lg:py-20 px-5">
+  <div class="max-h-[30rem] flex">
+    <ImageComp src={heroImage} alt={title} classes="object-cover w-full" />
   </div>
   <div class="title">
-    <div class="date">
+    <div class="date text-blue-800 font-semibold text-2xl tracking-wide italic">
       <FormattedDate date={pubDate} />
     </div>
     <h1>{title}</h1>

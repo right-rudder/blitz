@@ -323,7 +323,7 @@ const Navbar = ({ pathname }) => {
                 <div className="font-semibold p-5 w-full justify-between flex cursor-pointer text-white text-lg duration-300  border-main-blue-800 whitespace-nowrap">
                   <p>{item.name}</p>
                   <div
-                    className={`p-1 pointer-events-none duration-300 rounded-full ${
+                    className={`p-1 pointer-events-none duration-300 ${
                       hoveredIndex === index
                         ? "bg-white -rotate-90"
                         : "bg-main-blue-500 rotate-90"

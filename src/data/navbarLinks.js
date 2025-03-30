@@ -1,5 +1,9 @@
 export const navbarLinks = [
   {
+    name: "Home",
+    link: "/",
+  },
+  {
     name: "Flight Training",
     submenu: [
       {
@@ -44,7 +48,7 @@ export const navbarLinks = [
         link: "/about/our-fleet",
       },
       {
-        name: "Blog",
+        name: "Our Blog",
         link: "/blog",
       },
     ],

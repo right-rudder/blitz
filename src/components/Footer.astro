@@ -111,16 +111,18 @@ const today = new Date();
             <h3 class="font-bold text-lg mb-3">About Us</h3>
             <ul class="flex flex-col gap-4">
               {
-                navbarLinks[2].submenu.map((link) => (
-                  <li>
-                    <a
-                      href={link.link}
-                      class="hover:text-main-blue duration-200"
-                    >
-                      {link.name}
-                    </a>
-                  </li>
-                ))
+                navbarLinks
+                  .find((link) => link.name === "More Info")
+                  .submenu.map((link) => (
+                    <li>
+                      <a
+                        href={link.link}
+                        class="hover:text-main-blue duration-200"
+                      >
+                        {link.name}
+                      </a>
+                    </li>
+                  ))
               }
             </ul>
           </div>

@@ -17,15 +17,6 @@ const team = [
     instagram: "https://www.instagram.com/up_the_andy/",
     x: "https://x.com",
   },
-  {
-    name: "Cambrie Foster",
-    image: "/src/assets/images/cambrie-foster.webp",
-    certificatesAndRatings: ["CFI", "CFII", "AGI"],
-    bio: "Cambrie is excited to share her passion for aviation with you. She is a great instructor for students looking to earn their Private Pilot or Instrument Rating.",
-    facebook: "https://www.facebook.com",
-    instagram: "https://www.instagram.com/flying.foster/",
-    x: "https://x.com",
-  },
 ];
 
 export default team;

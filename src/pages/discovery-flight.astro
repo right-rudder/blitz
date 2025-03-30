@@ -1,0 +1,242 @@
+---
+import ImageComp from "../components/ImageComp.astro";
+import DiscoveryFlightLayout from "../layouts/DiscoveryFlightLayout.astro";
+const DISCOVERY_FORM_WEBHOOK_URL = import.meta.env.DISCOVERY_FORM_WEBHOOK_URL;
+---
+
+<DiscoveryFlightLayout
+  siteTitle="Discovery Flight Form | Blitz Aviation"
+  siteDescription="Schedule a discovery flight at Blitz Aviation. Take control of an aircraft and enjoy the joy of flight. See the St. Louis Gateway Arch from thousands of feet in the air. See if becoming a pilot is right for you"
+>
+  <section class="flex">
+    <div
+      class="flex flex-col gap-3 max-w-screen-sm px-5 py-10 lg:py-28 lg:px-28 lg:min-w-[640px] mx-auto lg:mx-0"
+    >
+      <a href="/">
+        <ImageComp
+          alt="Blitz Aviation Logo"
+          src="/src/assets/logos/blitz-logo.webp"
+          classes="w-28 mb-5"
+        />
+      </a>
+      <h1
+        class="text-sm/5 font-semibold text-gray-500 uppercase tracking-widest"
+      >
+        Request a Discovery Flight
+      </h1>
+      <h2
+        class="max-w-lg text-pretty text-2xl font-semibold tracking-tight text-main-black sm:text-3xl"
+      >
+        Depart from Ogden-Hinckley Airport with Blitz Aviation
+      </h2>
+      <p class="italic text-sm text-gray-700">
+        IMPORTANT: Please ensure that you have talked with an Blitz Aviation
+        team member to confirm your flight. This page is just to REQUEST a
+        discovery flight. You will not be in the flight schedule until you speak
+        with an Blitz Aviation team member.
+      </p>
+      <form
+        id="form"
+        class="flex flex-col max-w-4xl mx-auto lg:my-0 bg-white shadow-sm"
+      >
+        <div class="flex flex-col gap-2">
+          <label for="first-name" class="text-sm font-medium mt-2 text-gray-500"
+            >First Name</label
+          >
+          <input
+            type="text"
+            name="first-name"
+            class="px-2 py-2 outline-1 w-full border-gray-400 border outline-gray-500"
+            required
+          />
+          <label for="last-name" class="text-sm font-medium mt-2 text-gray-500"
+            >Last Name</label
+          >
+          <input
+            type="text"
+            name="last-name"
+            class="px-2 py-2 outline-1 w-full border-gray-400 border outline-gray-500"
+            required
+          />
+          <label for="email" class="text-sm font-medium mt-2 text-gray-500"
+            >Email</label
+          >
+          <input
+            id="email"
+            type="email"
+            name="email"
+            class="px-2 py-2 outline-1 w-full border-gray-400 border outline-gray-500"
+            required
+          />
+          <input
+            type="email"
+            name="confirm-email"
+            placeholder="Confirm email"
+            class="hidden"
+          />
+          <label for="phone" class="text-sm font-medium mt-2 text-gray-500"
+            >Phone</label
+          >
+          <input
+            type="tel"
+            name="phone"
+            class="px-2 py-2 outline-1 w-full border-gray-400 border outline-gray-500"
+            required
+          />
+          <label
+            for="preferred-date"
+            class="text-sm font-medium mt-2 text-gray-500"
+            >Preferred Discovery Flight Date</label
+          >
+          <input
+            id="date"
+            type="date"
+            name="preferred-date"
+            class="px-2 py-2 outline-1 w-full border-gray-400 border outline-gray-500"
+            required
+          />
+          <label
+            for="preferred-time"
+            class="text-sm font-medium mt-2 text-gray-500"
+            >Preferred Discovery Flight Time</label
+          >
+          <select
+            name="preferred-time"
+            class="px-2 py-2 outline-1 w-full border-gray-400 border outline-gray-500 bg-white"
+            required
+          >
+            <option value="7AM - 10AM">7AM - 10AM</option>
+            <option value="10AM - 1PM">10AM - 1PM</option>
+            <option value="1PM - 4PM">1PM - 4PM</option>
+            <option value="4PM - 7PM">4PM - 7PM</option>
+          </select>
+          <label
+            for="additional-info"
+            class="text-sm font-medium mt-2 text-gray-500"
+          >
+            Any additional information
+          </label>
+          <textarea
+            id="additional-info"
+            name="additional-info"
+            class="px-2 py-2 outline-1 border-gray-400 border outline-gray-500 min-h-32"
+          ></textarea>
+        </div>
+
+        <div class="flex gap-3">
+          <input
+            type="checkbox"
+            name="agree-data-collection"
+            id="agree-data-collection"
+            required
+          />
+
+          <label
+            for="agree-data-collection"
+            class="text-gray-500 text-sm lg:text-base my-5"
+          >
+            I agree to the terms & conditions provided by the company. By
+            providing my phone number, I agree to receive text messages from
+            Blitz Aviation.
+          </label>
+        </div>
+        <button
+          id="submit-button"
+          type="submit"
+          class="btn-primary cursor-not-allowed bg-gray-400 hover:bg-gray-400"
+          >Request</button
+        >
+      </form>
+    </div>
+    <div
+      class="w-full hidden lg:block fixed right-0 bottom-0 top-0 left-[640px]"
+    >
+      <ImageComp
+        alt="View from discovery flight in Ogden, Utah"
+        src="/src/assets/images/pexels-alexmoliski-22591176.webp"
+        classes="w-full h-full object-cover"
+        quality={100}
+      />
+    </div>
+  </section>
+</DiscoveryFlightLayout>
+
+<script define:vars={{ DISCOVERY_FORM_WEBHOOK_URL }}>
+  const dateInput = document.getElementById("date");
+
+  // Get today's date
+  const today = new Date();
+  today.setHours(0, 0, 0, 0); // Set to midnight to avoid timezone issues
+
+  // Calculate the minimum date (5 days from today)
+  const minDate = new Date(today);
+  minDate.setDate(today.getDate() + 5);
+
+  // Format dates to YYYY-MM-DD
+  const formatDate = (date) => {
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const day = String(date.getDate()).padStart(2, "0");
+    return `${year}-${month}-${day}`;
+  };
+
+  // Set min and max attributes for the input
+  dateInput.min = formatDate(minDate);
+
+  // Wait for the DOM content to be fully loaded
+  document.addEventListener("DOMContentLoaded", function () {
+    // Get the contactUs form element
+    const form = document.getElementById("form");
+
+    // Check if the contactUs form element exists
+    if (form !== null) {
+      // Add submit event listener to the contactUs form
+      form.addEventListener("submit", function (event) {
+        // Prevent the default form submission
+        event.preventDefault();
+
+        // Serialize the form data
+        const formData = new FormData(form);
+
+        // Check the value of the honeypot field
+        const confirmEmailValue = formData.get("confirm-email");
+        if (confirmEmailValue === "" || confirmEmailValue === null) {
+          // If the honeypot field is empty, it's a human
+          // Set the form action to the URL for processing the form and redirecting to thank you
+          form.action = DISCOVERY_FORM_WEBHOOK_URL;
+        }
+
+        // Convert FormData to URLSearchParams
+        const urlSearchParams = new URLSearchParams();
+        for (const pair of formData.entries()) {
+          urlSearchParams.append(pair[0], pair[1]);
+        }
+
+        // Send an AJAX request to submit the form
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", form.action);
+        xhr.setRequestHeader(
+          "Content-Type",
+          "application/x-www-form-urlencoded",
+        );
+        xhr.onload = function () {
+          // Check if the request was successful (status 200)
+          if (xhr.status === 200) {
+            // Redirect the user after a successful form submission
+            window.location.href = "/contact-confirmation";
+          } else {
+            // Handle errors if any
+            console.error("Form submission failed:", xhr.statusText);
+          }
+        };
+        xhr.onerror = function () {
+          // Handle network errors
+          console.error("Network error occurred while submitting the form.");
+        };
+        xhr.send(urlSearchParams);
+      });
+    } else {
+      console.error("Form element not found.");
+    }
+  });
+</script>

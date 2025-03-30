@@ -7,29 +7,29 @@ const { title, description, heroImage, pubDate } = data;
 const datePublished = new Date(pubDate);
 ---
 
-<div
-  class="flex gap-10 flex-col group border-gray-200 border rounded-2xl shadow-lg p-2 w-full"
->
+<a href={`/blog/${id}`} class="flex flex-col group gap-3 w-full">
   <div class="h-64 overflow-hidden shrink-0 relative">
     <ImageComp
       src={heroImage}
       alt={title}
-      classes="w-full h-full object-cover duration-700 rounded-2xl"
+      classes="w-full h-full object-cover group-hover:scale-125 duration-500"
     />
   </div>
 
-  <div class="flex flex-col bg-white px-6 gap-3 justify-between h-full">
+  <div
+    class="flex flex-col bg-main-blue-100 p-5 gap-3 justify-between h-full min-h-64"
+  >
     <div class="flex flex-col gap-3 h-full justify-between">
-      <div class="flex flex-col gap-3">
-        <p class="text-sm text-main-black">
+      <div class="flex flex-col">
+        <p class="text-blue-800 tracking-wide italic">
           <FormattedDate date={datePublished} />
         </p>
-        <h3 class="text-xl font-medium text-main-blue line-clamp-3">
+        <h3 class="text-2xl font-medium tracking-wide sm:text-4xl">
           {title}
         </h3>
         <p class="text-gray-600 line-clamp-4">{description}</p>
       </div>
-      <a href={`/blog/${id}`} class="btn-secondary my-5">Read More</a>
+      <button class="btn-primary group-hover:brightness-75">Read More</button>
     </div>
   </div>
-</div>
+</a>

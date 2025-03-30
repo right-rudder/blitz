@@ -98,7 +98,7 @@ const today = new Date();
                   <li>
                     <a
                       href={program.data.url}
-                      class="hover:text-main-blue duration-200"
+                      class="hover:brightness-75 duration-200"
                     >
                       {program.data.title}
                     </a>
@@ -117,7 +117,7 @@ const today = new Date();
                     <li>
                       <a
                         href={link.link}
-                        class="hover:text-main-blue duration-200"
+                        class="hover:brightness-75 duration-200"
                       >
                         {link.name}
                       </a>
@@ -131,28 +131,28 @@ const today = new Date();
             <ul class="flex flex-col gap-4">
               <li class="flex gap-2 group items-center">
                 <MdEmail
-                  className="size-4 group-hover:text-main-blue duration-200"
+                  className="size-4 group-hover:brightness-75 duration-200"
                 />
                 <a
-                  class="group-hover:text-main-blue duration-200"
+                  class="group-hover:brightness-75 duration-200"
                   href=`mailto:${EMAIL_ADDRESS}`>{EMAIL_ADDRESS}</a
                 >
               </li>
               <li class="flex gap-2 group items-center">
                 <FaPhone
-                  className="size-4 group-hover:text-main-blue duration-200"
+                  className="size-4 group-hover:brightness-75 duration-200"
                 />
                 <a
-                  class="group-hover:text-main-blue duration-200"
+                  class="group-hover:brightness-75 duration-200"
                   href=`tel:${PHONE_NUMBER}`>{PHONE_NUMBER}</a
                 >
               </li>
               <li class="flex gap-2 group max-w-sm">
                 <IoLocationSharp
-                  className="size-4 group-hover:text-main-blue duration-200 mt-1 flex-shrink-0"
+                  className="size-4 group-hover:brightness-75 duration-200 mt-1 flex-shrink-0"
                 />
                 <a
-                  class="group-hover:text-main-blue duration-200"
+                  class="group-hover:brightness-75 duration-200"
                   href={GOOGLE_MAPS_URL}
                   target="_blank"
                 >
@@ -172,15 +172,16 @@ const today = new Date();
             today.getFullYear()
           }. All rights reserved.
           <a
-            class="hover:underline duration-200 hover:text-main-blue"
-            href="/privacy-policy">Privacy Policy & Terms of Service</a
+            class="hover:underline duration-200 hover:brightness-75"
+            href="/privacy-policy-and-terms-of-service"
+            >Privacy Policy & Terms of Service</a
           >
         </p>
         <p class="text-sm">
           Powered by <a
             href="https://rightruddermarketing.com/"
             target="_blank"
-            class="font-semibold hover:underline text-main-blue duration-200"
+            class="font-semibold hover:underline duration-200 hover:brightness-75"
             >More Right Rudder</a
           >
         </p>

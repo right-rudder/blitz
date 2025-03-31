@@ -30,7 +30,7 @@ const DISCOVERY_FLIGHT_FORM_WEBHOOK_URL = import.meta.env
       >
         Depart from Ogden-Hinckley Airport with Blitz Aviation
       </h2>
-      <p class="italic text-sm text-gray-700">
+      <p class="italic text-sm text-blue-800 tracking-wide">
         IMPORTANT: Please ensure that you have talked with an Blitz Aviation
         team member to confirm your flight. This page is just to REQUEST a
         discovery flight. You will not be in the flight schedule until you speak
@@ -41,7 +41,7 @@ const DISCOVERY_FLIGHT_FORM_WEBHOOK_URL = import.meta.env
         class="flex flex-col max-w-4xl mx-auto lg:my-0 bg-white shadow-sm"
       >
         <div class="flex flex-col gap-2">
-          <label for="first-name" class="text-sm font-medium mt-2 text-gray-500"
+          <label for="first-name" class="font-medium mt-2 text-gray-500"
             >First Name</label
           >
           <input
@@ -50,7 +50,7 @@ const DISCOVERY_FLIGHT_FORM_WEBHOOK_URL = import.meta.env
             class="px-2 py-2 outline-1 w-full border-gray-400 border outline-gray-500"
             required
           />
-          <label for="last-name" class="text-sm font-medium mt-2 text-gray-500"
+          <label for="last-name" class="font-medium mt-2 text-gray-500"
             >Last Name</label
           >
           <input
@@ -59,8 +59,7 @@ const DISCOVERY_FLIGHT_FORM_WEBHOOK_URL = import.meta.env
             class="px-2 py-2 outline-1 w-full border-gray-400 border outline-gray-500"
             required
           />
-          <label for="email" class="text-sm font-medium mt-2 text-gray-500"
-            >Email</label
+          <label for="email" class="font-medium mt-2 text-gray-500">Email</label
           >
           <input
             id="email"
@@ -75,8 +74,7 @@ const DISCOVERY_FLIGHT_FORM_WEBHOOK_URL = import.meta.env
             placeholder="Confirm email"
             class="hidden"
           />
-          <label for="phone" class="text-sm font-medium mt-2 text-gray-500"
-            >Phone</label
+          <label for="phone" class="font-medium mt-2 text-gray-500">Phone</label
           >
           <input
             type="tel"
@@ -84,9 +82,7 @@ const DISCOVERY_FLIGHT_FORM_WEBHOOK_URL = import.meta.env
             class="px-2 py-2 outline-1 w-full border-gray-400 border outline-gray-500"
             required
           />
-          <label
-            for="preferred-date"
-            class="text-sm font-medium mt-2 text-gray-500"
+          <label for="preferred-date" class="font-medium mt-2 text-gray-500"
             >Preferred Discovery Flight Date</label
           >
           <input
@@ -96,9 +92,7 @@ const DISCOVERY_FLIGHT_FORM_WEBHOOK_URL = import.meta.env
             class="px-2 py-2 outline-1 w-full border-gray-400 border outline-gray-500"
             required
           />
-          <label
-            for="preferred-time"
-            class="text-sm font-medium mt-2 text-gray-500"
+          <label for="preferred-time" class="font-medium mt-2 text-gray-500"
             >Preferred Discovery Flight Time</label
           >
           <select
@@ -111,10 +105,7 @@ const DISCOVERY_FLIGHT_FORM_WEBHOOK_URL = import.meta.env
             <option value="1PM - 4PM">1PM - 4PM</option>
             <option value="4PM - 7PM">4PM - 7PM</option>
           </select>
-          <label
-            for="additional-info"
-            class="text-sm font-medium mt-2 text-gray-500"
-          >
+          <label for="additional-info" class="font-medium mt-2 text-gray-500">
             Any additional information
           </label>
           <textarea
@@ -132,13 +123,10 @@ const DISCOVERY_FLIGHT_FORM_WEBHOOK_URL = import.meta.env
             required
           />
 
-          <label
-            for="agree-data-collection"
-            class="text-gray-500 text-sm lg:text-base my-5"
-          >
+          <label for="agree-data-collection" class="text-gray-500 text-sm my-5">
             I agree to the terms & conditions provided by the company. By
-            providing my phone number, I agree to receive text messages from
-            Blitz Aviation.
+            providing my email and phone number, I agree to receive email and
+            text messages from Blitz Aviation.
           </label>
         </div>
         <button id="submit-button" type="submit" class="btn-primary"

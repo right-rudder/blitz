@@ -28,19 +28,19 @@ const cfii = {
         title: "Complete Ground School and Flight Training",
         icon: FaFileMedical,
         description:
-          "Our multi engine training program begins with a comprehensive ground school that covers the principles of multi engine flight, systems, and procedures. You'll learn about the unique characteristics of multi engine aircraft and the critical considerations for safe operation. With our expert instructors, you'll then take to the skies in our Piper Seminole, where you'll gain hands-on experience with twin engines and advanced systems. Through a structured blend of flight training, you'll master multi engine operations and develop the skills needed to confidently pilot multi engine aircraft.",
+          "The CFII program begins with a structured ground school that reinforces the principles of instrument flight, focusing on teaching techniques and best practices for instrument instruction. You'll review IFR regulations, procedures, and navigation while learning how to effectively teach these concepts to future instrument students. Our experienced instructors will guide you through advanced instructional techniques, ensuring that you're prepared to deliver clear and concise explanations in both the classroom and cockpit. During the flight portion, you'll apply these teaching principles while flying simulated instrument scenarios, refining your ability to demonstrate and explain IFR maneuvers from the right seat.",
       },
       {
-        title: "Accumulate Flight Time",
+        title: "Accumulate Flight Time and Teaching Practice",
         icon: FaRegEdit,
         description:
-          "As you progress through the program, you'll accumulate the flight time required to demonstrate your proficiency in multi engine operations. With a focus on precision and safety, our instructors will guide you through a series of flight maneuvers and scenarios that will enhance your skills and build your confidence. From engine-out procedures to complex flight profiles, you'll develop the expertise needed to handle the challenges of multi engine flight.",
+          "As you advance in the program, you'll gain experience teaching instrument procedures while flying under simulated IFR conditions. You'll practice guiding students through instrument approaches, holds, and enroute navigation. Our instructors will mentor you through scenario-based training sessions, where you'll refine your ability to manage diverse student learning styles and build confidence in providing effective IFR instruction. This stage also emphasizes honing your ability to identify and correct student errors during complex instrument operations.",
       },
       {
         title: "Pass Written and Practical Exams",
         icon: FaRegPaperPlane,
         description:
-          "To earn your multi engine rating, you'll need to pass both a written exam and a practical flight test. Our instructors will ensure that you are well prepared for these assessments, guiding you through the necessary knowledge and skills to succeed. With a focus on excellence and professionalism, we'll help you achieve your goal of becoming a multi engine rated pilot.",
+          "To obtain your CFII certificate, you'll need to pass the FAA’s CFII knowledge test and the practical flight test (checkride). The written exam evaluates your knowledge of instrument procedures and instructional techniques, while the practical exam assesses your ability to teach instrument flight skills in real-world scenarios. Our instructors will ensure you are fully prepared, providing personalized guidance and mock oral exams to build your confidence. With focused preparation and hands-on training, you'll be ready to excel in your checkride and earn your CFII certification.",
       },
     ],
   },

@@ -1,7 +1,8 @@
 ---
 import ImageComp from "../components/ImageComp.astro";
 import DiscoveryFlightLayout from "../layouts/DiscoveryFlightLayout.astro";
-const DISCOVERY_FORM_WEBHOOK_URL = import.meta.env.DISCOVERY_FORM_WEBHOOK_URL;
+const DISCOVERY_FLIGHT_FORM_WEBHOOK_URL = import.meta.env
+  .DISCOVERY_FLIGHT_FORM_WEBHOOK_URL;
 ---
 
 <DiscoveryFlightLayout
@@ -140,10 +141,7 @@ const DISCOVERY_FORM_WEBHOOK_URL = import.meta.env.DISCOVERY_FORM_WEBHOOK_URL;
             Blitz Aviation.
           </label>
         </div>
-        <button
-          id="submit-button"
-          type="submit"
-          class="btn-primary cursor-not-allowed bg-gray-400 hover:bg-gray-400"
+        <button id="submit-button" type="submit" class="btn-primary"
           >Request</button
         >
       </form>
@@ -161,7 +159,7 @@ const DISCOVERY_FORM_WEBHOOK_URL = import.meta.env.DISCOVERY_FORM_WEBHOOK_URL;
   </section>
 </DiscoveryFlightLayout>
 
-<script define:vars={{ DISCOVERY_FORM_WEBHOOK_URL }}>
+<script define:vars={{ DISCOVERY_FLIGHT_FORM_WEBHOOK_URL }}>
   const dateInput = document.getElementById("date");
 
   // Get today's date
@@ -203,7 +201,7 @@ const DISCOVERY_FORM_WEBHOOK_URL = import.meta.env.DISCOVERY_FORM_WEBHOOK_URL;
         if (confirmEmailValue === "" || confirmEmailValue === null) {
           // If the honeypot field is empty, it's a human
           // Set the form action to the URL for processing the form and redirecting to thank you
-          form.action = DISCOVERY_FORM_WEBHOOK_URL;
+          form.action = DISCOVERY_FLIGHT_FORM_WEBHOOK_URL;
         }
 
         // Convert FormData to URLSearchParams

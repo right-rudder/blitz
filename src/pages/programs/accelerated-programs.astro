@@ -1,0 +1,42 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import acceleratedPrograms from "../../data/acceleratedPrograms";
+import AcceleratedProgramsCard from "../../components/AcceleratedProgramsCard.astro";
+
+const headerData = {
+  title: "Accelerated Flight Training Programs",
+  primaryImage: "/src/assets/images/pexels-josephmartin-5785741.jpg",
+  primaryAlt: "Accelerated Flight Training Programs",
+};
+---
+
+<BaseLayout
+  siteTitle="Accelerated Flight Training Programs | Blitz Aviation"
+  siteDescription="Accelerated flight training programs at Blitz Aviation are designed to help you become a pilot in record time. Our experienced instructors and state-of-the-art facilities ensure you receive the best training possible. Whether you're looking to become a private pilot or a commercial pilot, our programs are tailored to meet your needs."
+>
+  <Header slot="header" data={headerData} />
+
+  <section id="acceleratedPrograms">
+    <div class="mx-auto px-5 md:px-10 lg:px-20 py-24">
+      <h3 class="text-6xl font-bold text-center italic">
+        Blitz Accelerated Programs
+      </h3>
+      <div class="flex flex-col gap-20 md:gap-[10rem] mt-20">
+        {
+          acceleratedPrograms.map((program) => (
+            <AcceleratedProgramsCard
+              imageSrc={program.data.primaryImage}
+              headline={program.data.title}
+              title={program.data.title}
+              description={program.data.intro}
+              url={program.data.url}
+              details={program.data.details}
+              prerequisites={program.data.prerequisites}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>

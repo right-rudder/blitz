@@ -21,8 +21,8 @@ const services = [
     headline: "Advance",
     title: "Advanced Flight Training",
     description:
-      "For pilots looking to advance their skills, we offer a range of advanced flight training programs. Whether you're pursuing your instrument rating, commercial pilot certificate, or multi-engine rating, our experienced instructors will provide you with the knowledge and skills you need to succeed. With our aircraft and comprehensive training curriculum, you'll be well-prepared to take your flying to the next level.",
-    url: "#",
+      "For pilots looking to advance their skills, we offer a range of advanced flight training programs. Whether you're pursuing your instrument rating, commercial pilot certificate, or flight instructor certificate, our experienced instructors will provide you with the knowledge and skills you need to succeed. With our aircraft and comprehensive training curriculum, you'll be well-prepared to take your flying to the next level.",
+    url: "/programs/accelerated-programs",
   },
   {
     imageSrc: "/src/assets/images/pexels-kokorevas-5313876.jpg",

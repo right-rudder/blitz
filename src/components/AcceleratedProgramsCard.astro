@@ -1,0 +1,81 @@
+---
+import { FaDotCircle } from "react-icons/fa";
+import ImageComp from "./ImageComp.astro";
+import { CgDetailsLess } from "react-icons/cg";
+const { imageSrc, headline, title, description, url, prerequisites, details } =
+  Astro.props;
+---
+
+<div
+  class="flex flex-col md:flex-row group justify-between gap-10 md:gap-[10vw] items-center"
+>
+  <div class="flex-1 relative">
+    <ImageComp
+      src={imageSrc}
+      alt="title"
+      classes="object-cover aspect-square"
+    />
+    <div
+      class="absolute inset-0 bg-black/30 flex justify-between p-5 lg:p-10 text-right flex-col"
+    >
+      <h6
+        class="text-white text-5xl md:text-2xl lg:text-5xl font-semibold max-w-[19rem] ml-auto"
+      >
+        {title}
+      </h6>
+      <hr class="bg-white text-white h-[2px]" />
+    </div>
+  </div>
+
+  <div class="flex-1">
+    <p class="sm:text-lg lg:text-xl xl:text-2xl tracking-wide leading-relaxed">
+      {description}
+    </p>
+
+    <div class="grid lg:grid-cols-2 gap-5 lg:gap-10 mt-5">
+      <div class="flex flex-col">
+        <h4
+          class="text-blue-800 font-semibold text-xl lg:text-2xl tracking-wide italic"
+        >
+          Details
+        </h4>
+        <ul class="flex flex-col gap-2 my-3">
+          {
+            details.map((detail) => (
+              <li class="flex gap-2">
+                <FaDotCircle className="text-main-blue-800 size-3 shrink-0 mt-[6px]" />
+                <div
+                  class="font-light font-sm lg:font-base"
+                  set:html={detail}
+                />
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <div class="flex flex-col">
+        <h4
+          class="text-blue-800 font-semibold text-xl lg:text-2xl tracking-wide italic"
+        >
+          Prerequisites
+        </h4>
+        <ul class="flex flex-col gap-2 my-3">
+          {
+            prerequisites.map((prerequisite) => (
+              <li class="flex gap-2">
+                <FaDotCircle className="text-main-blue-800 size-3 shrink-0 mt-[6px]" />
+                <div
+                  class="font-light font-sm lg:font-base"
+                  set:html={prerequisite}
+                />
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+    <a href="/enrollment-form" class="btn-primary w-fit mt-5"
+      >Enroll to {title}</a
+    >
+  </div>
+</div>

@@ -2,7 +2,15 @@
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
 
-const { src, alt, classes = "", quality = 70 } = Astro.props;
+const {
+  src,
+  alt,
+  classes = "",
+  quality = 70,
+  loading = "lazy",
+  widths: userWidths,
+  sizes: userSizes,
+} = Astro.props;
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/**/*.{jpeg,jpg,png,gif,webp}",
@@ -12,6 +20,22 @@ if (!images[src])
   throw new Error(
     `"${src}" does not exist in glob: "src/assets/**/*.{jpeg,jpg,png,gif,webp}"`,
   );
+
+const image = await images[src]();
+const { width } = image.default;
+
+const widths = userWidths ?? [360, 540, 720, 1080, width];
+const sizes =
+  userSizes ??
+  `(max-width: 480px) 360px, (max-width: 720px) 540px, (max-width: 1200px) 720px, (max-width: 1600px) 1080px, ${width}px`;
 ---
 
-<Image src={images[src]()} alt={alt} class={classes} quality={quality} />
+<Image
+  src={image.default}
+  alt={alt}
+  class={classes}
+  quality={quality}
+  widths={widths}
+  sizes={sizes}
+  loading={loading}
+/>

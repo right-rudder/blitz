@@ -1,7 +1,4 @@
 ---
-import { Image } from "astro:assets";
-import HeroImage1 from "../assets/images/cfi-cambrie-foster.jpg";
-import HeroImage2 from "../assets/images/cfi-andrew-zilka.jpg";
 const { data } = Astro.props;
 import ImageComp from "./ImageComp.astro";
 ---
@@ -11,6 +8,7 @@ import ImageComp from "./ImageComp.astro";
     src={data.primaryImage}
     alt={data.primaryAlt}
     classes="object-cover w-full"
+    loading="eager"
   />
 
   <div

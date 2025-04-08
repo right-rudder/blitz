@@ -1,24 +1,20 @@
 ---
-import { Image } from "astro:assets";
-import HeroImage1 from "../assets/images/cfi-cambrie-foster.jpg";
-import HeroImage2 from "../assets/images/cfi-andrew-zilka.jpg";
+import ImageComp from "./ImageComp.astro";
 ---
 
 <header class="relative isolate overflow-hidden h-screen flex">
   <div class="flex-1">
-    <Image
-      src={HeroImage1}
+    <ImageComp
+      src="/src/assets/images/cfi-cambrie-foster.jpg"
       alt="Blitz Airplane in Hangar"
-      class="h-full object-cover w-full"
-      loading="eager"
+      classes="h-full object-cover w-full"
     />
   </div>
   <div class="flex-1">
-    <Image
-      src={HeroImage2}
+    <ImageComp
+      src="/src/assets/images/cfi-andrew-zilka.jpg"
       alt="Blitz Airplane in Hangar"
-      class="h-full object-cover w-full"
-      loading="eager"
+      classes="h-full object-cover w-full"
     />
   </div>
 

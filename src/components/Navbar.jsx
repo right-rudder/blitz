@@ -2,7 +2,6 @@ import { navbarLinks } from "../data/navbarLinks.js";
 import { useEffect, useState } from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import { FaPhone } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
 import companyLogo from "../assets/logos/blitz-aviation-logo.png";
 import {
   FACEBOOK_URL,

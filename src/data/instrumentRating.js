@@ -7,9 +7,10 @@ const instrumentRating = {
     title: "Instrument Rating",
     url: "/programs/instrument-rating",
     slug: "instrument-rating",
-    siteTitle: "Instrument Rating | Blitz Aviation",
+    siteTitle:
+      "Instrument Rating Course in Utah | IFR Flight Training at Blitz Aviation",
     siteDescription:
-      "Blitz Aviation is committed to helping you become a proficient instrument pilot, whether you're a private pilot looking to enhance your abilities or an aspiring professional pilot. Through a blend of comprehensive ground school instruction and hands on flight training, you'll acquire the knowledge and skills needed to confidently navigate and operate aircraft using instrument references alone.",
+      "Master instrument flying with Blitz Aviation’s 2-month IFR training program. Fly safely in low visibility and take the next step toward your aviation career.",
     intro:
       "Earning an Instrument Rating (IR) enables you to fly in low visibility and adverse weather conditions using instruments. At Blitz Aviation, our IR training emphasizes precision in IFR operations, preparing you for commercial aviation and airline operations.",
     description: [

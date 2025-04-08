@@ -7,9 +7,10 @@ const cfi = {
     title: "Certified Flight Instructor",
     url: "/programs/cfi",
     slug: "cfi",
-    siteTitle: "Certified Flight Instructor | Blitz Aviation",
+    siteTitle:
+      "Certified Flight Instructor Course in Utah | CFI Training at Blitz Aviation",
     siteDescription:
-      "Our CFI Training program offers you the opportunity to share your knowledge and love for flying with aspiring pilots. As a CFI, you'll play a vital role in shaping the next generation of aviators, and we're here to provide you with the training and support you need to excel in this rewarding role.",
+      "Launch your aviation career as a Certified Flight Instructor. Gain real-world teaching experience and build flight hours with Blitz Aviation’s CFI program.",
     intro:
       "Becoming a Certified Flight Instructor (CFI) is a strategic step for aspiring airline pilots, enabling you to build flight hours while earning a income. Our tailored CFI programs at Blitz Aviation equip you with confidence, professionalism, and refined skills to instruct effectively and accelerate your airline career.",
     description: [

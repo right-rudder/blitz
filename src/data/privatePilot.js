@@ -7,9 +7,9 @@ const privatePilot = {
     title: "Private Pilot",
     url: "/programs/private-pilot",
     slug: "private-pilot",
-    siteTitle: "Private Pilot | Blitz Aviation",
+    siteTitle: "Private Pilot Training in Ogden, Utah | Blitz Aviation",
     siteDescription:
-      "Blitz Aviation believes that anyone with a passion for flying can become a pilot with the right training, dedication, and support. Watch our video by Bill Macon that outlines the three main tests you need to pass to obtain your pilot's license: the medical exam, written test, and flight test (check ride). We believe that the key to your success lies in our commitment to providing the highest quality flight training available, with a focus on safety, professionalism, and individual attention.",
+      "Earn your Private Pilot License in as little as 3 months at Blitz Aviation in Ogden, UT. Learn to fly with expert instructors in a flexible, affordable program.",
     primaryImage: "/src/assets/images/cfi-cambrie-foster.jpg",
     primaryAlt: "Pilot flying on IFR flight",
     intro:

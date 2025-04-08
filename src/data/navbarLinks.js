@@ -37,7 +37,7 @@ export const navbarLinks = [
     link: "/the-blitz-program",
   },
   {
-    name: "More Info",
+    name: "About",
     submenu: [
       {
         name: "Our Story",

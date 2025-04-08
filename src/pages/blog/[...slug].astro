@@ -25,7 +25,7 @@ const headerData = {
 };
 ---
 
-<BaseLayout>
+<BaseLayout siteTitle={title} siteDescription={description}>
   <Header slot="hero" data={headerData} />
   <BlogPost {...post.data}>
     <Content />

@@ -420,15 +420,6 @@ const Navbar = ({ pathname }) => {
         <div className="p-5 px-10 text-white flex flex-col gap-3 overflow-hidden">
           <div className="flex gap-3 items-center">
             <a
-              href={`mailto:${EMAIL_ADDRESS}`}
-              className="border p-2 w-fit border-white rounded-full bg-white cursor-pointer"
-            >
-              <MdEmail className="size-3 text-main-blue-500" />
-            </a>
-            <a href={`mailto:${EMAIL_ADDRESS}`}>{EMAIL_ADDRESS}</a>
-          </div>
-          <div className="flex gap-3 items-center">
-            <a
               href={`tel:${PHONE_NUMBER}`}
               className="border p-2 w-fit border-white rounded-full bg-white"
             >

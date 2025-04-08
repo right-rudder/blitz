@@ -1,6 +1,13 @@
 ---
-import { PHONE_NUMBER, EMAIL_ADDRESS } from "../consts";
+import {
+  PHONE_NUMBER,
+  EMAIL_ADDRESS,
+  ADDRESS_LINE_1,
+  ADDRESS_LINE_2,
+  GOOGLE_MAPS_URL,
+} from "../consts";
 import ContactUsForm from "../components/ContactUsForm.astro";
+import { IoLocationSharp } from "react-icons/io5";
 ---
 
 <section
@@ -57,25 +64,11 @@ import ContactUsForm from "../components/ContactUsForm.astro";
             </div>
 
             <div class="flex flex-row">
-              <div class="text-white">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="w-6 h-6"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
-                  ></path>
-                </svg>
-              </div>
-              <div class="ml-5">
-                <a href={`mailto:${EMAIL_ADDRESS}`}>{EMAIL_ADDRESS}</a>
-              </div>
+              <IoLocationSharp className="size-5 mt-1 flex-shrink-0" />
+              <a class="ml-5 text-white" href={GOOGLE_MAPS_URL} target="_blank">
+                <p>{ADDRESS_LINE_1}</p>
+                <p>{ADDRESS_LINE_2}</p>
+              </a>
             </div>
 
             <div class="flex flex-row">
@@ -90,7 +83,7 @@ import ContactUsForm from "../components/ContactUsForm.astro";
                   ></path></svg
                 >
               </div>
-              <div class="ml-5 p-text text-white">
+              <div class="ml-5 text-white">
                 Monday to Saturday<br />
                 9:00 AM to 5:00 PM
               </div>

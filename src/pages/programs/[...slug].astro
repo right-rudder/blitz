@@ -1,6 +1,5 @@
 ---
 import Header from "../../components/Header.astro";
-import HomepageHeader from "../../components/HomepageHeader.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import CourseLayout from "../../layouts/CourseLayout.astro";
 import programs from "../../data/programs";
@@ -19,6 +18,6 @@ const { data } = Astro.props;
 ---
 
 <BaseLayout siteTitle={data.siteTitle} siteDescription={data.siteDescription}>
-  <Header slot="header" data={data} />
+  <Header slot="hero" data={data} />
   <CourseLayout data={data} />
 </BaseLayout>

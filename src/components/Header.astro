@@ -3,7 +3,7 @@ const { data } = Astro.props;
 import ImageComp from "./ImageComp.astro";
 ---
 
-<header class="relative overflow-hidden h-[60vh] flex">
+<div class="relative overflow-hidden h-[60vh] flex">
   <ImageComp
     src={data.primaryImage}
     alt={data.primaryAlt}
@@ -27,4 +27,4 @@ import ImageComp from "./ImageComp.astro";
       }
     </div>
   </div>
-</header>
+</div>

@@ -18,9 +18,11 @@ import ContactUs from "../components/ContactUs.astro";
     />
   </head>
   <body>
-    <Navbar pathname={pathname} client:load />
-    <slot name="header" />
+    <header>
+      <Navbar pathname={pathname} client:load />
+    </header>
     <main>
+      <slot name="hero" />
       <slot />
       <ContactUs />
     </main>

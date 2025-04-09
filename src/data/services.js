@@ -28,8 +28,8 @@ const services = [
     url: "/programs/accelerated-programs",
   },
   {
-    imageSrc: "/src/assets/images/pexels-kokorevas-5313876.jpg",
-    imageAlt: "Flight School",
+    imageSrc: "/src/assets/images/cessna-172p-at-blitz-aviation-hangar.webp",
+    imageAlt: "Cessna 172P at Blitz Aviation Hangar",
     headline: "Rent",
     title: "Aircraft Rental",
     description:

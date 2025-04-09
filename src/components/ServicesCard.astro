@@ -1,6 +1,6 @@
 ---
 import ImageComp from "./ImageComp.astro";
-const { imageSrc, headline, title, description, url } = Astro.props;
+const { imageSrc, imageAlt, headline, title, description, url } = Astro.props;
 ---
 
 <a href={url} class="flex flex-col group h-full justify-between">
@@ -8,7 +8,7 @@ const { imageSrc, headline, title, description, url } = Astro.props;
     <div class="overflow-hidden">
       <ImageComp
         src={imageSrc}
-        alt="title"
+        alt={imageAlt}
         classes="group-hover:scale-125 duration-500 h-80 w-full object-cover"
       />
     </div>

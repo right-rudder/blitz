@@ -1,7 +1,8 @@
 const services = [
   {
     imageSrc:
-      "/src/assets/images/pexels-iryna-liabiodkina-75708745-8578729.jpg",
+      "/src/assets/images/view-of-ogden-ohio-mountains-from-discovery-flight.webp",
+    imageAlt: "View of Ogden, Ohio mountains from a Discovery Flight",
     headline: "Discover",
     title: "Take a Discovery Flight",
     description:
@@ -10,6 +11,7 @@ const services = [
   },
   {
     imageSrc: "/src/assets/images/pexels-tranthangnhat-17594303.jpg",
+    imageAlt: "Flight School",
     headline: "Start",
     title: "Introductory Flight Lessons",
     description:
@@ -18,6 +20,7 @@ const services = [
   },
   {
     imageSrc: "/src/assets/images/pexels-felix-57767809-29170959.jpg",
+    imageAlt: "Flight School",
     headline: "Advance",
     title: "Advanced Flight Training",
     description:
@@ -26,6 +29,7 @@ const services = [
   },
   {
     imageSrc: "/src/assets/images/pexels-kokorevas-5313876.jpg",
+    imageAlt: "Flight School",
     headline: "Rent",
     title: "Aircraft Rental",
     description:
@@ -34,6 +38,7 @@ const services = [
   },
   {
     imageSrc: "/src/assets/images/pexels-josephmartin-5785741.jpg",
+    imageAlt: "Flight School",
     headline: "Train",
     title: "Aviation Career Training",
     description:
@@ -42,6 +47,7 @@ const services = [
   },
   {
     imageSrc: "/src/assets/images/pexels-junerydocto-15543665.jpg",
+    imageAlt: "Flight School",
     headline: "Explore",
     title: "Flight School Resources",
     description:

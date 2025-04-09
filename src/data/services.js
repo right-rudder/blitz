@@ -19,8 +19,8 @@ const services = [
     url: "programs/private-pilot",
   },
   {
-    imageSrc: "/src/assets/images/pexels-felix-57767809-29170959.jpg",
-    imageAlt: "Flight School",
+    imageSrc: "/src/assets/images/blitz-discovery-flight-night-view-utah.webp",
+    imageAlt: "Blitz Discovery Flight Night View Utah",
     headline: "Advance",
     title: "Advanced Flight Training",
     description:
@@ -37,8 +37,9 @@ const services = [
     url: "about/our-fleet",
   },
   {
-    imageSrc: "/src/assets/images/pexels-josephmartin-5785741.jpg",
-    imageAlt: "Flight School",
+    imageSrc:
+      "/src/assets/images/student-pulling-cessna-out-of-the-hangar-at-blitz-aviation.webp",
+    imageAlt: "Student pulling Cessna out of the hangar at Blitz Aviation",
     headline: "Train",
     title: "Aviation Career Training",
     description:
@@ -46,8 +47,8 @@ const services = [
     url: "#trainingPrograms",
   },
   {
-    imageSrc: "/src/assets/images/pexels-junerydocto-15543665.jpg",
-    imageAlt: "Flight School",
+    imageSrc: "/src/assets/images/cessna-172xp-control-panel.webp",
+    imageAlt: "Cessna 172XP Control Panel",
     headline: "Explore",
     title: "Flight School Resources",
     description:

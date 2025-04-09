@@ -17,8 +17,11 @@ const instrumentRating = {
       "The Instrument Rating (IR) is a critical qualification that allows you to fly in low visibility and adverse weather conditions using instruments. Whether you're looking to enhance your private pilot skills or pursue a career in commercial aviation, the IR is an essential step in your journey. At Blitz Aviation, our IR program provides you with the knowledge and skills needed to excel as an instrument-rated pilot.",
       "Our IR program is designed to deepen your understanding of instrument flight and enhance your proficiency in IFR operations. With a focus on precision and safety, our program prepares you to navigate and operate aircraft using instrument references alone. By combining expert instruction with hands-on experience, we'll help you become a skilled and confident instrument-rated pilot.",
     ],
-    primaryImage: "/src/assets/images/pexels-junerydocto-15543665.jpg",
+    primaryImage:
+      "/src/assets/images/student-in-a-flight-lesson-at-blitz-aviation.webp",
     primaryAlt: "Pilot flying on IFR flight",
+    secondaryImage: "/src/assets/images/cessna-172xp-control-panel.webp",
+    secondaryAlt: "Cessna 172XP control panel",
     prerequisites: [
       "Hold a current private pilot certificate or apply for one alongside the instrument rating.",
       "Accumulate a specific amount of flight time, including: 50 hours of cross-country PIC (Pilot in Command) time. 40 hours of instrument training",

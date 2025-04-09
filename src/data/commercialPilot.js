@@ -17,8 +17,13 @@ const commercialPilot = {
       "The Commercial Pilot Certificate (CPL) is the gateway to a career in aviation, allowing you to fly for hire or compensation. Whether you're looking to become a flight instructor, fly for a charter company, or pursue a career with the airlines, the CPL is a critical step in your journey. At Blitz Aviation, our comprehensive program prepares you for the challenges and opportunities of professional flying.",
       "Our CPL program is designed to build on your existing skills and experience, taking you to the next level of proficiency and professionalism. With a focus on advanced flight maneuvers, complex aircraft operations, and aviation regulations, our program equips you with the knowledge and skills needed to succeed in the competitive world of commercial aviation.",
     ],
-    primaryImage: "/src/assets/images/pexels-josephmartin-5785741.jpg",
-    primaryAlt: "Student pilot recieves certificate",
+    primaryImage:
+      "/src/assets/images/instructor-at-commercial-pilot-training-at-blitz-aviation.webp",
+    primaryAlt: "Commercial Pilot Training at Blitz Aviation",
+    secondaryImage:
+      "/src/assets/images/student-pulling-cessna-out-of-the-hangar-at-blitz-aviation.webp",
+    secondaryAlt:
+      "Student pulling Cessna out of the hangar at Blitz Aviation in Ogden, Utah",
     prerequisites: [
       "Hold a current private pilot certificate",
       "Have a minimum of 250 hours of flight time, including 100 hours of pilot-in-command time",

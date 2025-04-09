@@ -17,8 +17,13 @@ const cfi = {
       "The Certified Flight Instructor (CFI) certificate is a valuable qualification that allows you to teach and mentor aspiring pilots. Whether you're looking to build flight hours, share your passion for aviation, or prepare for a career with the airlines, the CFI certificate is an essential step in your journey. At Blitz Aviation, our CFI program provides you with the knowledge and skills needed to excel as a flight instructor.",
       "Our CFI program is designed to enhance your teaching abilities, deepen your understanding of aviation regulations, and refine your flight skills. With a focus on professionalism and safety, our program prepares you to guide students through the complexities of flight training. By combining expert instruction with hands-on experience, we'll help you become a skilled and effective CFI.",
     ],
-    primaryImage: "/src/assets/images/pexels-felix-57767809-29170959.jpg",
-    primaryAlt: "Blitz CFI with private pilot",
+    primaryImage:
+      "/src/assets/images/commercial-pilot-doing-an-airplane-inspection.webp",
+    primaryAlt: "Certified Flight Instructor at Blitz Aviation",
+    secondaryImage:
+      "/src/assets/images/certified-flight-instructor-at-blitz-aviation.webp",
+    secondaryAlt:
+      "Certified Flight Instructor at Blitz Aviation in Ogden, Utah",
     prerequisites: [
       "Hold either a commercial pilot certificate or an airline transport pilot certificate with an instrument rating",
       "Secure a valid FAA 3rd Class Medical Certificate or a higher class",

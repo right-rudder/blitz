@@ -17,9 +17,11 @@ const cfii = {
       "The Certified Flight Instructor - Instrument (CFII) rating is a valuable addition to your qualifications, allowing you to teach students the intricacies of instrument flight. Whether you're looking to enhance your teaching abilities, build your instrument proficiency, or expand your career opportunities, the CFII rating is a critical step in your journey. At Blitz Aviation, our CFII program provides you with the knowledge and skills needed to excel as an instrument flight instructor.",
       "Our CFII program is designed to enhance your understanding of instrument flight and deepen your proficiency in IFR operations. With a focus on teaching techniques, instrument procedures, and flight safety, our program prepares you to guide students through the complexities of instrument flying. By combining advanced flight training with expert instruction, we'll help you become a skilled and effective CFII.",
     ],
-    primaryImage:
-      "/src/assets/images/pexels-iryna-liabiodkina-75708745-8578729.jpg",
-    primaryAlt: "Multi engine instructor pass checkride",
+    primaryImage: "/src/assets/images/cfi-at-blitz-aviation.webp",
+    primaryAlt: "Certified Flight Instructor Instrument CFII at Blitz Aviation",
+    secondaryImage:
+      "/src/assets/images/student-consultation-in-blitz-office.webp",
+    secondaryAlt: "Student consultation in Blitz Aviation office",
     prerequisites: [
       "Hold a current private pilot certificate",
       "Hold a valid FAA 3rd Class Medical Certificate or a higher class",

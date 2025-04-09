@@ -10,8 +10,12 @@ const privatePilot = {
     siteTitle: "Private Pilot Training in Ogden, Utah | Blitz Aviation",
     siteDescription:
       "Earn your Private Pilot License in as little as 3 months at Blitz Aviation in Ogden, UT. Learn to fly with expert instructors in a flexible, affordable program.",
-    primaryImage: "/src/assets/images/cfi-cambrie-foster.jpg",
-    primaryAlt: "Pilot flying on IFR flight",
+    primaryImage:
+      "/src/assets/images/student-of-the-private-pilot-flight-training-program.webp",
+    primaryAlt:
+      "Student of the Private Pilot Flight Training Program at Blitz Aviation",
+    secondaryImage: "/src/assets/images/ground-school-at-blitz-aviation.webp",
+    secondaryAlt: "Ground school at Blitz Aviation in Ogden, Utah",
     intro:
       "The Private Pilot License (PPL) is your first step toward professional training and qualifies you to fly for personal or recreational purposes. At Blitz Aviation, our Private Pilot course integrates flight training and ground instruction through a structured syllabus, accelerating your learning and laying the foundation for future advanced ratings and certifications.",
     description: [

@@ -10,8 +10,8 @@ const services = [
     url: "discovery-flight",
   },
   {
-    imageSrc: "/src/assets/images/pexels-tranthangnhat-17594303.jpg",
-    imageAlt: "Flight School",
+    imageSrc: "/src/assets/images/ground-school-at-blitz-aviation.webp",
+    imageAlt: "Ground School at Blitz Aviation",
     headline: "Start",
     title: "Introductory Flight Lessons",
     description:

@@ -22,7 +22,6 @@ export default defineConfig({
     "/acclerated-programs": "/programs/accelerated-programs",
     "/contact": "/#contactUs",
     "/rates": "/",
-    "/?olsPage=cart": "/",
     "/planes-%26-instructors": "/about/our-team",
   },
 });

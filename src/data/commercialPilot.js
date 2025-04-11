@@ -18,7 +18,7 @@ const commercialPilot = {
       "Our CPL program is designed to build on your existing skills and experience, taking you to the next level of proficiency and professionalism. With a focus on advanced flight maneuvers, complex aircraft operations, and aviation regulations, our program equips you with the knowledge and skills needed to succeed in the competitive world of commercial aviation.",
     ],
     primaryImage:
-      "/src/assets/images/instructor-at-commercial-pilot-training-at-blitz-aviation.webp",
+      "/src/assets/images/cfi-and-student-at-blitz-accelerated-training-program.webp",
     primaryAlt: "Commercial Pilot Training at Blitz Aviation",
     secondaryImage:
       "/src/assets/images/student-pulling-cessna-out-of-the-hangar-at-blitz-aviation.webp",

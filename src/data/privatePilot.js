@@ -14,7 +14,8 @@ const privatePilot = {
       "/src/assets/images/student-of-the-private-pilot-flight-training-program.webp",
     primaryAlt:
       "Student of the Private Pilot Flight Training Program at Blitz Aviation",
-    secondaryImage: "/src/assets/images/ground-school-at-blitz-aviation.webp",
+    secondaryImage:
+      "/src/assets/images/student-at-ground-school-blitz-aviation.webp",
     secondaryAlt: "Ground school at Blitz Aviation in Ogden, Utah",
     intro:
       "The Private Pilot License (PPL) is your first step toward professional training and qualifies you to fly for personal or recreational purposes. At Blitz Aviation, our Private Pilot course integrates flight training and ground instruction through a structured syllabus, accelerating your learning and laying the foundation for future advanced ratings and certifications.",

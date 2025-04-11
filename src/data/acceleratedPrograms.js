@@ -41,29 +41,29 @@ const acceleratedPrograms = [
       ],
     },
   },
-  {
-    data: {
-      title: "Accelerated Certified Flight Instructor (7 days)",
-      intro:
-        "The Accelerated CFI Course is a 7-day, fast-paced program designed for commercial pilots who want to become certified flight instructors. The course offers focused instruction on teaching techniques and flight skills, preparing you for the CFI check-ride.",
-      primaryImage:
-        "/src/assets/images/cfi-and-student-at-blitz-accelerated-training-program.webp",
-      primaryAlt:
-        "CFI and student at Blitz Aviation's accelerated training program",
-      details: [
-        "Accelerated 7-day CFI course with daily flight training",
-        "Includes 10 hours of flight time in aircraft",
-        "Includes 18 hours of ground instruction",
-        "Structured syllabus to ensure check-ride readiness",
-        "Includes check-ride fee",
-      ],
-      prerequisites: [
-        "FAA Certified Flight Instructor Written Exam must be completed before starting",
-        "Valid Commercial Pilot Certificate",
-        "Current FAA Medical Certificate",
-      ],
-    },
-  },
+  // {
+  //   data: {
+  //     title: "Accelerated Certified Flight Instructor (7 days)",
+  //     intro:
+  //       "The Accelerated CFI Course is a 7-day, fast-paced program designed for commercial pilots who want to become certified flight instructors. The course offers focused instruction on teaching techniques and flight skills, preparing you for the CFI check-ride.",
+  //     primaryImage:
+  //       "/src/assets/images/cfi-and-student-at-blitz-accelerated-training-program.webp",
+  //     primaryAlt:
+  //       "CFI and student at Blitz Aviation's accelerated training program",
+  //     details: [
+  //       "Accelerated 7-day CFI course with daily flight training",
+  //       "Includes 10 hours of flight time in aircraft",
+  //       "Includes 18 hours of ground instruction",
+  //       "Structured syllabus to ensure check-ride readiness",
+  //       "Includes check-ride fee",
+  //     ],
+  //     prerequisites: [
+  //       "FAA Certified Flight Instructor Written Exam must be completed before starting",
+  //       "Valid Commercial Pilot Certificate",
+  //       "Current FAA Medical Certificate",
+  //     ],
+  //   },
+  // },
   {
     data: {
       title: "High Performance Endorsement",

@@ -204,6 +204,8 @@ const Navbar = ({ pathname }) => {
                   src={companyLogo.src}
                   alt="Blitz Aviation Logo"
                   className={` ${navBar ? "w-12" : "w-18 translate-y-6"} duration-200`}
+                  width="72"
+                  height="80"
                 />
               </a>
 

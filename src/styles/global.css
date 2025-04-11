@@ -32,6 +32,10 @@ body {
   font-family: "Outfit Variable", sans-serif;
 }
 
+.text-link {
+  @apply text-main-blue-700 hover:underline
+}
+
 .btn-primary {
   @apply block cursor-pointer bg-gradient-to-br from-main-blue-600 to-main-blue-800 text-white py-3 px-5 font-medium hover:brightness-75 duration-100 text-center;
 }

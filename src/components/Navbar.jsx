@@ -288,7 +288,7 @@ const Navbar = ({ pathname, children }) => {
 
         <a
           href="/"
-          className="text-white px-10 w-fit mx-auto block leading-none uppercase font-semibold text-lg z-40 relative"
+          className="size-24 block mx-auto"
           dangerouslySetInnerHTML={{ __html: children.props.value }}
         ></a>
 
@@ -308,12 +308,12 @@ const Navbar = ({ pathname, children }) => {
               {item.link ? (
                 <a
                   href={item.link}
-                  className="font-semibold p-5 block text-white text-lg duration-300 border-main-blue-800 whitespace-nowrap group-last:bg-main-blue-800 group-last:py-4 group-last:px-8 group-last:rounded-full group-last:mt-4 group-last:text-center group-last:mx-5"
+                  className="font-semibold p-4 block text-white text-lg duration-300 border-main-blue-800 whitespace-nowrap group-last:bg-main-blue-800 group-last:py-4 group-last:px-8 group-last:rounded-full group-last:mt-4 group-last:text-center group-last:mx-5"
                 >
                   {item.name}
                 </a>
               ) : (
-                <div className="font-semibold p-5 w-full justify-between flex cursor-pointer text-white text-lg duration-300  border-main-blue-800 whitespace-nowrap">
+                <div className="font-semibold p-4 w-full justify-between flex cursor-pointer text-white text-lg duration-300  border-main-blue-800 whitespace-nowrap">
                   <p>{item.name}</p>
                   <div
                     className={`p-1 pointer-events-none duration-300 ${

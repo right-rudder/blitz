@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @theme {
   --color-main-blue-50: #f0f5fe;
@@ -23,6 +24,8 @@
   --color-main-accent-800: #7e4b15;
   --color-main-accent-900: #6b3d18;
   --color-main-accent-950: #3f1f09;
+
+  --background-image-blitz-program: url("/mycah-pittman.webp");
 }
 
 body {
@@ -30,17 +33,17 @@ body {
 }
 
 .btn-primary {
-  @apply rounded bg-main-blue-600 text-white py-2 px-4 font-medium hover:brightness-75 duration-100;
+  @apply block cursor-pointer bg-gradient-to-br from-main-blue-600 to-main-blue-800 text-white py-3 px-5 font-medium hover:brightness-75 duration-100 text-center;
+}
+
+.btn-primary-lg {
+  @apply block cursor-pointer bg-gradient-to-br from-main-blue-600 to-main-blue-800 text-white py-4 px-6 text-lg font-medium hover:brightness-75 duration-100 text-center;
 }
 
 .btn-secondary {
-  @apply rounded bg-white text-black py-2 px-4 font-medium hover:brightness-75 duration-100;
+  @apply block cursor-pointer bg-white text-black py-3 px-5 font-medium hover:brightness-75 duration-100 text-center;
 }
-/* 
-h1 {
-  text-shadow:
-    -4px 0 #243ea9,
-    0 4px #243ea9,
-    4px 0 #243ea9,
-    0 -4px #243ea9;
-} */
+
+.btn-secondary-lg {
+  @apply block cursor-pointer bg-white text-black py-4 px-6 font-medium text-lg hover:brightness-75 duration-100 text-center;
+}

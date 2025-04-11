@@ -1,0 +1,327 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
+
+const headerData = {
+  title: "Interested in Enrolling at Blitz Aviation?",
+  primaryImage: "/src/assets/images/pexels-josephmartin-5785741.jpg",
+  primaryAlt: "Enrollment Form",
+};
+---
+
+<BaseLayout
+  siteTitle="Enroll in Your Flight Training Program | Blitz Aviation"
+  siteDescription="Ready to start your aviation journey? Fill out the Blitz Aviation enrollment form to secure your spot in one of our flight training programs. Our team is here to support you every step of the way as you take flight!"
+>
+  <Header slot="hero" data={headerData} />
+
+  <section class="py-16 px-5">
+    <form id="enrollment-form" method="POST" class="flex flex-col items-center">
+      <h3
+        class="text-5xl font-bold leading-tight text-dark-blue text-center max-w-xl"
+      >
+        Fill Out the Form Below to Start Flying
+      </h3>
+      <div class="flex flex-col gap-2 w-full max-w-3xl">
+        <label for="first-name" class="font-medium mt-2 text-gray-500"
+          >First Name</label
+        >
+        <input
+          type="text"
+          name="first-name"
+          class="px-2 py-2 outline-1 w-full border-gray-400 border outline-gray-500"
+          required
+        />
+        <label for="last-name" class="font-medium mt-2 text-gray-500"
+          >Last Name</label
+        >
+        <input
+          type="text"
+          name="last-name"
+          class="px-2 py-2 outline-1 w-full border-gray-400 border outline-gray-500"
+          required
+        />
+        <label for="email" class="font-medium mt-2 text-gray-500">Email</label>
+        <input
+          id="email"
+          type="email"
+          name="email"
+          class="px-2 py-2 outline-1 w-full border-gray-400 border outline-gray-500"
+          required
+        />
+        <input
+          type="email"
+          name="confirm-email"
+          placeholder="Confirm email"
+          class="hidden"
+        />
+        <label for="phone" class="font-medium mt-2 text-gray-500">Phone</label>
+        <input
+          type="tel"
+          name="phone"
+          class="px-2 py-2 outline-1 w-full border-gray-400 border outline-gray-500"
+          required
+        />
+
+        <fieldset>
+          <legend class="font-medium leading-6">Preferred Program:</legend>
+          <p class="text-gray-500 text-sm">Select all that apply</p>
+          <div class="mt-2 space-y-1">
+            <div class="relative flex gap-x-3">
+              <div class="flex h-6 items-center">
+                <input
+                  id="private-pilot"
+                  name="preferred-programs"
+                  type="checkbox"
+                  value="Private Pilot"
+                  class="h-4 w-4 rounded border-gray-300 text-medium-blue focus:ring-medium-blue"
+                />
+              </div>
+              <div class="leading-6">
+                <label for="private-pilot" class="text-gray-600"
+                  >Private Pilot
+                </label>
+              </div>
+            </div>
+            <div class="relative flex gap-x-3">
+              <div class="flex h-6 items-center">
+                <input
+                  id="instrument-rating"
+                  name="preferred-programs"
+                  type="checkbox"
+                  value="Instrument Rating"
+                  class="h-4 w-4 rounded border-gray-300 text-medium-blue focus:ring-medium-blue"
+                />
+              </div>
+              <div class="leading-6">
+                <label for="instrument-rating" class="text-gray-600"
+                  >Instrument Rating</label
+                >
+              </div>
+            </div>
+            <div class="relative flex gap-x-3">
+              <div class="flex h-6 items-center">
+                <input
+                  id="commercial-pilot"
+                  name="preferred-programs"
+                  type="checkbox"
+                  value="Commercial Pilot"
+                  class="h-4 w-4 rounded border-gray-300 text-medium-blue focus:ring-medium-blue"
+                />
+              </div>
+              <div class="leading-6">
+                <label for="commercial-pilot" class="text-gray-600"
+                  >Commercial Pilot</label
+                >
+              </div>
+            </div>
+            <div class="relative flex gap-x-3">
+              <div class="flex h-6 items-center">
+                <input
+                  id="certified-flight-instructor"
+                  name="preferred-programs"
+                  type="checkbox"
+                  value="Certified Flight Instructor"
+                  class="h-4 w-4 rounded border-gray-300 text-medium-blue focus:ring-medium-blue"
+                />
+              </div>
+              <div class="leading-6">
+                <label for="flight-instructor" class="text-gray-600"
+                  >Certified Flight Instructor</label
+                >
+              </div>
+            </div>
+
+            <div class="relative flex gap-x-3">
+              <div class="flex h-6 items-center">
+                <input
+                  id="certified-flight-instructor-instrument"
+                  name="preferred-programs"
+                  type="checkbox"
+                  value="Certified Flight Instructor Instrument"
+                  class="h-4 w-4 rounded border-gray-300 text-medium-blue focus:ring-medium-blue"
+                />
+              </div>
+              <div class="leading-6">
+                <label for="flight-instructor" class="text-gray-600"
+                  >Certified Flight Instructor Instrument</label
+                >
+              </div>
+            </div>
+
+            <div class="relative flex gap-x-3">
+              <div class="flex h-6 items-center">
+                <input
+                  id="zero-to-hero"
+                  name="preferred-programs"
+                  type="checkbox"
+                  value="The Blitz Program (Zero to Hero)"
+                  class="h-4 w-4 rounded border-gray-300 text-medium-blue focus:ring-medium-blue"
+                />
+              </div>
+              <div class="leading-6">
+                <label for="zero-to-hero" class="text-gray-600"
+                  >The Blitz Program (Zero to Hero)</label
+                >
+              </div>
+            </div>
+
+            <div class="relative flex gap-x-3">
+              <div class="flex h-6 items-center">
+                <input
+                  id="accelerated-instrument-rating"
+                  name="preferred-programs"
+                  type="checkbox"
+                  value="Accelerated Instrument Rating"
+                  class="h-4 w-4 rounded border-gray-300 text-medium-blue focus:ring-medium-blue"
+                />
+              </div>
+              <div class="leading-6">
+                <label for="accelerated-instrument-rating" class="text-gray-600"
+                  >Accelerated Instrument Rating</label
+                >
+              </div>
+            </div>
+
+            <div class="relative flex gap-x-3">
+              <div class="flex h-6 items-center">
+                <input
+                  id="accelerated-commercial-pilot"
+                  name="preferred-programs"
+                  type="checkbox"
+                  value="Accelerated Commercial Pilot"
+                  class="h-4 w-4 rounded border-gray-300 text-medium-blue focus:ring-medium-blue"
+                />
+              </div>
+              <div class="leading-6">
+                <label for="accelerated-commercial-pilot" class="text-gray-600"
+                  >Accelerated Commercial Pilot</label
+                >
+              </div>
+            </div>
+
+            <div class="relative flex gap-x-3">
+              <div class="flex h-6 items-center">
+                <input
+                  id="accelerated-cfi"
+                  name="preferred-programs"
+                  type="checkbox"
+                  value="Accelerated Certified Flight Instructor"
+                  class="h-4 w-4 rounded border-gray-300 text-medium-blue focus:ring-medium-blue"
+                />
+              </div>
+              <div class="leading-6">
+                <label for="accelerated-cfi" class="text-gray-600"
+                  >Accelerated Certified Flight Instructor</label
+                >
+              </div>
+            </div>
+
+            <div class="relative flex gap-x-3">
+              <div class="flex h-6 items-center">
+                <input
+                  id="high-performance-endorsement"
+                  name="preferred-programs"
+                  type="checkbox"
+                  value="High Performance Endorsement"
+                  class="h-4 w-4 rounded border-gray-300 text-medium-blue focus:ring-medium-blue"
+                />
+              </div>
+              <div class="leading-6">
+                <label for="high-performance-endorsement" class="text-gray-600"
+                  >High Performance Endorsement</label
+                >
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <label for="additional-info" class="font-medium mt-2 text-gray-500">
+          Any additional information
+        </label>
+        <textarea
+          id="additional-info"
+          name="additional-info"
+          class="px-2 py-2 outline-1 border-gray-400 border outline-gray-500 min-h-32"
+        ></textarea>
+      </div>
+      <div class="flex gap-3 my-5 max-w-xs md:max-w-xl mx-auto">
+        <input
+          required
+          type="checkbox"
+          name="agree-data-collection"
+          id="agree-data-collection"
+        />
+
+        <label for="agree-data-collection" class="text-gray-500 text-sm">
+          I agree to the terms & conditions provided by the company. By
+          providing my email and phone number, I agree to receive email and text
+          messages from Blitz Aviation.
+        </label>
+      </div>
+
+      <button type="submit" id="submit-button" class="btn-primary"
+        >Submit</button
+      >
+    </form>
+  </section>
+</BaseLayout>
+
+<script define:vars={{ ENROLLMENT_FORM_WEBHOOK_URL }}>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Get the enrollment form element
+    const enrollmentForm = document.getElementById("enrollment-form");
+
+    // Check if the enrollment form element exists
+    if (enrollmentForm !== null) {
+      // Add submit event listener to the enrollment form
+      enrollmentForm.addEventListener("submit", function (event) {
+        // Prevent the default form submission
+        event.preventDefault();
+
+        // Serialize the form data
+        const formData = new FormData(enrollmentForm);
+
+        // Check the value of the honeypot field
+        const confirmEmailValue = formData.get("confirm-email");
+        if (confirmEmailValue === "" || confirmEmailValue === null) {
+          // If the honeypot field is empty, it's a human
+          // Set the form action to the URL for processing the form and redirecting to thank you
+          enrollmentForm.action = ENROLLMENT_FORM_WEBHOOK_URL;
+        }
+
+        // Convert FormData to URLSearchParams
+        const urlSearchParams = new URLSearchParams();
+        for (const pair of formData.entries()) {
+          urlSearchParams.append(pair[0], pair[1]);
+        }
+
+        // Send an AJAX request to submit the form
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", enrollmentForm.action);
+        xhr.setRequestHeader(
+          "Content-Type",
+          "application/x-www-form-urlencoded",
+        );
+        xhr.onload = function () {
+          // Check if the request was successful (status 200)
+          if (xhr.status === 200) {
+            // Redirect the user after a successful form submission
+            window.location.href = "/contact-confirmation";
+          } else {
+            // Handle errors if any
+            console.error("Form submission failed:", xhr.statusText);
+          }
+        };
+        xhr.onerror = function () {
+          // Handle network errors
+          console.error("Network error occurred while submitting the form.");
+        };
+        xhr.send(urlSearchParams);
+      });
+    } else {
+      console.error("Enrollment form element not found.");
+    }
+  });
+</script>

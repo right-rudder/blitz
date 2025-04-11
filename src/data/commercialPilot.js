@@ -7,20 +7,29 @@ const commercialPilot = {
     title: "Commercial Pilot",
     url: "/programs/commercial-pilot",
     slug: "commercial-pilot",
-    siteTitle: "Commercial Pilot | Ideal Aviation",
+    siteTitle:
+      "Commercial Pilot Training in Utah | Become a Pro with Blitz Aviation",
     siteDescription:
-      "Fly for hire or compensation. If you're looking to make a career out of flying, then getting your commerical pilot certificate is the certificate you need to start getting paid to fly. If you're looking to instruct in the near future, then getting your commerical out of the way and complete one more prerequisite. If you're looking to go to the airlines, fly corporate or charter, or even thinking of something else - Ideal Aviation is here to support you and your goals.",
-    intro: [
-      "Fly for hire or compensation. If you're looking to make a career out of flying, then getting your commerical pilot certificate is the certificate you need to start getting paid to fly. If you're looking to instruct in the near future, then getting your commerical out of the way and complete one more prerequisite. If you're looking to go to the airlines, fly corporate or charter, or even thinking of something else - Ideal Aviation is here to support you and your goals.",
-      "Ideal Aviation is the place in St. Louis to get your commercial certicate. Ideal Aviation is the place for pilots. We're here to support you and help you acheive your aviation goals.",
+      "Train to become a commercial pilot in just 3 months at Blitz Aviation in Ogden. Learn advanced maneuvers and earn your CPL with experienced instructors.",
+    intro:
+      "The Commercial Pilot Certificate (CPL) elevates your skills to professional standards, enabling you to receive compensation for flying services. Our CPL program at Blitz Aviation focuses on advanced maneuvers, complex aircraft operations, and aviation professionalism, unlocking opportunities in passenger transport, cargo, and specialized aviation fields.",
+    description: [
+      "The Commercial Pilot Certificate (CPL) is the gateway to a career in aviation, allowing you to fly for hire or compensation. Whether you're looking to become a flight instructor, fly for a charter company, or pursue a career with the airlines, the CPL is a critical step in your journey. At Blitz Aviation, our comprehensive program prepares you for the challenges and opportunities of professional flying.",
+      "Our CPL program is designed to build on your existing skills and experience, taking you to the next level of proficiency and professionalism. With a focus on advanced flight maneuvers, complex aircraft operations, and aviation regulations, our program equips you with the knowledge and skills needed to succeed in the competitive world of commercial aviation.",
     ],
-    primaryImage: "/src/assets/images/student_pilot_recieves_certificate.webp",
-    primaryAlt: "Student pilot recieves certificate",
+    primaryImage:
+      "/src/assets/images/instructor-at-commercial-pilot-training-at-blitz-aviation.webp",
+    primaryAlt: "Commercial Pilot Training at Blitz Aviation",
+    secondaryImage:
+      "/src/assets/images/student-pulling-cessna-out-of-the-hangar-at-blitz-aviation.webp",
+    secondaryAlt:
+      "Student pulling Cessna out of the hangar at Blitz Aviation in Ogden, Utah",
     prerequisites: [
       "Hold a current private pilot certificate",
       "Have a minimum of 250 hours of flight time, including 100 hours of pilot-in-command time",
       "Obtain a valid FAA 2nd Class Medical Certificate or a higher class",
     ],
+    duration: "3 months, 3-5 times/week",
     steps: [
       {
         title: "Build the Flight Hours",
@@ -38,13 +47,13 @@ const commercialPilot = {
         title: "Complete Requirements",
         icon: FaRegPaperPlane,
         description:
-          "Achieving your Commercial Pilot Certificate involves fulfilling specific flight requirements, including demanding long cross country flights and other critical experiences. At Ideal Aviation, our commercial program ensures that you master advanced flight maneuvers and precise navigation techniques. With your long cross country flight, you'll demonstrate your ability to plan and execute complex missions, showcasing your aptitude for real world challenges.",
+          "Achieving your Commercial Pilot Certificate involves fulfilling specific flight requirements, including demanding long cross country flights and other critical experiences. At Blitz Aviation, our commercial program ensures that you master advanced flight maneuvers and precise navigation techniques. With your long cross country flight, you'll demonstrate your ability to plan and execute complex missions, showcasing your aptitude for real world challenges.",
       },
       {
         title: "Pass the Commercial Checkride",
         icon: FaRegPaperPlane,
         description:
-          "With a focus on safety and precision, our instructors ensure that you are thoroughly ready for the check ride. As you confidently take to the skies with the examiner, you'll showcase the culmination of your training and the expertise you've gained throughout your journey with Ideal Aviation.",
+          "With a focus on safety and precision, our instructors ensure that you are thoroughly ready for the check ride. As you confidently take to the skies with the examiner, you'll showcase the culmination of your training and the expertise you've gained throughout your journey with Blitz Aviation.",
       },
     ],
   },

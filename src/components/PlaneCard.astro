@@ -1,0 +1,63 @@
+---
+import { FaDotCircle } from "react-icons/fa";
+import ImageComp from "./ImageComp.astro";
+const {
+  name,
+  number,
+  description,
+  image1,
+  image2,
+  image3,
+  image1Alt,
+  image2Alt,
+  image3Alt,
+  equipment,
+} = Astro.props;
+---
+
+<div class="flex flex-col-reverse md:flex-row gap-10 lg:gap-10 items-center">
+  <div class="flex-1 flex justify-center flex-col gap-5">
+    <h3
+      class="max-w-lg text-pretty text-4xl font-bold tracking-wide text-main-black sm:text-5xl"
+    >
+      {name}
+    </h3>
+    <h4 class="text-blue-800 font-semibold text-2xl tracking-wide italic">
+      {number}
+    </h4>
+    <p class="lg:text-lg tracking-wider font-light">
+      {description}
+    </p>
+    <ul>
+      {
+        equipment.map((item) => (
+          <li class="text-gray-600 lg:text-lg flex gap-2 items-center">
+            <FaDotCircle className="text-main-blue-700 size-3 shrink-0" />
+            <p class="lg:text-base text-sm">{item}</p>
+          </li>
+        ))
+      }
+    </ul>
+
+    <a href="#contactUs" class="btn-primary w-fit mt-3">Book Now</a>
+  </div>
+  <div class="flex-1 relative max-w-[30rem] md:hidden">
+    <ImageComp
+      src={image1}
+      alt={image1Alt}
+      classes="z-10 relative aspect-square object-cover max-h-[30rem]"
+    />
+  </div>
+
+  <div class="flex-[2_2_0] hidden md:grid grid-cols-2 gap-5">
+    <div class="row-span-2 h-full">
+      <ImageComp src={image2} alt={image2Alt} classes="object-cover h-full" />
+    </div>
+    <div>
+      <ImageComp src={image1} alt={image1Alt} classes="object-cover w-full" />
+    </div>
+    <div>
+      <ImageComp src={image3} alt={image3Alt} classes="object-cover w-full" />
+    </div>
+  </div>
+</div>

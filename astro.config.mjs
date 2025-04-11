@@ -7,12 +7,21 @@ import react from "@astrojs/react";
 
 import tailwindcss from "@tailwindcss/vite";
 
+import partytown from "@astrojs/partytown";
+
 // https://astro.build/config
 export default defineConfig({
-  site: "https://example.com",
-  integrations: [mdx(), sitemap(), react()],
+  site: "https://blitzaviation.com/",
+  integrations: [mdx(), sitemap(), react(), partytown()],
 
   vite: {
     plugins: [tailwindcss()],
+  },
+
+  redirects: {
+    "/acclerated-programs": "/programs/accelerated-programs",
+    "/contact": "/#contactUs",
+    "/rates": "/",
+    "/planes-%26-instructors": "/about/our-team",
   },
 });

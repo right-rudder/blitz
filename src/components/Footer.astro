@@ -1,18 +1,17 @@
 ---
 import { FaPhone } from "react-icons/fa";
 import { IoLocationSharp } from "react-icons/io5";
-import { MdEmail } from "react-icons/md";
 import {
-  EMAIL_ADDRESS,
   PHONE_NUMBER,
   ADDRESS_LINE_1,
   ADDRESS_LINE_2,
   YELP_URL,
   INSTAGRAM_URL,
   SITE_TITLE,
+  GOOGLE_MAPS_URL,
 } from "../consts";
 import { Image } from "astro:assets";
-import companyLogo from "../assets/logos/blitz-logo.webp";
+import companyLogo from "../assets/logos/blitz-aviation-logo.png";
 
 import { navbarLinks } from "../data/navbarLinks";
 
@@ -22,30 +21,27 @@ const today = new Date();
 ---
 
 <footer
-  class="bg-gradient-to-r from-main-blue-900 via-main-blue-700 to-main-blue-900 text-white"
+  class="bg-gradient-to-br from-main-blue-700 to-main-blue-900 text-white"
 >
-  <div class="py-12 px-5">
-    <div class="max-w-xl lg:max-w-7xl mx-auto">
+  <div class="pb-8 pt-24 px-5 md:px-10 lg:px-20">
+    <div class="mx-auto">
       <div class="flex gap-10 flex-col lg:flex-row justify-between">
         <div class="flex flex-col gap-5 lg:w-1/3">
           <a
             href="/"
             class="text-4xl font-bold uppercase flex items-center gap-2"
           >
-            <Image
-              src={companyLogo}
-              alt="Blitz Aviation Logo"
-              class="w-20 rounded"
-            />
+            <Image src={companyLogo} alt="Blitz Aviation Logo" class="w-20" />
           </a>
 
           <p class="text-sm">
-            At Blitz Aviation, we make flight training smarter, not harder.
-            Located in the heart of Salt Lake City, Utah, our school offers
-            expert instruction from seasoned pilots with years of real-world
-            experience—all without the sky-high price tag. Whether you choose a
-            full course or pay as you go, our flexible options are designed to
-            fit your lifestyle and budget.
+            Blitz Aviation offers premier flight training at Ogden-Hinckley
+            Airport (KOGD) in Utah. Specializing in private pilot training, we
+            provide expert, no-fluff instruction tailored to your pace and
+            budget. With flexible payment options and a streamlined curriculum,
+            we make achieving your aviation goals efficient and affordable. Book
+            an intro flight over Utah’s stunning landscapes or visit our Ogden
+            training center today!
           </p>
 
           <div class="flex space-x-6">
@@ -100,29 +96,47 @@ const today = new Date();
                   <li>
                     <a
                       href={program.data.url}
-                      class="hover:text-main-blue duration-200"
+                      class="hover:brightness-75 duration-200"
                     >
                       {program.data.title}
                     </a>
                   </li>
                 ))
               }
+              <li>
+                <a
+                  href="/the-blitz-program"
+                  class="hover:brightness-75 duration-200"
+                >
+                  Zero to Hero Program
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/programs/accelerated-programs"
+                  class="hover:brightness-75 duration-200"
+                >
+                  Accelerated Programs
+                </a>
+              </li>
             </ul>
           </div>
           <div class="flex flex-col gap-3">
             <h3 class="font-bold text-lg mb-3">About Us</h3>
             <ul class="flex flex-col gap-4">
               {
-                navbarLinks[2].submenu.map((link) => (
-                  <li>
-                    <a
-                      href={link.link}
-                      class="hover:text-main-blue duration-200"
-                    >
-                      {link.name}
-                    </a>
-                  </li>
-                ))
+                navbarLinks
+                  .find((link) => link.name === "About")
+                  .submenu.map((link) => (
+                    <li>
+                      <a
+                        href={link.link}
+                        class="hover:brightness-75 duration-200"
+                      >
+                        {link.name}
+                      </a>
+                    </li>
+                  ))
               }
             </ul>
           </div>
@@ -130,30 +144,21 @@ const today = new Date();
             <h3 class="font-bold text-lg mb-3">Contact</h3>
             <ul class="flex flex-col gap-4">
               <li class="flex gap-2 group items-center">
-                <MdEmail
-                  className="size-4 group-hover:text-main-blue duration-200"
-                />
-                <a
-                  class="group-hover:text-main-blue duration-200"
-                  href=`mailto:${EMAIL_ADDRESS}`>{EMAIL_ADDRESS}</a
-                >
-              </li>
-              <li class="flex gap-2 group items-center">
                 <FaPhone
-                  className="size-4 group-hover:text-main-blue duration-200"
+                  className="size-4 group-hover:brightness-75 duration-200"
                 />
                 <a
-                  class="group-hover:text-main-blue duration-200"
+                  class="group-hover:brightness-75 duration-200"
                   href=`tel:${PHONE_NUMBER}`>{PHONE_NUMBER}</a
                 >
               </li>
               <li class="flex gap-2 group max-w-sm">
                 <IoLocationSharp
-                  className="size-4 group-hover:text-main-blue duration-200 mt-1 flex-shrink-0"
+                  className="size-4 group-hover:brightness-75 duration-200 mt-1 flex-shrink-0"
                 />
                 <a
-                  class="group-hover:text-main-blue duration-200"
-                  href="https://maps.app.goo.gl/EkxRux52SAxEkUJLA"
+                  class="group-hover:brightness-75 duration-200"
+                  href={GOOGLE_MAPS_URL}
                   target="_blank"
                 >
                   <p>{ADDRESS_LINE_1}</p>
@@ -172,15 +177,16 @@ const today = new Date();
             today.getFullYear()
           }. All rights reserved.
           <a
-            class="hover:underline duration-200 hover:text-main-blue"
-            href="/privacy-policy">Privacy Policy & Terms of Service</a
+            class="hover:underline duration-200 hover:brightness-75"
+            href="/privacy-policy-and-terms-of-service"
+            >Privacy Policy & Terms of Service</a
           >
         </p>
         <p class="text-sm">
           Powered by <a
             href="https://rightruddermarketing.com/"
             target="_blank"
-            class="font-semibold hover:underline text-main-blue duration-200"
+            class="font-semibold hover:underline duration-200 hover:brightness-75"
             >More Right Rudder</a
           >
         </p>

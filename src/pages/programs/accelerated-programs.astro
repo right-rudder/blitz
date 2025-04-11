@@ -1,0 +1,43 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import acceleratedPrograms from "../../data/acceleratedPrograms";
+import AcceleratedProgramsCard from "../../components/AcceleratedProgramsCard.astro";
+
+const headerData = {
+  title: "Accelerated Flight Training Programs",
+  primaryImage:
+    "/src/assets/images/front-view-cessna-172xp-high-performance.webp",
+  primaryAlt: "Front view of a Cessna 172XP high performance aircraft",
+};
+---
+
+<BaseLayout
+  siteTitle="Accelerated Flight Training Programs in Utah | Blitz Aviation"
+  siteDescription="Earn your pilot certifications faster with Blitz Aviation’s accelerated flight training programs. From Instrument Rating to CFI, our expert-led courses help you achieve your goals in as little as 7–14 days in Ogden, Utah."
+>
+  <Header slot="hero" data={headerData} />
+
+  <section id="acceleratedPrograms">
+    <div class="mx-auto px-5 md:px-10 lg:px-20 py-24">
+      <h3 class="text-6xl font-bold text-center italic">
+        Blitz Accelerated Programs
+      </h3>
+      <div class="flex flex-col gap-20 md:gap-[10rem] mt-20">
+        {
+          acceleratedPrograms.map((program) => (
+            <AcceleratedProgramsCard
+              imageSrc={program.data.primaryImage}
+              headline={program.data.title}
+              title={program.data.title}
+              description={program.data.intro}
+              url={program.data.url}
+              details={program.data.details}
+              prerequisites={program.data.prerequisites}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>

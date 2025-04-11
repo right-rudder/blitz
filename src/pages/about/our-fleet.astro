@@ -1,0 +1,26 @@
+---
+import Header from "../../components/Header.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PlaneCard from "../../components/PlaneCard.astro";
+import aircraft from "../../data/aircraft";
+
+const headerData = {
+  title: "Our Fleet",
+  primaryImage:
+    "/src/assets/images/blitz-airplanes-available-for-rent-and-instruction.webp",
+  primaryAlt: "Blitz Aviation airplanes available for rent and instruction",
+};
+---
+
+<BaseLayout
+  siteTitle="Explore the Blitz Aviation Training Fleet | Cessna 172 Aircraft in Ogden, UT"
+  siteDescription="Train with confidence in Blitz Aviation’s top-tier fleet. Featuring the modernized Cessna 172XP and the classic 172P, our aircraft are equipped with advanced avionics and built for safe, effective flight training at every level."
+>
+  <Header slot="hero" data={headerData} />
+
+  <section
+    class="mx-auto px-5 md:px-10 lg:px-20 py-16 gap-10 lg:gap-28 flex flex-col max-w-7xl"
+  >
+    {aircraft.map((plane) => <PlaneCard {...plane} />)}
+  </section>
+</BaseLayout>

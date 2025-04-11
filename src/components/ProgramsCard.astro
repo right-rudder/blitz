@@ -1,0 +1,33 @@
+---
+import ImageComp from "./ImageComp.astro";
+const { imageSrc, headline, title, description, url } = Astro.props;
+---
+
+<div
+  class="flex flex-col md:flex-row group justify-between gap-10 md:gap-[10vw] items-center"
+>
+  <div class="flex-1 relative">
+    <ImageComp
+      src={imageSrc}
+      alt="title"
+      classes="object-cover aspect-square"
+    />
+    <div
+      class="absolute inset-0 bg-black/30 flex justify-between p-5 lg:p-10 text-right flex-col"
+    >
+      <h6
+        class="text-white text-5xl md:text-2xl lg:text-5xl font-semibold max-w-[19rem] ml-auto"
+      >
+        {title}
+      </h6>
+      <hr class="bg-white text-white h-[2px]" />
+    </div>
+  </div>
+
+  <div class="flex-1">
+    <p class="sm:text-lg lg:text-xl xl:text-2xl tracking-wider leading-relaxed">
+      {description}
+    </p>
+    <a href={url} class="btn-primary w-fit mt-5">Explore {title}</a>
+  </div>
+</div>

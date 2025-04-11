@@ -1,0 +1,26 @@
+---
+import Header from "../../components/Header.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import team from "../../data/team";
+import TeamCard from "../../components/TeamCard.astro";
+
+const headerData = {
+  title: "Our Team",
+  primaryImage:
+    "/src/assets/images/team-blitz-aviation-flight-training-utah-salt-lake.webp",
+  primaryAlt: "Team Blitz Aviation Flight Training Utah Salt Lake",
+};
+---
+
+<BaseLayout
+  siteTitle="Meet the Blitz Aviation Flight Instructors | Expert CFI Team in Utah"
+  siteDescription="Get to know the passionate instructors behind Blitz Aviation. From Mycah Pittman’s fast-track success to Andrew Zilka’s deep aviation roots, our experienced team is dedicated to guiding your journey from first flight to checkride success."
+>
+  <Header slot="hero" data={headerData} />
+
+  <section
+    class="mx-auto px-5 md:px-10 lg:px-20 py-16 gap-10 flex flex-col max-w-7xl"
+  >
+    {team.map((member) => <TeamCard {...member} />)}
+  </section>
+</BaseLayout>

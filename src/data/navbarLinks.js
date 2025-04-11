@@ -1,5 +1,9 @@
 export const navbarLinks = [
   {
+    name: "Home",
+    link: "/",
+  },
+  {
     name: "Flight Training",
     submenu: [
       {
@@ -22,14 +26,18 @@ export const navbarLinks = [
         name: "Certified Flight Instructor Instrument",
         link: "/programs/cfii",
       },
+      {
+        name: "Accelerated Programs",
+        link: "/programs/accelerated-programs",
+      },
     ],
   },
   {
-    name: "Our Fleet",
-    link: "/fleet",
+    name: "Zero-to-Hero",
+    link: "/the-blitz-program",
   },
   {
-    name: "More Info",
+    name: "About",
     submenu: [
       {
         name: "Our Story",
@@ -42,6 +50,10 @@ export const navbarLinks = [
       {
         name: "Our Fleet",
         link: "/about/our-fleet",
+      },
+      {
+        name: "Our Blog",
+        link: "/blog",
       },
     ],
   },

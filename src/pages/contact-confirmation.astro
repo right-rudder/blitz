@@ -5,8 +5,8 @@ import Header from "../components/Header.astro";
 
 const headerData = {
   title: "Thank you for contacting us",
-  primaryImage: "/src/assets/images/pexels-josephmartin-5785741.jpg",
-  primaryAlt: "Thank you for contacting us",
+  primaryImage: "/src/assets/images/blitz-discovery-flight-view.webp",
+  primaryAlt: "View of Ogden Mountains from a plane",
 };
 ---
 
@@ -31,15 +31,12 @@ const headerData = {
 
       <p class="px-5">
         Thank you for contacting Blitz Aviation. We are excited to work with you
-        soon. We will review your message and respond within 1-5 business days.
+        soon. We will review your message and respond within 1-5 business days. <br
+        />
         You can also call us at <a
           href=`tel:${PHONE_NUMBER}`
           class="hover:underline hover:text-main-color">{PHONE_NUMBER}</a
-        >
-        or email us at <a
-          href=`mailto:${EMAIL_ADDRESS}`
-          class="hover:underline hover:text-main-color">{EMAIL_ADDRESS}</a
-        >
+        >.
       </p>
 
       <div class="pt-10 flex flex-row justify-center">

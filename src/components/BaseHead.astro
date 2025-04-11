@@ -42,6 +42,92 @@ const { title, description, image = "/blog-placeholder-1.jpg" } = Astro.props;
   gtag("config", "G-XWPP0QF8N9");
 </script>
 
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://www.blitzaviation.com",
+    "name": "Blitz Aviation",
+    "url": "https://www.blitzaviation.com",
+    "logo": "https://www.blitzaviation.com/blitz-logo.png",
+    "description": "Blitz Aviation offers accelerated flight training programs at Ogden-Hinckley Airport (KOGD) in Utah. Serving Ogden, Salt Lake City, and surrounding areas, we provide private pilot, instrument rating, commercial pilot, and certified flight instructor training.",
+    "image": "https://www.blitzaviation.com/images/ogden-flight-training.jpg",
+    "telephone": "+1-801-823-4122",
+    "email": "info@blitzaviation.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "3909 Airport Rd",
+      "addressLocality": "Ogden",
+      "addressRegion": "UT",
+      "postalCode": "84405",
+      "addressCountry": "US"
+    },
+    "currenciesAccepted": "USD",
+    "paymentAccepted": "Cash, Credit Card, Visa, Mastercard, American Express, Discover, Checks",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 41.19415996924632,
+      "longitude": -112.00750135068749
+    },
+    "hasMap": "https://maps.app.goo.gl/wQMxZ949rDc7GHTH8",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "09:00",
+        "closes": "17:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/blitzaviation",
+      "https://www.yelp.com/biz/blitz-aviation-ogden"
+    ],
+    "areaServed": {
+      "@type": "Place",
+      "name": [
+        "Ogden",
+        "Salt Lake City",
+        "Layton",
+        "Bountiful",
+        "Northern Utah"
+      ]
+    },
+    "makesOffer": {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "serviceType": "Flight Instruction"
+      },
+      "priceCurrency": "USD",
+      "price": "Varies"
+    },
+    "identifier": [
+      {
+        "@type": "PropertyValue",
+        "name": "IATA Code",
+        "value": "OGD"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ICAO Code",
+        "value": "KOGD"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Airport Code",
+        "value": "OGD"
+      }
+    ]
+  }
+</script>
+
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
 

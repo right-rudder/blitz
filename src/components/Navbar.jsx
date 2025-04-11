@@ -297,6 +297,8 @@ const Navbar = ({ pathname }) => {
             src={companyLogo.src}
             alt="Blitz Aviation logo"
             className="w-40"
+            width="80"
+            height="88"
           />
         </a>
 
@@ -423,10 +425,13 @@ const Navbar = ({ pathname }) => {
             <a
               href={`tel:${PHONE_NUMBER}`}
               className="border p-2 w-fit border-white rounded-full bg-white"
+              aria-label="Call Blitz Aviation"
             >
               <FaPhone className="size-3 text-main-blue-500" />
             </a>
-            <a href={`tel:${PHONE_NUMBER}`}>{PHONE_NUMBER}</a>
+            <a href={`tel:${PHONE_NUMBER}`} aria-label="Call Blitz Aviation">
+              {PHONE_NUMBER}
+            </a>
           </div>
 
           <div className="flex gap-3 mt-2">

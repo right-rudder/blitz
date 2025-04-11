@@ -3,39 +3,32 @@ import ImageComp from "./ImageComp.astro";
 ---
 
 <div class="relative isolate overflow-hidden h-screen flex">
-  <!-- <div class="flex-1">
-    <ImageComp
-      src="/src/assets/images/cfi-cambrie-foster.jpg"
-      alt="Blitz Airplane in Hangar"
-      classes="h-full object-cover w-full"
-    />
-  </div>
-  <div class="flex-1">
-    <ImageComp
-      src="/src/assets/images/cfi-andrew-zilka.jpg"
-      alt="Blitz Airplane in Hangar"
-      classes="h-full object-cover w-full"
-    />
-  </div> -->
+  <!-- <video
+    autoplay
+    muted
+    loop
+    playsinline
+    src="https://res.cloudinary.com/do7bqihpr/video/upload/v1744398800/blitz-aviation-video-header-flight-training-school-ogden-salt-lake-city-utah_zlqcnp.mp4"
+    class="h-full w-full object-cover"></video> -->
 
-  <!-- <iframe
-    class="aspect-video pointer-events-none absolute w-[160rem] -left-[65rem] lg:-left-[50rem] -top-[15rem] 2xl:h-[135vh] 2xl:w-[135vw] 2xl:-left-[18vw] 2xl:-top-[18vh]"
-    src="https://www.youtube.com/embed/Qe-R56Tz78c?autoplay=1&start=113&loop=1&mute=1&iv_load_policy=3&controls=0&disablekb=1&fs=0&vq=hd1080&modestbranding=1&rel=0&playlist=Qe-R56Tz78c"
-    title="YouTube video player"
+  <ImageComp
+    src="/src/assets/images/view-of-ogden-ohio-mountains-from-discovery-flight.webp"
+    alt="View of Ogden, Utah from Discovery Flight"
+    classes="absolute inset-0 w-full h-full object-cover z-0"
     loading="eager"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    referrerpolicy="strict-origin-when-cross-origin"
-    tabindex="-1"
-    allowfullscreen></iframe> -->
-
+  />
   <video
     autoplay
     muted
     loop
     playsinline
-    poster="/view-of-ogden-ohio-mountains-from-discovery-flight.webp"
-    src="https://res.cloudinary.com/do7bqihpr/video/upload/v1744398800/blitz-aviation-video-header-flight-training-school-ogden-salt-lake-city-utah_zlqcnp.mp4"
-    class="h-full w-full object-cover"></video>
+    class="absolute inset-0 w-full h-full object-cover z-0"
+  >
+    <source
+      src="https://res.cloudinaryy.com/do7bqihpr/video/upload/v1744398800/blitz-aviation-video-header-flight-training-school-ogden-salt-lake-city-utah_zlqcnp.mp4"
+      type="video/mp4"
+    />
+  </video>
 
   <div
     class="flex px-5 md:px-10 lg:px-20 absolute top-0 backdrop-brightness-50 bottom-0 right-0 left-0 text-white items-center justify-center text-center"

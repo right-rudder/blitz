@@ -7,6 +7,7 @@ const { pathname } = Astro.url;
 const { siteTitle, siteDescription } = Astro.props;
 import "@fontsource-variable/outfit";
 import ContactUs from "../components/ContactUs.astro";
+import ImageComp from "../components/ImageComp.astro";
 ---
 
 <!doctype html>
@@ -19,7 +20,14 @@ import ContactUs from "../components/ContactUs.astro";
   </head>
   <body>
     <header>
-      <Navbar pathname={pathname} client:load />
+      <Navbar pathname={pathname} client:load>
+        <ImageComp
+          src="/src/assets/logos/blitz-aviation-logo.png"
+          alt="Blitz Aviation Logo"
+          classes="w-full h-full object-contain"
+          loading="eager"
+        />
+      </Navbar>
     </header>
     <main>
       <slot name="hero" />

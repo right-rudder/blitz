@@ -12,7 +12,8 @@ import {
   YOUTUBE_URL,
 } from "../consts.ts";
 
-const Navbar = ({ pathname }) => {
+const Navbar = ({ pathname, children }) => {
+  // console.log("hey");
   const [openMobile, setOpenMobile] = useState(false);
   const [navBar, setNavbar] = useState(false);
   const [showNavbar, setShowNavbar] = useState(false);
@@ -199,15 +200,11 @@ const Navbar = ({ pathname }) => {
                 </ul>
               </div>
 
-              <a href="/" className="flex items-center gap-4">
-                <img
-                  src={companyLogo.src}
-                  alt="Blitz Aviation Logo"
-                  className={` ${navBar ? "w-12" : "w-18 translate-y-6"} duration-200`}
-                  width="72"
-                  height="80"
-                />
-              </a>
+              <a
+                href="/"
+                className={` ${navBar ? "w-12" : "w-18 translate-y-6"} duration-200`}
+                dangerouslySetInnerHTML={{ __html: children.props.value }}
+              ></a>
 
               <div className="hidden lg:flex flex-1 justify-end">
                 <a href="#contactUs" className="btn-secondary">
@@ -292,15 +289,8 @@ const Navbar = ({ pathname }) => {
         <a
           href="/"
           className="text-white px-10 w-fit mx-auto block leading-none uppercase font-semibold text-lg z-40 relative"
-        >
-          <img
-            src={companyLogo.src}
-            alt="Blitz Aviation logo"
-            className="w-40"
-            width="80"
-            height="88"
-          />
-        </a>
+          dangerouslySetInnerHTML={{ __html: children.props.value }}
+        ></a>
 
         {/* <div
           className={`absolute w-full h-32 bg-white top-16 z-30 duration-300  ${

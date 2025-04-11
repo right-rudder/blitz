@@ -74,7 +74,7 @@ const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
       </div>
     </div>
     <div class="flex gap-x-4 sm:col-span-2 mt-5">
-      <div class="flex h-6 items-center">
+      <div class="flex items-center">
         <input
           type="checkbox"
           id="agree-terms"
@@ -82,7 +82,10 @@ const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
           class="h-4 w-4 cursor-pointer rounded border-gray-300 bg-white text-gray-900 focus:ring-2 focus:ring-gray-900"
           required
         />
-        <label for="agree-terms" class="ml-2 text-sm leading-6 text-gray-200">
+        <label
+          for="agree-terms"
+          class="ml-2 text-sm lg:leading-6 text-gray-200"
+        >
           I agree to <a href="#" class="underline">terms & conditions</a> provided
           by the company. By providing my phone number, I agree to receive text messages
           from the business.

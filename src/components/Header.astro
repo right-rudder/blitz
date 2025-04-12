@@ -3,11 +3,11 @@ const { data } = Astro.props;
 import ImageComp from "./ImageComp.astro";
 ---
 
-<div class="relative overflow-hidden h-[60vh] flex">
+<div class="relative object-cover overflow-hidden  h-[60vh] flex">
   <ImageComp
     src={data.primaryImage}
     alt={data.primaryAlt}
-    classes={`object-cover w-full`}
+    classes={`object-cover h-full w-full`}
     loading="eager"
     quality={100}
   />

@@ -6,7 +6,7 @@ const { imageSrc, headline, title, description, url } = Astro.props;
 <div
   class="flex flex-col md:flex-row group justify-between gap-10 md:gap-[10vw] items-center"
 >
-  <div class="flex-1 relative">
+  <div class="flex-1 relative" data-aos="fade-right">
     <ImageComp
       src={imageSrc}
       alt="title"
@@ -24,7 +24,7 @@ const { imageSrc, headline, title, description, url } = Astro.props;
     </div>
   </div>
 
-  <div class="flex-1">
+  <div class="flex-1" data-aos="fade-right" data-aos-delay="100">
     <p class="sm:text-lg lg:text-xl xl:text-2xl tracking-wider leading-relaxed">
       {description}
     </p>

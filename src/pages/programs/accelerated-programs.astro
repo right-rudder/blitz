@@ -13,16 +13,24 @@ const headerData = {
 ---
 
 <BaseLayout
-  siteTitle="Accelerated Flight Training Programs in Utah | Blitz Aviation"
-  siteDescription="Earn your pilot certifications faster with Blitz Aviation’s accelerated flight training programs. From Instrument Rating to CFI, our expert-led courses help you achieve your goals in as little as 7–14 days in Ogden, Utah."
+  siteTitle="Accelerated Flight Training Programs in Utah | Fast-Track Pilot Courses"
+  siteDescription="Earn your pilot certifications in record time with Blitz Aviation's accelerated flight training programs in Ogden, Utah. Complete instrument, commercial, and CFI ratings in as little as 7-14 days with our intensive, focused courses."
+  siteKeywords="accelerated flight training Utah, fast track pilot licenses, intensive flight courses, quick pilot certification, 14-day instrument rating, 10-day commercial pilot, 7-day CFI course, expedited flight training, rapid pilot training, aviation career fast track, quick flight certifications Utah"
 >
   <Header slot="hero" data={headerData} />
 
   <section id="acceleratedPrograms">
     <div class="mx-auto px-5 md:px-10 lg:px-20 py-24">
-      <h3 class="text-6xl font-bold text-center italic">
+      <h1 class="text-6xl font-bold text-center italic">
         Blitz Accelerated Programs
-      </h3>
+      </h1>
+      <p class="text-center mt-6 text-lg max-w-3xl mx-auto">
+        Our accelerated programs are designed for pilots who want to achieve
+        their aviation goals quickly and efficiently. With intensive training
+        schedules and experienced instructors, you'll gain the skills and
+        knowledge needed to advance your flying career in a fraction of the
+        time.
+      </p>
       <div class="flex flex-col gap-20 md:gap-[10rem] mt-20">
         {
           acceleratedPrograms.map((program) => (
@@ -31,7 +39,6 @@ const headerData = {
               headline={program.data.title}
               title={program.data.title}
               description={program.data.intro}
-              url={program.data.url}
               details={program.data.details}
               prerequisites={program.data.prerequisites}
             />

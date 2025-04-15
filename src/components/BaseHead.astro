@@ -2,17 +2,23 @@
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
 import "../styles/global.css";
-import { SITE_TITLE } from "../consts";
+import { SITE_TITLE, SITE_KEYWORDS } from "../consts";
 
 interface Props {
   title: string;
   description: string;
   image?: string;
+  keywords?: string;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description, image = "/blog-placeholder-1.jpg" } = Astro.props;
+const {
+  title,
+  description,
+  image = "/blog-placeholder-1.jpg",
+  keywords = SITE_KEYWORDS,
+} = Astro.props;
 ---
 
 <!-- Global Metadata -->
@@ -135,6 +141,12 @@ const { title, description, image = "/blog-placeholder-1.jpg" } = Astro.props;
 <title>{title}</title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
+<meta name="keywords" content={keywords} />
+<meta name="author" content="Blitz Aviation" />
+<meta name="geo.region" content="US-UT" />
+<meta name="geo.placename" content="Ogden" />
+<meta name="geo.position" content="41.19415996924632;-112.00750135068749" />
+<meta name="ICBM" content="41.19415996924632, -112.00750135068749" />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
@@ -142,6 +154,8 @@ const { title, description, image = "/blog-placeholder-1.jpg" } = Astro.props;
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={new URL(image, Astro.url)} />
+<meta property="og:locale" content="en_US" />
+<meta property="og:site_name" content="Blitz Aviation" />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />

@@ -2,13 +2,49 @@
 import type { CollectionEntry } from "astro:content";
 import FormattedDate from "../components/FormattedDate.astro";
 import ImageComp from "../components/ImageComp.astro";
+import BaseHead from "../components/BaseHead.astro";
+import { SITE_TITLE } from "../consts";
 
 type Props = CollectionEntry<"blog">["data"];
 
-const { title, description, pubDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+
+// Format date for schema markup
+const publishDate = new Date(pubDate).toISOString();
+const modifiedDate = updatedDate ? new Date(updatedDate).toISOString() : publishDate;
+const imageUrl = new URL(heroImage || '/blitz-logo.png', Astro.site).toString();
 ---
 
 <article class="prose lg:prose-xl max-w-3xl mx-auto py-10 lg:py-20 px-5">
+  <!-- Add schema.org Article markup for blog posts -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": title,
+    "description": description,
+    "image": imageUrl,
+    "datePublished": publishDate,
+    "dateModified": modifiedDate,
+    "author": {
+      "@type": "Organization",
+      "name": "Blitz Aviation",
+      "url": "https://blitzaviation.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Blitz Aviation",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://blitzaviation.com/blitz-logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": Astro.url.href
+    }
+  })}>
+  </script>
+
   <div class="flex">
     <ImageComp
       src={heroImage}
@@ -19,8 +55,14 @@ const { title, description, pubDate, heroImage } = Astro.props;
   <div class="title">
     <div class="date text-blue-800 font-semibold text-2xl tracking-wide italic">
       <FormattedDate date={pubDate} />
+      {updatedDate && (
+        <div class="last-updated-on">
+          Last updated on <FormattedDate date={updatedDate} />
+        </div>
+      )}
     </div>
     <h1>{title}</h1>
+    <p class="text-gray-600">{description}</p>
   </div>
   <slot />
 </article>

@@ -10,7 +10,9 @@ const cfi = {
     siteTitle:
       "Certified Flight Instructor Course in Utah | CFI Training at Blitz Aviation",
     siteDescription:
-      "Launch your aviation career as a Certified Flight Instructor. Gain real-world teaching experience and build flight hours with Blitz Aviation’s CFI program.",
+      "Launch your aviation career as a Certified Flight Instructor at Blitz Aviation in Ogden, Utah. Build flight hours, gain real-world teaching experience, and earn while developing your commercial pilot skills.",
+    siteKeywords:
+      "certified flight instructor Utah, CFI training Ogden, flight instructor certification, aviation teaching career, CFI preparation course, flight instructor jobs Utah, teaching pilots, earn flight hours, aviation education career, instructor pilot training, CFI checkride preparation",
     intro:
       "Becoming a Certified Flight Instructor (CFI) is a strategic step for aspiring airline pilots, enabling you to build flight hours while earning a income. Our tailored CFI programs at Blitz Aviation equip you with confidence, professionalism, and refined skills to instruct effectively and accelerate your airline career.",
     description: [

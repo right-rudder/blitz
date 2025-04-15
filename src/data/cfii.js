@@ -8,9 +8,11 @@ const cfii = {
     url: "/programs/cfii",
     slug: "cfii",
     siteTitle:
-      "CFII Training in Utah | Certified Flight Instructor - Instrument Course",
+      "CFII Training in Utah | Instrument Instructor Course at Blitz Aviation",
     siteDescription:
-      "Advance your teaching credentials with Blitz Aviation’s CFII program. Learn to instruct instrument students and refine your IFR flying skills in Ogden, Utah.",
+      "Advance your teaching credentials with Blitz Aviation's CFII program in Ogden, Utah. Learn to instruct instrument students and refine your IFR flying skills while increasing your value in the aviation job market.",
+    siteKeywords:
+      "CFII training Utah, instrument flight instructor, certified flight instructor instrument, teaching IFR flying, instrument instruction certification, advanced flight instructor training, CFII checkride preparation, aviation career advancement, instrument teaching qualification, instrument flight rules instructor, IFR teaching career",
     intro:
       "Becoming a Certified Flight Instructor - Instrument (CFII) takes your teaching skills to the next level, enabling you to instruct students in instrument flying techniques. Our CFII program at Blitz Aviation equips you with the expertise to teach instrument rating candidates, further refining your own instrument flying skills and deepening your understanding of IFR procedures.",
     description: [

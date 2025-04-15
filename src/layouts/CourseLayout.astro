@@ -4,9 +4,56 @@ import { IoMdAirplane } from "react-icons/io";
 import ImageComp from "../components/ImageComp.astro";
 
 const { data } = Astro.props;
+
+// Format structured data for course
+const courseUrl = new URL(data.url, Astro.site).toString();
+const primaryImageUrl = new URL(data.primaryImage, Astro.site).toString();
 ---
 
 <section class="my-24 mx-auto max-w-2xl lg:max-w-7xl">
+  <!-- Add schema.org Course markup -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": data.title,
+    "description": data.description[0],
+    "provider": {
+      "@type": "Organization",
+      "name": "Blitz Aviation",
+      "sameAs": "https://blitzaviation.com"
+    },
+    "url": courseUrl,
+    "image": primaryImageUrl,
+    "educationalCredentialAwarded": data.title,
+    "teaches": data.title,
+    "hasCourseInstance": {
+      "@type": "CourseInstance",
+      "courseMode": "onsite",
+      "location": {
+        "@type": "Place",
+        "name": "Blitz Aviation at Ogden-Hinckley Airport (KOGD)",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Ogden",
+          "addressRegion": "UT",
+          "postalCode": "84405",
+          "addressCountry": "US"
+        }
+      },
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": "Varies",
+          "priceCurrency": "USD"
+        }
+      }
+    }
+  })}>
+  </script>
+
   <div class="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row gap-20 px-5">
     <aside class="flex-1 flex flex-col gap-10 max-w-xl mx-auto">
       <div
@@ -16,7 +63,7 @@ const { data } = Astro.props;
         <hr />
         <ul class="flex flex-col gap-2 my-3">
           {
-            data.prerequisites.map((step) => (
+            data.prerequisites.map((step: string) => (
               <li class="flex gap-2">
                 <FaDotCircle className="text-white size-3 shrink-0 mt-[6px]" />
                 <div set:html={step} />
@@ -56,16 +103,16 @@ const { data } = Astro.props;
       />
 
       <div class="flex flex-col gap-5 mt-5">
-        <h2 class="max-w-lg text-pretty text-4xl font-bold tracking-wide text-main-black sm:text-5xl">{data.title}</h2>
-        <h3 class="text-blue-800 font-semibold text-2xl tracking-wide italic">About the program</h3>
+        <h1 class="max-w-lg text-pretty text-4xl font-bold tracking-wide text-main-black sm:text-5xl">{data.title}</h1>
+        <h2 class="text-blue-800 font-semibold text-2xl tracking-wide italic">About the program</h2>
         {
-          data.description.map((description) => (
+          data.description.map((description: string) => (
             <p class="lg:text-lg tracking-wider font-light" set:html={description} />
           ))
         }
         {
           data.programs &&
-            data.programs.map((program) => (
+            data.programs.map((program: { title: string; description: string }) => (
               <p class="text-gray-600 lg:text-lg">
                 <span class="font-semibold text-main-black">{program.title}: </span>
                 {program.description}
@@ -75,32 +122,34 @@ const { data } = Astro.props;
       </div>
 
       {data.steps && (
-        <h3 class="text-3xl">
-          What key steps will you take to complete the program?
-        </h3>
-        <ul class="flex flex-col gap-7">
-          {
-            data.steps.map((step, index) => (
-              <li class="flex gap-5">
-                <div class="bg-blue-700 w-fit h-fit  p-2 text-white">
-                  <step.icon />
-                </div>
-                <div class="flex-flex-col">
-                  <div>
-                    <p class="text-xs/5 font-semibold text-blue-700 uppercase tracking-widest">
-                      Step {index + 1}
-                    </p>
-                    <p
-                      class="max-w-lg text-pretty text-2xl font-semibold tracking-tight text-main-black"
-                      set:html={step.title}
-                    />
-                    <p class="text-sm lg:text-base tracking-wider font-light" set:html={step.description} />
+        <div>
+          <h3 class="text-3xl">
+            What key steps will you take to complete the program?
+          </h3>
+          <ul class="flex flex-col gap-7 mt-5">
+            {
+              data.steps.map((step: { icon: any; title: string; description: string }, index: number) => (
+                <li class="flex gap-5">
+                  <div class="bg-blue-700 w-fit h-fit p-2 text-white">
+                    <step.icon />
                   </div>
-                </div>
-              </li>
-            ))
-          }
-        </ul>
+                  <div class="flex-flex-col">
+                    <div>
+                      <p class="text-xs/5 font-semibold text-blue-700 uppercase tracking-widest">
+                        Step {index + 1}
+                      </p>
+                      <p
+                        class="max-w-lg text-pretty text-2xl font-semibold tracking-tight text-main-black"
+                        set:html={step.title}
+                      />
+                      <p class="text-sm lg:text-base tracking-wider font-light" set:html={step.description} />
+                    </div>
+                  </div>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
       )}
     </div>
   </div>

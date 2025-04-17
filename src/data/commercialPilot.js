@@ -8,9 +8,11 @@ const commercialPilot = {
     url: "/programs/commercial-pilot",
     slug: "commercial-pilot",
     siteTitle:
-      "Commercial Pilot Training in Utah | Become a Pro with Blitz Aviation",
+      "Commercial Pilot Training in Utah | Professional Aviation Career at Blitz Aviation",
     siteDescription:
-      "Train to become a commercial pilot in just 3 months at Blitz Aviation in Ogden. Learn advanced maneuvers and earn your CPL with experienced instructors.",
+      "Train to become a commercial pilot in just 3 months at Blitz Aviation in Ogden, Utah. Master advanced maneuvers and complex aircraft operations while preparing for a professional aviation career with our experienced instructors.",
+    siteKeywords:
+      "commercial pilot license Utah, CPL training Ogden, professional pilot training, commercial aviation career, complex aircraft training, advanced flight maneuvers, commercial pilot certificate, aviation career preparation, paid pilot training, charter pilot qualification, airline pilot path Utah",
     intro:
       "The Commercial Pilot Certificate (CPL) elevates your skills to professional standards, enabling you to receive compensation for flying services. Our CPL program at Blitz Aviation focuses on advanced maneuvers, complex aircraft operations, and aviation professionalism, unlocking opportunities in passenger transport, cargo, and specialized aviation fields.",
     description: [

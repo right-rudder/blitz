@@ -41,7 +41,7 @@ const { imageSrc, headline, title, description, url, prerequisites, details } =
         </h4>
         <ul class="flex flex-col gap-2 my-3">
           {
-            details.map((detail) => (
+            details.map((detail: string) => (
               <li class="flex gap-2">
                 <FaDotCircle className="text-main-blue-800 size-3 shrink-0 mt-[6px]" />
                 <div
@@ -61,7 +61,7 @@ const { imageSrc, headline, title, description, url, prerequisites, details } =
         </h4>
         <ul class="flex flex-col gap-2 my-3">
           {
-            prerequisites.map((prerequisite) => (
+            prerequisites.map((prerequisite: string) => (
               <li class="flex gap-2">
                 <FaDotCircle className="text-main-blue-800 size-3 shrink-0 mt-[6px]" />
                 <div

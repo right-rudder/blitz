@@ -7,9 +7,11 @@ const privatePilot = {
     title: "Private Pilot",
     url: "/programs/private-pilot",
     slug: "private-pilot",
-    siteTitle: "Private Pilot Training in Ogden, Utah | Blitz Aviation",
+    siteTitle: "Private Pilot License Training in Ogden, Utah | Blitz Aviation",
     siteDescription:
-      "Earn your Private Pilot License in as little as 3 months at Blitz Aviation in Ogden, UT. Learn to fly with expert instructors in a flexible, affordable program.",
+      "Earn your Private Pilot License in as little as 3 months at Blitz Aviation in Ogden, UT. Learn to fly with expert CFIs in a structured, affordable program with Cessna aircraft and personalized instruction.",
+    siteKeywords:
+      "private pilot license Utah, PPL training Ogden, learn to fly Utah, beginner flying lessons, Cessna 172 training, first-time pilot training, recreational flying, private aviation license, sport pilot, flight school near Salt Lake City, affordable flight training",
     primaryImage:
       "/src/assets/images/student-of-the-private-pilot-flight-training-program.webp",
     primaryAlt:

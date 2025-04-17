@@ -7,9 +7,11 @@ const multiEngine = {
     title: "Multi-Engine Rating",
     url: "/programs/multi-engine",
     slug: "multi-engine",
-    siteTitle: "Multi-Engine Rating | Blitz Aviation",
+    siteTitle: "Multi-Engine Rating Training in Utah | Blitz Aviation",
     siteDescription:
-      "Experience the power and precision of multi engine aircraft as our expert instructors guide you through comprehensive training. With advanced systems, twin engines, and enhanced performance capabilities, Blitz Aviation's Piper Seminole provides an exceptional platform for honing your multi engine skills.",
+      "Upgrade your pilot qualifications with multi-engine training at Blitz Aviation in Ogden, Utah. Master twin-engine operations and engine-out procedures with our experienced instructors in a comprehensive, safety-focused program.",
+    siteKeywords:
+      "multi-engine rating Utah, twin engine training, Piper Seminole training, MEL rating Ogden, engine-out procedures training, multi-engine commercial pilot, twin engine qualification, multi-engine checkride preparation, advanced pilot certification, twin aircraft flight training, multi-engine land rating",
     intro:
       "A Multi-Engine Rating qualifies you to fly multi-engine aircraft, a prerequisite for most commercial airline roles, and prepares you to handle complex scenarios like engine failures. At Blitz Aviation, our multi-engine training emphasizes precision, safety, and operational excellence, enhancing your credentials and expanding career opportunities in airline operations.",
     description: [

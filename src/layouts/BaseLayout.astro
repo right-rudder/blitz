@@ -1,10 +1,10 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS } from "../consts";
 import Navbar from "../components/Navbar";
 const { pathname } = Astro.url;
-const { siteTitle, siteDescription } = Astro.props;
+const { siteTitle, siteDescription, siteImage, siteKeywords } = Astro.props;
 import "@fontsource-variable/outfit";
 import ContactUs from "../components/ContactUs.astro";
 import ImageComp from "../components/ImageComp.astro";
@@ -16,7 +16,18 @@ import ImageComp from "../components/ImageComp.astro";
     <BaseHead
       title={siteTitle || SITE_TITLE}
       description={siteDescription || SITE_DESCRIPTION}
+      image={siteImage ||
+        "/team-blitz-aviation-flight-training-utah-salt-lake.webp"}
+      keywords={siteKeywords || SITE_KEYWORDS}
     />
+    <!-- Preconnect to external domains to improve performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Additional mobile-friendly meta tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
   </head>
   <body>
     <header>

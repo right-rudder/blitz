@@ -5,7 +5,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import BlogPostCard from "../../components/BlogPostCard.astro";
 
 const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 
 const headerData = {
@@ -17,25 +17,28 @@ const headerData = {
 ---
 
 <BaseLayout
-  siteTitle="Aviation Tips, Student Stories & Industry Insights | Blitz Aviation Blog"
-  siteDescription="Stay updated with the latest in aviation training, student success stories, and expert flying tips. The Blitz Aviation Blog offers valuable content for aspiring pilots and aviation enthusiasts alike."
+  siteTitle="Aviation Training Blog | Flight School Tips & Resources | Blitz Aviation"
+  siteDescription="Explore flight training tips, pilot licensing guides, and aviation career advice on the Blitz Aviation blog. Practical resources for student pilots in Ogden, Utah and beyond."
+  siteKeywords="aviation blog, flight training tips, pilot license guide, aviation career advice, flight school blog, student pilot resources, learn to fly blog, flight training articles, aviation education blog, pilot training guides, flight instruction tips Utah"
 >
   <Header slot="hero" data={headerData} />
 
   <section class="mx-auto px-5 md:px-10 lg:px-20 py-16">
     <div class="flex flex-col gap-5">
-      <h3
+      <h2
         class="max-w-lg text-4xl font-bold tracking-wide text-main-black sm:text-5xl"
       >
-        Our Blog
+        Flight Training Resources & Aviation Insights
+      </h2>
+      <h3 class="text-blue-800 font-semibold text-2xl tracking-wide italic">
+        Expert Tips for Student Pilots
       </h3>
-      <h4 class="text-blue-800 font-semibold text-2xl tracking-wide italic">
-        The Latest Resources and Insights
-      </h4>
       <p class="lg:text-lg tracking-wider font-light max-w-4xl">
-        Stay up to date with the latest news, tips, and updates from the world
-        of aviation. Our blog features articles on a variety of topics,
-        including flight training, aviation safety, and industry trends.
+        Welcome to the Blitz Aviation blog, your source for practical flight
+        training advice, aviation career guidance, and pilot success stories.
+        Whether you're just starting your journey or advancing to commercial
+        ratings, our articles provide valuable insights to help you navigate the
+        world of aviation.
       </p>
       <div
         class="grid mt-10 gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 w-full sm:justify-center"

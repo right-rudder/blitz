@@ -13,14 +13,25 @@ const headerData = {
 ---
 
 <BaseLayout
-  siteTitle="Meet the Blitz Aviation Flight Instructors | Expert CFI Team in Utah"
-  siteDescription="Get to know the passionate instructors behind Blitz Aviation. From Mycah Pittman’s fast-track success to Andrew Zilka’s deep aviation roots, our experienced team is dedicated to guiding your journey from first flight to checkride success."
+  siteTitle="Meet Our Certified Flight Instructors | Blitz Aviation's Expert Team in Ogden, Utah"
+  siteDescription="Learn from Blitz Aviation's experienced CFIs in Ogden, Utah. Our team of passionate certified flight instructors brings diverse backgrounds and specialized expertise to deliver personalized, high-quality flight training for all levels."
+  siteKeywords="certified flight instructors Utah, CFI Ogden Utah, flight training instructors, aviation teachers Utah, experienced flight instructors, Blitz Aviation team, aviation mentors, pilot instructors Ogden, professional flight teachers, aviation education experts, flight school instructors"
 >
   <Header slot="hero" data={headerData} />
 
   <section
     class="mx-auto px-5 md:px-10 lg:px-20 py-16 gap-10 flex flex-col max-w-7xl"
   >
+    <div class="text-center max-w-3xl mx-auto mb-8">
+      <h2 class="text-4xl font-bold mb-4">Our Expert Flight Instructors</h2>
+      <p class="text-lg">
+        At Blitz Aviation, our team of dedicated Certified Flight Instructors
+        (CFIs) brings expertise, passion, and personalized attention to your
+        flight training journey. Each instructor is committed to your success
+        and safety in the air.
+      </p>
+    </div>
+
     {team.map((member) => <TeamCard {...member} />)}
   </section>
 </BaseLayout>

@@ -266,62 +266,62 @@ const headerData = {
       >
     </form>
   </section>
-</BaseLayout>
 
-<script define:vars={{ ENROLLMENT_FORM_WEBHOOK_URL }}>
-  document.addEventListener("DOMContentLoaded", function () {
-    // Get the enrollment form element
-    const enrollmentForm = document.getElementById("enrollment-form");
+  <script define:vars={{ ENROLLMENT_FORM_WEBHOOK_URL }}>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Get the enrollment form element
+      const enrollmentForm = document.getElementById("enrollment-form");
 
-    // Check if the enrollment form element exists
-    if (enrollmentForm !== null) {
-      // Add submit event listener to the enrollment form
-      enrollmentForm.addEventListener("submit", function (event) {
-        // Prevent the default form submission
-        event.preventDefault();
+      // Check if the enrollment form element exists
+      if (enrollmentForm !== null) {
+        // Add submit event listener to the enrollment form
+        enrollmentForm.addEventListener("submit", function (event) {
+          // Prevent the default form submission
+          event.preventDefault();
 
-        // Serialize the form data
-        const formData = new FormData(enrollmentForm);
+          // Serialize the form data
+          const formData = new FormData(enrollmentForm);
 
-        // Check the value of the honeypot field
-        const confirmEmailValue = formData.get("confirm-email");
-        if (confirmEmailValue === "" || confirmEmailValue === null) {
-          // If the honeypot field is empty, it's a human
-          // Set the form action to the URL for processing the form and redirecting to thank you
-          enrollmentForm.action = ENROLLMENT_FORM_WEBHOOK_URL;
-        }
-
-        // Convert FormData to URLSearchParams
-        const urlSearchParams = new URLSearchParams();
-        for (const pair of formData.entries()) {
-          urlSearchParams.append(pair[0], pair[1]);
-        }
-
-        // Send an AJAX request to submit the form
-        const xhr = new XMLHttpRequest();
-        xhr.open("POST", enrollmentForm.action);
-        xhr.setRequestHeader(
-          "Content-Type",
-          "application/x-www-form-urlencoded",
-        );
-        xhr.onload = function () {
-          // Check if the request was successful (status 200)
-          if (xhr.status === 200) {
-            // Redirect the user after a successful form submission
-            window.location.href = "/contact-confirmation";
-          } else {
-            // Handle errors if any
-            console.error("Form submission failed:", xhr.statusText);
+          // Check the value of the honeypot field
+          const confirmEmailValue = formData.get("confirm-email");
+          if (confirmEmailValue === "" || confirmEmailValue === null) {
+            // If the honeypot field is empty, it's a human
+            // Set the form action to the URL for processing the form and redirecting to thank you
+            enrollmentForm.action = ENROLLMENT_FORM_WEBHOOK_URL;
           }
-        };
-        xhr.onerror = function () {
-          // Handle network errors
-          console.error("Network error occurred while submitting the form.");
-        };
-        xhr.send(urlSearchParams);
-      });
-    } else {
-      console.error("Enrollment form element not found.");
-    }
-  });
-</script>
+
+          // Convert FormData to URLSearchParams
+          const urlSearchParams = new URLSearchParams();
+          for (const pair of formData.entries()) {
+            urlSearchParams.append(pair[0], pair[1]);
+          }
+
+          // Send an AJAX request to submit the form
+          const xhr = new XMLHttpRequest();
+          xhr.open("POST", enrollmentForm.action);
+          xhr.setRequestHeader(
+            "Content-Type",
+            "application/x-www-form-urlencoded",
+          );
+          xhr.onload = function () {
+            // Check if the request was successful (status 200)
+            if (xhr.status === 200) {
+              // Redirect the user after a successful form submission
+              window.location.href = "/contact-confirmation";
+            } else {
+              // Handle errors if any
+              console.error("Form submission failed:", xhr.statusText);
+            }
+          };
+          xhr.onerror = function () {
+            // Handle network errors
+            console.error("Network error occurred while submitting the form.");
+          };
+          xhr.send(urlSearchParams);
+        });
+      } else {
+        console.error("Enrollment form element not found.");
+      }
+    });
+  </script>
+</BaseLayout>

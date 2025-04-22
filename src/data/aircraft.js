@@ -32,9 +32,9 @@ const aircraft = [
   {
     name: "Piper Archer PA-28",
     number: "N2569Q",
-    image1: "/src/assets/images/piper-cherokee-N2569Q-outside-2.webp",
+    image1: "/src/assets/images/piper-cherokee-N2569Q-outside.webp",
     image1Alt: "Piper Archer Cherokee at Salt Lake",
-    image2: "/src/assets/images/piper-cherokee-N2569Q-outside.webp",
+    image2: "/src/assets/images/piper-cherokee-N2569Q-outside-3.webp",
     image2Alt: "Piper Cherokee in Ogden Utah",
     image3: "/src/assets/images/piper-cherokee-N2569Q-inside.webp",
     image3Alt: "Piper PA-28 inside cockpit G5",

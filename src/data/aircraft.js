@@ -29,6 +29,19 @@ const aircraft = [
       "The Cessna 172P is a classic trainer that has been used by generations of pilots to earn their wings. With its simple design, reliable performance, and forgiving flight characteristics, the 172P is an ideal aircraft for student pilots and experienced aviators alike.",
     equipment: ["Dual Garmin G5", "Garmin 625 GPS", "Climb Prop"],
   },
+  {
+    name: "Piper Archer PA-28",
+    number: "N2569Q",
+    image1: "/src/assets/images/piper-cherokee-N2569Q-outside-2.webp",
+    image1Alt: "Piper Archer Cherokee at Salt Lake",
+    image2: "/src/assets/images/piper-cherokee-N2569Q-outside.webp",
+    image2Alt: "Piper Cherokee in Ogden Utah",
+    image3: "/src/assets/images/piper-cherokee-N2569Q-inside.webp",
+    image3Alt: "Piper PA-28 inside cockpit G5",
+    description:
+      "This Piper Archer II is a reliable, IFR-capable trainer equipped with modern avionics for today's student pilot. With dual Garmin G5s, a GNS 175 GPS navigator, and the GFC 500 autopilot, it offers a perfect balance of analog feel and digital precision—ideal for both VFR and IFR training.",
+    equipment: ["Dual Garmin G5", "Garmin GNS 175", "Garmin GFC 500 Autopilot"],
+  },
 ];
 
 export default aircraft;

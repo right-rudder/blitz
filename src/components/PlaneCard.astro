@@ -15,8 +15,8 @@ const {
 } = Astro.props;
 ---
 
-<div class="flex flex-col-reverse md:flex-row gap-10 lg:gap-10 items-center">
-  <div class="flex-1 flex justify-center flex-col gap-5">
+<div class="flex flex-col-reverse md:flex-row gap-5 lg:gap-10 items-center">
+  <div class="flex-1 flex justify-center flex-col gap-3">
     <h3
       class="max-w-lg text-pretty text-4xl font-bold tracking-wide text-main-black sm:text-5xl"
     >
@@ -49,15 +49,29 @@ const {
     />
   </div>
 
-  <div class="flex-[2_2_0] hidden md:grid grid-cols-2 gap-5">
+  <div
+    class="flex-[2_2_0] hidden md:grid grid-cols-2 gap-5 auto-rows[200px] lg:auto-rows-[250px]"
+  >
     <div class="row-span-2 h-full">
-      <ImageComp src={image2} alt={image2Alt} classes="object-cover h-full" />
+      <ImageComp
+        src={image2}
+        alt={image2Alt}
+        classes="object-cover h-full w-full"
+      />
     </div>
     <div>
-      <ImageComp src={image1} alt={image1Alt} classes="object-cover w-full" />
+      <ImageComp
+        src={image1}
+        alt={image1Alt}
+        classes="object-cover h-full w-full"
+      />
     </div>
     <div>
-      <ImageComp src={image3} alt={image3Alt} classes="object-cover w-full" />
+      <ImageComp
+        src={image3}
+        alt={image3Alt}
+        classes="object-cover h-full w-full"
+      />
     </div>
   </div>
 </div>

@@ -34,10 +34,10 @@ const aircraft = [
     number: "N2569Q",
     image1: "/src/assets/images/piper-cherokee-N2569Q-outside.webp",
     image1Alt: "Piper Archer Cherokee at Salt Lake",
-    image2: "/src/assets/images/piper-cherokee-N2569Q-outside-3.webp",
-    image2Alt: "Piper Cherokee in Ogden Utah",
-    image3: "/src/assets/images/piper-cherokee-N2569Q-inside.webp",
-    image3Alt: "Piper PA-28 inside cockpit G5",
+    image2: "/src/assets/images/piper-cherokee-N2569Q-inside.webp",
+    image2Alt: "Piper PA-28 inside cockpit G5",
+    image3: "/src/assets/images/piper-cherokee-N2569Q-outside-3.webp",
+    image3Alt: "Piper Cherokee in Ogden Utah",
     description:
       "This Piper Archer II is a reliable, IFR-capable trainer equipped with modern avionics for today's student pilot. With dual Garmin G5s, a GNC 355 GPS navigator, and the GFC 500 autopilot, it offers a perfect balance of analog feel and digital precision—ideal for both VFR and IFR training.",
     equipment: [

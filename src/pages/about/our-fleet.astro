@@ -3,6 +3,7 @@ import Header from "../../components/Header.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import PlaneCard from "../../components/PlaneCard.astro";
 import aircraft from "../../data/aircraft";
+import ImageComp from "../../components/ImageComp.astro";
 
 const headerData = {
   title: "Our Fleet",
@@ -20,15 +21,15 @@ const headerData = {
   <Header slot="hero" data={headerData} />
 
   <section
-    class="mx-auto px-5 md:px-10 lg:px-20 py-16 gap-10 lg:gap-28 flex flex-col max-w-7xl"
+    class="mx-auto px-5 md:px-10 lg:px-20 py-16 gap-20 lg:gap-28 flex flex-col max-w-7xl"
   >
     <div class="text-center max-w-3xl mx-auto mb-8">
       <h2 class="text-4xl font-bold mb-4">Our Training Fleet</h2>
       <p class="text-lg">
         At Blitz Aviation, we maintain a fleet of well-equipped Cessna 172
-        aircraft and Piper Archers are perfect for flight training and rental. Our aircraft feature
-        modern avionics and are expertly maintained to ensure safety and
-        reliability for all your flying needs.
+        aircraft and Piper Archers are perfect for flight training and rental.
+        Our aircraft feature modern avionics and are expertly maintained to
+        ensure safety and reliability for all your flying needs.
       </p>
     </div>
 

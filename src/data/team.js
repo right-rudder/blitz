@@ -42,7 +42,7 @@ const team = [
     certificatesAndRatings: ["PPL"],
     image:
       "/src/assets/images/student-of-the-private-pilot-flight-training-program.webp",
-    bio: "Ruby is a passionate aviator who has always dreamed of flying. She is currently working towards her Instrument Rating and is excited to share her journey with others. Ruby's enthusiasm for aviation and dedication to her training make her a valuable member of the Blitz Aviation team.",
+    bio: "Meet Ruby, our Front Desk Manager and the friendly face that keeps Blitz running smoothly! From scheduling lessons to giving tours and welcoming new students, she’s your go-to for just about everything. A licensed private pilot, Ruby moved to Florida after high school to pursue her aviation dreams. While she’s working toward earning more ratings, she’s also preparing for a future in medicine with plans to become a Physician Assistant. When she’s not at the airport, you’ll find her powerlifting, snowboarding, or planning her next adventure.",
   },
 ];
 

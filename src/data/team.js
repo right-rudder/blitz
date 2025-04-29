@@ -26,7 +26,7 @@ const team = [
   },
   {
     name: "Corinne Robison",
-    certificatesAndRatings: ["CFI"],
+    certificatesAndRatings: ["CFI", "CFII", "MEI"],
     image: "/src/assets/images/cfi-corinne-robinson.webp",
     bio: "Corinne grew up around aviation, inspired by her pilot stepdad and brothers, and her mom who works for the airlines. After studying space engineering and computer science at SDSU, a discovery flight changed everything, she knew she wanted to fly. Corinne earned all her ratings (PPL–CFII/MEI) in just 10 months and hopes to inspire more women in aviation.",
     instagram: "https://www.instagram.com/corinne.robison/",
@@ -43,6 +43,7 @@ const team = [
     image:
       "/src/assets/images/student-of-the-private-pilot-flight-training-program.webp",
     bio: "Meet Ruby, our Front Desk Manager and the friendly face that keeps Blitz running smoothly! From scheduling lessons to giving tours and welcoming new students, she’s your go-to for just about everything. A licensed private pilot, Ruby moved to Florida after high school to pursue her aviation dreams. While she’s working toward earning more ratings, she’s also preparing for a future in medicine with plans to become a Physician Assistant. When she’s not at the airport, you’ll find her powerlifting, snowboarding, or planning her next adventure.",
+    instagram: "https://www.instagram.com/_ruby.quinn/",
   },
 ];
 

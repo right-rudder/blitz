@@ -8,7 +8,12 @@ const Reviews = () => {
     <>
       <Marquee autoFill={true} pauseOnHover={true}>
         {reviews.map((review, index) => (
-          <ReviewCard key={index} review={review.review} name={review.name} />
+          <ReviewCard
+            key={index}
+            review={review.review}
+            name={review.name}
+            link={review.link}
+          />
         ))}
       </Marquee>
     </>

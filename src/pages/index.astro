@@ -7,6 +7,7 @@ import services from "../data/services";
 import programs from "../data/programs";
 import ProgramsCard from "../components/ProgramsCard.astro";
 import CourseCard from "../components/CourseCard.astro";
+import Reviews from "../components/Reviews.jsx";
 ---
 
 <BaseLayout
@@ -95,6 +96,10 @@ import CourseCard from "../components/CourseCard.astro";
         />
       </div>
     </div>
+  </section>
+
+  <section class="pb-10 lg:pb-20">
+    <Reviews client:only />
   </section>
 
   <section

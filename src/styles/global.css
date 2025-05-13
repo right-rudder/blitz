@@ -26,6 +26,20 @@
   --color-main-accent-950: #3f1f09;
 
   --background-image-blitz-program: url("/mycah-pittman.webp");
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.marquee-track {
+  animation: marquee 20s linear infinite;
+  animation-delay: -10s; /* 👈 Start halfway through so it feels already moving */
 }
 
 body {
@@ -33,7 +47,7 @@ body {
 }
 
 .text-link {
-  @apply text-main-blue-700 hover:underline
+  @apply text-main-blue-700 hover:underline;
 }
 
 .btn-primary {

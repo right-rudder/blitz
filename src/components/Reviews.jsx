@@ -6,7 +6,7 @@ import reviews from "../data/reviews.js";
 const Reviews = () => {
   return (
     <>
-      <Marquee autoFill={true} pauseOnHover={true}>
+      <Marquee autoFill={true} pauseOnHover={false}>
         {reviews.map((review, index) => (
           <ReviewCard
             key={index}

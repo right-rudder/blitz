@@ -2,18 +2,9 @@ import { navbarLinks } from "../data/navbarLinks.js";
 import { useEffect, useState } from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import { FaPhone } from "react-icons/fa";
-import companyLogo from "../assets/logos/blitz-aviation-logo.png";
-import {
-  FACEBOOK_URL,
-  INSTAGRAM_URL,
-  PHONE_NUMBER,
-  EMAIL_ADDRESS,
-  YELP_URL,
-  YOUTUBE_URL,
-} from "../consts.ts";
+import { INSTAGRAM_URL, PHONE_NUMBER, YELP_URL } from "../consts.ts";
 
 const Navbar = ({ pathname, children }) => {
-  // console.log("hey");
   const [openMobile, setOpenMobile] = useState(false);
   const [navBar, setNavbar] = useState(false);
   const [showNavbar, setShowNavbar] = useState(false);
@@ -402,7 +393,7 @@ const Navbar = ({ pathname, children }) => {
           ))}
           <li className="relative group">
             <a
-              href="/contact-us"
+              href="/about/our-story#contactUs"
               className="font-semibold p-5 block text-white text-lg duration-300 border-main-blue-800 whitespace-nowrap group-last:bg-main-blue-800 group-last:py-4 group-last:px-8 group-last:mt-4 group-last:text-center group-last:mx-5"
             >
               Contact Us

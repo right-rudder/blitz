@@ -1,5 +1,7 @@
 ---
 const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
+const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
+const production = import.meta.env.PROD;
 ---
 
 <form method="POST" id="contact_form" action="" data-astro-reload>
@@ -99,7 +101,9 @@ const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
     </div>
   </div>
 
-  <script define:vars={{ CONTACT_US_FORM_WEBHOOK_URL }}>
+  <script
+    define:vars={{ CONTACT_US_FORM_WEBHOOK_URL, PORTAL_API_KEY, production }}
+  >
     document.addEventListener("DOMContentLoaded", function () {
       const contactForm = document.getElementById("contact_form");
 
@@ -136,23 +140,49 @@ const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
             console.error("Network error occurred while submitting the form.");
           };
           xhr.send(urlSearchParams);
+
+          // Send data to Portal
+          if (confirmEmailValue === "" || confirmEmailValue === null) {
+            const jsonData = {
+              first_name: formData.get("first-name"),
+              last_name: formData.get("last-name"),
+              email: formData.get("email"),
+              phone: formData.get("phone-number"),
+              campaign: "contact_us_form",
+              account_random_id: "ac_ly7kki3x",
+              metadata: {
+                message: formData.get("message"),
+              },
+            };
+
+            fetch(
+              production
+                ? "https://portal.rightruddermarketing.com/api/leads"
+                : "http://127.0.0.1:3000/api/leads",
+              {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                  Accept: "application/json",
+                  "x-api-key": PORTAL_API_KEY,
+                },
+                body: JSON.stringify(jsonData),
+              },
+            )
+              .then((res) => {
+                if (!res.ok) {
+                  throw new Error("Rails API submission failed");
+                }
+                window.location.href = "/contact-confirmation";
+              })
+              .catch((err) => {
+                console.error(err);
+              });
+          }
         });
       } else {
         console.error("Contact form element not found.");
       }
     });
-
-    // const checkbox = document.getElementById("agree-terms");
-    // const submitButton = document.getElementById("submit-button");
-
-    // checkbox.addEventListener("change", function () {
-    //   if (checkbox.checked) {
-    //     submitButton.disabled = false;
-    //     submitButton.classList.remove("!cursor-not-allowed");
-    //   } else {
-    //     submitButton.disabled = true;
-    //     submitButton.classList.add("!cursor-not-allowed");
-    //   }
-    // });
   </script>
 </form>

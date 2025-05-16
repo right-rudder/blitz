@@ -3,6 +3,7 @@ import ImageComp from "../components/ImageComp.astro";
 import DiscoveryFlightLayout from "../layouts/DiscoveryFlightLayout.astro";
 const DISCOVERY_FLIGHT_FORM_WEBHOOK_URL = import.meta.env
   .DISCOVERY_FLIGHT_FORM_WEBHOOK_URL;
+const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
 ---
 
 <DiscoveryFlightLayout
@@ -44,7 +45,7 @@ const DISCOVERY_FLIGHT_FORM_WEBHOOK_URL = import.meta.env
         with an Blitz Aviation team member.
       </p>
       <form
-        id="form"
+        id="discovery-flight-form"
         class="flex flex-col max-w-4xl mx-auto lg:my-0 bg-white shadow-sm"
       >
         <div class="flex flex-col gap-2">
@@ -152,84 +153,91 @@ const DISCOVERY_FLIGHT_FORM_WEBHOOK_URL = import.meta.env
       />
     </div>
   </section>
-</DiscoveryFlightLayout>
 
-<script define:vars={{ DISCOVERY_FLIGHT_FORM_WEBHOOK_URL }}>
-  const dateInput = document.getElementById("date");
+  <script define:vars={{ DISCOVERY_FLIGHT_FORM_WEBHOOK_URL, PORTAL_API_KEY }}>
+    const dateInput = document.getElementById("date");
 
-  // Get today's date
-  const today = new Date();
-  today.setHours(0, 0, 0, 0); // Set to midnight to avoid timezone issues
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
 
-  // Calculate the minimum date (5 days from today)
-  const minDate = new Date(today);
-  minDate.setDate(today.getDate() + 5);
+    const minDate = new Date(today);
+    minDate.setDate(today.getDate() + 5);
 
-  // Format dates to YYYY-MM-DD
-  const formatDate = (date) => {
-    const year = date.getFullYear();
-    const month = String(date.getMonth() + 1).padStart(2, "0");
-    const day = String(date.getDate()).padStart(2, "0");
-    return `${year}-${month}-${day}`;
-  };
+    const formatDate = (date) => {
+      const year = date.getFullYear();
+      const month = String(date.getMonth() + 1).padStart(2, "0");
+      const day = String(date.getDate()).padStart(2, "0");
+      return `${year}-${month}-${day}`;
+    };
 
-  // Set min and max attributes for the input
-  dateInput.min = formatDate(minDate);
+    dateInput.min = formatDate(minDate);
 
-  // Wait for the DOM content to be fully loaded
-  document.addEventListener("DOMContentLoaded", function () {
-    // Get the contactUs form element
-    const form = document.getElementById("form");
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("discovery-flight-form");
+      if (!form) {
+        console.error("Form element not found.");
+        return;
+      }
 
-    // Check if the contactUs form element exists
-    if (form !== null) {
-      // Add submit event listener to the contactUs form
-      form.addEventListener("submit", function (event) {
-        // Prevent the default form submission
+      form.addEventListener("submit", async (event) => {
         event.preventDefault();
 
-        // Serialize the form data
         const formData = new FormData(form);
+        const confirmEmail = formData.get("confirm-email")?.trim();
 
-        // Check the value of the honeypot field
-        const confirmEmailValue = formData.get("confirm-email");
-        if (confirmEmailValue === "" || confirmEmailValue === null) {
-          // If the honeypot field is empty, it's a human
-          // Set the form action to the URL for processing the form and redirecting to thank you
-          form.action = DISCOVERY_FLIGHT_FORM_WEBHOOK_URL;
-        }
+        if (confirmEmail) return;
 
-        // Convert FormData to URLSearchParams
-        const urlSearchParams = new URLSearchParams();
-        for (const pair of formData.entries()) {
-          urlSearchParams.append(pair[0], pair[1]);
-        }
+        const webhookURL = DISCOVERY_FLIGHT_FORM_WEBHOOK_URL;
+        const apiKey = PORTAL_API_KEY;
 
-        // Send an AJAX request to submit the form
-        const xhr = new XMLHttpRequest();
-        xhr.open("POST", form.action);
-        xhr.setRequestHeader(
-          "Content-Type",
-          "application/x-www-form-urlencoded"
-        );
-        xhr.onload = function () {
-          // Check if the request was successful (status 200)
-          if (xhr.status === 200) {
-            // Redirect the user after a successful form submission
+        const urlEncodedBody = new URLSearchParams(formData).toString();
+
+        const jsonBody = {
+          first_name: formData.get("first-name")?.trim() || "",
+          last_name: formData.get("last-name")?.trim() || "",
+          email: formData.get("email")?.trim() || "",
+          phone: formData.get("phone")?.trim() || "",
+          campaign: "discovery_flight_form",
+          account_random_id: "ac_ly7kki3x",
+          metadata: {
+            preferred_date: formData.get("preferred-date")?.trim() || "",
+            preferred_time: formData.get("preferred-time")?.trim() || "",
+            additional_info: formData.get("additional-info")?.trim() || "",
+          },
+        };
+
+        try {
+          const [ghlRes, portalRes] = await Promise.all([
+            fetch(webhookURL, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+              },
+              body: urlEncodedBody,
+            }),
+            fetch("https://portal.rightruddermarketing.com/api/leads", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+                "x-api-key": apiKey,
+              },
+              body: JSON.stringify(jsonBody),
+            }),
+          ]);
+
+          if (ghlRes.ok && portalRes.ok) {
             window.location.href = "/contact-confirmation";
           } else {
-            // Handle errors if any
-            console.error("Form submission failed:", xhr.statusText);
+            console.error("Submission failed", {
+              ghlStatus: ghlRes.status,
+              portalStatus: portalRes.status,
+            });
           }
-        };
-        xhr.onerror = function () {
-          // Handle network errors
-          console.error("Network error occurred while submitting the form.");
-        };
-        xhr.send(urlSearchParams);
+        } catch (err) {
+          console.error("Submission error:", err);
+        }
       });
-    } else {
-      console.error("Form element not found.");
-    }
-  });
-</script>
+    });
+  </script>
+</DiscoveryFlightLayout>

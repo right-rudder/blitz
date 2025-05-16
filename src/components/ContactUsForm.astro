@@ -1,10 +1,9 @@
 ---
 const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
 const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
-const production = import.meta.env.PROD;
 ---
 
-<form method="POST" id="contact_form" action="" data-astro-reload>
+<form id="contact_form">
   <div class="grid grid-cols-1 gap-x-8 gap-y-2 sm:grid-cols-2">
     <div>
       <div class="mt-2.5">
@@ -54,8 +53,8 @@ const production = import.meta.env.PROD;
       <div class="relative mt-2.5">
         <input
           type="tel"
-          name="phone-number"
-          id="phone-number"
+          name="phone"
+          id="phone"
           autocomplete="tel"
           placeholder="Phone Number"
           required
@@ -101,88 +100,71 @@ const production = import.meta.env.PROD;
     </div>
   </div>
 
-  <script
-    define:vars={{ CONTACT_US_FORM_WEBHOOK_URL, PORTAL_API_KEY, production }}
-  >
-    document.addEventListener("DOMContentLoaded", function () {
-      const contactForm = document.getElementById("contact_form");
-
-      if (contactForm !== null) {
-        contactForm.addEventListener("submit", function (event) {
-          event.preventDefault();
-
-          const formData = new FormData(contactForm);
-
-          const confirmEmailValue = formData.get("confirm-email");
-          if (confirmEmailValue === "" || confirmEmailValue === null) {
-            contactForm.action = CONTACT_US_FORM_WEBHOOK_URL;
-          }
-
-          const urlSearchParams = new URLSearchParams();
-          for (const pair of formData.entries()) {
-            urlSearchParams.append(pair[0], pair[1]);
-          }
-
-          const xhr = new XMLHttpRequest();
-          xhr.open("POST", contactForm.action);
-          xhr.setRequestHeader(
-            "Content-Type",
-            "application/x-www-form-urlencoded",
-          );
-          xhr.onload = function () {
-            if (xhr.status === 200) {
-              window.location.href = "/contact-confirmation";
-            } else {
-              console.error("Form submission failed:", xhr.statusText);
-            }
-          };
-          xhr.onerror = function () {
-            console.error("Network error occurred while submitting the form.");
-          };
-          xhr.send(urlSearchParams);
-
-          // Send data to Portal
-          if (confirmEmailValue === "" || confirmEmailValue === null) {
-            const jsonData = {
-              first_name: formData.get("first-name"),
-              last_name: formData.get("last-name"),
-              email: formData.get("email"),
-              phone: formData.get("phone-number"),
-              campaign: "contact_us_form",
-              account_random_id: "ac_ly7kki3x",
-              metadata: {
-                message: formData.get("message"),
-              },
-            };
-
-            fetch(
-              production
-                ? "https://portal.rightruddermarketing.com/api/leads"
-                : "http://127.0.0.1:3000/api/leads",
-              {
-                method: "POST",
-                headers: {
-                  "Content-Type": "application/json",
-                  Accept: "application/json",
-                  "x-api-key": PORTAL_API_KEY,
-                },
-                body: JSON.stringify(jsonData),
-              },
-            )
-              .then((res) => {
-                if (!res.ok) {
-                  throw new Error("Rails API submission failed");
-                }
-                window.location.href = "/contact-confirmation";
-              })
-              .catch((err) => {
-                console.error(err);
-              });
-          }
-        });
-      } else {
-        console.error("Contact form element not found.");
+  <script define:vars={{ CONTACT_US_FORM_WEBHOOK_URL, PORTAL_API_KEY }}>
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("contact_form");
+      if (!form) {
+        console.error("Form element not found.");
+        return;
       }
+
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(form);
+        const confirmEmail = formData.get("confirm-email")?.trim();
+
+        if (confirmEmail) return;
+
+        const webhookURL = CONTACT_US_FORM_WEBHOOK_URL;
+        const apiKey = PORTAL_API_KEY;
+
+        const urlEncodedBody = new URLSearchParams(formData).toString();
+
+        const jsonBody = {
+          first_name: formData.get("first-name")?.trim() || "",
+          last_name: formData.get("last-name")?.trim() || "",
+          email: formData.get("email")?.trim() || "",
+          phone: formData.get("phone")?.trim() || "",
+          campaign: "contact_us_form",
+          account_random_id: "ac_ly7kki3x",
+          metadata: {
+            message: formData.get("message")?.trim() || "",
+          },
+        };
+
+        try {
+          const [ghlRes, portalRes] = await Promise.all([
+            fetch(webhookURL, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+              },
+              body: urlEncodedBody,
+            }),
+            fetch("https://portal.rightruddermarketing.com/api/leads", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+                "x-api-key": apiKey,
+              },
+              body: JSON.stringify(jsonBody),
+            }),
+          ]);
+
+          if (ghlRes.ok && portalRes.ok) {
+            window.location.href = "/contact-confirmation";
+          } else {
+            console.error("Submission failed", {
+              ghlStatus: ghlRes.status,
+              portalStatus: portalRes.status,
+            });
+          }
+        } catch (err) {
+          console.error("Submission error:", err);
+        }
+      });
     });
   </script>
 </form>

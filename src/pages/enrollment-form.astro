@@ -2,6 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
+const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
 
 const headerData = {
   title: "Interested in Enrolling at Blitz Aviation?",
@@ -17,7 +18,7 @@ const headerData = {
   <Header slot="hero" data={headerData} />
 
   <section class="py-16 px-5">
-    <form id="enrollment-form" method="POST" class="flex flex-col items-center">
+    <form id="enrollment-form" class="flex flex-col items-center">
       <h3
         class="text-5xl font-bold leading-tight text-dark-blue text-center max-w-xl"
       >
@@ -127,7 +128,7 @@ const headerData = {
                 />
               </div>
               <div class="leading-6">
-                <label for="flight-instructor" class="text-gray-600"
+                <label for="certified-flight-instructor" class="text-gray-600"
                   >Certified Flight Instructor</label
                 >
               </div>
@@ -144,7 +145,9 @@ const headerData = {
                 />
               </div>
               <div class="leading-6">
-                <label for="flight-instructor" class="text-gray-600"
+                <label
+                  for="certified-flight-instructor-instrument"
+                  class="text-gray-600"
                   >Certified Flight Instructor Instrument</label
                 >
               </div>
@@ -267,61 +270,74 @@ const headerData = {
     </form>
   </section>
 
-  <script define:vars={{ ENROLLMENT_FORM_WEBHOOK_URL }}>
-    document.addEventListener("DOMContentLoaded", function () {
-      // Get the enrollment form element
-      const enrollmentForm = document.getElementById("enrollment-form");
-
-      // Check if the enrollment form element exists
-      if (enrollmentForm !== null) {
-        // Add submit event listener to the enrollment form
-        enrollmentForm.addEventListener("submit", function (event) {
-          // Prevent the default form submission
-          event.preventDefault();
-
-          // Serialize the form data
-          const formData = new FormData(enrollmentForm);
-
-          // Check the value of the honeypot field
-          const confirmEmailValue = formData.get("confirm-email");
-          if (confirmEmailValue === "" || confirmEmailValue === null) {
-            // If the honeypot field is empty, it's a human
-            // Set the form action to the URL for processing the form and redirecting to thank you
-            enrollmentForm.action = ENROLLMENT_FORM_WEBHOOK_URL;
-          }
-
-          // Convert FormData to URLSearchParams
-          const urlSearchParams = new URLSearchParams();
-          for (const pair of formData.entries()) {
-            urlSearchParams.append(pair[0], pair[1]);
-          }
-
-          // Send an AJAX request to submit the form
-          const xhr = new XMLHttpRequest();
-          xhr.open("POST", enrollmentForm.action);
-          xhr.setRequestHeader(
-            "Content-Type",
-            "application/x-www-form-urlencoded",
-          );
-          xhr.onload = function () {
-            // Check if the request was successful (status 200)
-            if (xhr.status === 200) {
-              // Redirect the user after a successful form submission
-              window.location.href = "/contact-confirmation";
-            } else {
-              // Handle errors if any
-              console.error("Form submission failed:", xhr.statusText);
-            }
-          };
-          xhr.onerror = function () {
-            // Handle network errors
-            console.error("Network error occurred while submitting the form.");
-          };
-          xhr.send(urlSearchParams);
-        });
-      } else {
-        console.error("Enrollment form element not found.");
+  <script define:vars={{ ENROLLMENT_FORM_WEBHOOK_URL, PORTAL_API_KEY }}>
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("enrollment-form");
+      if (!form) {
+        console.error("Form element not found.");
+        return;
       }
+
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(form);
+        const confirmEmail = formData.get("confirm-email")?.trim();
+
+        if (confirmEmail) return;
+
+        const webhookURL = ENROLLMENT_FORM_WEBHOOK_URL;
+        const apiKey = PORTAL_API_KEY;
+
+        const urlEncodedBody = new URLSearchParams(formData).toString();
+
+        const jsonBody = {
+          first_name: formData.get("first-name")?.trim() || "",
+          last_name: formData.get("last-name")?.trim() || "",
+          email: formData.get("email")?.trim() || "",
+          phone: formData.get("phone")?.trim() || "",
+          campaign: "enrollment_form",
+          account_random_id: "ac_ly7kki3x",
+          metadata: {
+            message: formData.get("additional-info")?.trim() || "",
+            preferred_programs: formData
+              .getAll("preferred-programs")
+              .map((program) => program.trim()),
+          },
+        };
+
+        try {
+          const [ghlRes, portalRes] = await Promise.all([
+            fetch(webhookURL, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+              },
+              body: urlEncodedBody,
+            }),
+            fetch("https://portal.rightruddermarketing.com/api/leads", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+                "x-api-key": apiKey,
+              },
+              body: JSON.stringify(jsonBody),
+            }),
+          ]);
+
+          if (ghlRes.ok && portalRes.ok) {
+            window.location.href = "/contact-confirmation";
+          } else {
+            console.error("Submission failed", {
+              ghlStatus: ghlRes.status,
+              portalStatus: portalRes.status,
+            });
+          }
+        } catch (err) {
+          console.error("Submission error:", err);
+        }
+      });
     });
   </script>
 </BaseLayout>

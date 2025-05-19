@@ -11,7 +11,7 @@ export const EMAIL_ADDRESS = "contact@blitzaviation.com";
 export const TIKTOK_URL = "";
 export const YOUTUBE_URL = "";
 export const YELP_URL = "https://www.yelp.com/biz/blitz-aviation-ogden";
-export const ADDRESS_LINE_1 = "3909 Airport Rd";
+export const ADDRESS_LINE_1 = "3909 Airport Rd, Hangar 397";
 export const ADDRESS_LINE_2 = "Ogden, UT 84405";
 export const GOOGLE_MAPS_URL = "https://maps.app.goo.gl/aGy2fdwxSjhvpTMx6";
 

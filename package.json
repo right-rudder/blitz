@@ -9,9 +9,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.2.6",
+    "@astrojs/mdx": "^4.3.0",
     "@astrojs/partytown": "^2.1.4",
-    "@astrojs/react": "^4.2.7",
+    "@astrojs/react": "^4.3.0",
     "@astrojs/rss": "^4.0.11",
     "@astrojs/sitemap": "^3.4.0",
     "@fontsource-variable/outfit": "^5.2.5",
@@ -19,7 +19,7 @@
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "aos": "^2.3.4",
-    "astro": "^5.7.12",
+    "astro": "^5.8.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-fast-marquee": "^1.6.5",

@@ -55,6 +55,10 @@ export const navbarLinks = [
         name: "Our Blog",
         link: "/blog",
       },
+      {
+        name: "Join The Team",
+        link: "/about/join-the-team",
+      },
     ],
   },
 ];

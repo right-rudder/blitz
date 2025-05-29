@@ -1,0 +1,160 @@
+---
+import Header from "../../components/Header.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const JOIN_THE_TEAM_FORM_WEBHOOK_URL = import.meta.env
+  .JOIN_THE_TEAM_FORM_WEBHOOK_URL;
+
+const headerData = {
+  title: "Work at Blitz Aviation",
+  primaryImage:
+    "/src/assets/images/team-blitz-aviation-flight-training-utah-salt-lake.webp",
+  primaryAlt: "Team Blitz Aviation Flight Training Utah Salt Lake",
+};
+---
+
+<BaseLayout
+  siteTitle="Work at Blitz Aviation | Join Our Certified Flight Instructor Team in Ogden, Utah"
+  siteDescription="Become part of Blitz Aviation's expert team in Ogden, Utah. We are looking for passionate Certified Flight Instructors (CFIs) to deliver high-quality flight training and mentorship to aspiring pilots. Join us in shaping the future of aviation education."
+  siteKeywords="join flight instructor team Utah, CFI job openings Ogden, flight training careers, aviation instructor positions, certified flight instructor jobs, Blitz Aviation hiring, flight school employment, aviation education careers, pilot training jobs Utah, CFI recruitment Ogden"
+>
+  <Header slot="hero" data={headerData} />
+
+  <section class="py-16 px-5">
+    <form id="enrollment-form" class="flex flex-col items-center">
+      <h2
+        class="max-w-7xl text-center text-pretty text-4xl font-bold tracking-wide text-main-black sm:text-5xl"
+      >
+        Interested in joining the Blitz Aviation team as a Certified Flight
+        Instructor (CFI)?
+      </h2>
+      <h3
+        class="text-blue-800 font-semibold text-2xl tracking-wide italic my-5"
+      >
+        Fill out the form below to apply!
+      </h3>
+      <div class="flex flex-col gap-2 w-full max-w-3xl">
+        <label for="first-name" class="font-medium mt-2 text-gray-500"
+          >First Name</label
+        >
+        <input
+          type="text"
+          name="first-name"
+          class="px-2 py-2 outline-1 w-full border-gray-400 border outline-gray-500"
+          required
+        />
+        <label for="last-name" class="font-medium mt-2 text-gray-500"
+          >Last Name</label
+        >
+        <input
+          type="text"
+          name="last-name"
+          class="px-2 py-2 outline-1 w-full border-gray-400 border outline-gray-500"
+          required
+        />
+        <label for="email" class="font-medium mt-2 text-gray-500">Email</label>
+        <input
+          id="email"
+          type="email"
+          name="email"
+          class="px-2 py-2 outline-1 w-full border-gray-400 border outline-gray-500"
+          required
+        />
+        <input
+          type="email"
+          name="confirm-email"
+          placeholder="Confirm email"
+          class="hidden"
+        />
+        <label for="phone" class="font-medium mt-2 text-gray-500">Phone</label>
+        <input
+          type="tel"
+          name="phone"
+          class="px-2 py-2 outline-1 w-full border-gray-400 border outline-gray-500"
+          required
+        />
+
+        <label for="ratings" class="font-medium mt-2 text-gray-500"
+          >Ratings/Certifications</label
+        >
+        <input
+          type="text"
+          name="ratings"
+          class="px-2 py-2 outline-1 w-full border-gray-400 border outline-gray-500"
+          required
+        />
+
+        <label for="former-experience" class="font-medium mt-2 text-gray-500">
+          Former Experience
+        </label>
+        <textarea
+          id="former-experience"
+          name="former-experience"
+          class="px-2 py-2 outline-1 border-gray-400 border outline-gray-500 min-h-32"
+        ></textarea>
+      </div>
+      <div class="flex gap-3 my-5 max-w-xs md:max-w-xl mx-auto">
+        <input
+          required
+          type="checkbox"
+          name="agree-data-collection"
+          id="agree-data-collection"
+        />
+
+        <label for="agree-data-collection" class="text-gray-500 text-sm">
+          I agree to the terms & conditions provided by the company. By
+          providing my email and phone number, I agree to receive email and text
+          messages from Blitz Aviation.
+        </label>
+      </div>
+
+      <button type="submit" id="submit-button" class="btn-primary"
+        >Submit</button
+      >
+    </form>
+  </section>
+
+  <script define:vars={{ JOIN_THE_TEAM_FORM_WEBHOOK_URL }}>
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("enrollment-form");
+      if (!form) {
+        console.error("Form element not found.");
+        return;
+      }
+
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(form);
+        const confirmEmail = formData.get("confirm-email")?.trim();
+
+        if (confirmEmail) return;
+
+        const webhookURL = JOIN_THE_TEAM_FORM_WEBHOOK_URL;
+
+        const urlEncodedBody = new URLSearchParams(formData).toString();
+
+        try {
+          const [ghlRes] = await Promise.all([
+            fetch(webhookURL, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+              },
+              body: urlEncodedBody,
+            }),
+          ]);
+
+          if (ghlRes.ok) {
+            window.location.href = "/contact-confirmation";
+          } else {
+            console.error("Submission failed", {
+              ghlStatus: ghlRes.status,
+            });
+          }
+        } catch (err) {
+          console.error("Submission error:", err);
+        }
+      });
+    });
+  </script>
+</BaseLayout>

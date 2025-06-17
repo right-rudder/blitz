@@ -38,6 +38,18 @@ const team = [
     bio: "Stan brings over 1,600 hours of flight time and a deep passion for teaching to the Blitz Aviation crew. Originally from New Jersey, he got into aviation through a love for travel and exploration. Stan has experience in the PC-12 and recently earned his CFII right here at Blitz. When he’s not flying, he’s outdoors—skiing, fishing, or hiking. Stan’s upbeat attitude and real-world experience make him a favorite among students.",
   },
   {
+    name: "Hank Hulme",
+    certificatesAndRatings: ["CFI"],
+    image: "/src/assets/images/cfi-hank-hulme.jpeg",
+    bio: "",
+  },
+  {
+    name: "Spencer Rowberry",
+    certificatesAndRatings: ["CFI", "CFII", "MEI", "A&P"],
+    image: "/src/assets/images/cfi-spencer-rowberry.jpeg",
+    bio: "Spencer began his flight training at Utah State in 2018 and has logged over 1,000 flight hours. His favorite types of flying include tailwheel and multi-engine. Outside of aviation, Spencer enjoys spending time with his wife and two daughters. He also loves skiing, camping, swimming, and exploring the mountains.",
+  },
+  {
     name: "Ruby Hutchinson",
     certificatesAndRatings: ["PPL"],
     image:

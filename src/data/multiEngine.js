@@ -24,6 +24,7 @@ const multiEngine = {
       "Hold a current private pilot certificate",
       "Hold a valid FAA 3rd Class Medical Certificate or a higher class",
     ],
+    duration: "",
     steps: [
       {
         title: "Complete Ground School and Flight Training",

@@ -31,6 +31,7 @@ const cfi = {
       "Secure a valid FAA 3rd Class Medical Certificate or a higher class",
       "Accumulated at least 250 hours of flight time",
     ],
+    duration: "",
     steps: [
       {
         title: "Meet Federal Aviation Regulations (FAR) Requirements",

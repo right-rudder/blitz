@@ -46,6 +46,43 @@ const aircraft = [
       "Garmin GFC 500 Autopilot",
     ],
   },
+  {
+    name: "Cessna 172M",
+    number: "N9650V",
+    image1: "/src/assets/images/cessna-172.jpeg",
+    image1Alt: "Cessna 172M parked on the ramp",
+    image2: "/src/assets/images/cessna-172-panel.jpeg",
+    image2Alt: "Cessna 172M cockpit with avionics panel",
+    image3: "/src/assets/images/cessna-172-side.jpeg",
+    image3Alt: "Side view of Cessna 172M in flight",
+    description:
+      "Our Cessna 172M is a classic, IFR-capable trainer ideal for private pilot and instrument training. Equipped with a Garmin GNS 430 WAAS GPS/NAV/COM, dual VOR/ILS, and a reliable steam gauge panel, it provides an excellent foundation for both VFR and IFR students.",
+    equipment: [
+      "Garmin GNS 430 WAAS GPS/NAV/COM",
+      "King KX-155 NAV/COM",
+      "Garmin GTX Transponder (ADS-B Out)",
+      "Dual VOR/ILS",
+    ],
+  },
+  {
+    name: "Piper PA-30 Twin Comanche",
+    number: "N808TY",
+    image1: "/src/assets/images/twin-comanche.jpeg",
+    image1Alt: "Piper PA-30 Twin Comanche on the tarmac",
+    image2: "/src/assets/images/twin-comanche-panel.jpeg",
+    image2Alt: "Piper PA-30 Twin Comanche cockpit panel",
+    image3: "/src/assets/images/twin-comanche-top.jpeg",
+    image3Alt: "Top view of Piper PA-30 Twin Comanche in flight",
+    description:
+      "Our Piper PA-30 Twin Comanche is a fast, efficient multi-engine trainer ideal for pilots pursuing their multi-engine rating or building time. It offers excellent performance, range, and fuel efficiency for both training and cross-country flights.",
+    equipment: [
+      "Dual Garmin G5 Electronic Flight Instruments",
+      "Garmin GTN 650 WAAS GPS/NAV/COM",
+      "Garmin GTX 345 Transponder (ADS-B In/Out)",
+      "PS Engineering Audio Panel",
+      "JPI EDM-760 Engine Monitoring System",
+    ],
+  },
 ];
 
 export default aircraft;

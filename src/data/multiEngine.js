@@ -18,8 +18,10 @@ const multiEngine = {
       "The Multi-Engine Rating is a valuable qualification that allows you to fly multi-engine aircraft, opening up new opportunities in commercial aviation. Whether you're looking to pursue a career with the airlines, fly charter flights, or enhance your piloting skills, the Multi-Engine Rating is an essential step in your journey. At Blitz Aviation, our comprehensive program provides you with the knowledge and skills needed to excel as a multi-engine pilot.",
       "Our Multi-Engine Rating program is designed to deepen your understanding of multi-engine flight and enhance your proficiency in complex aircraft operations. With a focus on precision and safety, our program prepares you to handle the challenges of multi-engine flight, including engine failures and emergency procedures. By combining expert instruction with hands-on experience, we'll help you become a skilled and confident multi-engine pilot.",
     ],
-    primaryImage: "/src/assets/images/pexels-kokorevas-5313876.jpg",
+    primaryImage: "/src/assets/images/twin-comanche.jpeg",
     primaryAlt: "Multi engine instructor pass checkride",
+    secondaryImage: "/src/assets/images/cfi-spencer-rowberry.jpeg",
+    secondaryAlt: "Cessna 172XP control panel",
     prerequisites: [
       "Hold a current private pilot certificate",
       "Hold a valid FAA 3rd Class Medical Certificate or a higher class",

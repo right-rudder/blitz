@@ -7,7 +7,10 @@ const { title, description, heroImage, pubDate } = data;
 const datePublished = new Date(pubDate);
 ---
 
-<a href={`/blog/${id}`} class="flex flex-col group gap-3 w-full">
+<a
+  href={`/blog/${id}`}
+  class="flex flex-col group gap-3 w-full lg:first:col-span-2"
+>
   <div class="overflow-hidden shrink-0 relative">
     <ImageComp
       src={heroImage}

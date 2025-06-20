@@ -20,6 +20,22 @@ const headerData = {
   <Header slot="hero" data={headerData} />
 
   <section
+    class="mx-auto px-5 md:px-10 lg:px-20 py-16 gap-10 flex flex-col max-w-7xl"
+  >
+    <div class="text-center max-w-3xl mx-auto mb-8">
+      <h2 class="text-4xl font-bold mb-4">Our Expert Flight Instructors</h2>
+      <p class="text-lg">
+        At Blitz Aviation, our team of dedicated Certified Flight Instructors
+        (CFIs) brings expertise, passion, and personalized attention to your
+        flight training journey. Each instructor is committed to your success
+        and safety in the air.
+      </p>
+    </div>
+
+    {team.map((member) => <TeamCard {...member} />)}
+  </section>
+
+  <section
     class="bg-gradient-to-br from-main-blue-700 to-main-blue-900 text-white"
   >
     <div
@@ -54,21 +70,5 @@ const headerData = {
         <a href="#contactUs" class="btn-secondary w-fit mt-3">Contact Us</a>
       </div>
     </div>
-  </section>
-
-  <section
-    class="mx-auto px-5 md:px-10 lg:px-20 py-16 gap-10 flex flex-col max-w-7xl"
-  >
-    <div class="text-center max-w-3xl mx-auto mb-8">
-      <h2 class="text-4xl font-bold mb-4">Our Expert Flight Instructors</h2>
-      <p class="text-lg">
-        At Blitz Aviation, our team of dedicated Certified Flight Instructors
-        (CFIs) brings expertise, passion, and personalized attention to your
-        flight training journey. Each instructor is committed to your success
-        and safety in the air.
-      </p>
-    </div>
-
-    {team.map((member) => <TeamCard {...member} />)}
   </section>
 </BaseLayout>

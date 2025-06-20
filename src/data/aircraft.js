@@ -56,13 +56,8 @@ const aircraft = [
     image3: "/src/assets/images/cessna-172-side.jpeg",
     image3Alt: "Side view of Cessna 172M in flight",
     description:
-      "Our Cessna 172M is a classic, IFR-capable trainer ideal for private pilot and instrument training. Equipped with a Garmin GNS 430 WAAS GPS/NAV/COM, dual VOR/ILS, and a reliable steam gauge panel, it provides an excellent foundation for both VFR and IFR students.",
-    equipment: [
-      "Garmin GNS 430 WAAS GPS/NAV/COM",
-      "King KX-155 NAV/COM",
-      "Garmin GTX Transponder (ADS-B Out)",
-      "Dual VOR/ILS",
-    ],
+      "Our Cessna 172M is a classic, IFR-capable trainer ideal for private pilot and instrument training. Equipped with a Garmin 650 WAAS, dual Garmin G5, and a reliable steam gauge panel, it provides an excellent foundation for both VFR and IFR students.",
+    equipment: ["Garmin 650 WAAS", "GFC 500 Autopilot", "Dual Garmin G5"],
   },
   {
     name: "Piper PA-30 Twin Comanche",

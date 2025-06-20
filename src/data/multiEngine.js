@@ -41,10 +41,10 @@ const multiEngine = {
           "As you progress through the program, you'll accumulate the flight time required to demonstrate your proficiency in multi engine operations. With a focus on precision and safety, our instructors will guide you through a series of flight maneuvers and scenarios that will enhance your skills and build your confidence. From engine-out procedures to complex flight profiles, you'll develop the expertise needed to handle the challenges of multi engine flight.",
       },
       {
-        title: "Pass Written and Practical Exams",
+        title: "Pass the Practical Exam",
         icon: FaRegPaperPlane,
         description:
-          "To earn your multi engine rating, you'll need to pass both a written exam and a practical flight test. Our instructors will ensure that you are well prepared for these assessments, guiding you through the necessary knowledge and skills to succeed. With a focus on excellence and professionalism, we'll help you achieve your goal of becoming a multi engine rated pilot.",
+          "To earn your multi engine rating, you'll need to pass a practical flight test with an FAA examiner. Our instructors will ensure that you are fully prepared for this evaluation, guiding you through the knowledge and flight skills required to succeed. With a focus on excellence and professionalism, we’ll help you achieve your goal of becoming a multi engine rated pilot.",
       },
     ],
   },

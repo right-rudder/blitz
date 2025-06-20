@@ -1,0 +1,52 @@
+---
+import ImageComp from "./ImageComp.astro";
+const { city, state } = Astro.props;
+---
+
+<div class="relative isolate overflow-hidden h-screen flex">
+  <!-- <video
+    autoplay
+    muted
+    loop
+    playsinline
+    src="https://res.cloudinary.com/do7bqihpr/video/upload/v1744398800/blitz-aviation-video-header-flight-training-school-ogden-salt-lake-city-utah_zlqcnp.mp4"
+    class="h-full w-full object-cover"></video> -->
+
+  <ImageComp
+    src="/src/assets/images/view-of-ogden-ohio-mountains-from-discovery-flight.webp"
+    alt="View of Ogden, Utah from Discovery Flight"
+    classes="absolute inset-0 w-full h-full object-cover z-0"
+    loading="eager"
+  />
+  <video
+    autoplay
+    muted
+    loop
+    playsinline
+    class="absolute inset-0 w-full h-full object-cover z-0"
+  >
+    <source
+      src="https://cdn.jsdelivr.net/gh/right-rudder/blitz/blitz-aviation-video-header-flight-training-school-ogden-salt-lake-city-utah.mp4"
+      type="video/mp4"
+    />
+  </video>
+
+  <div
+    class="flex px-5 md:px-10 lg:px-20 absolute top-0 backdrop-brightness-50 bottom-0 right-0 left-0 text-white items-center justify-center text-center"
+  >
+    <div class="flex flex-col gap-3 md:mt-80">
+      <h1
+        class="text-6xl max-w-2xl lg:text-8xl font-black lg:max-w-6xl uppercase italic"
+      >
+        Blitz Aviation
+      </h1>
+      <h2 class="text-xl max-w-xl lg:text-2xl lg:max-w-3xl">
+        Your flight school near {city}, Utah
+      </h2>
+      <div class="flex gap-5 flex-col sm:flex-row justify-center mt-2">
+        <a href="/enrollment-form" class="btn-secondary">Start Flying</a>
+        <a href="#trainingPrograms" class="btn-secondary">Programs</a>
+      </div>
+    </div>
+  </div>
+</div>

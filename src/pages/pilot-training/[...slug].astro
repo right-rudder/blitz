@@ -1,0 +1,229 @@
+---
+import { getCollection } from "astro:content";
+import HomepageLocationsHeader from "../../components/HomepageLocationsHeader.astro";
+import ImageComp from "../../components/ImageComp.astro";
+import ServicesCard from "../../components/ServicesCard.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import services from "../../data/services";
+import programs from "../../data/programs";
+import ProgramsCard from "../../components/ProgramsCard.astro";
+import CourseCard from "../../components/CourseCard.astro";
+import Reviews from "../../components/Reviews.jsx";
+
+export async function getStaticPaths() {
+  const locations = await getCollection("pilot-training");
+  return locations.map((location) => ({
+    params: { slug: location.id },
+    props: location,
+  }));
+}
+
+const location = Astro.props;
+
+const { city, region, landmark } = location.data;
+---
+
+<BaseLayout
+  siteTitle=`Flight Training near ${city}, Utah| Blitz Aviation`
+  siteDescription=`Become a private or commercial pilot fast with Blitz Aviation’s expert-led flight training near ${city}, Utah. Flexible, affordable programs. Book your discovery flight!`
+>
+  <HomepageLocationsHeader slot="hero" city={city} />
+
+  <section
+    class="bg-gradient-to-br from-main-blue-700 to-main-blue-900 text-white"
+  >
+    <div
+      class="mx-auto px-5 md:px-10 lg:px-20 py-16 flex flex-col 2xl:flex-row items-center gap-10 justify-between"
+    >
+      <div class="flex flex-col gap-5">
+        <h2 class="text-5xl font-semibold uppercase max-w-xl">
+          Become a Commercial Pilot in Just 7 Months!
+        </h2>
+        <p class="lg:text-lg tracking-wider font-light">
+          Our accelerated flight training programs are designed to help aspiring
+          pilots from {city} achieve their aviation goals quickly and affordably.
+          Whether you’re looking to become a private pilot or pursue a career in
+          aviation, we have the training you need to succeed.
+        </p>
+        <a href="/the-blitz-program" class="btn-secondary w-fit">
+          Go from Zero to Hero
+        </a>
+      </div>
+      <div class="flex flex-col md:flex-row gap-10 justify-between text-white">
+        {
+          programs
+            .slice(0, 3)
+            .map((program, index) => (
+              <CourseCard
+                imageSrc={program.data.primaryImage}
+                title={program.data.title}
+                delay={index * 150}
+                duration={program.data.duration}
+              />
+            ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div
+      class="mx-auto px-5 md:px-10 lg:px-20 py-24 flex flex-col-reverse md:flex-row gap-10 lg:gap-40 items-center"
+    >
+      <div class="flex-1 flex justify-center flex-col gap-5">
+        <h3
+          class="max-w-2xl text-pretty text-4xl font-bold tracking-wide text-main-black sm:text-5xl"
+        >
+          Welcome to Blitz Aviation
+        </h3>
+        <h4 class="text-blue-800 font-semibold text-2xl tracking-wide italic">
+          Where passion meets practicality—just a short drive from {city}
+        </h4>
+        <p class="lg:text-lg tracking-wider font-light">
+          At Blitz Aviation, we make flight training smarter, not harder.
+          Conveniently located in Ogden, Utah, our flight school attracts
+          aspiring pilots from {city} and across the {region}. We offer expert
+          instruction from seasoned pilots with years of real-world
+          experience—all without the sky-high price tag you might find in larger
+          metro areas.
+        </p>
+        <p class="lg:text-lg tracking-wider font-light">
+          Our streamlined, no-fluff approach focuses on what truly matters,
+          helping you master the skills you need efficiently and affordably.
+          Learn at your own pace, save on costs, and avoid hidden fees—because
+          becoming a pilot should be an exciting journey, not a financial
+          burden.
+        </p>
+        <a
+          href="/discovery-flight"
+          class="btn-primary w-fit mt-3"
+          target="_blank">Book a Discovery Flight</a
+        >
+      </div>
+      <div class="flex-1 relative max-w-[30rem]">
+        <ImageComp
+          src="/src/assets/images/cfi-andrew-zilka.jpg"
+          alt="Certified Flight Instructor Andrew Zilka at Blitz Aviation"
+          classes="z-10 relative aspect-square object-cover max-h-[30rem]"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="pb-10 lg:pb-20">
+    <Reviews client:only />
+  </section>
+
+  <section>
+    <div
+      class="mx-auto px-5 md:px-10 lg:px-20 pb-24 flex flex-col-reverse lg:flex-row gap-10 lg:gap-20 items-center"
+    >
+      <iframe
+        src="https://tube.rvere.com/embed?v=ha-0DAyil2M"
+        title="[Student Testimonial] - Why I Chose Blitz Aviation for My Pilot Training"
+        class="w-full h-full flex-1 aspect-video border-3 border-main-blue-700 shadow"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      >
+      </iframe>
+
+      <div class="flex-1 flex justify-center flex-col gap-5">
+        <h3
+          class="max-w-2xl text-pretty text-4xl font-bold tracking-wide text-main-black sm:text-5xl"
+        >
+          Why Choose Blitz Aviation?
+        </h3>
+        <p class="lg:text-lg tracking-wider font-light">
+          At Blitz Aviation, we offer a personalized flight training experience
+          for students from {city}—just a short drive from {landmark}—combining
+          high-quality instruction with affordable pricing. Pilots choose us for
+          our experienced instructors, flexible scheduling, and clear commitment
+          to helping them reach their aviation goals without breaking the bank.
+        </p>
+        <p class="lg:text-lg tracking-wider font-light">
+          Whether you’re a beginner from {city} looking to earn your private pilot
+          license or an experienced pilot seeking advanced training, we have the
+          resources and expertise to help you succeed. Our students appreciate our
+          hands-on approach, well-maintained aircraft, and supportive learning environment.
+        </p>
+        <a href="enrollment-form" class="btn-primary w-fit mt-3">Enroll Now</a>
+      </div>
+    </div>
+  </section>
+
+  <section
+    class="relative bg-blitz-program bg-cover bg-center bg-fixed text-white flex flex-col"
+  >
+    <div
+      class="absolute bg-gradient-to-br from-main-blue-700/60 to-main-blue-900/60 w-full h-full z-10"
+    >
+    </div>
+    <div
+      class="px-5 md:px-10 lg:px-20 flex flex-col py-20 lg:py-40 relative z-20 gap-10"
+    >
+      <h3 class="text-5xl font-bold">The Blitz Program: From Zero to Hero</h3>
+
+      <p class="text-xl lg:text-2xl font-light tracking-wider max-w-7xl">
+        Ready to turn your aviation dreams into reality? Follow Mycah’s proven
+        path from <strong class="font-bold">zero to hero</strong>. Starting as a
+        private pilot and advancing all the way to CFII.
+      </p>
+      <a href="/the-blitz-program" class="btn-secondary w-fit"
+        >Explore Our Zero-to-Hero Flight Training Program</a
+      >
+    </div>
+  </section>
+
+  <section>
+    <div class="mx-auto px-5 md:px-10 lg:px-20 py-24">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-20">
+        {services.map((service) => <ServicesCard {...service} />)}
+      </div>
+    </div>
+  </section>
+
+  <section
+    class="relative bg-[url(/src/assets/images/view-from-the-skies-discovery-flight-blitz-aviation.webp)] bg-cover bg-center text-white flex flex-col"
+  >
+    <div
+      class="absolute bg-gradient-to-br from-main-blue-700/60 to-main-blue-900/60 w-full h-full z-10"
+    >
+    </div>
+    <div
+      class="px-5 md:px-10 lg:px-20 flex flex-col py-20 lg:py-40 relative z-20 gap-10"
+    >
+      <h3 class="text-5xl font-bold">Take to the Skies!</h3>
+
+      <p class="text-xl lg:text-2xl font-light tracking-wider max-w-7xl">
+        Experience the thrill of flying with our discovery flights or enroll in
+        our comprehensive flight training programs today.
+      </p>
+      <div class="flex gap-5">
+        <a href="discovery-flight" class="btn-secondary w-fit" target="_blank"
+          >Request</a
+        >
+        <a href="enrollment-form" class="btn-secondary w-fit">Enroll</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="trainingPrograms">
+    <div class="mx-auto px-5 md:px-10 lg:px-20 py-24">
+      <h3 class="text-6xl font-bold text-center italic">
+        Blitz Training Programs
+      </h3>
+      <div class="flex flex-col gap-20 md:gap-[10rem] mt-20">
+        {
+          programs.map((program) => (
+            <ProgramsCard
+              imageSrc={program.data.primaryImage}
+              headline={program.data.title}
+              title={program.data.title}
+              description={program.data.intro}
+              url={program.data.url}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>

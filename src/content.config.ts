@@ -15,4 +15,16 @@ const blog = defineCollection({
   }),
 });
 
-export const collections = { blog };
+const locations = defineCollection({
+  loader: glob({
+    base: "./src/content/pilot-training",
+    pattern: "**/*.{md,mdx}",
+  }),
+  schema: z.object({
+    city: z.string(),
+    region: z.string(),
+    landmark: z.string(),
+  }),
+});
+
+export const collections = { blog, "pilot-training": locations };

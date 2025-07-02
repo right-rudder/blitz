@@ -20,6 +20,20 @@ import ImageComp from "../components/ImageComp.astro";
         "/team-blitz-aviation-flight-training-utah-salt-lake.webp"}
       keywords={siteKeywords || SITE_KEYWORDS}
     />
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-WQWV363W");
+    </script>
+    <!-- End Google Tag Manager -->
     <!-- Preconnect to external domains to improve performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,6 +44,15 @@ import ImageComp from "../components/ImageComp.astro";
     <meta name="format-detection" content="telephone=no" />
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-WQWV363W"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"></iframe></noscript
+    >
+    <!-- End Google Tag Manager (noscript) -->
     <header>
       <Navbar pathname={pathname} client:load>
         <ImageComp

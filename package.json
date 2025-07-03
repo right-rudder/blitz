@@ -19,7 +19,7 @@
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "aos": "^2.3.4",
-    "astro": "^5.9.2",
+    "astro": "^5.11.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-fast-marquee": "^1.6.5",

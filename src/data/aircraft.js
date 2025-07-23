@@ -78,6 +78,25 @@ const aircraft = [
       "JPI EDM-760 Engine Monitoring System",
     ],
   },
+  {
+    name: "Cirrus SR22T",
+    number: "N345PK",
+    image1: "/src/assets/images/n345pk-blitz-airplane.png",
+    image1Alt: "Cirrus SR22T at Blitz Aviation",
+    image2: "/src/assets/images/n345pk-rearview.jpeg",
+    image2Alt: "Cirrus SR22T rear view",
+    image3: "/src/assets/images/n345pk-sideview.jpeg",
+    image3Alt: "Cirrus SR22T side view",
+    description:
+      "The Cirrus SR22T is a top-of-the-line, high-performance single-engine aircraft equipped with the latest in safety, comfort, and avionics. With its powerful turbocharged engine, luxurious cabin, and advanced technology, it's the perfect aircraft for cross-country flights, business travel, or high-end personal flying.",
+    equipment: [
+      "Continental TSIO-550-K Turbocharged Engine (315 HP)",
+      "Garmin Perspective+ Avionics Suite",
+      "GFC 700 Autopilot",
+      "Flight Into Known Icing (FIKI) System",
+      "Cirrus Airframe Parachute System (CAPS)",
+    ],
+  },
 ];
 
 export default aircraft;

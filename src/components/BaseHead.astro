@@ -35,10 +35,8 @@ const {
 <meta name="generator" content={Astro.generator} />
 
 <!-- Google tag (gtag.js) -->
-<script
-  type="text/partytown"
-  src="https://www.googletagmanager.com/gtag/js?id=G-XWPP0QF8N9"></script>
-<script type="text/partytown">
+<script src="https://www.googletagmanager.com/gtag/js?id=G-XWPP0QF8N9"></script>
+<script is:inline>
   window.dataLayer = window.dataLayer || [];
   function gtag() {
     dataLayer.push(arguments);

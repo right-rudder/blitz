@@ -5,7 +5,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import BlogPostCard from "../../components/BlogPostCard.astro";
 
 const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 
 const headerData = {
@@ -41,7 +41,7 @@ const headerData = {
         world of aviation.
       </p>
       <div
-        class="grid mt-10 gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 w-full sm:justify-center"
+        class="grid mt-10 gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full sm:justify-center"
       >
         {posts.map((post) => <BlogPostCard {...post} />)}
       </div>

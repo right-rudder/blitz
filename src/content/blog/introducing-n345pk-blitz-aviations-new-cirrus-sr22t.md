@@ -1,6 +1,6 @@
 ---
 pubDate: "Jul 25 2025"
-title: "Introducing N345PK: Blitz Aviation’s New Cirrus SR22T Raises the Bar for Flight Training"
+title: "Blitz Aviation’s New Cirrus SR22T Raises the Bar for Flight Training"
 description: "The Cirrus SR22T isn’t just another airplane—it’s an industry leader. With a turbocharged Continental TSIO-550-K engine producing 315 horsepower, this aircraft delivers exceptional performance at high altitudes and across long distances. Whether you're training for your instrument rating or planning your first cross-country adventure, N345PK offers the range, speed, and capability to make every flight efficient and unforgettable."
 heroImage: "/src/assets/images/n345pk-rearview.jpeg"
 ---

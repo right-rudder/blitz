@@ -1,0 +1,143 @@
+---
+import type { CollectionEntry } from "astro:content";
+import BlogPostCard from "./BlogPostCard.astro";
+
+interface Props {
+  currentPost: CollectionEntry<"blog">;
+  allPosts: CollectionEntry<"blog">[];
+  maxRelated?: number;
+}
+
+const { currentPost, allPosts, maxRelated = 3 } = Astro.props;
+
+// Function to calculate similarity between posts
+function calculateSimilarity(post1: CollectionEntry<"blog">, post2: CollectionEntry<"blog">): number {
+  let score = 0;
+  
+  // Same category gets high score
+  if (post1.data.category === post2.data.category) {
+    score += 5;
+  }
+  
+  // Same series gets very high score
+  if (post1.data.series && post1.data.series === post2.data.series) {
+    score += 10;
+  }
+  
+  // Common tags
+  const post1Tags = post1.data.tags || [];
+  const post2Tags = post2.data.tags || [];
+  const commonTags = post1Tags.filter(tag => post2Tags.includes(tag));
+  score += commonTags.length * 2;
+  
+  // Keywords overlap
+  const post1Keywords = post1.data.keywords || [];
+  const post2Keywords = post2.data.keywords || [];
+  const commonKeywords = post1Keywords.filter(keyword => post2Keywords.includes(keyword));
+  score += commonKeywords.length;
+  
+  // Similar difficulty level
+  if (post1.data.difficulty === post2.data.difficulty) {
+    score += 1;
+  }
+  
+  // Title word similarity (simple check)
+  const post1Words = post1.data.title.toLowerCase().split(/\s+/);
+  const post2Words = post2.data.title.toLowerCase().split(/\s+/);
+  const commonWords = post1Words.filter(word => 
+    word.length > 3 && post2Words.includes(word)
+  );
+  score += commonWords.length;
+  
+  return score;
+}
+
+// Get related posts
+const relatedPosts = allPosts
+  .filter(post => post.id !== currentPost.id) // Exclude current post
+  .map(post => ({
+    post,
+    similarity: calculateSimilarity(currentPost, post)
+  }))
+  .filter(item => item.similarity > 0) // Only posts with some similarity
+  .sort((a, b) => b.similarity - a.similarity) // Sort by similarity descending
+  .slice(0, maxRelated) // Take top N
+  .map(item => item.post);
+
+// If we have explicit related posts defined in frontmatter, prioritize those
+const explicitRelated = currentPost.data.relatedPosts || [];
+const explicitRelatedPosts = allPosts.filter(post => 
+  explicitRelated.includes(post.id)
+);
+
+// Combine explicit and algorithmic recommendations
+const finalRelatedPosts = [
+  ...explicitRelatedPosts,
+  ...relatedPosts.filter(post => !explicitRelated.includes(post.id))
+].slice(0, maxRelated);
+
+// Schema for related articles
+const relatedArticlesSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Related Articles",
+  "description": `Articles related to "${currentPost.data.title}"`,
+  "numberOfItems": finalRelatedPosts.length,
+  "itemListElement": finalRelatedPosts.map((post, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "item": {
+      "@type": "BlogPosting",
+      "headline": post.data.title,
+      "description": post.data.description,
+      "url": new URL(`/blog/${post.id}`, Astro.site).toString(),
+      "datePublished": new Date(post.data.pubDate).toISOString(),
+      "image": post.data.heroImage ? new URL(post.data.heroImage, Astro.site).toString() : new URL('/blitz-logo.png', Astro.site).toString(),
+      "author": {
+        "@type": "Organization",
+        "name": "Blitz Aviation"
+      }
+    }
+  }))
+};
+---
+
+{finalRelatedPosts.length > 0 && (
+  <section class="mt-16 border-t pt-16" itemscope itemtype="https://schema.org/ItemList">
+    <!-- Related Articles Schema -->
+    <script type="application/ld+json" set:html={JSON.stringify(relatedArticlesSchema)}>
+    </script>
+    
+    <div class="container mx-auto px-5">
+      <h2 class="text-3xl font-bold text-main-black mb-8" itemprop="name">
+        Related Articles
+      </h2>
+      <meta itemprop="numberOfItems" content={finalRelatedPosts.length.toString()} />
+      
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {finalRelatedPosts.map((post, index) => (
+          <div itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <meta itemprop="position" content={(index + 1).toString()} />
+            <div itemprop="item">
+              <BlogPostCard {...post} body={post.body} />
+            </div>
+          </div>
+        ))}
+      </div>
+      
+      <!-- Series navigation if part of a series -->
+      {currentPost.data.series && (
+        <div class="mt-12 p-6 bg-blue-50 rounded-lg">
+          <h3 class="text-xl font-semibold text-blue-900 mb-4">
+            📚 Part of the "{currentPost.data.series}" Series
+          </h3>
+          {currentPost.data.seriesOrder && (
+            <p class="text-blue-700">
+              This is article #{currentPost.data.seriesOrder} in the series.
+            </p>
+          )}
+        </div>
+      )}
+    </div>
+  </section>
+)}

@@ -11,7 +11,7 @@ const privatePilot = {
     siteDescription:
       "Earn your Private Pilot License in as little as 3 months at Blitz Aviation in Ogden, UT. Learn to fly with expert CFIs in a structured, affordable program with Cessna aircraft and personalized instruction.",
     siteKeywords:
-      "private pilot license Utah, PPL training Ogden, learn to fly Utah, beginner flying lessons, Cessna 172 training, first-time pilot training, recreational flying, private aviation license, sport pilot, flight school near Salt Lake City, affordable flight training",
+      "private pilot license Utah, PPL training Salt Lake City, student pilot course Ogden, beginner flight training Utah, recreational pilot license, private pilot certification Utah, learn to fly private pilot, flight training for beginners Utah, private pilot ground school, Utah private pilot course, flight training Ogden, pilot school Salt Lake City, aviation training Northern Utah, discovery flight Utah",
     primaryImage:
       "/src/assets/images/student-of-the-private-pilot-flight-training-program.webp",
     primaryAlt:

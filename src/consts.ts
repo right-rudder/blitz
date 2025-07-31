@@ -15,6 +15,6 @@ export const ADDRESS_LINE_1 = "3909 Airport Rd, Hangar 397";
 export const ADDRESS_LINE_2 = "Ogden, UT 84405";
 export const GOOGLE_MAPS_URL = "https://maps.app.goo.gl/aGy2fdwxSjhvpTMx6";
 
-// Keywords for SEO
+// Keywords for SEO - Comprehensive flight training strategy targeting Salt Lake City and Ogden
 export const SITE_KEYWORDS =
-  "flight school Ogden, pilot training Utah, learn to fly Utah, flying lessons Salt Lake City, Ogden Utah flight training, private pilot license Utah, instrument rating, commercial pilot certificate, CFI training, certified flight instructor, aviation school Utah, discovery flight Ogden, accelerated flight training, Cessna training, zero to hero pilot program, flight instructor jobs Utah, aviation career training";
+  "flight training Ogden Utah, pilot school Salt Lake City, learn to fly Utah, aviation training Northern Utah, private pilot license Utah, instrument rating training, commercial pilot certification Utah, CFI training Ogden, flight instructor certification, discovery flight Salt Lake City, aircraft rental Utah, accelerated flight training, zero to hero pilot program Utah, Cessna training Utah, flight school Weber County, aviation school Davis County, pilot training Wasatch Front, flight lessons Utah, professional pilot training, aviation career Utah, IFR training Salt Lake, multi-engine rating Utah, flight simulator training, aviation education Utah, student pilot resources, flight training cost Utah, pilot certification programs, aviation safety training, flight school near me, best flight training Utah";

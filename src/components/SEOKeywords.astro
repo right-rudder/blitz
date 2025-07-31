@@ -1,0 +1,213 @@
+---
+/**
+ * SEO Keywords Optimizer Component
+ * Dynamically generates and optimizes keywords for better search visibility
+ */
+import {
+  generateMetaKeywords,
+  SERVICE_SPECIFIC_KEYWORDS,
+  LOCATION_KEYWORDS,
+} from "../utils/keywordStrategy";
+
+interface Props {
+  pageType: "home" | "program" | "location" | "blog" | "about" | "service";
+  primaryKeywords?: string[];
+  location?: string;
+  service?: string;
+  additionalKeywords?: string[];
+  priority?: "local" | "service" | "competitive" | "informational";
+}
+
+const {
+  pageType,
+  primaryKeywords = [],
+  location,
+  service,
+  additionalKeywords = [],
+  priority = "local",
+} = Astro.props;
+
+// Generate contextual keywords based on page type and priority
+function getContextualKeywords(
+  pageType: string,
+  priority: string,
+  location?: string
+): string[] {
+  const contextKeywords: string[] = [];
+
+  switch (priority) {
+    case "local":
+      if (location) {
+        contextKeywords.push(
+          `flight training ${location}`,
+          `pilot school ${location}`,
+          `aviation training ${location}`,
+          `learn to fly ${location}`,
+          `flying lessons ${location}`
+        );
+      }
+      contextKeywords.push(
+        ...LOCATION_KEYWORDS.primary.map((loc) => `flight school ${loc}`)
+      );
+      break;
+
+    case "service":
+      if (service && service in SERVICE_SPECIFIC_KEYWORDS) {
+        const serviceKeywords =
+          SERVICE_SPECIFIC_KEYWORDS[
+            service as keyof typeof SERVICE_SPECIFIC_KEYWORDS
+          ];
+        contextKeywords.push(...serviceKeywords.split(", ").slice(0, 10));
+      }
+      break;
+
+    case "competitive":
+      contextKeywords.push(
+        "best flight school Utah",
+        "top pilot training Salt Lake City",
+        "affordable aviation school",
+        "professional flight instruction",
+        "quality pilot training"
+      );
+      break;
+
+    case "informational":
+      contextKeywords.push(
+        "how to become a pilot",
+        "pilot training requirements",
+        "aviation career guide",
+        "flight school information",
+        "pilot license cost"
+      );
+      break;
+  }
+
+  return contextKeywords;
+}
+
+// Generate the final keyword string
+const contextualKeywords = getContextualKeywords(pageType, priority, location);
+const finalKeywords = generateMetaKeywords(
+  [...primaryKeywords, ...contextualKeywords],
+  location || "Utah",
+  additionalKeywords
+);
+
+// Structured data for search engines
+const keywordSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  keywords: finalKeywords,
+  about: [
+    {
+      "@type": "Thing",
+      name: "Flight Training",
+      description: "Professional aviation training services",
+    },
+    {
+      "@type": "Place",
+      name: location || "Utah",
+      description: `Flight training location in ${location || "Utah"}`,
+    },
+  ],
+};
+---
+
+<!-- SEO Keywords Meta Tag -->
+<meta name="keywords" content={finalKeywords} />
+
+<!-- Location-specific SEO tags -->
+{
+  location && (
+    <>
+      <meta name="geo.region" content="US-UT" />
+      <meta name="geo.placename" content={location} />
+      <meta
+        name="geo.position"
+        content="41.19415996924632;-112.00750135068749"
+      />
+      <meta name="ICBM" content="41.19415996924632, -112.00750135068749" />
+    </>
+  )
+}
+
+<!-- Enhanced keyword targeting for local search -->
+<meta
+  name="DC.subject"
+  content={`Flight Training, Aviation Education, ${location || "Utah"}`}
+/>
+<meta
+  name="classification"
+  content="Aviation Training, Flight School, Pilot Education"
+/>
+
+<!-- Structured Data for Keywords -->
+<script type="application/ld+json" set:html={JSON.stringify(keywordSchema)} />
+
+<!-- Additional meta tags for enhanced SEO -->
+<meta
+  name="robots"
+  content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+/>
+<meta
+  name="googlebot"
+  content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+/>
+
+<!-- Local business indicators -->
+{
+  location && (
+    <>
+      <meta property="business:contact_data:locality" content={location} />
+      <meta property="business:contact_data:region" content="Utah" />
+      <meta
+        property="business:contact_data:country_name"
+        content="United States"
+      />
+    </>
+  )
+}
+
+<!-- Service-specific meta tags -->
+{
+  service && (
+    <meta name="article:section" content={`Flight Training - ${service}`} />
+  )
+}
+
+<!-- Priority-based meta description enhancement -->
+{
+  priority === "local" && (
+    <meta
+      name="description-enhancement"
+      content={`Serving ${location || "Utah"} and surrounding areas with professional flight training services`}
+    />
+  )
+}
+
+<!-- Keywords for social media optimization -->
+<meta
+  property="article:tag"
+  content={finalKeywords.split(", ").slice(0, 10).join(", ")}
+/>
+
+<style>
+  /* Hidden keyword-rich content for search engines */
+  .seo-keywords-context {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+</style>
+
+<!-- Hidden contextual content for enhanced keyword relevance -->
+<div class="seo-keywords-context">
+  <span>
+    {location && `Flight training services in ${location}, Utah. `}
+    Professional aviation education and pilot certification programs.
+    {service && ` Specialized ${service} training available.`}
+    Serving Salt Lake City, Ogden, and Northern Utah communities.
+  </span>
+</div>

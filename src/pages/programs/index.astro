@@ -1,0 +1,127 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import programs from "../../data/programs";
+import acceleratedPrograms from "../../data/acceleratedPrograms";
+import ImageComp from "../../components/ImageComp.astro";
+import ProgramsCard from "../../components/ProgramsCard.astro";
+import services from "../../data/services";
+import ServicesCard from "../../components/ServicesCard.astro";
+import Header from "../../components/Header.astro";
+import FAQ from "../../components/FAQ.astro";
+import faqs from "../../data/faqs";
+
+const siteTitle =
+  "Flight Training Programs | Professional Pilot Training in Ogden, Utah | Blitz Aviation";
+const siteDescription =
+  "Explore Blitz Aviation's comprehensive flight training programs in Ogden, Utah. From Private Pilot to Commercial ratings, accelerated courses, and instructor certifications. Start your aviation career today.";
+const siteKeywords =
+  "flight training programs Utah, pilot training Ogden, private pilot license, commercial pilot training, instrument rating, CFI training, accelerated flight programs, aviation school Utah, professional pilot training";
+
+// Custom breadcrumbs for programs index
+const customBreadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Programs", url: "/programs" },
+];
+
+const headerData = {
+  title: " Blitz Training Programs",
+  subtitle: "Start Your Aviation Journey",
+  primaryImage:
+    "/src/assets/images/view-of-the-mountains-from-ogden-airport.webp",
+  primaryAlt: " Blitz Training Programs",
+};
+---
+
+<BaseLayout
+  siteTitle={siteTitle}
+  siteDescription={siteDescription}
+  siteKeywords={siteKeywords}
+  customBreadcrumbs={customBreadcrumbs}
+>
+  <Header slot="hero" data={headerData} />
+
+  <section
+    class="relative bg-blitz-program bg-cover bg-center bg-fixed text-white flex flex-col"
+  >
+    <div
+      class="absolute bg-gradient-to-br from-main-blue-700/60 to-main-blue-900/60 w-full h-full z-10"
+    >
+    </div>
+    <div
+      class="px-5 md:px-10 lg:px-20 flex flex-col py-20 lg:py-40 relative z-20 gap-10"
+    >
+      <h3 class="text-5xl font-bold">The Blitz Program: From Zero to Hero</h3>
+
+      <p class="text-xl lg:text-2xl font-light tracking-wider max-w-7xl">
+        Ready to turn your aviation dreams into reality? Follow Mycah’s proven
+        path from <strong class="font-bold">zero to hero</strong>. Starting as a
+        private pilot and advancing all the way to CFII.
+      </p>
+      <a href="/the-blitz-program" class="btn-secondary w-fit"
+        >Explore Our Zero-to-Hero Flight Training Program</a
+      >
+    </div>
+  </section>
+
+  <section>
+    <div class="mx-auto px-5 md:px-10 lg:px-20 py-24">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-20">
+        {services.map((service) => <ServicesCard {...service} />)}
+      </div>
+    </div>
+  </section>
+
+  <section
+    class="relative bg-[url(/src/assets/images/view-from-the-skies-discovery-flight-blitz-aviation.webp)] bg-cover bg-center text-white flex flex-col"
+  >
+    <div
+      class="absolute bg-gradient-to-br from-main-blue-700/60 to-main-blue-900/60 w-full h-full z-10"
+    >
+    </div>
+    <div
+      class="px-5 md:px-10 lg:px-20 flex flex-col py-20 lg:py-40 relative z-20 gap-10"
+    >
+      <h3 class="text-5xl font-bold">Take to the Skies!</h3>
+
+      <p class="text-xl lg:text-2xl font-light tracking-wider max-w-7xl">
+        Experience the thrill of flying with our discovery flights or enroll in
+        our comprehensive flight training programs today.
+      </p>
+      <div class="flex gap-5">
+        <a href="discovery-flight" class="btn-secondary w-fit" target="_blank"
+          >Request</a
+        >
+        <a href="enrollment-form" class="btn-secondary w-fit">Enroll</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="trainingPrograms">
+    <div class="mx-auto px-5 md:px-10 lg:px-20 py-24">
+      <h3 class="text-6xl font-bold text-center italic">
+        Blitz Training Programs
+      </h3>
+      <div class="flex flex-col gap-20 md:gap-[10rem] mt-20">
+        {
+          programs.map((program) => (
+            <ProgramsCard
+              imageSrc={program.data.primaryImage}
+              headline={program.data.title}
+              title={program.data.title}
+              description={program.data.intro}
+              url={program.data.url}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <FAQ
+    faqs={faqs.general}
+    title="Flight Training Questions & Answers"
+    description="Get answers to the most common questions about flight training at Blitz Aviation."
+    className="bg-gray-50"
+  />
+</BaseLayout>

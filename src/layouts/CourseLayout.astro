@@ -2,8 +2,31 @@
 import { FaDotCircle } from "react-icons/fa";
 import { IoMdAirplane } from "react-icons/io";
 import ImageComp from "../components/ImageComp.astro";
+import FAQ from "../components/FAQ.astro";
+import faqs from "../data/faqs";
 
 const { data } = Astro.props;
+
+// Get relevant FAQs based on course type
+const getFAQsForCourse = (courseSlug: string) => {
+  switch (courseSlug) {
+    case 'private-pilot':
+      return faqs.privatePilot;
+    case 'instrument-rating':
+      return faqs.instrumentRating;
+    case 'commercial-pilot':
+      return faqs.commercialPilot;
+    case 'cfi':
+    case 'cfii':
+      return faqs.cfiTraining;
+    case 'accelerated-programs':
+      return faqs.acceleratedPrograms;
+    default:
+      return faqs.general;
+  }
+};
+
+const courseFAQs = getFAQsForCourse(data.slug);
 
 // Format structured data for course
 const courseUrl = new URL(data.url, Astro.site).toString();
@@ -154,3 +177,11 @@ const primaryImageUrl = new URL(data.primaryImage, Astro.site).toString();
     </div>
   </div>
 </section>
+
+<!-- FAQ Section -->
+<FAQ 
+  faqs={courseFAQs} 
+  title={`${data.title} Frequently Asked Questions`}
+  description={`Get answers to common questions about ${data.title} training at Blitz Aviation.`}
+  className="bg-gray-50"
+/>

@@ -1,6 +1,8 @@
 ---
 import ImageComp from "../components/ImageComp.astro";
 import DiscoveryFlightLayout from "../layouts/DiscoveryFlightLayout.astro";
+import FAQ from "../components/FAQ.astro";
+import faqs from "../data/faqs";
 const DISCOVERY_FLIGHT_FORM_WEBHOOK_URL = import.meta.env
   .DISCOVERY_FLIGHT_FORM_WEBHOOK_URL;
 const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
@@ -9,7 +11,7 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
 <DiscoveryFlightLayout
   siteTitle="Discovery Flight in Ogden, Utah | Experience Flying with Blitz Aviation"
   siteDescription="Experience the thrill of piloting an aircraft with a Discovery Flight at Blitz Aviation in Ogden, Utah. Fly over breathtaking mountain views with an experienced instructor. Perfect for beginners considering flight training."
-  siteKeywords="discovery flight Utah, introductory flight lesson, first-time flying experience, trial flight Ogden, airplane experience Salt Lake City, learn to fly Utah, discovery flight cost, beginner pilot experience, scenic flight Ogden mountains, flying lesson trial, first flight experience"
+  siteKeywords="discovery flight Utah, intro flight Salt Lake City, trial flight lesson Ogden, first time flying experience, scenic flight tour Utah, beginner flight experience, introductory flying lesson, trial pilot experience Utah, first flight lesson Utah, aviation experience flight, flight training Ogden, pilot school Salt Lake City, learn to fly Utah, aviation training Northern Utah, aircraft rental Utah"
 >
   <section class="flex">
     <div
@@ -141,6 +143,13 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
           >Request</button
         >
       </form>
+
+      <!-- FAQ Section -->
+      <!-- <FAQ
+        faqs={faqs.discoveryFlight}
+        title="Discovery Flight Questions"
+        description="Everything you need to know about your first flying experience with Blitz Aviation."
+      /> -->
     </div>
     <div
       class="w-full hidden lg:block fixed right-0 bottom-0 top-0 left-[640px]"

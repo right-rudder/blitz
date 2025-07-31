@@ -1,0 +1,175 @@
+---
+/**
+ * Location-Based Keywords Component
+ * Generates location-specific SEO content and keywords for flight training
+ */
+import {
+  LOCATION_KEYWORDS,
+  generateLocationKeywords,
+  FLIGHT_TRAINING_KEYWORDS,
+} from "../utils/keywordStrategy";
+
+interface Props {
+  city: string;
+  region?: string;
+  landmark?: string;
+  showAll?: boolean;
+}
+
+const { city, region, landmark, showAll = false } = Astro.props;
+
+// Generate comprehensive location keywords
+const locationKeywords = generateLocationKeywords(
+  city,
+  FLIGHT_TRAINING_KEYWORDS.primary
+);
+const nearbyKeywords = [
+  `flight school near ${city}`,
+  `pilot training ${city} area`,
+  `aviation school ${region || city}`,
+  `learn to fly near ${landmark || city}`,
+  `flying lessons ${city} Utah`,
+  `aircraft rental ${city}`,
+  `discovery flight ${city}`,
+  `CFI training ${region || city}`,
+];
+
+// Combine all keywords
+const allKeywords = [...locationKeywords, ...nearbyKeywords];
+const displayKeywords = showAll ? allKeywords : allKeywords.slice(0, 15);
+
+// Create structured data for location
+const locationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Place",
+  name: `${city}, Utah`,
+  description: `Flight training services available in ${city}, Utah and surrounding areas`,
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: "41.19415996924632",
+    longitude: "-112.00750135068749",
+  },
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: city,
+    addressRegion: "Utah",
+    addressCountry: "United States",
+  },
+  servedBy: {
+    "@type": "Organization",
+    name: "Blitz Aviation",
+    serviceArea: {
+      "@type": "GeoCircle",
+      geoMidpoint: {
+        "@type": "GeoCoordinates",
+        latitude: "41.19415996924632",
+        longitude: "-112.00750135068749",
+      },
+      geoRadius: "50 miles",
+    },
+  },
+};
+
+// Create service area keywords
+const serviceAreaKeywords = [
+  `flight training services ${city}`,
+  `professional pilot education ${region || city}`,
+  `aviation training near ${landmark || city}`,
+  `certified flight instructors ${city}`,
+  `accelerated flight programs ${region || city}`,
+];
+---
+
+<!-- Location-specific keywords meta tag -->
+<meta name="geo.keywords" content={displayKeywords.join(", ")} />
+
+<!-- Service area meta tags -->
+<meta
+  name="service-area"
+  content={`${city}, ${region || "Utah"}, Northern Utah, Salt Lake City area`}
+/>
+<meta name="coverage-area" content={serviceAreaKeywords.join(", ")} />
+
+<!-- Location schema markup -->
+<script type="application/ld+json" set:html={JSON.stringify(locationSchema)} />
+
+<!-- Location-specific Open Graph tags -->
+<meta property="og:locality" content={city} />
+<meta property="og:region" content="Utah" />
+<meta property="og:country-name" content="United States" />
+
+<!-- Twitter location tags -->
+<meta name="twitter:location" content={`${city}, Utah`} />
+
+<!-- Additional location context for search engines -->
+<meta name="location-keywords" content={allKeywords.join(", ")} />
+<meta
+  name="nearby-services"
+  content={`Flight training, pilot education, aviation school serving ${city} and surrounding areas`}
+/>
+
+<!-- Hidden location context content -->
+<div
+  class="location-seo-context"
+  style="position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden;"
+>
+  <h1>Flight Training in {city}, Utah</h1>
+  <p>
+    Blitz Aviation provides comprehensive flight training services to students
+    in {city}, Utah.
+    {
+      region &&
+        `Located in ${region}, our flight school is easily accessible to residents of ${city}.`
+    }
+    {
+      landmark &&
+        ` We're conveniently located near ${landmark}, making us the perfect choice for aspiring pilots in the ${city} area.`
+    }
+  </p>
+  <p>
+    Our services include private pilot training, instrument rating, commercial
+    pilot certification, and certified flight instructor training for students
+    from {city} and surrounding communities.
+  </p>
+
+  <!-- Location-specific service keywords -->
+  <ul>
+    {displayKeywords.map((keyword) => <li>{keyword}</li>)}
+  </ul>
+
+  <!-- Service area coverage -->
+  <p>
+    Serving {city}, {region || "Utah"}, and the greater Salt Lake City
+    metropolitan area with professional aviation training and aircraft rental
+    services.
+  </p>
+</div>
+
+<!-- Local business rich snippets -->
+<div
+  itemscope
+  itemtype="http://schema.org/LocalBusiness"
+  style="display: none;"
+>
+  <span itemprop="name">Blitz Aviation</span>
+  <span itemprop="description">Flight training school serving {city}, Utah</span
+  >
+  <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+    <span itemprop="addressLocality">{city}</span>
+    <span itemprop="addressRegion">Utah</span>
+    <span itemprop="addressCountry">United States</span>
+  </div>
+  <span itemprop="serviceArea">{city}, {region || "Utah"}, Northern Utah</span>
+</div>
+
+<style>
+  .location-seo-context {
+    position: absolute !important;
+    left: -9999px !important;
+    width: 1px !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    white-space: nowrap !important;
+  }
+</style>

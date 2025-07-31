@@ -12,7 +12,7 @@ const instrumentRating = {
     siteDescription:
       "Master instrument flying with Blitz Aviation's 2-month IFR training program in Ogden, Utah. Learn to navigate in all weather conditions with advanced avionics and gain the skills needed for a professional flying career.",
     siteKeywords:
-      "instrument rating Utah, IFR training Ogden, instrument flight rules training, bad weather flying certificate, Garmin G5 training, advanced pilot training, all-weather flying, instrument navigation training, instrument approach procedures, aviation career advancement, instrument pilot Utah",
+      "instrument rating Utah, IFR training Salt Lake City, instrument flight training Ogden, weather flying training Utah, precision approach training, instrument pilot certification, IFR checkride preparation Utah, instrument rating course Utah, advanced pilot training, instrument flight rules training, flight training Ogden, pilot school Utah, aviation training Northern Utah",
     intro:
       "Earning an Instrument Rating (IR) enables you to fly in low visibility and adverse weather conditions using instruments. At Blitz Aviation, our IR training emphasizes precision in IFR operations, preparing you for commercial aviation and airline operations.",
     description: [

@@ -3,6 +3,8 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import Header from "../../components/Header.astro";
 import acceleratedPrograms from "../../data/acceleratedPrograms";
 import AcceleratedProgramsCard from "../../components/AcceleratedProgramsCard.astro";
+import FAQ from "../../components/FAQ.astro";
+import faqs from "../../data/faqs";
 
 const headerData = {
   title: "Accelerated Flight Training Programs",
@@ -47,4 +49,12 @@ const headerData = {
       </div>
     </div>
   </section>
+
+  <!-- FAQ Section -->
+  <FAQ
+    faqs={faqs.acceleratedPrograms}
+    title="Accelerated Training Questions"
+    description="Everything you need to know about our intensive flight training programs."
+    className="bg-gray-50"
+  />
 </BaseLayout>

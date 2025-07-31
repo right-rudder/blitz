@@ -1,0 +1,180 @@
+---
+export interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+export interface Props {
+  faqs: FAQItem[];
+  title?: string;
+  description?: string;
+  className?: string;
+}
+
+const {
+  faqs,
+  title = "Frequently Asked Questions",
+  description,
+  className = "",
+} = Astro.props;
+---
+
+<section class={`py-16 bg-white ${className}`}>
+  <div class="mx-auto px-5 md:px-10 lg:px-20 max-w-4xl">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl lg:text-5xl font-bold mb-4 text-gray-900">{title}</h2>
+      {
+        description && (
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">{description}</p>
+        )
+      }
+    </div>
+
+    <div class="space-y-4">
+      {
+        faqs.map((faq, index) => (
+          <div
+            class="border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300"
+            data-faq-item={index}
+          >
+            <button
+              class="w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors duration-200 flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-main-blue-500 focus:ring-inset"
+              aria-expanded="false"
+              data-faq-button={index}
+            >
+              <h3 class="text-lg font-semibold text-gray-900 pr-4">
+                {faq.question}
+              </h3>
+              <svg
+                class="w-5 h-5 text-gray-500 transform transition-transform duration-200"
+                data-faq-icon={index}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <div
+              class="overflow-hidden transition-all duration-300 max-h-0"
+              data-faq-content={index}
+            >
+              <div class="px-6 py-4 bg-white">
+                <div
+                  class="text-gray-700 prose prose-sm max-w-none"
+                  set:html={faq.answer}
+                />
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Schema Markup -->
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer.replace(/<[^>]*>/g, ""), // Strip HTML for schema
+      },
+    })),
+  })}
+/>
+
+<script>
+  // FAQ Accordion functionality
+  document.addEventListener("DOMContentLoaded", function () {
+    const faqButtons = document.querySelectorAll("[data-faq-button]");
+
+    faqButtons.forEach((button) => {
+      button.addEventListener("click", function (this: HTMLButtonElement) {
+        const index = this.getAttribute("data-faq-button");
+        const content = document.querySelector(
+          `[data-faq-content="${index}"]`
+        ) as HTMLElement;
+        const icon = document.querySelector(
+          `[data-faq-icon="${index}"]`
+        ) as HTMLElement;
+        const isExpanded = this.getAttribute("aria-expanded") === "true";
+
+        // Close all other FAQs
+        faqButtons.forEach((otherButton) => {
+          if (otherButton !== this) {
+            const otherIndex = otherButton.getAttribute("data-faq-button");
+            const otherContent = document.querySelector(
+              `[data-faq-content="${otherIndex}"]`
+            ) as HTMLElement;
+            const otherIcon = document.querySelector(
+              `[data-faq-icon="${otherIndex}"]`
+            ) as HTMLElement;
+
+            otherButton.setAttribute("aria-expanded", "false");
+            if (otherContent) otherContent.style.maxHeight = "0px";
+            if (otherIcon) otherIcon.style.transform = "rotate(0deg)";
+          }
+        });
+
+        // Toggle current FAQ
+        if (isExpanded) {
+          this.setAttribute("aria-expanded", "false");
+          if (content) content.style.maxHeight = "0px";
+          if (icon) icon.style.transform = "rotate(0deg)";
+        } else {
+          this.setAttribute("aria-expanded", "true");
+          if (content) content.style.maxHeight = content.scrollHeight + "px";
+          if (icon) icon.style.transform = "rotate(180deg)";
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  .prose h1,
+  .prose h2,
+  .prose h3,
+  .prose h4,
+  .prose h5,
+  .prose h6 {
+    color: inherit;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .prose p {
+    margin-bottom: 1rem;
+  }
+
+  .prose ul,
+  .prose ol {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+  }
+
+  .prose li {
+    margin-bottom: 0.25rem;
+  }
+
+  .prose a {
+    color: #2d5fe3;
+    text-decoration: underline;
+  }
+
+  .prose a:hover {
+    color: #244ad1;
+  }
+</style>

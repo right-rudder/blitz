@@ -1,0 +1,114 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import FAQ from "../components/FAQ.astro";
+import faqs from "../data/faqs";
+import Header from "../components/Header.astro";
+
+const siteTitle =
+  "Flight Training FAQs | Common Questions Answered | Blitz Aviation";
+const siteDescription =
+  "Find answers to frequently asked questions about flight training at Blitz Aviation in Ogden, Utah. Get information about pilot licenses, training requirements, costs, and more.";
+const siteKeywords =
+  "flight training FAQ, pilot license questions, aviation training answers, flight school questions, pilot training cost, how to become a pilot, flight training requirements";
+
+// Custom breadcrumbs for FAQs page
+const customBreadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "FAQs", url: "/faqs" },
+];
+
+const headerData = {
+  title: "Frequently Asked Questions",
+  subtitle: "Your Questions Answered",
+  primaryImage:
+    "/src/assets/images/view-of-the-mountains-from-ogden-airport.webp",
+  primaryAlt: "FAQs Blitz Training Programs",
+};
+---
+
+<BaseLayout
+  siteTitle={siteTitle}
+  siteDescription={siteDescription}
+  siteKeywords={siteKeywords}
+  customBreadcrumbs={customBreadcrumbs}
+>
+  <!-- Hero Section -->
+  <Header slot="hero" data={headerData} />
+
+  <!-- General Flight Training FAQs -->
+  <FAQ
+    faqs={faqs.general}
+    title="General Flight Training"
+    description="Common questions about getting started with flight training."
+  />
+
+  <!-- Discovery Flight FAQs -->
+  <FAQ
+    faqs={faqs.discoveryFlight}
+    title="Discovery Flights"
+    description="Questions about your first flying experience."
+    className="bg-gray-50"
+  />
+
+  <!-- Private Pilot FAQs -->
+  <FAQ
+    faqs={faqs.privatePilot}
+    title="Private Pilot License"
+    description="Information about earning your Private Pilot License."
+  />
+
+  <!-- Instrument Rating FAQs -->
+  <FAQ
+    faqs={faqs.instrumentRating}
+    title="Instrument Rating"
+    description="Questions about instrument flight training."
+    className="bg-gray-50"
+  />
+
+  <!-- Commercial Pilot FAQs -->
+  <FAQ
+    faqs={faqs.commercialPilot}
+    title="Commercial Pilot License"
+    description="Information about commercial pilot training and career opportunities."
+  />
+
+  <!-- CFI Training FAQs -->
+  <FAQ
+    faqs={faqs.cfiTraining}
+    title="Flight Instructor Training"
+    description="Questions about becoming a Certified Flight Instructor."
+    className="bg-gray-50"
+  />
+
+  <!-- Accelerated Programs FAQs -->
+  <FAQ
+    faqs={faqs.acceleratedPrograms}
+    title="Accelerated Programs"
+    description="Information about our intensive training programs."
+  />
+
+  <!-- Contact CTA -->
+  <section class="py-20 bg-main-blue-900 text-white">
+    <div class="mx-auto px-5 md:px-10 lg:px-20 text-center max-w-3xl">
+      <h2 class="text-4xl font-bold mb-6">Still Have Questions?</h2>
+      <p class="text-xl mb-8 opacity-90">
+        Our experienced team is here to help you with any questions about flight
+        training, career opportunities, or our programs.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="#contactUs"
+          class="bg-white text-main-blue-900 hover:bg-gray-100 px-8 py-3 rounded-full font-semibold transition-all duration-300"
+        >
+          Contact Us
+        </a>
+        <a
+          href="/discovery-flight"
+          class="border-2 border-white text-white hover:bg-white hover:text-main-blue-900 px-8 py-3 rounded-full font-semibold transition-all duration-300"
+        >
+          Book Discovery Flight
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

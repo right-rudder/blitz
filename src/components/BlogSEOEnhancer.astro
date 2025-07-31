@@ -1,0 +1,164 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  posts: CollectionEntry<"blog">[];
+}
+
+const { posts } = Astro.props;
+
+// Create sitemap schema for blog posts
+const sitemapSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Blitz Aviation Blog",
+  "url": new URL("/blog", Astro.site).toString(),
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": new URL("/blog?search={search_term_string}", Astro.site).toString()
+    },
+    "query-input": "required name=search_term_string"
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "numberOfItems": posts.length,
+    "itemListElement": posts.map((post, index) => ({
+      "@type": "BlogPosting",
+      "position": index + 1,
+      "headline": post.data.title,
+      "description": post.data.description,
+      "url": new URL(`/blog/${post.id}`, Astro.site).toString(),
+      "datePublished": new Date(post.data.pubDate).toISOString(),
+      "dateModified": post.data.updatedDate ? new Date(post.data.updatedDate).toISOString() : new Date(post.data.pubDate).toISOString(),
+      "image": post.data.heroImage ? new URL(post.data.heroImage, Astro.site).toString() : new URL('/blitz-logo.png', Astro.site).toString(),
+      "author": {
+        "@type": "Organization",
+        "name": "Blitz Aviation",
+        "url": "https://blitzaviation.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Blitz Aviation",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://blitzaviation.com/blitz-logo.png"
+        }
+      }
+    }))
+  }
+};
+
+// Create knowledge graph schema
+const knowledgeGraphSchema = {
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "Blitz Aviation",
+  "description": "Professional flight training school specializing in accelerated pilot programs",
+  "url": "https://blitzaviation.com",
+  "logo": "https://blitzaviation.com/blitz-logo.png",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "3909 Airport Rd",
+    "addressLocality": "Ogden",
+    "addressRegion": "UT",
+    "postalCode": "84405",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "41.1956",
+    "longitude": "-111.9478"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-801-388-3231",
+    "contactType": "Customer Service",
+    "availableLanguage": "English"
+  },
+  "sameAs": [
+    "https://www.facebook.com/blitzaviation",
+    "https://www.instagram.com/blitzaviation",
+    "https://www.linkedin.com/company/blitz-aviation"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Flight Training Programs",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Course",
+          "name": "Private Pilot License Training",
+          "description": "Comprehensive private pilot training program including ground school and flight instruction",
+          "provider": {
+            "@type": "EducationalOrganization", 
+            "name": "Blitz Aviation"
+          }
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Course",
+          "name": "Instrument Rating Training",
+          "description": "Professional instrument flight training for advanced pilots",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Blitz Aviation"
+          }
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Course",
+          "name": "Commercial Pilot License Training",
+          "description": "Commercial pilot certification program for career aviators",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Blitz Aviation"
+          }
+        }
+      }
+    ]
+  },
+  "knowsAbout": [
+    "Flight Training",
+    "Pilot Certification",
+    "Aviation Education",
+    "Aircraft Operation",
+    "Flight Safety",
+    "Aviation Regulations",
+    "Instrument Flight Rules",
+    "Commercial Aviation"
+  ]
+};
+---
+
+<!-- Blog Sitemap Schema -->
+<script type="application/ld+json" set:html={JSON.stringify(sitemapSchema)}>
+</script>
+
+<!-- Knowledge Graph Schema -->
+<script type="application/ld+json" set:html={JSON.stringify(knowledgeGraphSchema)}>
+</script>
+
+<!-- RSS Feed Link -->
+<link rel="alternate" type="application/rss+xml" title="Blitz Aviation Blog RSS Feed" href="/rss.xml" />
+
+<!-- Blog-specific meta tags -->
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+<meta name="article:publisher" content="https://blitzaviation.com" />
+<meta name="article:author" content="Blitz Aviation" />
+
+<!-- Open Graph Tags for Blog Section -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Blitz Aviation Blog" />
+<meta property="og:locale" content="en_US" />
+
+<!-- Twitter Card for Blog Section -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@blitzaviation" />
+<meta name="twitter:creator" content="@blitzaviation" />

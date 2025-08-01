@@ -1,0 +1,251 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  pubDate: Date;
+  updatedDate?: Date;
+  heroImage?: string;
+  tags?: string[];
+  category?: string;
+  readingTime?: number;
+  wordCount?: number;
+  slug: string;
+}
+
+const { 
+  title, 
+  description, 
+  pubDate, 
+  updatedDate, 
+  heroImage, 
+  tags = [], 
+  category = "Flight Training",
+  readingTime,
+  wordCount,
+  slug 
+} = Astro.props;
+
+// Format dates for schema markup
+const publishDate = new Date(pubDate).toISOString();
+const modifiedDate = updatedDate ? new Date(updatedDate).toISOString() : publishDate;
+const imageUrl = heroImage ? new URL(heroImage, Astro.site).toString() : new URL('/blitz-logo.png', Astro.site).toString();
+const postUrl = new URL(`/blog/${slug}`, Astro.site).toString();
+
+// Create comprehensive author schema
+const authorSchema = {
+  "@type": "Organization",
+  "name": "Blitz Aviation",
+  "url": "https://blitzaviation.com",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://blitzaviation.com/blitz-logo.png",
+    "width": 200,
+    "height": 200
+  },
+  "sameAs": [
+    "https://www.facebook.com/blitzaviation",
+    "https://www.instagram.com/blitzaviation",
+    "https://www.linkedin.com/company/blitz-aviation"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "3909 Airport Rd",
+    "addressLocality": "Ogden",
+    "addressRegion": "UT",
+    "postalCode": "84405",
+    "addressCountry": "US"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-801-388-3231",
+    "contactType": "Customer Service",
+    "availableLanguage": "English"
+  }
+};
+
+// Create publisher schema
+const publisherSchema = {
+  "@type": "Organization",
+  "name": "Blitz Aviation",
+  "url": "https://blitzaviation.com",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://blitzaviation.com/blitz-logo.png",
+    "width": 200,
+    "height": 200
+  }
+};
+
+// Create comprehensive blog posting schema
+// Define the type for blogPostSchema to include isPartOf
+type BlogPostSchema = {
+  "@context": string;
+  "@type": string;
+  headline: string;
+  description: string;
+  image: {
+    "@type": string;
+    url: string;
+    width: number;
+    height: number;
+  };
+  datePublished: string;
+  dateModified: string;
+  author: object;
+  publisher: object;
+  mainEntityOfPage: {
+    "@type": string;
+    "@id": string;
+  };
+  articleSection: string;
+  keywords: string;
+  inLanguage: string;
+  url: string;
+  wordCount?: number;
+  timeRequired?: string;
+  readingTime?: string;
+  about: {
+    "@type": string;
+    name: string;
+    description: string;
+  };
+  mentions: {
+    "@type": string;
+    name: string;
+    description: string;
+  }[];
+  isPartOf?: {
+    "@type": string;
+    name: string;
+    description: string;
+  };
+};
+
+const blogPostSchema: BlogPostSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": title,
+  "description": description,
+  "image": {
+    "@type": "ImageObject",
+    "url": imageUrl,
+    "width": 1200,
+    "height": 630
+  },
+  "datePublished": publishDate,
+  "dateModified": modifiedDate,
+  "author": authorSchema,
+  "publisher": publisherSchema,
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": postUrl
+  },
+  "articleSection": category,
+  "keywords": tags.join(", "),
+  "inLanguage": "en-US",
+  "url": postUrl,
+  ...(wordCount && { "wordCount": wordCount }),
+  ...(readingTime && { 
+    "timeRequired": `PT${readingTime}M`,
+    "readingTime": `${readingTime} minutes`
+  }),
+  "about": {
+    "@type": "Thing",
+    "name": "Flight Training",
+    "description": "Professional pilot training and aviation education"
+  },
+  "mentions": [
+    {
+      "@type": "EducationalOrganization",
+      "name": "Blitz Aviation",
+      "description": "Professional flight training school in Ogden, Utah"
+    }
+  ]
+};
+
+// Add article series schema if this is part of a series
+const isPartOfSeries = tags.some(tag => tag.toLowerCase().includes('series') || tag.toLowerCase().includes('guide'));
+if (isPartOfSeries) {
+  blogPostSchema["isPartOf"] = {
+    "@type": "CreativeWorkSeries",
+    "name": "Flight Training Guide Series",
+    "description": "Comprehensive guides for aspiring pilots"
+  };
+}
+---
+
+<!-- Enhanced Blog Post Schema -->
+<script type="application/ld+json" set:html={JSON.stringify(blogPostSchema)}>
+</script>
+
+<!-- Website Schema for the blog section -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Blitz Aviation Blog",
+  "url": "https://blitzaviation.com/blog",
+  "description": "Flight training tips, pilot licensing guides, and aviation career advice from Blitz Aviation",
+  "publisher": publisherSchema,
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://blitzaviation.com/blog?search={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+})}>
+</script>
+
+<!-- Organization Schema for Blitz Aviation -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "Blitz Aviation",
+  "alternateName": "Blitz Aviation Flight Training",
+  "url": "https://blitzaviation.com",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://blitzaviation.com/blitz-logo.png",
+    "width": 200,
+    "height": 200
+  },
+  "description": "Professional flight training school offering Private Pilot License, Instrument Rating, Commercial Pilot License, and CFI training in Ogden, Utah",
+  "address": authorSchema.address,
+  "contactPoint": authorSchema.contactPoint,
+  "sameAs": authorSchema.sameAs,
+  "foundingDate": "2020",
+  "slogan": "Accelerate Your Aviation Dreams",
+  "serviceArea": {
+    "@type": "State",
+    "name": "Utah"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Flight Training Programs",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Course",
+          "name": "Private Pilot License Training",
+          "description": "Comprehensive private pilot training program"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Course",
+          "name": "Instrument Rating Training",
+          "description": "Professional instrument flight training"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Course",
+          "name": "Commercial Pilot License Training",
+          "description": "Commercial pilot certification program"
+        }
+      }
+    ]
+  }
+})}>
+</script>

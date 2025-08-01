@@ -3,9 +3,11 @@ import Header from "../../components/Header.astro";
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import BlogPostCard from "../../components/BlogPostCard.astro";
+import BlogListingSchema from "../../components/BlogListingSchema.astro";
+import BlogSEOEnhancer from "../../components/BlogSEOEnhancer.astro";
 
 const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 
 const headerData = {
@@ -21,6 +23,12 @@ const headerData = {
   siteDescription="Explore flight training tips, pilot licensing guides, and aviation career advice on the Blitz Aviation blog. Practical resources for student pilots in Ogden, Utah and beyond."
   siteKeywords="aviation blog, flight training tips, pilot license guide, aviation career advice, flight school blog, student pilot resources, learn to fly blog, flight training articles, aviation education blog, pilot training guides, flight instruction tips Utah"
 >
+  <!-- Enhanced Blog Listing Schema -->
+  <BlogListingSchema posts={posts} />
+
+  <!-- Blog SEO Enhancements -->
+  <BlogSEOEnhancer posts={posts} />
+
   <Header slot="hero" data={headerData} />
 
   <section class="mx-auto px-5 md:px-10 lg:px-20 py-16">
@@ -43,7 +51,7 @@ const headerData = {
       <div
         class="grid mt-10 gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full sm:justify-center"
       >
-        {posts.map((post) => <BlogPostCard {...post} />)}
+        {posts.map((post) => <BlogPostCard {...post} body={post.body} />)}
       </div>
     </div>
   </section>

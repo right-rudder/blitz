@@ -12,6 +12,22 @@ const blog = defineCollection({
     pubDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
     heroImage: z.string().optional(),
+    // Additional SEO and schema fields
+    tags: z.array(z.string()).optional(),
+    category: z.string().optional(),
+    author: z.string().optional(),
+    featured: z.boolean().optional(),
+    series: z.string().optional(),
+    seriesOrder: z.number().optional(),
+    relatedPosts: z.array(z.string()).optional(),
+    // Schema.org specific fields
+    keywords: z.array(z.string()).optional(),
+    audience: z.string().optional(),
+    difficulty: z.enum(["beginner", "intermediate", "advanced"]).optional(),
+    // Social media fields
+    socialImage: z.string().optional(),
+    twitterTitle: z.string().optional(),
+    twitterDescription: z.string().optional(),
   }),
 });
 

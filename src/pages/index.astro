@@ -8,12 +8,34 @@ import programs from "../data/programs";
 import ProgramsCard from "../components/ProgramsCard.astro";
 import CourseCard from "../components/CourseCard.astro";
 import Reviews from "../components/Reviews.jsx";
+import FAQ from "../components/FAQ.astro";
+import faqs from "../data/faqs";
+import SEOKeywords from "../components/SEOKeywords.astro";
 ---
 
 <BaseLayout
-  siteTitle="Flight Training in Ogden, Utah | Blitz Aviation"
-  siteDescription="Become a private or commercial pilot fast with Blitz Aviation’s expert-led flight training in Ogden, Utah. Flexible, affordable programs. Book your discovery flight!"
+  siteTitle="Professional Flight Training in Ogden & Salt Lake City, Utah | Blitz Aviation"
+  siteDescription="Become a private or commercial pilot fast with Blitz Aviation's expert-led flight training in Ogden, Utah. Serving Salt Lake City, Davis County, and Northern Utah with flexible, affordable programs. Book your discovery flight today!"
 >
+  <!-- Enhanced SEO Keywords Component -->
+  <SEOKeywords
+    pageType="home"
+    primaryKeywords={[
+      "flight training Ogden Utah",
+      "pilot school Salt Lake City",
+      "learn to fly Utah",
+      "aviation training Northern Utah",
+    ]}
+    location="Ogden"
+    priority="local"
+    additionalKeywords={[
+      "discovery flight",
+      "aircraft rental",
+      "CFI training",
+      "accelerated pilot programs",
+    ]}
+  />
+
   <HomepageHeader slot="hero" />
 
   <section
@@ -216,4 +238,12 @@ import Reviews from "../components/Reviews.jsx";
       </div>
     </div>
   </section>
+
+  <!-- FAQ Section -->
+  <FAQ
+    faqs={faqs.general}
+    title="Frequently Asked Questions"
+    description="Get answers to the most common questions about flight training at Blitz Aviation."
+    className="bg-gray-50"
+  />
 </BaseLayout>

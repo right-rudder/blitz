@@ -1,18 +1,38 @@
 ---
 import FormattedDate from "./FormattedDate.astro";
 import ImageComp from "./ImageComp.astro";
+import {
+  calculateReadingStats,
+  extractContentMetadata,
+} from "../utils/blogUtils";
 
-const { id, data } = Astro.props;
+const { id, data, body = "" } = Astro.props;
 const { title, description, heroImage, pubDate } = data;
 const datePublished = new Date(pubDate);
+
+// Calculate reading stats and extract metadata
+const readingStats = calculateReadingStats(body);
+const { categories, tags } = extractContentMetadata(body, data);
+const primaryCategory = categories[0] || "Flight Training";
 ---
 
-<a href={`/blog/${id}`} class="flex flex-col group gap-3 w-full">
+<a
+  href={`/blog/${id}`}
+  class="flex flex-col group gap-3 w-full"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
   <div class="overflow-hidden shrink-0 relative">
     <ImageComp
       src={heroImage}
       alt={title}
       classes="w-full h-full object-cover aspect-square group-hover:scale-125 duration-500"
+    />
+    <meta
+      itemprop="image"
+      content={heroImage
+        ? new URL(heroImage, Astro.site).toString()
+        : new URL("/blitz-logo.png", Astro.site).toString()}
     />
   </div>
 
@@ -21,15 +41,71 @@ const datePublished = new Date(pubDate);
   >
     <div class="flex flex-col gap-3 h-full justify-between">
       <div class="flex flex-col">
-        <p class="text-blue-800 tracking-wide italic">
-          <FormattedDate date={datePublished} />
-        </p>
-        <h3 class="text-xl font-medium line-clamp-2">
+        <div class="flex items-center justify-between mb-2">
+          <p class="text-blue-800 tracking-wide italic">
+            <FormattedDate date={datePublished} />
+            <meta
+              itemprop="datePublished"
+              content={datePublished.toISOString()}
+            />
+          </p>
+          <span class="text-xs text-gray-500"
+            >{readingStats.readingTimeText}</span
+          >
+        </div>
+
+        <!-- {
+          primaryCategory && (
+            <span
+              class="text-xs bg-blue-200 text-blue-800 px-2 py-1 rounded-full w-fit mb-2"
+              itemprop="articleSection"
+            >
+              {primaryCategory}
+            </span>
+          )
+        }
+ -->
+        <h3 class="text-xl font-medium line-clamp-2" itemprop="headline">
           {title}
         </h3>
-        <p class="text-gray-600 line-clamp-4 text-sm">{description}</p>
+        <p class="text-gray-600 line-clamp-4 text-sm" itemprop="description">
+          {description}
+        </p>
+        <!-- 
+        {
+          tags.length > 0 && (
+            <div class="flex flex-wrap gap-1 mt-2">
+              {tags.slice(0, 3).map((tag) => (
+                <span
+                  class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded"
+                  itemprop="keywords"
+                >
+                  #{tag}
+                </span>
+              ))}
+            </div>
+          )
+        } -->
       </div>
-      <button class="btn-primary group-hover:brightness-75">Read More</button>
+      <button class="btn-primary mt-2 group-hover:brightness-75"
+        >Read More</button
+      >
+    </div>
+
+    <!-- Hidden structured data -->
+    <meta
+      itemprop="url"
+      content={new URL(`/blog/${id}`, Astro.site).toString()}
+    />
+    <meta itemprop="wordCount" content={readingStats.wordCount.toString()} />
+    <div
+      itemprop="author"
+      itemscope
+      itemtype="https://schema.org/Organization"
+      class="hidden"
+    >
+      <meta itemprop="name" content="Blitz Aviation" />
+      <meta itemprop="url" content="https://blitzaviation.com" />
     </div>
   </div>
 </a>

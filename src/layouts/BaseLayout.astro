@@ -3,11 +3,90 @@ import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS } from "../consts";
 import Navbar from "../components/Navbar";
+import { getBreadcrumbsForPath } from "../utils/breadcrumbs";
 const { pathname } = Astro.url;
-const { siteTitle, siteDescription, siteImage, siteKeywords } = Astro.props;
+const { siteTitle, siteDescription, siteImage, siteKeywords, customBreadcrumbs } = Astro.props;
 import "@fontsource-variable/outfit";
 import ContactUs from "../components/ContactUs.astro";
 import ImageComp from "../components/ImageComp.astro";
+
+// Generate breadcrumbs based on URL path
+function generateBreadcrumbs(pathname: string, customBreadcrumbs?: Array<{name: string, url: string}>) {
+  // Use custom breadcrumbs if provided
+  if (customBreadcrumbs) {
+    return customBreadcrumbs;
+  }
+
+  // Check for predefined breadcrumb configurations
+  const predefinedBreadcrumbs = getBreadcrumbsForPath(pathname);
+  if (predefinedBreadcrumbs) {
+    return predefinedBreadcrumbs;
+  }
+
+  // Fallback to automatic generation
+  const breadcrumbs = [{ name: "Home", url: "/" }];
+  
+  if (pathname === "/") {
+    return breadcrumbs;
+  }
+
+  const pathSegments = pathname.split("/").filter(segment => segment);
+  let currentPath = "";
+
+  for (let i = 0; i < pathSegments.length; i++) {
+    currentPath += `/${pathSegments[i]}`;
+    const segment = pathSegments[i];
+    
+    // Create human-readable names for breadcrumbs
+    let breadcrumbName = segment
+      .split("-")
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
+
+    // Special cases for better breadcrumb names
+    const specialCases: Record<string, string> = {
+      "pilot-training": "Flight Training",
+      "our-story": "Our Story",
+      "our-team": "Our Team",
+      "our-fleet": "Our Fleet",
+      "join-the-team": "Join Our Team",
+      "the-blitz-program": "Zero to Hero Program",
+      "accelerated-programs": "Accelerated Programs",
+      "private-pilot": "Private Pilot License",
+      "instrument-rating": "Instrument Rating",
+      "commercial-pilot": "Commercial Pilot License",
+      "multi-engine": "Multi-Engine Rating",
+      "cfi": "Flight Instructor Certificate",
+      "cfii": "Instrument Flight Instructor",
+      "discovery-flight": "Discovery Flight",
+      "enrollment-form": "Enrollment",
+      "contact-confirmation": "Contact Confirmation",
+      "privacy-policy-and-terms-of-service": "Privacy & Terms"
+    };
+
+    if (specialCases[segment]) {
+      breadcrumbName = specialCases[segment];
+    }
+
+    // For city names, format them properly
+    if (segment.endsWith("-ut")) {
+      const cityName = segment.replace("-ut", "")
+        .split("-")
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(" ");
+      breadcrumbName = `${cityName}, UT`;
+    }
+
+    breadcrumbs.push({
+      name: breadcrumbName,
+      url: currentPath
+    });
+  }
+
+  return breadcrumbs;
+}
+
+const breadcrumbs = generateBreadcrumbs(pathname, customBreadcrumbs);
 ---
 
 <!doctype html>
@@ -20,28 +99,54 @@ import ImageComp from "../components/ImageComp.astro";
         "/team-blitz-aviation-flight-training-utah-salt-lake.webp"}
       keywords={siteKeywords || SITE_KEYWORDS}
     />
+    
+    <!-- Breadcrumb Schema Markup -->
+    {breadcrumbs.length > 1 && (
+      <script type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": breadcrumbs.map((crumb, index) => ({
+          "@type": "ListItem",
+          "position": index + 1,
+          "name": crumb.name,
+          "item": new URL(crumb.url, Astro.site).toString()
+        }))
+      })}>
+      </script>
+    )}
+    
     <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        (w as any)[l] = (w as any)[l] || [];
+        (w as any)[l].push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js",
+        });
         var f = d.getElementsByTagName(s)[0],
           j = d.createElement(s),
           dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
+        var script = j as HTMLScriptElement;
+        script.async = true;
+        script.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        if (f && f.parentNode) {
+          f.parentNode.insertBefore(script, f);
+        }
       })(window, document, "script", "dataLayer", "GTM-WQWV363W");
     </script>
     <!-- End Google Tag Manager -->
     <!-- Preconnect to external domains to improve performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://widgets.leadconnectorhq.com" />
 
     <!-- Additional mobile-friendly meta tags -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#1e40af" />
+    <meta name="mobile-web-app-capable" content="yes" />
     <script
       src="https://widgets.leadconnectorhq.com/loader.js"
       data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
@@ -68,8 +173,40 @@ import ImageComp from "../components/ImageComp.astro";
         />
       </Navbar>
     </header>
+    
+    
     <main>
       <slot name="hero" />
+    <!-- Breadcrumb Navigation -->
+    {breadcrumbs.length > 1 && (
+      <nav aria-label="Breadcrumb" class="bg-gray-50 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-5 md:px-10 lg:px-20 py-3">
+          <ol class="flex items-center space-x-2 text-sm">
+            {breadcrumbs.map((crumb, index) => (
+              <li class="flex items-center">
+                {index > 0 && (
+                  <svg class="w-4 h-4 text-gray-400 mx-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                  </svg>
+                )}
+                {index === breadcrumbs.length - 1 ? (
+                  <span class="text-gray-500 font-medium" aria-current="page">
+                    {crumb.name}
+                  </span>
+                ) : (
+                  <a
+                    href={crumb.url}
+                    class="text-main-blue-700 hover:text-main-blue-800 transition-colors duration-200 font-medium"
+                  >
+                    {crumb.name}
+                  </a>
+                )}
+              </li>
+            ))}
+          </ol>
+        </div>
+      </nav>
+    )}
       <slot />
       <ContactUs />
     </main>

@@ -103,7 +103,7 @@ const relatedArticlesSchema = {
 ---
 
 {finalRelatedPosts.length > 0 && (
-  <section class="mt-16 border-t pt-16" itemscope itemtype="https://schema.org/ItemList">
+  <section class="mt-16 border-t pt-16 pb-8" itemscope itemtype="https://schema.org/ItemList">
     <!-- Related Articles Schema -->
     <script type="application/ld+json" set:html={JSON.stringify(relatedArticlesSchema)}>
     </script>

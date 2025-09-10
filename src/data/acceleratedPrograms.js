@@ -46,8 +46,7 @@ const acceleratedPrograms = [
       title: "Accelerated CFI-I (7 days)",
       intro:
         "The Accelerated CFI-I Course is a 7-day, fast-paced program designed for CFIs who want to become Certified Flight Instructors - Instrument. The course offers focused instruction on teaching techniques and flight skills, preparing you for the CFI-I check-ride.",
-      primaryImage:
-        "/src/assets/images/certified-flight-instructor-instrument-at-blitz-aviation.webp",
+      primaryImage: "/src/assets/images/cfi-corinne-robinson.webp",
       primaryAlt:
         "CFI and student at Blitz Aviation's accelerated training program",
       details: [

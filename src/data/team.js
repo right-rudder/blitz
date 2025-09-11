@@ -17,13 +17,13 @@ const team = [
     instagram: "https://www.instagram.com/michael_pittman_jr/?hl=en",
     x: "https://x.com/mikepitt_jr?lang=en",
   },
-  {
-    name: "Andrew Zilka",
-    image: "/src/assets/images/andrew-zilka.webp",
-    certificatesAndRatings: ["CFI", "CFII", "MEI"],
-    bio: "Andrew joins us as a Certified Flight Instructor (CFI), Instrument Instructor (CFII), and Multi-Engine Instructor (MEI). With a strong family background in aviation and a deep passion for flying, Andrew is dedicated to helping students succeed and grow as pilots",
-    instagram: "https://www.instagram.com/up_the_andy/",
-  },
+  // {
+  //   name: "Andrew Zilka",
+  //   image: "/src/assets/images/andrew-zilka.webp",
+  //   certificatesAndRatings: ["CFI", "CFII", "MEI"],
+  //   bio: "Andrew joins us as a Certified Flight Instructor (CFI), Instrument Instructor (CFII), and Multi-Engine Instructor (MEI). With a strong family background in aviation and a deep passion for flying, Andrew is dedicated to helping students succeed and grow as pilots",
+  //   instagram: "https://www.instagram.com/up_the_andy/",
+  // },
   {
     name: "Corinne Robison",
     certificatesAndRatings: ["CFI", "CFII", "MEI"],

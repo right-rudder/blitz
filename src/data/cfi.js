@@ -20,12 +20,10 @@ const cfi = {
       "Our CFI program is designed to enhance your teaching abilities, deepen your understanding of aviation regulations, and refine your flight skills. With a focus on professionalism and safety, our program prepares you to guide students through the complexities of flight training. By combining expert instruction with hands-on experience, we'll help you become a skilled and effective CFI.",
     ],
     primaryImage:
-      "/src/assets/images/commercial-pilot-doing-an-airplane-inspection.webp",
+      "/src/assets/images/instructor-at-commercial-pilot-training-at-blitz-aviation.webp",
     primaryAlt: "Certified Flight Instructor at Blitz Aviation",
-    secondaryImage:
-      "/src/assets/images/certified-flight-instructor-at-blitz-aviation.webp",
-    secondaryAlt:
-      "Certified Flight Instructor at Blitz Aviation in Ogden, Utah",
+    secondaryImage: "/src/assets/images/cessna-172p-at-ogden-airport.webp",
+    secondaryAlt: "Cessna 172p at Ogden Airport, Utah",
     prerequisites: [
       "Hold either a commercial pilot certificate or an airline transport pilot certificate with an instrument rating",
       "Secure a valid FAA 3rd Class Medical Certificate or a higher class",

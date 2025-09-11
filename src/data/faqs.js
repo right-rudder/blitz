@@ -22,7 +22,8 @@ export const generalFlightTrainingFAQs = [
   {
     question: "What aircraft do you use for training?",
     answer:
-      "We primarily train in Cessna 172 aircraft, which are ideal for training due to their forgiving flight characteristics and modern avionics. We also have a Piper Cherokee for multi-engine training and a Cirrus SR22T for advanced training. All our aircraft are well-maintained and equipped with modern instrumentation.",
+      // "We primarily train in Cessna 172 aircraft, which are ideal for training due to their forgiving flight characteristics and modern avionics. We also have a Piper Cherokee for multi-engine training and a Cirrus SR22T for advanced training. All our aircraft are well-maintained and equipped with modern instrumentation.",
+      "We primarily train in Cessna 172 aircraft, which are ideal for training due to their forgiving flight characteristics and modern avionics. We also have a Piper Cherokee for multi-engine training. All our aircraft are well-maintained and equipped with modern instrumentation.",
   },
   {
     question: "Can I train part-time while working full-time?",

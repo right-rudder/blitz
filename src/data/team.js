@@ -1,7 +1,7 @@
 const team = [
   {
     name: "Mycah Pittman",
-    certificatesAndRatings: ["CFI", "CFII"],
+    certificatesAndRatings: ["CFI", "CFII", "MEI"],
     image: "/src/assets/images/mycah-pittman.webp",
     bio: "Meet Mycah, one of our CFIs and co-founder of Blitz Aviation! After playing college football and earning a degree in social science, he shifted gears and discovered his passion for flying. He completed all his ratings (PPL–CFII) in under a year. Inspired by his mom, a flight attendant, Mycah’s goal is to travel the world and help make Blitz the best flight school in the West.",
     facebook: "https://www.facebook.com/mycah.pittman",

@@ -24,13 +24,13 @@ const team = [
   //   bio: "Andrew joins us as a Certified Flight Instructor (CFI), Instrument Instructor (CFII), and Multi-Engine Instructor (MEI). With a strong family background in aviation and a deep passion for flying, Andrew is dedicated to helping students succeed and grow as pilots",
   //   instagram: "https://www.instagram.com/up_the_andy/",
   // },
-  {
-    name: "Corinne Robison",
-    certificatesAndRatings: ["CFI", "CFII", "MEI"],
-    image: "/src/assets/images/cfi-corinne-robinson.webp",
-    bio: "Corinne grew up around aviation, inspired by her pilot stepdad and brothers, and her mom who works for the airlines. After studying space engineering and computer science at SDSU, a discovery flight changed everything, she knew she wanted to fly. Corinne earned all her ratings (PPL–CFII/MEI) in just 10 months and hopes to inspire more women in aviation.",
-    instagram: "https://www.instagram.com/corinne.robison/",
-  },
+  // {
+  //   name: "Corinne Robison",
+  //   certificatesAndRatings: ["CFI", "CFII", "MEI"],
+  //   image: "/src/assets/images/cfi-corinne-robinson.webp",
+  //   bio: "Corinne grew up around aviation, inspired by her pilot stepdad and brothers, and her mom who works for the airlines. After studying space engineering and computer science at SDSU, a discovery flight changed everything, she knew she wanted to fly. Corinne earned all her ratings (PPL–CFII/MEI) in just 10 months and hopes to inspire more women in aviation.",
+  //   instagram: "https://www.instagram.com/corinne.robison/",
+  // },
   {
     name: "Stanton Mayer",
     certificatesAndRatings: ["CFI", "CFII"],
@@ -43,11 +43,17 @@ const team = [
     image: "/src/assets/images/cfi-hank-hulme.jpeg",
     bio: "",
   },
+  // {
+  //   name: "Spencer Rowberry",
+  //   certificatesAndRatings: ["CFI", "CFII", "MEI", "A&P"],
+  //   image: "/src/assets/images/cfi-spencer-rowberry.jpeg",
+  //   bio: "Spencer began his flight training at Utah State in 2018 and has logged over 1,000 flight hours. His favorite types of flying include tailwheel and multi-engine. Outside of aviation, Spencer enjoys spending time with his wife and two daughters. He also loves skiing, camping, swimming, and exploring the mountains.",
+  // },
   {
-    name: "Spencer Rowberry",
-    certificatesAndRatings: ["CFI", "CFII", "MEI", "A&P"],
-    image: "/src/assets/images/cfi-spencer-rowberry.jpeg",
-    bio: "Spencer began his flight training at Utah State in 2018 and has logged over 1,000 flight hours. His favorite types of flying include tailwheel and multi-engine. Outside of aviation, Spencer enjoys spending time with his wife and two daughters. He also loves skiing, camping, swimming, and exploring the mountains.",
+    name: "Avery Gurrola",
+    certificatesAndRatings: ["CFI"],
+    image: "/src/assets/images/cfi-avery-ogden-salt-lake-flight-training.webp",
+    bio: "Avery started his flight training at Bowling Green State University, where he graduated, and has since been growing his flight experience by instructing, cropdusting, and other various forms of flying. Avery has accumulated over 800 hours of flying in various planes and even has one of his own. Outside of aviation, he likes all the things living in Utah has to offer.",
   },
   {
     name: "Ruby Hutchinson",

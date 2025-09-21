@@ -31,12 +31,12 @@ const team = [
   //   bio: "Corinne grew up around aviation, inspired by her pilot stepdad and brothers, and her mom who works for the airlines. After studying space engineering and computer science at SDSU, a discovery flight changed everything, she knew she wanted to fly. Corinne earned all her ratings (PPL–CFII/MEI) in just 10 months and hopes to inspire more women in aviation.",
   //   instagram: "https://www.instagram.com/corinne.robison/",
   // },
-  {
-    name: "Stanton Mayer",
-    certificatesAndRatings: ["CFI", "CFII"],
-    image: "/src/assets/images/cfi-stanton-mayer.webp",
-    bio: "Stan brings over 1,600 hours of flight time and a deep passion for teaching to the Blitz Aviation crew. Originally from New Jersey, he got into aviation through a love for travel and exploration. Stan has experience in the PC-12 and recently earned his CFII right here at Blitz. When he’s not flying, he’s outdoors—skiing, fishing, or hiking. Stan’s upbeat attitude and real-world experience make him a favorite among students.",
-  },
+  // {
+  //   name: "Stanton Mayer",
+  //   certificatesAndRatings: ["CFI", "CFII"],
+  //   image: "/src/assets/images/cfi-stanton-mayer.webp",
+  //   bio: "Stan brings over 1,600 hours of flight time and a deep passion for teaching to the Blitz Aviation crew. Originally from New Jersey, he got into aviation through a love for travel and exploration. Stan has experience in the PC-12 and recently earned his CFII right here at Blitz. When he’s not flying, he’s outdoors—skiing, fishing, or hiking. Stan’s upbeat attitude and real-world experience make him a favorite among students.",
+  // },
   {
     name: "Hank Hulme",
     certificatesAndRatings: ["CFI"],

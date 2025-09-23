@@ -35,7 +35,7 @@ const team = [
     name: "Stanton Mayer",
     certificatesAndRatings: ["CFI", "CFII"],
     image: "/src/assets/images/cfi-stanton-mayer.webp",
-    bio: "Stan brings over 1,600 hours of flight time and a deep passion for teaching to the Blitz Aviation crew. Originally from New Jersey, he got into aviation through a love for travel and exploration. Stan has experience in the PC-12 and recently earned his CFII right here at Blitz. When he’s not flying, he’s outdoors—skiing, fishing, or hiking. Stan’s upbeat attitude and real-world experience make him a favorite among students.",
+    bio: "Stan brings over 1,600 hours of flight time and a deep passion for teaching to the Blitz Aviation crew. Originally from New Jersey, he got into aviation through a love for travel and exploration. Stan has experience in the PC-12 and recently earned his CFII right here at Blitz. When he’s not flying, he’s outdoors, skiing, fishing, or hiking. Stan’s upbeat attitude and real-world experience make him a favorite among students.",
   },
   {
     name: "Hank Hulme",

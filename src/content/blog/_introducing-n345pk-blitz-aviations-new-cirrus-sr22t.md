@@ -1,15 +1,15 @@
 ---
 pubDate: "Jul 25 2025"
 title: "Blitz Aviation’s New Cirrus SR22T Raises the Bar for Flight Training"
-description: "The Cirrus SR22T isn’t just another airplane—it’s an industry leader. With a turbocharged Continental TSIO-550-K engine producing 315 horsepower, this aircraft delivers exceptional performance at high altitudes and across long distances. Whether you're training for your instrument rating or planning your first cross-country adventure, N345PK offers the range, speed, and capability to make every flight efficient and unforgettable."
+description: "The Cirrus SR22T isn’t just another airplane, it’s an industry leader. With a turbocharged Continental TSIO-550-K engine producing 315 horsepower, this aircraft delivers exceptional performance at high altitudes and across long distances. Whether you're training for your instrument rating or planning your first cross-country adventure, N345PK offers the range, speed, and capability to make every flight efficient and unforgettable."
 heroImage: "/src/assets/images/n345pk-rearview.jpeg"
 ---
 
-At [Blitz Aviation](/), we're committed to offering our students not only top-tier instruction but also the best tools to take their flight training to new heights. That’s why we’re thrilled to introduce the latest addition to our fleet: **the Cirrus SR22T, tail number N345PK**—a high-performance, turbocharged marvel that redefines what’s possible in general aviation training.
+At [Blitz Aviation](/), we're committed to offering our students not only top-tier instruction but also the best tools to take their flight training to new heights. That’s why we’re thrilled to introduce the latest addition to our fleet: **the Cirrus SR22T, tail number N345PK**, a high-performance, turbocharged marvel that redefines what’s possible in general aviation training.
 
 ## Why the SR22T Matters
 
-The Cirrus SR22T isn’t just another airplane—it’s an industry leader. With a **turbocharged Continental TSIO-550-K engine producing 315 horsepower**, this aircraft delivers exceptional performance at high altitudes and across long distances. Whether you're training for your instrument rating or planning your first cross-country adventure, N345PK offers the range, speed, and capability to make every flight efficient and unforgettable.
+The Cirrus SR22T isn’t just another airplane, it’s an industry leader. With a **turbocharged Continental TSIO-550-K engine producing 315 horsepower**, this aircraft delivers exceptional performance at high altitudes and across long distances. Whether you're training for your instrument rating or planning your first cross-country adventure, N345PK offers the range, speed, and capability to make every flight efficient and unforgettable.
 
 More than just power, this aircraft boasts an impressive suite of features that make it a standout for both training and advanced proficiency:
 
@@ -18,7 +18,7 @@ More than just power, this aircraft boasts an impressive suite of features that 
 - **Luxurious interior** that blends comfort and functionality
 - **Advanced autopilot and weather display** to enhance situational awareness
 
-This isn’t just a step forward for Blitz Aviation—it’s a leap.
+This isn’t just a step forward for Blitz Aviation, it’s a leap.
 
 ## A Perfect Fit for the Blitz Program
 
@@ -39,7 +39,7 @@ Additionally, the Perspective+ avionics platform offers:
 
 This aircraft allows our instructors to teach not only traditional stick-and-rudder skills but also the modern glass cockpit proficiency that’s increasingly essential in today’s aviation careers.
 
-## Meet the Fleet—Now Featuring N345PK
+## Meet the Fleet, Now Featuring N345PK
 
 With the addition of N345PK, Blitz Aviation’s fleet becomes even more diverse and capable. [Explore our full fleet here](/about/our-fleet/) to see the variety of aircraft available for every stage of training, from primary instruction to commercial preparation.
 

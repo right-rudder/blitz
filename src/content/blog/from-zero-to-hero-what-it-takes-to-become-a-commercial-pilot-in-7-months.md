@@ -114,6 +114,6 @@ Blitz Aviation also offers pathways to become a **Certified Flight Instructor (C
 
 Your journey from Zero to Hero begins with a single step. If you're ready to fast-track your aviation career, visit [Blitz Aviation's Zero-to-Hero Program](https://blitzaviation.com/the-blitz-program/) and learn how you can be soaring through the skies in just 7 months. Contact Blitz Aviation today to schedule your **Discovery Flight** and experience flying firsthand.
 
-**Your career in aviation is waiting—take off with Blitz Aviation!**
+**Your career in aviation is waiting, take off with Blitz Aviation!**
 
 ---

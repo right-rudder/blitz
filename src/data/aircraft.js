@@ -39,7 +39,7 @@ const aircraft = [
     image3: "/src/assets/images/piper-cherokee-N2569Q-outside-3.webp",
     image3Alt: "Piper Cherokee in Ogden Utah",
     description:
-      "This Piper Archer II is a reliable, IFR-capable trainer equipped with modern avionics for today's student pilot. With dual Garmin G5s, a GNC 355 GPS navigator, and the GFC 500 autopilot, it offers a perfect balance of analog feel and digital precision—ideal for both VFR and IFR training.",
+      "This Piper Archer II is a reliable, IFR-capable trainer equipped with modern avionics for today's student pilot. With dual Garmin G5s, a GNC 355 GPS navigator, and the GFC 500 autopilot, it offers a perfect balance of analog feel and digital precision, ideal for both VFR and IFR training.",
     equipment: [
       "Dual Garmin G5",
       "Garmin GNC 355 WAAS",

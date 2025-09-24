@@ -5,6 +5,7 @@ import { FaRegPaperPlane } from "react-icons/fa";
 const privatePilot = {
   data: {
     title: "Private Pilot",
+    tagline: "No Checkride Waits - Finish on Time!",
     url: "/programs/private-pilot",
     slug: "private-pilot",
     siteTitle: "Private Pilot License Training in Ogden, Utah | Blitz Aviation",

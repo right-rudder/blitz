@@ -5,6 +5,7 @@ import { FaRegPaperPlane } from "react-icons/fa";
 const commercialPilot = {
   data: {
     title: "Commercial Pilot",
+    tagline: "No Checkride Waits - Finish on Time!",
     url: "/programs/commercial-pilot",
     slug: "commercial-pilot",
     siteTitle:

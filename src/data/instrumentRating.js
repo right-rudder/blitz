@@ -56,6 +56,16 @@ const instrumentRating = {
           "The checkride marks the culmination of your efforts, assessing both your theoretical knowledge and practical instrument flying skills. Pass the oral portion of the exam which covers regulations, procedures, and decision making. Then, complete a flight test where you'll demonstrate precise instrument maneuvers, approaches, and communications. Upon passing, you'll emerge as a confident instrument rated pilot, ready to safely navigate the skies in challenging weather conditions.",
       },
     ],
+    cta: {
+      title: "Ready to Start Your Flight Training?",
+      description:
+        "Take the first step toward earning your Private Pilot License with Blitz Aviation. Contact us today to schedule your introductory flight and begin your journey in aviation!",
+      link: "/enrollment-form",
+      linkText: "Enroll Now",
+      imagePath:
+        "/src/assets/images/Student Checkride Paxton Instrument Rating.webp",
+      imageAlt: "Student with CFI after passing checkride",
+    },
   },
 };
 

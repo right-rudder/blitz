@@ -59,6 +59,15 @@ const commercialPilot = {
           "With a focus on safety and precision, our instructors ensure that you are thoroughly ready for the check ride. As you confidently take to the skies with the examiner, you'll showcase the culmination of your training and the expertise you've gained throughout your journey with Blitz Aviation.",
       },
     ],
+    cta: {
+      title: "Ready to Start Your Flight Training?",
+      description:
+        "Take the first step toward earning your Private Pilot License with Blitz Aviation. Contact us today to schedule your introductory flight and begin your journey in aviation!",
+      link: "/enrollment-form",
+      linkText: "Enroll Now",
+      imagePath: "/src/assets/images/Student Checkride Jordan Commercial.webp",
+      imageAlt: "Student with CFI after passing checkride",
+    },
   },
 };
 

@@ -51,6 +51,16 @@ const privatePilot = {
           "The flight test, also known as the check ride, is the final step in the process of obtaining your pilot's license. During the check ride, you will demonstrate your flying skills to an FAA examiner. If you pass the check ride, you will be issued your pilot's license.",
       },
     ],
+    cta: {
+      title: "Ready to Start Your Flight Training?",
+      description:
+        "Take the first step toward earning your Private Pilot License with Blitz Aviation. Contact us today to schedule your introductory flight and begin your journey in aviation!",
+      link: "/enrollment-form",
+      linkText: "Enroll Now",
+      imagePath:
+        "/src/assets/images/Student Checkride Devren passing PPL checkride CFI Hank and Mycah.webp",
+      imageAlt: "Student with CFI after passing checkride",
+    },
   },
 };
 

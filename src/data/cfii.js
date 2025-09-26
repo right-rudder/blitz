@@ -50,9 +50,9 @@ const cfii = {
       },
     ],
     cta: {
-      title: "Ready to Start Your Flight Training?",
+      title: "Teach Pilots to Fly by Instruments",
       description:
-        "Take the first step toward earning your Private Pilot License with Blitz Aviation. Contact us today to schedule your introductory flight and begin your journey in aviation!",
+        "Expand your teaching credentials with a CFII rating from Blitz Aviation. Gain the skills to instruct students in instrument flying and build valuable flight time.",
       link: "/enrollment-form",
       linkText: "Enroll Now",
       imagePath: "/src/assets/images/Student Checkride Anna CFII.webp",

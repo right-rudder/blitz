@@ -60,9 +60,9 @@ const commercialPilot = {
       },
     ],
     cta: {
-      title: "Ready to Start Your Flight Training?",
+      title: "Turn Your Passion into a Career",
       description:
-        "Take the first step toward earning your Private Pilot License with Blitz Aviation. Contact us today to schedule your introductory flight and begin your journey in aviation!",
+        "Take the leap from private flying to professional aviation with a Commercial Pilot Certificate from Blitz Aviation. Start your training today and prepare for a career in the skies.",
       link: "/enrollment-form",
       linkText: "Enroll Now",
       imagePath: "/src/assets/images/Student Checkride Jordan Commercial.webp",

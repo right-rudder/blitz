@@ -57,9 +57,9 @@ const instrumentRating = {
       },
     ],
     cta: {
-      title: "Ready to Start Your Flight Training?",
+      title: "Master the Skies in Any Weather",
       description:
-        "Take the first step toward earning your Private Pilot License with Blitz Aviation. Contact us today to schedule your introductory flight and begin your journey in aviation!",
+        "Advance your skills and safety with an Instrument Rating at Blitz Aviation. Enroll today and gain the confidence to fly through clouds and low visibility conditions.",
       link: "/enrollment-form",
       linkText: "Enroll Now",
       imagePath:

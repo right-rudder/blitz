@@ -51,9 +51,10 @@ const cfi = {
       },
     ],
     cta: {
-      title: "Ready to Start Your Flight Training?",
+      title: "Share Your Passion for Aviation",
       description:
-        "Take the first step toward earning your Private Pilot License with Blitz Aviation. Contact us today to schedule your introductory flight and begin your journey in aviation!",
+        "Inspire the next generation of pilots as a Certified Flight Instructor. Train with Blitz Aviation and take the next step in your professional flying career.",
+
       link: "/enrollment-form",
       linkText: "Enroll Now",
       imagePath: "/src/assets/images/Student Checkride CFI Tim.webp",

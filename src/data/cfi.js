@@ -50,6 +50,16 @@ const cfi = {
           "As part of your CFI training, you'll need to pass the Fundamentals of Instruction (FOI) written exam. This exam covers topics such as learning theory, teaching methods, and human behavior, providing you with a solid foundation in instructional techniques. Our instructors will help you prepare for the exam, ensuring that you have the knowledge and skills needed to pass with confidence.",
       },
     ],
+    cta: {
+      title: "Share Your Passion for Aviation",
+      description:
+        "Inspire the next generation of pilots as a Certified Flight Instructor. Train with Blitz Aviation and take the next step in your professional flying career.",
+
+      link: "/enrollment-form",
+      linkText: "Enroll Now",
+      imagePath: "/src/assets/images/Student Checkride CFI Tim.webp",
+      imageAlt: "Student with CFI after passing checkride",
+    },
   },
 };
 

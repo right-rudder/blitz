@@ -3,7 +3,7 @@ const { data } = Astro.props;
 import ImageComp from "./ImageComp.astro";
 ---
 
-<div class="relative object-cover overflow-hidden  h-[60vh] flex">
+<div class="relative object-cover overflow-hidden h-[60vh] flex">
   <ImageComp
     src={data.primaryImage}
     alt={data.primaryAlt}
@@ -21,6 +21,7 @@ import ImageComp from "./ImageComp.astro";
       >
         {data.title}
       </h1>
+      {data.tagline && <p class="text-lg lg:text-xl italic">{data.tagline}</p>}
       {
         data.subtitle && (
           <h2 class="text-2xl lg:text-3xl font-semibold">{data.subtitle}</h2>

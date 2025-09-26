@@ -40,6 +40,11 @@ export const generalFlightTrainingFAQs = [
     answer:
       "Yes! We provide comprehensive ground school instruction and study materials to prepare you for the FAA written exam. Our instructors will work with you until you're confident and ready to pass. We also help schedule your exam at approved testing centers.",
   },
+  {
+    question: "Do I need to wait for a checkride appointment?",
+    answer:
+      "One of the biggest advantages of our accelerated programs is that we have no wait times for checkrides. We schedule your checkride as soon as you're ready, often within days of completing your training, so you can finish on time without delays.",
+  },
 ];
 
 export const discoveryFlightFAQs = [
@@ -101,6 +106,11 @@ export const privatePilotFAQs = [
     answer:
       "Yes! Night flying training is included in the Private Pilot curriculum. You'll receive training in night flying procedures, including night takeoffs, landings, and navigation. This opens up more flying opportunities and flexibility in your travel plans.",
   },
+  {
+    question: "Do I need to wait for a checkride appointment?",
+    answer:
+      "One of the biggest advantages of our accelerated programs is that we have no wait times for checkrides. We schedule your checkride as soon as you're ready, often within days of completing your training, so you can finish on time without delays.",
+  },
 ];
 
 export const instrumentRatingFAQs = [
@@ -147,6 +157,11 @@ export const commercialPilotFAQs = [
       "What's the difference between commercial and private pilot training?",
     answer:
       "Commercial pilot training focuses on precision flying, advanced maneuvers, and higher standards of performance. You'll learn commercial maneuvers like chandelles, lazy eights, and steep spirals, along with more precise aircraft control and decision-making skills.",
+  },
+  {
+    question: "Do I need to wait for a checkride appointment?",
+    answer:
+      "One of the biggest advantages of our accelerated programs is that we have no wait times for checkrides. We schedule your checkride as soon as you're ready, often within days of completing your training, so you can finish on time without delays.",
   },
 ];
 
@@ -198,6 +213,11 @@ export const acceleratedProgramFAQs = [
     question: "Do I need to arrange accommodations?",
     answer:
       "For out-of-town students, we can provide recommendations for local hotels and extended stay accommodations. Many students find it convenient to stay nearby during their intensive training period.",
+  },
+  {
+    question: "Do I need to wait for a checkride appointment?",
+    answer:
+      "One of the biggest advantages of our accelerated programs is that we have no wait times for checkrides. We schedule your checkride as soon as you're ready, often within days of completing your training, so you can finish on time without delays.",
   },
 ];
 

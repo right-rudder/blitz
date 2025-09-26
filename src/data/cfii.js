@@ -49,6 +49,15 @@ const cfii = {
           "To obtain your CFII certificate, you'll need to pass the FAA’s CFII knowledge test and the practical flight test (checkride). The written exam evaluates your knowledge of instrument procedures and instructional techniques, while the practical exam assesses your ability to teach instrument flight skills in real-world scenarios. Our instructors will ensure you are fully prepared, providing personalized guidance and mock oral exams to build your confidence. With focused preparation and hands-on training, you'll be ready to excel in your checkride and earn your CFII certification.",
       },
     ],
+    cta: {
+      title: "Teach Pilots to Fly by Instruments",
+      description:
+        "Expand your teaching credentials with a CFII rating from Blitz Aviation. Gain the skills to instruct students in instrument flying and build valuable flight time.",
+      link: "/enrollment-form",
+      linkText: "Enroll Now",
+      imagePath: "/src/assets/images/Student Checkride Anna CFII.webp",
+      imageAlt: "Student with CFI after passing checkride",
+    },
   },
 };
 

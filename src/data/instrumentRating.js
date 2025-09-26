@@ -56,6 +56,16 @@ const instrumentRating = {
           "The checkride marks the culmination of your efforts, assessing both your theoretical knowledge and practical instrument flying skills. Pass the oral portion of the exam which covers regulations, procedures, and decision making. Then, complete a flight test where you'll demonstrate precise instrument maneuvers, approaches, and communications. Upon passing, you'll emerge as a confident instrument rated pilot, ready to safely navigate the skies in challenging weather conditions.",
       },
     ],
+    cta: {
+      title: "Master the Skies in Any Weather",
+      description:
+        "Advance your skills and safety with an Instrument Rating at Blitz Aviation. Enroll today and gain the confidence to fly through clouds and low visibility conditions.",
+      link: "/enrollment-form",
+      linkText: "Enroll Now",
+      imagePath:
+        "/src/assets/images/Student Checkride Paxton Instrument Rating.webp",
+      imageAlt: "Student with CFI after passing checkride",
+    },
   },
 };
 

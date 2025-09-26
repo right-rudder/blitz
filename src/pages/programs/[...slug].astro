@@ -3,6 +3,7 @@ import Header from "../../components/Header.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import CourseLayout from "../../layouts/CourseLayout.astro";
 import programs from "../../data/programs";
+import CheckrideStudentsCTA from "../../components/CheckrideStudentsCTA.astro";
 export function getStaticPaths() {
   return programs.map(({ data }) => {
     return {
@@ -14,10 +15,22 @@ export function getStaticPaths() {
   });
 }
 
+const cta = {
+  title: "Ready to Start Your Flight Training?",
+  description:
+    "Take the first step toward earning your Private Pilot License with Blitz Aviation. Contact us today to schedule your introductory flight and begin your journey in aviation!",
+  link: "/enrollment-form",
+  linkText: "Enroll Now",
+  imagePath:
+    "/src/assets/images/Student Checkride Devren passing PPL checkride CFI Hank and Mycah.webp",
+  imageAlt: "Student with CFI after passing checkride",
+};
+
 const { data } = Astro.props;
 ---
 
 <BaseLayout siteTitle={data.siteTitle} siteDescription={data.siteDescription}>
   <Header slot="hero" data={data} />
   <CourseLayout data={data} />
+  {data.cta && <CheckrideStudentsCTA content={data.cta || cta} />}
 </BaseLayout>

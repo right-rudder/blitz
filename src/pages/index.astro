@@ -11,6 +11,8 @@ import Reviews from "../components/Reviews.jsx";
 import FAQ from "../components/FAQ.astro";
 import faqs from "../data/faqs";
 import SEOKeywords from "../components/SEOKeywords.astro";
+import CheckrideStudentsCTA from "../components/CheckrideStudentsCTA.astro";
+import cta from "../data/CheckrideStudentsCTA";
 ---
 
 <BaseLayout
@@ -53,6 +55,10 @@ import SEOKeywords from "../components/SEOKeywords.astro";
           achieve your aviation goals quickly and affordably. Whether you’re
           looking to become a private pilot or pursue a career in aviation, we
           have the training you need to succeed.
+        </p>
+
+        <p class="text-base italic">
+          “Fly without delays – No Waits for Checkrides at Blitz Aviation.”
         </p>
         <a href="/the-blitz-program" class="btn-secondary w-fit">
           Go from Zero to Hero
@@ -144,6 +150,7 @@ import SEOKeywords from "../components/SEOKeywords.astro";
         >
           Why Choose Blitz Aviation?
         </h3>
+        <p>No Checkride Waits, finish on time!</p>
         <p class="lg:text-lg tracking-wider font-light">
           At Blitz Aviation, we offer a personalized flight training experience
           that is both high-quality and affordable. Students choose us for our
@@ -179,6 +186,7 @@ import SEOKeywords from "../components/SEOKeywords.astro";
         path from <strong class="font-bold">zero to hero</strong>. Starting as a
         private pilot and advancing all the way to CFII.
       </p>
+      <p>No Checkride Waits — Finish on time!</p>
       <a href="/the-blitz-program" class="btn-secondary w-fit"
         >Explore Our Zero-to-Hero Flight Training Program</a
       >
@@ -238,6 +246,8 @@ import SEOKeywords from "../components/SEOKeywords.astro";
       </div>
     </div>
   </section>
+
+  <CheckrideStudentsCTA content={cta} />
 
   <!-- FAQ Section -->
   <FAQ

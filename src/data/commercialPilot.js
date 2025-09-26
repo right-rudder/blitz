@@ -5,6 +5,7 @@ import { FaRegPaperPlane } from "react-icons/fa";
 const commercialPilot = {
   data: {
     title: "Commercial Pilot",
+    tagline: "No Checkride Waits - Finish on Time!",
     url: "/programs/commercial-pilot",
     slug: "commercial-pilot",
     siteTitle:
@@ -58,6 +59,15 @@ const commercialPilot = {
           "With a focus on safety and precision, our instructors ensure that you are thoroughly ready for the check ride. As you confidently take to the skies with the examiner, you'll showcase the culmination of your training and the expertise you've gained throughout your journey with Blitz Aviation.",
       },
     ],
+    cta: {
+      title: "Turn Your Passion into a Career",
+      description:
+        "Take the leap from private flying to professional aviation with a Commercial Pilot Certificate from Blitz Aviation. Start your training today and prepare for a career in the skies.",
+      link: "/enrollment-form",
+      linkText: "Enroll Now",
+      imagePath: "/src/assets/images/Student Checkride Jordan Commercial.webp",
+      imageAlt: "Student with CFI after passing checkride",
+    },
   },
 };
 

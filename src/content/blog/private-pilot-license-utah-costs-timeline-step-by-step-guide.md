@@ -127,9 +127,9 @@ Utah provides an ideal training environment with:
 
 ## Next Steps
 
-- **Step 1:** Schedule your discovery flight at Blitz Aviation.
-- **Step 2:** Meet with our training team to outline your personal training plan.
-- **Step 3:** Begin ground school and flight training toward your Private Pilot License.
+- **Step 1:** Schedule your discovery flight at Blitz Aviation
+- **Step 2:** Meet with our training team to outline your personal training plan
+- **Step 3:** Begin ground school and flight training toward your Private Pilot License
 
 ## Contact Blitz Aviation
 

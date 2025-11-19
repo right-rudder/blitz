@@ -1,7 +1,7 @@
 ---
 title: "Flight School Safety in Utah: How Blitz Aviation Keeps Students Confident and Secure"
 description: "Discover how Blitz Aviation prioritizes student safety in Utah flight training. Learn about our safety protocols, experienced instructors, and confidence-building approach."
-pubDate: "Nov 30 2025"
+pubDate: "Nov 19 2025"
 heroImage: "/src/assets/images/cessna-172-panel.jpeg"
 category: "Flight School"
 tags:
@@ -105,10 +105,6 @@ Choose a flight school where **safety and confidence go hand-in-hand**. At [Blit
 - **Personalized instruction** with a safety-first approach
 - **FAA-compliant training** in Utah’s diverse flying environments
 
-**Contact Blitz Aviation** to learn more about how we prioritize student safety and confidence.
-
-**Phone:** 801-823-4122  
-**Email:** contact@blitzaviation.com  
-**Address:** 3909 Airport Rd, Hangar 397, Ogden, UT 84405
+[**Contact Blitz Aviation**](#contactUs) to learn more about how we prioritize student safety and confidence.
 
 ---

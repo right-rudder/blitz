@@ -103,7 +103,6 @@ Flight training costs can vary depending on factors like fuel, aircraft type, an
 | Ground School and Materials    |
 | FAA Exams and Checkride        |
 | Medical Exam and Miscellaneous |
-| **Total Estimated Cost**       |
 
 We offer **financing options**, **scholarship guidance**, and **flexible payment plans** to make flight training more accessible.
 

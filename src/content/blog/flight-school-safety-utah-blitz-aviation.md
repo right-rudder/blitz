@@ -41,7 +41,7 @@ Flight training is inherently exciting, but safety ensures it’s also **control
 - **FAA-compliant procedures** for every lesson
 - **Thorough pre-flight planning and briefings**
 - **Experienced, patient instructors** with real-world flight hours
-- **Structured emergency training** and scenario preparation
+- **Structured Emergency Management** with Scenario-Based Training
 
 We don’t just teach flying—we teach **how to stay safe while flying**, which gives students the confidence to grow as pilots.
 
@@ -49,7 +49,7 @@ We don’t just teach flying—we teach **how to stay safe while flying**, which
 
 Our instructors are **highly trained and certified**, combining technical expertise with teaching skills:
 
-- Over **thousands of flight hours** of combined experience
+- **Thousands of flight hours** of combined experience
 - Specialized training in **mountain and cross-country flying**
 - Expertise in **emergency procedures, decision-making, and risk management**
 - One-on-one guidance tailored to your learning pace

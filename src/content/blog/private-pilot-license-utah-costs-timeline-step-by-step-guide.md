@@ -96,14 +96,13 @@ Our **accelerated program** is ideal for students who want to earn their license
 
 Flight training costs can vary depending on factors like fuel, aircraft type, and individual progress. Here’s a general estimate for Utah:
 
-| Training Component             | Estimated Cost        |
-| ------------------------------ | --------------------- |
-| Aircraft Rental (50–60 hours)  | $11,000 – $14,000     |
-| Flight Instruction             | $5,000 – $7,000       |
-| Ground School and Materials    | $1,000 – $1,500       |
-| FAA Exams and Checkride        | $1,000                |
-| Medical Exam and Miscellaneous | $200 – $400           |
-| **Total Estimated Cost**       | **$18,000 – $23,000** |
+| Training Component             |
+| ------------------------------ |
+| Aircraft Rental (50–60 hours)  |
+| Flight Instruction             |
+| Ground School and Materials    |
+| FAA Exams and Checkride        |
+| Medical Exam and Miscellaneous |
 
 We offer **financing options**, **scholarship guidance**, and **flexible payment plans** to make flight training more accessible.
 

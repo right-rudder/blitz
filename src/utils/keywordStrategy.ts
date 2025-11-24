@@ -69,7 +69,7 @@ export const FLIGHT_TRAINING_KEYWORDS = {
 export const AIRCRAFT_KEYWORDS = [
   "Cessna 172 training",
   "Piper Cherokee training",
-  "Twin Comanche multi-engine",
+  "Beechcraft 55 Baron multi-engine",
   "Garmin G5 training",
   "modern avionics training",
   "IFR training aircraft",

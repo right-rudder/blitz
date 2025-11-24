@@ -59,7 +59,7 @@ const aircraft = [
       "Our Cessna 172M is a classic, IFR-capable trainer ideal for private pilot and instrument training. Equipped with a Garmin 650 WAAS, dual Garmin G5, and a reliable steam gauge panel, it provides an excellent foundation for both VFR and IFR students.",
     equipment: ["Garmin 650 WAAS", "GFC 500 Autopilot", "Dual Garmin G5"],
   },
-  {
+  /* {
     name: "Piper PA-30 Twin Comanche",
     number: "N808TY",
     image1: "/src/assets/images/twin-comanche.jpeg",
@@ -77,9 +77,9 @@ const aircraft = [
       "PS Engineering Audio Panel",
       "JPI EDM-760 Engine Monitoring System",
     ],
-  },
+  }, */
   {
-    name: " Beechcraft 55 Baron",
+    name: "Beechcraft 55 Baron",
     number: "N8145R",
     image1: "/src/assets/images/front-view-beechcraft-55-baron-N8145R-blitz-aviation-utah-multi-engine-rating.jpg",
     image1Alt: "Front view of a Beechcraft 55 Baron multi engine aircraft",

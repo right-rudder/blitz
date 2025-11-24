@@ -78,6 +78,18 @@ const aircraft = [
       "JPI EDM-760 Engine Monitoring System",
     ],
   },
+  {
+    name: " Beechcraft 55 Baron",
+    number: "N8145R",
+    image1: "/src/assets/images/front-view-beechcraft-55-baron-N8145R-blitz-aviation-utah-multi-engine-rating.jpg",
+    image1Alt: "Front view of a Beechcraft 55 Baron multi engine aircraft",
+    description:
+      "The Beechcraft 55 Baron is a light, twin-engine piston aircraft known for its speed and performance. Additionally, due to its responsive handling, comfortable cabin, and suitability for IFR training, it is the perfect option for your multi-engine rating lessons.",
+    equipment: [
+      "Garmin G500 glass panel", 
+      "Garmin GTN 650",
+    ],
+  },
   // {
   //   name: "Cirrus SR22T",
   //   number: "N345PK",

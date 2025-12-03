@@ -13,6 +13,8 @@ import faqs from "../data/faqs";
 import SEOKeywords from "../components/SEOKeywords.astro";
 import CheckrideStudentsCTA from "../components/CheckrideStudentsCTA.astro";
 import cta from "../data/CheckrideStudentsCTA";
+import PromotionalBanner from "../components/PromotionalBanner.astro";
+import AnnouncementPopup from "../components/AnnouncementPopup.astro";
 ---
 
 <BaseLayout
@@ -39,6 +41,10 @@ import cta from "../data/CheckrideStudentsCTA";
   />
 
   <HomepageHeader slot="hero" />
+
+  {/* TODO : Remove once the promotion ends */}
+  <PromotionalBanner />
+  <AnnouncementPopup />
 
   <section
     class="bg-gradient-to-br from-main-blue-700 to-main-blue-900 text-white"

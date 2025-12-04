@@ -1,0 +1,90 @@
+---
+const data = {
+  btnId: "announcement-dismiss-button",
+  title: "Take to the skies this Christmas!",
+  description: `60-minute Discovery Flight for $205 for 2 people. Book until Dec 31.`,
+  cta: {
+    url: "/discovery-flight",
+    text: "Book Your Flight Now",
+  },
+};
+---
+
+<astro-banner btnId={data.btnId} section-key="homepage">
+  <div
+    class="fixed top-0 start-1/2 z-50 mx-auto w-full -translate-x-1/2 transform sm:max-w-3xl max-h-[40rem] overflow-y-auto -translate-y-full flex flex-col gap-2 px-4 opacity-0 transition-all duration-500 ease-out"
+    role="region"
+    aria-label="Promotional Banner"
+  >
+    <div class="rounded-lg bg-neutral-200/90 backdrop-blur-sm p-4 text-center">
+      <button
+        type="button"
+        class="ml-auto flex items-center gap-x-2 rounded-full border border-transparent p-1 text-sm font-semibold text-dark-blue cursor-pointer duration-200 hover:bg-main-blue-900 hover:text-white"
+        id={data.btnId}
+      >
+        <span class="sr-only">Dismiss</span>
+        <svg
+          class="size-5 flex-shrink-0"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg
+        >
+      </button>
+      <div class="flex items-center justify-center flex-col gap-2 max-w-3xl mx-auto">
+        <span
+          class="text-pretty text-3xl font-bold tracking-wide text-main-black capitalize text-blue-800 sm:text-4xl"
+          set:html={data.title}
+        />
+        <p class="text-gray-600 font-light text-xl tracking-wide" set:html={data.description} />
+        <div class="flex justify-center align-middle items-center mt-4">
+          <a href={data.cta.url} class="btn-primary-lg">
+            {data.cta.text}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</astro-banner>
+
+<script type="module">
+  class AstroBanner extends HTMLElement {
+    connectedCallback() {
+      const btnId = this.getAttribute("btnId");
+      const sectionKey = this.getAttribute("section-key") || "global";
+      const storageKey = `ht-banner:${sectionKey}:shown`;
+
+      // If already shown this session for this section, do nothing.
+      if (sessionStorage.getItem(storageKey) === "1") return;
+
+      const wrapper = this.querySelector('[role="region"]');
+      const button = this.querySelector(`#${CSS.escape(btnId)}`);
+
+      // Show after ~1 second
+      setTimeout(() => {
+        // Double-check: maybe another instance already showed
+        if (sessionStorage.getItem(storageKey) === "1") return;
+
+        if (wrapper) {
+          wrapper.classList.replace("opacity-0", "opacity-100");
+          wrapper.classList.remove("-translate-y-full");
+          wrapper.classList.add("translate-y-10", "lg:translate-y-24");
+        }
+        sessionStorage.setItem(storageKey, "1");
+      }, 1000);
+
+      if (button != null) {
+        button.addEventListener("click", () => {
+          wrapper.addEventListener("transitionend", () => this.remove());
+          wrapper.classList.replace("opacity-100", "opacity-0");
+        });
+      }
+    }
+  }
+
+  customElements.define("astro-banner", AstroBanner);
+</script>

@@ -7,7 +7,7 @@ const services = [
     title: "Take a Discovery Flight",
     description:
       "The best way to experience flying is to take a Discovery Flight. This short introductory flight offers you the chance to fly with one of our experienced instructors. You'll take the controls, learn basic maneuvers, and enjoy breathtaking views of Salt Lake City and the surrounding area.",
-    url: "discovery-flight",
+    url: "/discovery-flight",
   },
   {
     imageSrc: "/src/assets/images/student-at-ground-school-blitz-aviation.webp",
@@ -16,7 +16,7 @@ const services = [
     title: "Introductory Flight Lessons",
     description:
       "Our Introductory Flight Lessons are the perfect way to begin your journey to becoming a pilot. You'll learn the basics of flying, experience the thrill of taking the controls, and get a taste of what it's like to fly through the skies. Our experienced instructors will guide you through each step, ensuring that you have a safe and enjoyable flight.",
-    url: "programs/private-pilot",
+    url: "/programs/private-pilot",
   },
   {
     imageSrc: "/src/assets/images/blitz-discovery-flight-night-view-utah.webp",
@@ -34,7 +34,7 @@ const services = [
     title: "Aircraft Rental",
     description:
       "Blitz Aviation offers a wide range of aircraft for rent, from single-engine trainers to multi-engine aircraft. Whether you're looking to build flight hours, explore new destinations, or simply enjoy the freedom of flight, we have the perfect aircraft for your needs. Our rental fleet is well-maintained and equipped with the latest avionics.",
-    url: "about/our-fleet",
+    url: "/about/our-fleet",
   },
   {
     imageSrc:
@@ -53,7 +53,7 @@ const services = [
     title: "Flight School Resources",
     description:
       "Our website offers a wealth of resources for aspiring pilots including flight school information, financing options, study materials, career guidance, and more. Whether you're just starting your flight training or looking to advance your career, our resources are designed to help you make informed decisions and achieve your aviation goals.",
-    url: "blog",
+    url: "/blog",
   },
 ];
 

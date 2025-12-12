@@ -21,10 +21,10 @@ const commercialPilot = {
       "Our CPL program is designed to build on your existing skills and experience, taking you to the next level of proficiency and professionalism. With a focus on advanced flight maneuvers, complex aircraft operations, and aviation regulations, our program equips you with the knowledge and skills needed to succeed in the competitive world of commercial aviation.",
     ],
     primaryImage:
-      "/src/assets/images/cfi-and-student-at-blitz-accelerated-training-program.webp",
+      "/src/assets/images/cfi-and-student-at-blitz-accelerated-training-program-blitz-aviation-ogden-accelerated-flight-training.webp",
     primaryAlt: "Two men chatting with mountains on the background",
     secondaryImage:
-      "/src/assets/images/student-pulling-cessna-out-of-the-hangar-at-blitz-aviation.webp",
+      "/src/assets/images/student-pulling-cessna-out-of-the-hangar-at-blitz-aviation-blitz-aviation-utah-discovery-flight.webp",
     secondaryAlt:
       "Student pulling Cessna out of the hangar at Blitz Aviation in Ogden, Utah",
     prerequisites: [
@@ -65,7 +65,7 @@ const commercialPilot = {
         "Take the leap from private flying to professional aviation with a Commercial Pilot Certificate from Blitz Aviation. Start your training today and prepare for a career in the skies.",
       link: "/enrollment-form",
       linkText: "Enroll Now",
-      imagePath: "/src/assets/images/Student Checkride Jordan Commercial.webp",
+      imagePath: "/src/assets/images/student-checkride-jordan-commercial-blitz-aviation-davis-county-instrument-rating.webp",
       imageAlt: "Student and CFI standing in front of and airplane while holding a poster with \"Commercial Rated\" on it",
     },
   },

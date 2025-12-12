@@ -5,7 +5,7 @@ const acceleratedPrograms = [
       intro:
         "The Accelerated Instrument Course is a 14-day intensive program designed for pilots looking to quickly earn their instrument rating. This course offers daily flight training and structured instruction, helping you gain the skills and confidence to operate under instrument flight rules.",
       primaryImage:
-        "/src/assets/images/student-at-ground-school-blitz-aviation.webp",
+        "/src/assets/images/student-at-ground-school-blitz-aviation-blitz-aviation-davis-county-flying-lessons.webp",
       primaryAlt: "Teacher making an explanation during class in front of a white board with writing on it",
       details: [
         "Accelerated 14-day instrument course with daily flight training",
@@ -27,7 +27,7 @@ const acceleratedPrograms = [
       intro:
         "The Accelerated Commercial Pilot Program is a 10-day, intensive course for those aiming to earn their commercial pilot certificate quickly. With daily flights and comprehensive ground instruction, this course provides the necessary training to prepare for the commercial check-ride.",
       primaryImage:
-        "/src/assets/images/commercial-pilot-at-accelerated-program.webp",
+        "/src/assets/images/at-accelerated-program-blitz-aviation-northern-utah-become-a-pilot.webp",
       primaryAlt: "Woman in front of plane looking to the side",
       details: [
         "Intensive 10-day course with daily flight training",
@@ -46,7 +46,7 @@ const acceleratedPrograms = [
       title: "Accelerated CFI-I (7 days)",
       intro:
         "The Accelerated CFI-I Course is a 7-day, fast-paced program designed for CFIs who want to become Certified Flight Instructors - Instrument. The course offers focused instruction on teaching techniques and flight skills, preparing you for the CFI-I check-ride.",
-      primaryImage: "/src/assets/images/cfi-corinne-robinson.webp",
+      primaryImage: "/src/assets/images/cfi-corinne-robinson-blitz-aviation-salt-city-lake-instrument-rating.webp",
       primaryAlt:
         "Woman with headset and sunglasses looking back at the camera while piloting an aircraft",
       details: [
@@ -69,7 +69,7 @@ const acceleratedPrograms = [
       intro:
         "The High Performance Endorsement course is designed for pilots seeking to expand their flying capabilities with a high-performance aircraft. This training focuses on operating the Cessna 172XP with 210 horsepower, enhancing your skills to handle more powerful aircraft with precision.",
       primaryImage:
-        "/src/assets/images/front-view-cessna-172xp-high-performance.webp",
+        "/src/assets/images/front-view-cessna-172xp-high-performance-blitz-aviation-utah-zero-to-hero-pilot-program.webp",
       primaryAlt: "Front view of Cessna 172XP high performance aircraft",
       details: [
         "Includes 5 hours of flight time in aircraft",

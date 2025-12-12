@@ -39,10 +39,10 @@ const multiEngine = {
       "Our Multi-Engine Rating program is designed to deepen your understanding of multi-engine flight and enhance your proficiency in complex aircraft operations. With a focus on precision and safety, our program prepares you to handle the challenges of multi-engine flight, including engine failures and emergency procedures. By combining expert instruction with hands-on experience, we'll help you become a skilled and confident multi-engine pilot.",
     ],
     primaryImage:
-      "/src/assets/images/front-view-beechcraft-55-baron-N8145R-blitz-aviation-utah-multi-engine-rating.jpg",
+      "/src/assets/images/front-view-beechcraft-55-baron-n8145r-multi-engine-rating-blitz-aviation-wasatch-front-accelerated-flight-training.jpg",
     primaryAlt: "Front view of a Beechcraft 55 Baron multi engine aircraft",
     secondaryImage:
-      "/src/assets/images/front-view-beechcraft-55-baron-N8145R-blitz-aviation-utah-multi-engine-rating.jpg",
+      "/src/assets/images/front-view-beechcraft-55-baron-n8145r-multi-engine-rating-blitz-aviation-wasatch-front-accelerated-flight-training.jpg",
     secondaryAlt: "Front view of a Beechcraft 55 Baron multi engine aircraft",
     prerequisites: [
       "Hold a current private pilot certificate",

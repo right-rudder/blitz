@@ -2,7 +2,7 @@
 title: "How to Pass Your FAA Checkride on the First Try in Utah"
 description: "Learn how to prepare for your FAA checkride in Utah with tips, strategies, and advice to avoid common mistakes. Gain confidence and succeed on your first attempt."
 pubDate: "Nov 15 2025"
-heroImage: "/src/assets/images/student-at-ground-school-blitz-aviation.webp"
+heroImage: "/src/assets/images/student-at-ground-school-blitz-aviation-blitz-aviation-davis-county-flying-lessons.webp"
 heroImageAlt: "Teacher making an explanation during class in front of a white board with writing on it"
 category: "Flight Training"
 tags:
@@ -19,7 +19,7 @@ author: "Blitz Aviation Team"
 readingTime: 8
 difficulty: "beginner"
 audience: "Aspiring pilots preparing for FAA checkrides"
-socialImage: "/src/assets/images/student-at-ground-school-blitz-aviation.webp"
+socialImage: "/src/assets/images/student-at-ground-school-blitz-aviation-blitz-aviation-davis-county-flying-lessons.webp"
 keywords:
   [
     "FAA checkride Utah",

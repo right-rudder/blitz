@@ -20,9 +20,9 @@ const instrumentRating = {
       "Our IR program is designed to deepen your understanding of instrument flight and enhance your proficiency in IFR operations. With a focus on precision and safety, our program prepares you to navigate and operate aircraft using instrument references alone. By combining expert instruction with hands-on experience, we'll help you become a skilled and confident instrument-rated pilot.",
     ],
     primaryImage:
-      "/src/assets/images/student-in-a-flight-lesson-at-blitz-aviation.webp",
+      "/src/assets/images/student-in-a-flight-lesson-at-blitz-aviation-blitz-aviation-wasatch-front-certified-flight-instructor.webp",
     primaryAlt: "View of the back of two pilots in the cockpit while flying a plane",
-    secondaryImage: "/src/assets/images/cessna-172xp-control-panel.webp",
+    secondaryImage: "/src/assets/images/cessna-172xp-control-panel-blitz-aviation-wasatch-front-pilot-training.webp",
     secondaryAlt: "Cessna 172XP control panel",
     prerequisites: [
       "Hold a current private pilot certificate or apply for one alongside the instrument rating.",
@@ -63,7 +63,7 @@ const instrumentRating = {
       link: "/enrollment-form",
       linkText: "Enroll Now",
       imagePath:
-        "/src/assets/images/Student Checkride Paxton Instrument Rating.webp",
+        "/src/assets/images/student-checkride-paxton-instrument-rating-blitz-aviation-northern-utah-discovery-flight.webp",
       imageAlt: "Student and CFI standing in front of an airplane while holding a poster with \"Instrument Rated\" written on it",
     },
   },

@@ -2,7 +2,7 @@
 title: "How to Become a Certified Flight Instructor (CFI) in Utah"
 description: "Learn the steps to become a Certified Flight Instructor (CFI) in Utah with Blitz Aviation. Discover program requirements, training tips, and career opportunities for aspiring instructors."
 pubDate: "Feb 15 2026"
-heroImage: "/src/assets/images/cessna-172p-at-ogden-airport.webp"
+heroImage: "/src/assets/images/cessna-172p-at-airport-blitz-aviation-northern-utah-flight-school.webp"
 heroImageAlt: "Front view of an airplane with mountains on the background"
 category: "Flight Training"
 tags:
@@ -17,7 +17,7 @@ author: "Blitz Aviation Team"
 readingTime: 8
 difficulty: "intermediate"
 audience: "Aspiring pilots and aviation enthusiasts"
-socialImage: "/src/assets/images/cessna-172p-at-ogden-airport.webp"
+socialImage: "/src/assets/images/cessna-172p-at-airport-blitz-aviation-northern-utah-flight-school.webp"
 keywords:
   [
     "certified flight instructor Utah",

@@ -20,9 +20,9 @@ const cfi = {
       "Our CFI program is designed to enhance your teaching abilities, deepen your understanding of aviation regulations, and refine your flight skills. With a focus on professionalism and safety, our program prepares you to guide students through the complexities of flight training. By combining expert instruction with hands-on experience, we'll help you become a skilled and effective CFI.",
     ],
     primaryImage:
-      "/src/assets/images/instructor-at-commercial-pilot-training-at-blitz-aviation.webp",
+      "/src/assets/images/instructor-at-commercial-at-blitz-aviation-blitz-aviation-ogden-flight-training.webp",
     primaryAlt: "Woman smiling in front of an airplane during daytime with mountains in the background",
-    secondaryImage: "/src/assets/images/cessna-172p-at-ogden-airport.webp",
+    secondaryImage: "/src/assets/images/cessna-172p-at-airport-blitz-aviation-northern-utah-flight-school.webp",
     secondaryAlt: "Cessna 172p at Ogden Airport, Utah",
     prerequisites: [
       "Hold either a commercial pilot certificate or an airline transport pilot certificate with an instrument rating",
@@ -57,7 +57,7 @@ const cfi = {
 
       link: "/enrollment-form",
       linkText: "Enroll Now",
-      imagePath: "/src/assets/images/Student Checkride CFI Tim.webp",
+      imagePath: "/src/assets/images/student-checkride-cfi-tim-blitz-aviation-ogden-pilot-training.webp",
       imageAlt: "Student in front of an airplane while holding a poster with \"Certified Flight Instructor Instrument Rated\" on it",
     },
   },

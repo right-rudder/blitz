@@ -2,7 +2,7 @@
 title: "How to Become a Commercial Pilot in Utah: Training Path and Career Opportunities"
 description: "Explore the steps to become a commercial pilot in Utah. Learn about training requirements, career pathways, and how Blitz Aviation prepares students for a professional aviation career."
 pubDate: "Dec 15 2025"
-heroImage: "/src/assets/images/pexels-sevenstormphotography-728824.webp"
+heroImage: "/src/assets/images/pexels-sevenstormphotography-728824-blitz-aviation-wasatch-front-certified-flight-instructor.webp"
 heroImageAlt: "White vapor trail coming out of an airplane during flight"
 category: "Flight Training"
 tags:
@@ -19,7 +19,7 @@ author: "Blitz Aviation Team"
 readingTime: 9
 difficulty: "beginner"
 audience: "Aspiring professional pilots and aviation enthusiasts"
-socialImage: "/src/assets/images/pexels-sevenstormphotography-728824.webp"
+socialImage: "/src/assets/images/pexels-sevenstormphotography-728824-blitz-aviation-wasatch-front-certified-flight-instructor.webp"
 keywords:
   [
     "commercial pilot license Utah",

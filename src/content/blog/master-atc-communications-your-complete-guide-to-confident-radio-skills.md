@@ -2,7 +2,7 @@
 title: "Master ATC Communications: Your Complete Guide to Confident Radio Skills"
 description: "Unlock the secrets to effective air traffic control communication with our comprehensive guide. Perfect your radio skills and boost your confidence in the cockpit."
 pubDate: "July 7 2025"
-heroImage: "/src/assets/images/Blitz-aviation-atc-radio.webp"
+heroImage: "/src/assets/images/atc-radio-blitz-aviation-ogden-certified-flight-instructor.webp"
 heroImageAlt: "Airport control tower"
 ---
 

@@ -2,7 +2,7 @@
 pubDate: "May 12 2025"
 title: "From Zero to Hero: What It Takes to Become a Commercial Pilot in 7 Months"
 description: "Discover how you can become a commercial pilot in just 7 months with Blitz Aviation's Zero-to-Hero Program. Learn the step-by-step pathway from Private Pilot License (PPL) to Commercial Pilot License (CPL), gain hands-on experience with a modern fleet, and explore exciting career opportunities. Your aviation journey starts here!"
-heroImage: "/src/assets/images/cfi-cambrie-foster.jpg"
+heroImage: "/src/assets/images/cfi-cambrie-foster-blitz-aviation-salt-city-lake-flight-school.jpg"
 heroImageAlt: "Woman pushing an aircraft"
 category: "Commercial Pilot License"
 tags:
@@ -29,7 +29,7 @@ keywords:
   ]
 audience: "Aspiring commercial pilots and career changers"
 difficulty: "intermediate"
-socialImage: "/src/assets/images/cfi-cambrie-foster.jpg"
+socialImage: "/src/assets/images/cfi-cambrie-foster-blitz-aviation-salt-city-lake-flight-school.jpg"
 twitterTitle: "Become a Commercial Pilot in 7 Months | Zero-to-Hero Program"
 twitterDescription: "Transform your aviation dreams into reality with Blitz Aviation's accelerated 7-month commercial pilot program. Start your professional flying career today!"
 ---

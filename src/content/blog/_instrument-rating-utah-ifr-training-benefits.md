@@ -2,7 +2,7 @@
 title: "Instrument Rating in Utah: Why IFR Training Will Make You a Better Pilot"
 description: "Discover how an instrument rating (IFR) improves your piloting skills and safety in Utah. Learn why Blitz Aviation’s IFR training prepares you for all-weather flight operations."
 pubDate: "oct 30 2025"
-heroImage: "/src/assets/images/instructor-at-commercial-pilot-training-at-blitz-aviation.webp"
+heroImage: "/src/assets/images/instructor-at-commercial-at-blitz-aviation-blitz-aviation-ogden-flight-training.webp"
 heroImageAlt: "Woman smiling in front of an airplane during daytime with mountains in the background"
 category: "Flight Training"
 tags:
@@ -18,7 +18,7 @@ author: "Blitz Aviation Team"
 readingTime: 8
 difficulty: "beginner"
 audience: "Aspiring pilots looking to improve their skills"
-socialImage: "/src/assets/images/instructor-at-commercial-pilot-training-at-blitz-aviation.webp"
+socialImage: "/src/assets/images/instructor-at-commercial-at-blitz-aviation-blitz-aviation-ogden-flight-training.webp"
 keywords:
   [
     "instrument rating Utah",

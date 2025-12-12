@@ -1,7 +1,7 @@
 const services = [
   {
     imageSrc:
-      "/src/assets/images/view-of-ogden-ohio-mountains-from-discovery-flight.webp",
+      "/src/assets/images/view-of-ohio-mountains-from-discovery-flight-blitz-aviation-salt-city-lake-multi-engine-rating.webp",
     imageAlt: "View of Ogden, Ohio mountains from a Discovery Flight",
     headline: "Discover",
     title: "Take a Discovery Flight",
@@ -10,16 +10,16 @@ const services = [
     url: "/discovery-flight",
   },
   {
-    imageSrc: "/src/assets/images/student-at-ground-school-blitz-aviation.webp",
+    imageSrc: "/src/assets/images/student-at-ground-school-blitz-aviation-blitz-aviation-davis-county-flying-lessons.webp",
     imageAlt: "Teacher making an explanation during class in front of a white board with writing on it",
-    headline: "Start",
+    headline: "Learn",
     title: "Introductory Flight Lessons",
     description:
       "Our Introductory Flight Lessons are the perfect way to begin your journey to becoming a pilot. You'll learn the basics of flying, experience the thrill of taking the controls, and get a taste of what it's like to fly through the skies. Our experienced instructors will guide you through each step, ensuring that you have a safe and enjoyable flight.",
     url: "/programs/private-pilot",
   },
   {
-    imageSrc: "/src/assets/images/blitz-discovery-flight-night-view-utah.webp",
+    imageSrc: "/src/assets/images/blitz-night-view-utah-blitz-aviation-ogden-flying-lessons.webp",
     imageAlt: "Above view of a city at night from an airplane",
     headline: "Advance",
     title: "Advanced Flight Training",
@@ -28,7 +28,7 @@ const services = [
     url: "/programs/accelerated-programs",
   },
   {
-    imageSrc: "/src/assets/images/cessna-172p-at-blitz-aviation-hangar.webp",
+    imageSrc: "/src/assets/images/cessna-172p-at-hangar-blitz-aviation-davis-county-private-pilot.webp",
     imageAlt: "Cessna 172P at Blitz Aviation Hangar",
     headline: "Rent",
     title: "Aircraft Rental",
@@ -38,7 +38,7 @@ const services = [
   },
   {
     imageSrc:
-      "/src/assets/images/student-pulling-cessna-out-of-the-hangar-at-blitz-aviation.webp",
+      "/src/assets/images/student-pulling-cessna-out-of-the-hangar-at-blitz-aviation-blitz-aviation-utah-discovery-flight.webp",
     imageAlt: "Student pulling Cessna out of the hangar at Blitz Aviation",
     headline: "Train",
     title: "Aviation Career Training",
@@ -47,7 +47,7 @@ const services = [
     url: "#trainingPrograms",
   },
   {
-    imageSrc: "/src/assets/images/cessna-172xp-control-panel.webp",
+    imageSrc: "/src/assets/images/cessna-172xp-control-panel-blitz-aviation-wasatch-front-pilot-training.webp",
     imageAlt: "Cessna 172XP Control Panel",
     headline: "Explore",
     title: "Flight School Resources",

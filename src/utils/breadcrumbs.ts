@@ -26,10 +26,9 @@ export const customBreadcrumbConfigs: Record<string, Breadcrumb[]> = {
   ],
 
   // About pages
-  "/about/our-story": [
+  "/about": [
     { name: "Home", url: "/" },
     { name: "About", url: "/about" },
-    { name: "Our Story", url: "/about/our-story" },
   ],
 
   "/about/our-team": [

@@ -11,7 +11,7 @@ const services = [
   },
   {
     imageSrc: "/src/assets/images/student-at-ground-school-blitz-aviation.webp",
-    imageAlt: "Ground School at Blitz Aviation",
+    imageAlt: "Teacher making an explanation during class in front of a white board with writing on it",
     headline: "Start",
     title: "Introductory Flight Lessons",
     description:
@@ -20,7 +20,7 @@ const services = [
   },
   {
     imageSrc: "/src/assets/images/blitz-discovery-flight-night-view-utah.webp",
-    imageAlt: "Blitz Discovery Flight Night View Utah",
+    imageAlt: "Above view of a city at night from an airplane",
     headline: "Advance",
     title: "Advanced Flight Training",
     description:

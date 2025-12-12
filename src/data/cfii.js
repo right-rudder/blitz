@@ -20,7 +20,7 @@ const cfii = {
       "Our CFII program is designed to enhance your understanding of instrument flight and deepen your proficiency in IFR operations. With a focus on teaching techniques, instrument procedures, and flight safety, our program prepares you to guide students through the complexities of instrument flying. By combining advanced flight training with expert instruction, we'll help you become a skilled and effective CFII.",
     ],
     primaryImage: "/src/assets/images/cfi-at-blitz-aviation.webp",
-    primaryAlt: "Certified Flight Instructor Instrument CFII at Blitz Aviation",
+    primaryAlt: "Man smiling at the camera while standing in front of an airplane",
     secondaryImage:
       "/src/assets/images/student-consultation-in-blitz-office.webp",
     secondaryAlt: "Student consultation in Blitz Aviation office",
@@ -56,7 +56,7 @@ const cfii = {
       link: "/enrollment-form",
       linkText: "Enroll Now",
       imagePath: "/src/assets/images/Student Checkride Anna CFII.webp",
-      imageAlt: "Student with CFI after passing checkride",
+      imageAlt: "Student in front of an airplane holding a poster with \"Certified Flight Instructor Instrument Rated\" written on it",
     },
   },
 };

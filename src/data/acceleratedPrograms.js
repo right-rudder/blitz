@@ -6,7 +6,7 @@ const acceleratedPrograms = [
         "The Accelerated Instrument Course is a 14-day intensive program designed for pilots looking to quickly earn their instrument rating. This course offers daily flight training and structured instruction, helping you gain the skills and confidence to operate under instrument flight rules.",
       primaryImage:
         "/src/assets/images/student-at-ground-school-blitz-aviation.webp",
-      primaryAlt: "Student at ground school at Blitz Aviation",
+      primaryAlt: "Teacher making an explanation during class in front of a white board with writing on it",
       details: [
         "Accelerated 14-day instrument course with daily flight training",
         "Includes 40 hours of instrument flight time",
@@ -28,7 +28,7 @@ const acceleratedPrograms = [
         "The Accelerated Commercial Pilot Program is a 10-day, intensive course for those aiming to earn their commercial pilot certificate quickly. With daily flights and comprehensive ground instruction, this course provides the necessary training to prepare for the commercial check-ride.",
       primaryImage:
         "/src/assets/images/commercial-pilot-at-accelerated-program.webp",
-      primaryAlt: "Commercial pilot at accelerated program at Blitz Aviation",
+      primaryAlt: "Woman in front of plane looking to the side",
       details: [
         "Intensive 10-day course with daily flight training",
         "Includes 15 hours of flight time",
@@ -48,7 +48,7 @@ const acceleratedPrograms = [
         "The Accelerated CFI-I Course is a 7-day, fast-paced program designed for CFIs who want to become Certified Flight Instructors - Instrument. The course offers focused instruction on teaching techniques and flight skills, preparing you for the CFI-I check-ride.",
       primaryImage: "/src/assets/images/cfi-corinne-robinson.webp",
       primaryAlt:
-        "CFI and student at Blitz Aviation's accelerated training program",
+        "Woman with headset and sunglasses looking back at the camera while piloting an aircraft",
       details: [
         "Accelerated 7-day CFI-I course with daily flight training",
         "Includes 10 hours of flight time in aircraft",

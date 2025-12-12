@@ -3,6 +3,7 @@ title: "Career Guidance for Commercial Pilots in Utah: Opportunities After Train
 description: "Discover career opportunities for commercial pilots in Utah. From airlines to charter services, Blitz Aviation offers guidance to help you launch your aviation career."
 pubDate: "Jan 15 2026"
 heroImage: "/src/assets/images/Student Cechride pass Alex Commercial.webp"
+heroImageAlt: "Man in front of an airplane holding a poster with \"Commercial Rated\" written on it"
 category: "Career Guidance"
 tags:
   [

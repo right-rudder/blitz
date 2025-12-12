@@ -3,6 +3,7 @@ title: "What to Expect on Your First Discovery Flight with Blitz Aviation"
 description: "Curious about flight training? Discover what to expect on your first discovery flight with Blitz Aviation in Ogden, Utah, from pre-flight briefings to taking the controls in the sky."
 pubDate: "June 17 2025"
 heroImage: "/src/assets/images/cfi-corinne-robinson.webp"
+heroImageAlt: "Woman with headset and sunglasses looking back at the camera while piloting an aircraft"
 ---
 
 ## Your First Discovery Flight: What to Expect with Blitz Aviation

@@ -3,6 +3,7 @@ title: "Why Choose Blitz Aviation for Flight Training in Salt Lake City and Ogde
 description: "Discover why Blitz Aviation is the premier choice for flight training in Northern Utah. Serving Salt Lake City, Ogden, Davis County, and Weber County with professional pilot training programs, modern aircraft, and experienced instructors."
 pubDate: "May 1 2025"
 heroImage: "/src/assets/images/certified-flight-instructors-smiling-and-having-fun-blitz-aviation.webp"
+heroImageAlt: "Two man smiling while looking at the camera during daytime with mountains in the background"
 category: "Flight School"
 tags:
   [

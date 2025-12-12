@@ -3,6 +3,7 @@ title: "Master ATC Communications: Your Complete Guide to Confident Radio Skills
 description: "Unlock the secrets to effective air traffic control communication with our comprehensive guide. Perfect your radio skills and boost your confidence in the cockpit."
 pubDate: "July 7 2025"
 heroImage: "/src/assets/images/Blitz-aviation-atc-radio.webp"
+heroImageAlt: "Airport control tower"
 ---
 
 _"Cessna 123AB, turn left heading 270, descend and maintain 3,000, contact approach 119.4."_

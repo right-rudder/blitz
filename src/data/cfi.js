@@ -21,7 +21,7 @@ const cfi = {
     ],
     primaryImage:
       "/src/assets/images/instructor-at-commercial-pilot-training-at-blitz-aviation.webp",
-    primaryAlt: "Certified Flight Instructor at Blitz Aviation",
+    primaryAlt: "Woman smiling in front of an airplane during daytime with mountains in the background",
     secondaryImage: "/src/assets/images/cessna-172p-at-ogden-airport.webp",
     secondaryAlt: "Cessna 172p at Ogden Airport, Utah",
     prerequisites: [
@@ -58,7 +58,7 @@ const cfi = {
       link: "/enrollment-form",
       linkText: "Enroll Now",
       imagePath: "/src/assets/images/Student Checkride CFI Tim.webp",
-      imageAlt: "Student with CFI after passing checkride",
+      imageAlt: "Student in front of an airplane while holding a poster with \"Certified Flight Instructor Instrument Rated\" on it",
     },
   },
 };

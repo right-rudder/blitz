@@ -5,7 +5,7 @@ const cta = {
   link: "/enrollment-form",
   linkText: "Enroll Now",
   imagePath: "/src/assets/images/Student First Solo Ethan Smith.webp",
-  imageAlt: "Student with CFI after first solo flight",
+  imageAlt: "Student and CFI smiling and flexing their arms in front of an airplane while holding a poster with \"First Solo\" written on it",
 };
 
 export default cta;

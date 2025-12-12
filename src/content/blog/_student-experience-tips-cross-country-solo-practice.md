@@ -3,6 +3,7 @@ title: "Student Pilot Experience Tips: Cross-Country Flights and Solo Practice S
 description: "Maximize your flight training success with practical tips for managing cross-country flights and solo practice. Learn how Blitz Aviation supports students in gaining confidence and experience."
 pubDate: "Feb 30 2026"
 heroImage: "/src/assets/images/discovery-flight-view-at-blitz-aviation.webp"
+heroImageAlt: "View of a field with mountains in the background from inside an airplane"
 category: "Flight Training"
 tags:
   [

@@ -12,7 +12,7 @@ type Props = CollectionEntry<"blog">["data"] & {
   content?: string;
 };
 
-const { title, description, pubDate, updatedDate, heroImage, content = "" } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, heroImageAlt, content = "" } = Astro.props;
 
 // Create breadcrumbs for this blog post
 const postSlug = Astro.url.pathname.split('/').pop() || '';
@@ -55,7 +55,7 @@ const primaryCategory = categories[0] || "Flight Training";
   <div class="flex">
     <ImageComp
       src={heroImage}
-      alt={title}
+      alt={heroImageAlt}
       classes="object-cover w-full aspect-square"
     />
   </div>
@@ -68,7 +68,7 @@ const primaryCategory = categories[0] || "Flight Training";
         </div>
       )}
     </div>
-    <h1>{title}</h1>
+    <h2>{title}</h2>
     <!-- Reading time and metadata -->
     <div class="flex flex-wrap gap-4 text-sm text-gray-500 mt-4">
       <span>{readingStats.readingTimeText}</span>

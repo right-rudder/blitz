@@ -76,6 +76,7 @@ import AnnouncementPopup from "../components/AnnouncementPopup.astro";
             .map((program, index) => (
               <CourseCard
                 imageSrc={program.data.primaryImage}
+                imageAlt={program.data.primaryAlt}
                 title={program.data.title}
                 delay={index * 150}
                 duration={program.data.duration}
@@ -124,7 +125,7 @@ import AnnouncementPopup from "../components/AnnouncementPopup.astro";
       <div class="flex-1 relative max-w-[30rem]">
         <ImageComp
           src="/src/assets/images/cfi-at-blitz-aviation.webp"
-          alt="Certified Flight Instructor Instrument CFII at Blitz Aviation"
+          alt="Man smiling at the camera while standing in front of an airplane"
           classes="z-10 relative aspect-square object-cover max-h-[30rem]"
         />
       </div>
@@ -241,6 +242,7 @@ import AnnouncementPopup from "../components/AnnouncementPopup.astro";
           programs.map((program) => (
             <ProgramsCard
               imageSrc={program.data.primaryImage}
+              imageAlt={program.data.primaryAlt}
               headline={program.data.title}
               title={program.data.title}
               description={program.data.intro}

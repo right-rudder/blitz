@@ -3,6 +3,7 @@ title: "Private Pilot License in Utah: Costs, Timeline, and Step-by-Step Guide"
 description: "Learn how to get your Private Pilot License (PPL) in Utah. From costs and training timeline to step-by-step requirements, this guide covers everything you need to start flying with Blitz Aviation."
 pubDate: "Oct 15 2025"
 heroImage: "/src/assets/images/Student Checkride Alexandra Priate Pilot.webp"
+heroImageAlt: "Student holding a Private Pilot poster with a CFI behind her besides an aircraft"
 category: "Flight Training"
 tags:
   [

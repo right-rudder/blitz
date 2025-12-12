@@ -22,7 +22,7 @@ const commercialPilot = {
     ],
     primaryImage:
       "/src/assets/images/cfi-and-student-at-blitz-accelerated-training-program.webp",
-    primaryAlt: "Commercial Pilot Training at Blitz Aviation",
+    primaryAlt: "Two men chatting with mountains on the background",
     secondaryImage:
       "/src/assets/images/student-pulling-cessna-out-of-the-hangar-at-blitz-aviation.webp",
     secondaryAlt:
@@ -66,7 +66,7 @@ const commercialPilot = {
       link: "/enrollment-form",
       linkText: "Enroll Now",
       imagePath: "/src/assets/images/Student Checkride Jordan Commercial.webp",
-      imageAlt: "Student with CFI after passing checkride",
+      imageAlt: "Student and CFI standing in front of and airplane while holding a poster with \"Commercial Rated\" on it",
     },
   },
 };

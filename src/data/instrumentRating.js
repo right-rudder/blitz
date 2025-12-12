@@ -21,7 +21,7 @@ const instrumentRating = {
     ],
     primaryImage:
       "/src/assets/images/student-in-a-flight-lesson-at-blitz-aviation.webp",
-    primaryAlt: "Pilot flying on IFR flight",
+    primaryAlt: "View of the back of two pilots in the cockpit while flying a plane",
     secondaryImage: "/src/assets/images/cessna-172xp-control-panel.webp",
     secondaryAlt: "Cessna 172XP control panel",
     prerequisites: [
@@ -64,7 +64,7 @@ const instrumentRating = {
       linkText: "Enroll Now",
       imagePath:
         "/src/assets/images/Student Checkride Paxton Instrument Rating.webp",
-      imageAlt: "Student with CFI after passing checkride",
+      imageAlt: "Student and CFI standing in front of an airplane while holding a poster with \"Instrument Rated\" written on it",
     },
   },
 };

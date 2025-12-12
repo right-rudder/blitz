@@ -76,6 +76,7 @@ import AnnouncementPopup from "../components/AnnouncementPopup.astro";
             .map((program, index) => (
               <CourseCard
                 imageSrc={program.data.primaryImage}
+                imageAlt={program.data.primaryAlt}
                 title={program.data.title}
                 delay={index * 150}
                 duration={program.data.duration}
@@ -98,7 +99,7 @@ import AnnouncementPopup from "../components/AnnouncementPopup.astro";
         </h3>
         <h4 class="text-blue-800 font-semibold text-2xl tracking-wide italic">
           Where passion meets practicality, and your aviation dreams take flight
-          in Ogden
+          in Salt Lake City
         </h4>
         <p class="lg:text-lg tracking-wider font-light">
           At Blitz Aviation, we make flight training smarter, not harder.
@@ -123,8 +124,8 @@ import AnnouncementPopup from "../components/AnnouncementPopup.astro";
       </div>
       <div class="flex-1 relative max-w-[30rem]">
         <ImageComp
-          src="/src/assets/images/cfi-at-blitz-aviation.webp"
-          alt="Certified Flight Instructor Instrument CFII at Blitz Aviation"
+          src="/src/assets/images/cfi-at-blitz-aviation-blitz-aviation-northern-utah-multi-engine-rating.webp"
+          alt="Man smiling at the camera while standing in front of an airplane"
           classes="z-10 relative aspect-square object-cover max-h-[30rem]"
         />
       </div>
@@ -169,7 +170,7 @@ import AnnouncementPopup from "../components/AnnouncementPopup.astro";
           our hands-on approach, well-maintained aircraft, and supportive
           learning environment.
         </p>
-        <a href="enrollment-form" class="btn-primary w-fit mt-3">Enroll Now</a>
+        <a href="/enrollment-form" class="btn-primary w-fit mt-3">Enroll Now</a>
       </div>
     </div>
   </section>
@@ -207,7 +208,7 @@ import AnnouncementPopup from "../components/AnnouncementPopup.astro";
   </section>
 
   <section
-    class="relative bg-[url(/src/assets/images/view-from-the-skies-discovery-flight-blitz-aviation.webp)] bg-cover bg-center text-white flex flex-col"
+    class="relative bg-[url(/src/assets/images/view-from-the-skies-blitz-aviation-blitz-aviation-weber-county-flight-training.webp)] bg-cover bg-center text-white flex flex-col"
   >
     <div
       class="absolute bg-gradient-to-br from-main-blue-700/60 to-main-blue-900/60 w-full h-full z-10"
@@ -223,10 +224,10 @@ import AnnouncementPopup from "../components/AnnouncementPopup.astro";
         our comprehensive flight training programs today.
       </p>
       <div class="flex gap-5">
-        <a href="discovery-flight" class="btn-secondary w-fit" target="_blank"
+        <a href="/discovery-flight" class="btn-secondary w-fit" target="_blank"
           >Request</a
         >
-        <a href="enrollment-form" class="btn-secondary w-fit">Enroll</a>
+        <a href="/enrollment-form" class="btn-secondary w-fit">Enroll</a>
       </div>
     </div>
   </section>
@@ -241,6 +242,7 @@ import AnnouncementPopup from "../components/AnnouncementPopup.astro";
           programs.map((program) => (
             <ProgramsCard
               imageSrc={program.data.primaryImage}
+              imageAlt={program.data.primaryAlt}
               headline={program.data.title}
               title={program.data.title}
               description={program.data.intro}

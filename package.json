@@ -8,7 +8,9 @@
     "build": "astro build",
     "preview": "astro preview",
     "bpreview": "astro build && astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "img:csv": "node ./scripts/imgNewNameCSV.js",
+    "img:renaming": "node ./scripts/imgRenaming.js"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.4",
@@ -21,6 +23,7 @@
     "@types/react-dom": "^19.0.4",
     "aos": "^2.3.4",
     "astro": "^5.13.2",
+    "csv-parse": "^6.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-fast-marquee": "^1.6.5",

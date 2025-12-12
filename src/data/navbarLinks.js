@@ -45,7 +45,7 @@ export const navbarLinks = [
     submenu: [
       {
         name: "Our Story",
-        link: "/about/our-story",
+        link: "/about",
       },
       {
         name: "Our Team",

@@ -37,7 +37,7 @@ const blogListingSchema = {
     "url": new URL(`/blog/${post.id}`, Astro.site).toString(),
     "datePublished": new Date(post.data.pubDate).toISOString(),
     "dateModified": post.data.updatedDate ? new Date(post.data.updatedDate).toISOString() : new Date(post.data.pubDate).toISOString(),
-    "image": post.data.heroImage ? new URL(post.data.heroImage, Astro.site).toString() : new URL('/blitz-logo.png', Astro.site).toString(),
+    "image": post.data.heroImage ? new URL(post.data.heroImage, Astro.site).toString() : new URL('/blitz-logo-blitz-aviation-ogden-private-pilot.png', Astro.site).toString(),
     "author": {
       "@type": "Organization",
       "name": "Blitz Aviation"
@@ -59,7 +59,7 @@ const itemListSchema = {
     "description": post.data.description,
     "url": new URL(`/blog/${post.id}`, Astro.site).toString(),
     "datePublished": new Date(post.data.pubDate).toISOString(),
-    "image": post.data.heroImage ? new URL(post.data.heroImage, Astro.site).toString() : new URL('/blitz-logo.png', Astro.site).toString()
+    "image": post.data.heroImage ? new URL(post.data.heroImage, Astro.site).toString() : new URL('/blitz-logo-blitz-aviation-ogden-private-pilot.png', Astro.site).toString()
   }))
 };
 

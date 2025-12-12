@@ -2,7 +2,8 @@
 title: "Can You Become a Pilot While Working Full-Time?"
 description: "For many aspiring pilots, the biggest barrier isn’t fear of flying, it’s time. You’ve got a full-time job, a family to care for, and a calendar that’s already packed. So when the dream of becoming a pilot starts calling, the question becomes: Can I actually do this without quitting my job?"
 pubDate: "August 15 2025"
-heroImage: "/src/assets/images/cfi-at-blitz-aviation.webp"
+heroImage: "/src/assets/images/cfi-at-blitz-aviation-blitz-aviation-northern-utah-multi-engine-rating.webp"
+heroImageAlt: "Man smiling at the camera while standing in front of an airplane"
 ---
 
 For many aspiring pilots, the biggest barrier isn’t fear of flying, it’s time. You’ve got a full-time job, a family to care for, and a calendar that’s already packed. So when the dream of becoming a pilot starts calling, the question becomes: _Can I actually do this without quitting my job?_

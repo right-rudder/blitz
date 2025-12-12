@@ -2,7 +2,8 @@
 title: "Flight School Safety: How Blitz Aviation Keeps Students Confident and Secure"
 description: "Discover how Blitz Aviation prioritizes flight school safety through rigorous training, FAA standards, and a culture of confidence that reassures students and parents alike."
 pubDate: "September 16 2025"
-heroImage: "/src/assets/images/ground-school-at-blitz-aviation.webp"
+heroImage: "/src/assets/images/ground-school-at-blitz-aviation-blitz-aviation-ogden-zero-to-hero-pilot-program.webp"
+heroImageAlt: "Women making an explanation while pointing to writing on a white board"
 ---
 
 _"The three most important things in aviation are safety, safety, and safety."_

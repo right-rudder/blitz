@@ -7,7 +7,7 @@ import {
 } from "../utils/blogUtils";
 
 const { id, data, body = "" } = Astro.props;
-const { title, description, heroImage, pubDate } = data;
+const { title, description, heroImage, heroImageAlt, pubDate } = data;
 const datePublished = new Date(pubDate);
 
 // Calculate reading stats and extract metadata
@@ -25,14 +25,14 @@ const primaryCategory = categories[0] || "Flight Training";
   <div class="overflow-hidden shrink-0 relative">
     <ImageComp
       src={heroImage}
-      alt={title}
+      alt={heroImageAlt}
       classes="w-full h-full object-cover aspect-square group-hover:scale-125 duration-500"
     />
     <meta
       itemprop="image"
       content={heroImage
         ? new URL(heroImage, Astro.site).toString()
-        : new URL("/blitz-logo.png", Astro.site).toString()}
+        : new URL("/blitz-logo-blitz-aviation-ogden-private-pilot.png", Astro.site).toString()}
     />
   </div>
 

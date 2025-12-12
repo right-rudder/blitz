@@ -14,12 +14,12 @@ const privatePilot = {
     siteKeywords:
       "private pilot license Utah, PPL training Salt Lake City, student pilot course Ogden, beginner flight training Utah, recreational pilot license, private pilot certification Utah, learn to fly private pilot, flight training for beginners Utah, private pilot ground school, Utah private pilot course, flight training Ogden, pilot school Salt Lake City, aviation training Northern Utah, discovery flight Utah",
     primaryImage:
-      "/src/assets/images/student-of-the-private-pilot-flight-training-program.webp",
+      "/src/assets/images/student-of-the-program-blitz-aviation-northern-utah-pilot-training.webp",
     primaryAlt:
-      "Student of the Private Pilot Flight Training Program at Blitz Aviation",
+      "Woman smiling and leaning on an airplane while looking at the camera inside a hangar",
     secondaryImage:
-      "/src/assets/images/student-at-ground-school-blitz-aviation.webp",
-    secondaryAlt: "Ground school at Blitz Aviation in Ogden, Utah",
+      "/src/assets/images/student-at-ground-school-blitz-aviation-blitz-aviation-davis-county-flying-lessons.webp",
+    secondaryAlt: "Teacher making an explanation during class in front of a white board with writing on it",
     intro:
       "The Private Pilot License (PPL) is your first step toward professional training and qualifies you to fly for personal or recreational purposes. At Blitz Aviation, our Private Pilot course integrates flight training and ground instruction through a structured syllabus, accelerating your learning and laying the foundation for future advanced ratings and certifications.",
     description: [
@@ -58,8 +58,8 @@ const privatePilot = {
       link: "/enrollment-form",
       linkText: "Enroll Now",
       imagePath:
-        "/src/assets/images/Student Checkride Devren passing PPL checkride CFI Hank and Mycah.webp",
-      imageAlt: "Student with CFI after passing checkride",
+        "/src/assets/images/student-checkride-devren-passing-ppl-checkride-cfi-hank-and-mycah-blitz-aviation-ogden-aircraft-rental.webp",
+      imageAlt: "Man in front of an airplane holding a poster with \"Private Pilot\" written on it",
     },
   },
 };

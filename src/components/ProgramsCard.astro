@@ -1,6 +1,6 @@
 ---
 import ImageComp from "./ImageComp.astro";
-const { imageSrc, headline, title, description, url } = Astro.props;
+const { imageSrc, imageAlt, headline, title, description, url } = Astro.props;
 ---
 
 <div
@@ -9,7 +9,7 @@ const { imageSrc, headline, title, description, url } = Astro.props;
   <div class="flex-1 relative" data-aos="fade-right">
     <ImageComp
       src={imageSrc}
-      alt="title"
+      alt={imageAlt}
       classes="object-cover aspect-square"
     />
     <div

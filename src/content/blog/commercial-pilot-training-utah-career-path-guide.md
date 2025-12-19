@@ -52,25 +52,15 @@ A **CPL** allows you to operate aircraft for compensation or hire. It is the key
 
 ## Step-by-Step: Becoming a Commercial Pilot in Utah
 
-### Step 1: Earn Your Private Pilot License
+1. **Earn Your Private Pilot License:** Before a CPL, you need a strong foundation with your **PPL**. Blitz Aviation helps you complete this efficiently.
 
-Before a CPL, you need a strong foundation with your **PPL**. Blitz Aviation helps you complete this efficiently.
+2. **Accumulate Flight Hours:** Commercial training requires a minimum of **250 hours** of flight time, including cross-country, night, and instrument experience.
 
-### Step 2: Accumulate Flight Hours
+3. **Instrument Rating (IFR Training):** An instrument rating enhances safety and makes you more marketable. Blitz Aviation’s IFR training prepares students for all-weather flight operations.
 
-Commercial training requires a minimum of **250 hours** of flight time, including cross-country, night, and instrument experience.
+4. **Enroll in Commercial Flight Training:** Focus on advanced maneuvers, high-performance aircraft, and multi-engine operations if desired. Our instructors guide students step-by-step.
 
-### Step 3: Instrument Rating (IFR Training)
-
-An **instrument rating** enhances safety and makes you more marketable. Blitz Aviation’s IFR training prepares students for all-weather flight operations.
-
-### Step 4: Enroll in Commercial Flight Training
-
-Focus on advanced maneuvers, high-performance aircraft, and multi-engine operations if desired. Our instructors guide students step-by-step.
-
-### Step 5: FAA Written Exam and Checkride
-
-Passing the FAA written exam and **practical test** is your final step toward obtaining a CPL.
+5. **FAA Written Exam and Checkride:** Passing the FAA written exam and practical test is your final step toward obtaining a CPL.
 
 ## Career Opportunities After CPL
 

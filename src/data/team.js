@@ -40,6 +40,13 @@ const team = [
   //   bio: "Stan brings over 1,600 hours of flight time and a deep passion for teaching to the Blitz Aviation crew. Originally from New Jersey, he got into aviation through a love for travel and exploration. Stan has experience in the PC-12 and recently earned his CFII right here at Blitz. When he’s not flying, he’s outdoors—skiing, fishing, or hiking. Stan’s upbeat attitude and real-world experience make him a favorite among students.",
   // },
   {
+    name: "Avery Gurrola",
+    certificatesAndRatings: ["Check Instructor", "CFI", "CFII"],
+    image:
+      "/src/assets/team/team-Avery Gurrola Check Instructor CFI CFII_blitz-aviation_ogden-utah_flight-school_pilot-training.jpg",
+    bio: "Avery started his flight training at Bowling Green State University, where he graduated, and has since been growing his flight experience by instructing, cropdusting, and other various forms of flying. Avery has accumulated over 800 hours of flying in various planes and even has one of his own. Outside of aviation, he likes all the things living in Utah has to offer.",
+  },
+  {
     name: "Hank Hulme",
     certificatesAndRatings: ["Check Instructor", "CFI", "CFII"],
     image:
@@ -63,16 +70,6 @@ const team = [
   //   bio: "Spencer began his flight training at Utah State in 2018 and has logged over 1,000 flight hours. His favorite types of flying include tailwheel and multi-engine. Outside of aviation, Spencer enjoys spending time with his wife and two daughters. He also loves skiing, camping, swimming, and exploring the mountains.",
   // },
   {
-    name: "Avery Gurrola",
-    certificatesAndRatings: ["Check Instructor", "CFI", "CFII"],
-    image:
-      "/src/assets/team/team-Avery Gurrola Check Instructor CFI CFII_blitz-aviation_ogden-utah_flight-school_pilot-training.jpg",
-    bio: "Avery is a Check Instructor at Blitz Aviation with experience guiding pilots through advanced training and evaluations.",
-    facebook: "",
-    instagram: "",
-    x: "",
-  },
-  {
     name: "Paxton Boyce",
     certificatesAndRatings: ["CFI", "CFII"],
     image:
@@ -81,13 +78,6 @@ const team = [
     facebook: "",
     instagram: "",
     x: "",
-  },
-  {
-    name: "Avery Gurrola",
-    certificatesAndRatings: ["CFI"],
-    image:
-      "/src/assets/images/cfi-avery-salt-lake-flight-training-blitz-aviation-ogden-become-a-pilot.webp",
-    bio: "Avery started his flight training at Bowling Green State University, where he graduated, and has since been growing his flight experience by instructing, cropdusting, and other various forms of flying. Avery has accumulated over 800 hours of flying in various planes and even has one of his own. Outside of aviation, he likes all the things living in Utah has to offer.",
   },
   {
     name: "Ruby Hutchinson",

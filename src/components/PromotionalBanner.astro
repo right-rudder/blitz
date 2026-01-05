@@ -30,7 +30,7 @@ const data = {
 };
 ---
 
-<section>
+<section id="temp-promotion-section" class="hidden">
   <div class="mx-auto flex flex-col items-stretch lg:flex-row">
     <div class="px-5 py-24 flex-1 flex justify-center flex-col gap-5 relative md:px-10 lg:px-20">
       <FaGifts
@@ -50,3 +50,20 @@ const data = {
     </div>
   </div>
 </section>
+
+<script>
+  function runKillSwitch() {
+    const killDate = new Date("2026-01-01T00:00:00");
+    const now = new Date();
+    const section = document.getElementById("temp-promotion-section");
+    if (section) {
+      if (now >= killDate) {
+        section.remove();
+      } else {
+        section.classList.remove("hidden");
+      }
+    }
+  }
+
+  runKillSwitch();
+</script>

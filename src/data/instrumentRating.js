@@ -20,7 +20,7 @@ const instrumentRating = {
       "Our IR program is designed to deepen your understanding of instrument flight and enhance your proficiency in IFR operations. With a focus on precision and safety, our program prepares you to navigate and operate aircraft using instrument references alone. By combining expert instruction with hands-on experience, we'll help you become a skilled and confident instrument-rated pilot.",
     ],
     primaryImage:
-      "/src/assets/images/student-in-a-flight-lesson-at-blitz-aviation-blitz-aviation-wasatch-front-certified-flight-instructor.webp",
+      "/src/assets/images/blitz-aviation-flying-over-montains-cockpit-ogden-utah.jpg",
     primaryAlt: "View of the back of two pilots in the cockpit while flying a plane",
     secondaryImage: "/src/assets/images/cessna-172xp-control-panel-blitz-aviation-wasatch-front-pilot-training.webp",
     secondaryAlt: "Cessna 172XP control panel",

@@ -84,7 +84,7 @@ const team = [
     certificatesAndRatings: ["PPL"],
     image:
       "/src/assets/images/student-of-the-program-blitz-aviation-northern-utah-pilot-training.webp",
-    bio: "Meet Ruby, our Front Desk Manager and the friendly face that keeps Blitz running smoothly! From scheduling lessons to giving tours and welcoming new students, she’s your go-to for just about everything. A licensed private pilot, Ruby moved to Florida after high school to pursue her aviation dreams. While she’s working toward earning more ratings, she’s also preparing for a future in medicine with plans to become a Physician Assistant. When she’s not at the airport, you’ll find her powerlifting, snowboarding, or planning her next adventure.",
+    bio: "Meet Ruby, our Front Desk Manager and the friendly face that keeps Blitz running smoothly! From scheduling lessons to giving tours and welcoming new students, she’s your go-to for just about everything. A licensed private pilot, Ruby moved to Florida after high school to pursue her aviation dreams. While she’s working toward earning more ratings, she’s also preparing for a future in the airline industry or the corporate world. When she’s not at the airport, you’ll find her powerlifting, snowboarding, or planning her next adventure.",
     instagram: "https://www.instagram.com/_ruby.quinn/",
   },
   {

@@ -20,7 +20,7 @@ const cfi = {
       "Our CFI program is designed to enhance your teaching abilities, deepen your understanding of aviation regulations, and refine your flight skills. With a focus on professionalism and safety, our program prepares you to guide students through the complexities of flight training. By combining expert instruction with hands-on experience, we'll help you become a skilled and effective CFI.",
     ],
     primaryImage:
-      "/src/assets/images/ground-school-at-blitz-aviation.webp",
+      "/src/assets/images/ground-school-at-blitz-aviation-blitz-aviation-ogden-zero-to-hero-pilot-program.webp",
     primaryAlt: "Certified Flight Instructor at Blitz Aviation",
     secondaryImage: "/src/assets/images/cessna-172p-at-ogden-airport.webp",
     secondaryAlt: "Cessna 172p at Ogden Airport, Utah",

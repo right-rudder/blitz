@@ -1,7 +1,7 @@
 const services = [
   {
     imageSrc:
-      "/src/assets/images/view-of-ogden-ohio-mountains-from-discovery-flight.webp",
+      "/src/assets/images/blitz-aviation-flying-over-montains-ogden-utah.jpg",
     imageAlt: "View of Ogden, Ohio mountains from a Discovery Flight",
     headline: "Discover",
     title: "Take a Discovery Flight",

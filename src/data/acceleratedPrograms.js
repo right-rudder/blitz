@@ -27,7 +27,7 @@ const acceleratedPrograms = [
       intro:
         "The Accelerated Commercial Pilot Program is a 10-day, intensive course for those aiming to earn their commercial pilot certificate quickly. With daily flights and comprehensive ground instruction, this course provides the necessary training to prepare for the commercial check-ride.",
       primaryImage:
-        "/src/assets/images/commercial-pilot-at-accelerated-program.webp",
+        "/src/assets/images/commercial-pilot-doing-an-airplane-inspection.webp",
       primaryAlt: "Commercial pilot at accelerated program at Blitz Aviation",
       details: [
         "Intensive 10-day course with daily flight training",
@@ -46,7 +46,7 @@ const acceleratedPrograms = [
       title: "Accelerated CFI-I (7 days)",
       intro:
         "The Accelerated CFI-I Course is a 7-day, fast-paced program designed for CFIs who want to become Certified Flight Instructors - Instrument. The course offers focused instruction on teaching techniques and flight skills, preparing you for the CFI-I check-ride.",
-      primaryImage: "/src/assets/images/cfi-corinne-robinson.webp",
+      primaryImage: "/src/assets/images/cfi-avery-ogden-salt-lake-flight-training.webp",
       primaryAlt:
         "CFI and student at Blitz Aviation's accelerated training program",
       details: [

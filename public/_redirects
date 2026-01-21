@@ -1,0 +1,8 @@
+# Netlify redirects for Blitz Aviation
+# https://docs.netlify.com/routing/redirects/
+
+/acclerated-programs/ /programs/accelerated-programs/ 301
+/contact/ /#contactUs 301
+/rates/ / 301
+/planes-%26-instructors/ /about/our-team/ 301
+/about/our-story/ /about/ 301

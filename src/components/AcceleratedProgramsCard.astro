@@ -2,7 +2,7 @@
 import { FaDotCircle } from "react-icons/fa";
 import ImageComp from "./ImageComp.astro";
 import { CgDetailsLess } from "react-icons/cg";
-const { imageSrc, headline, title, description, url, prerequisites, details } =
+const { imageSrc, imageAlt, headline, title, description, url, prerequisites, details } =
   Astro.props;
 ---
 
@@ -12,7 +12,7 @@ const { imageSrc, headline, title, description, url, prerequisites, details } =
   <div class="flex-1 relative">
     <ImageComp
       src={imageSrc}
-      alt="title"
+      alt={imageAlt}
       classes="object-cover aspect-square"
     />
     <div

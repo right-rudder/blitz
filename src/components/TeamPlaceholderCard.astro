@@ -1,0 +1,113 @@
+---
+import ImageComp from "./ImageComp.astro";
+const example = {
+  name: "Comming Soon...",
+  certificatesAndRatings: ["CFI"],
+  image:
+    "/src/assets/team/team-placeholder_blitz-aviation_ogden-utah_flight-school_pilot-training_no-background.png",
+  bio: "Team member details coming soon. Stay tuned for updates on our expert flight instructors dedicated to providing top-notch flight training at Blitz Aviation in Salt Lake City and Ogden, Utah.",
+  facebook: "",
+  instagram: "",
+  x: "",
+};
+
+const {
+  name,
+  image,
+  certificatesAndRatings,
+  bio,
+  instagram,
+  facebook,
+  x,
+  content = example,
+} = Astro.props;
+---
+
+<div class="flex gap-5 flex-col lg:flex-row">
+  <div class="flex-1 ring ring-main-blue-600">
+    <ImageComp
+      src={content.image}
+      alt={content.name}
+      classes="object-cover aspect-square h-full w-full"
+    />
+  </div>
+
+  <div
+    class="flex flex-[2_2_0] flex-col gap-1 bg-main-blue-100 p-8 text-center lg:text-start justify-center"
+  >
+    <h2 class="text-pretty text-2xl font-medium tracking-wide sm:text-2xl">
+      {content.name}
+    </h2>
+    <p class="text-blue-800 text-lg tracking-wide italic">
+      {content.certificatesAndRatings.map((cert: any) => <span>{cert} </span>)}
+    </p>
+    <p class="lg:text-lg tracking-wider font-light mt-5">{content.bio}</p>
+
+    <div class="flex justify-center lg:justify-start gap-5 mt-5">
+      {
+        content.facebook && (
+          <a
+            class="border border-gray-500 rounded-full p-2 hover:bg-blue-400 duration-100"
+            href={content.facebook}
+            target="_blank"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="size-5"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M14.2 2.875A4.625 4.625 0 0 0 9.575 7.5v2.575H7.1c-.124 0-.225.1-.225.225v3.4c0 .124.1.225.225.225h2.475V20.9c0 .124.1.225.225.225h3.4c.124 0 .225-.1.225-.225v-6.975h2.497c.103 0 .193-.07.218-.17l.85-3.4a.225.225 0 0 0-.218-.28h-3.347V7.5a.775.775 0 0 1 .775-.775h2.6c.124 0 .225-.1.225-.225V3.1c0-.124-.1-.225-.225-.225z"
+              />
+            </svg>
+          </a>
+        )
+      }
+
+      {
+        content.instagram && (
+          <a
+            class="border border-gray-500 rounded-full p-2 hover:bg-blue-400 duration-100"
+            href={content.instagram}
+            target="_blank"
+          >
+            <svg
+              class="size-5"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </a>
+        )
+      }
+
+      {
+        content.x && (
+          <a
+            class="border border-gray-500 rounded-full p-2 hover:bg-blue-400 duration-100"
+            href={content.x}
+            target="_blank"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="size-5"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="m17.687 3.063l-4.996 5.711l-4.32-5.711H2.112l7.477 9.776l-7.086 8.099h3.034l5.469-6.25l4.78 6.25h6.102l-7.794-10.304l6.625-7.571zm-1.064 16.06L5.654 4.782h1.803l10.846 14.34z"
+              />
+            </svg>
+          </a>
+        )
+      }
+    </div>
+  </div>
+</div>

@@ -28,7 +28,7 @@ const {
 // Format dates for schema markup
 const publishDate = new Date(pubDate).toISOString();
 const modifiedDate = updatedDate ? new Date(updatedDate).toISOString() : publishDate;
-const imageUrl = heroImage ? new URL(heroImage, Astro.site).toString() : new URL('/blitz-logo.png', Astro.site).toString();
+const imageUrl = heroImage ? new URL(heroImage, Astro.site).toString() : new URL('/blitz-logo-blitz-aviation-ogden-private-pilot.png', Astro.site).toString();
 const postUrl = new URL(`/blog/${slug}`, Astro.site).toString();
 
 // Create comprehensive author schema

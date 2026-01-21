@@ -7,133 +7,115 @@ import {
   ADDRESS_LINE_2,
   YELP_URL,
   INSTAGRAM_URL,
+  YOUTUBE_URL,
   SITE_TITLE,
   GOOGLE_MAPS_URL,
 } from "../consts";
-import { Image } from "astro:assets";
-import companyLogo from "../assets/logos/blitz-aviation-logo.png";
 
 import { navbarLinks } from "../data/navbarLinks";
 
 import programs from "../data/programs";
+import ImageComp from "./ImageComp.astro";
 
 const today = new Date();
 ---
 
-<footer
-  class="bg-gradient-to-br from-main-blue-700 to-main-blue-900 text-white"
->
+<footer class="bg-gradient-to-br from-main-blue-700 to-main-blue-900 text-white">
   <div class="pb-8 pt-24 px-5 md:px-10 lg:px-20">
     <div class="mx-auto">
       <div class="flex gap-10 flex-col lg:flex-row justify-between">
         <div class="flex flex-col gap-5 lg:w-1/3">
-          <a
-            href="/"
-            class="text-4xl font-bold uppercase flex items-center gap-2"
-          >
-            <Image src={companyLogo} alt="Blitz Aviation Logo" class="w-20" />
+          <a href="/" class="text-4xl font-bold uppercase flex items-center gap-2">
+            <ImageComp src="/src/assets/logos/logo-blitz-aviation-ogden-accelerated-flight-training.png" alt="Blitz Aviation Logo" classes="w-20" />
           </a>
 
           <p class="text-sm">
-            Blitz Aviation offers premier flight training at Ogden-Hinckley
-            Airport (KOGD) in Utah. Specializing in private pilot training, we
-            provide expert, no-fluff instruction tailored to your pace and
-            budget. With flexible payment options and a streamlined curriculum,
-            we make achieving your aviation goals efficient and affordable. Book
-            an intro flight over Utah’s stunning landscapes or visit our Ogden
-            training center today!
+            Blitz Aviation offers premier flight training at Ogden-Hinckley Airport (KOGD) in Utah. Specializing in
+            private pilot training, we provide expert, no-fluff instruction tailored to your pace and budget. With
+            flexible payment options and a streamlined curriculum, we make achieving your aviation goals efficient and
+            affordable. Book an intro flight over Utah’s stunning landscapes or visit our Ogden training center today!
           </p>
 
           <div class="flex space-x-6">
-            <a
-              href={INSTAGRAM_URL}
-              target="_blank"
-              class="hover:brightness-75 text-white"
-            >
-              <span class="sr-only">Instagram</span>
-              <svg
-                class="h-6 w-6"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
-                  clip-rule="evenodd"></path>
-              </svg>
-            </a>
-            <a
-              href={YELP_URL}
-              target="_blank"
-              class="hover:brightness-75 text-white"
-            >
-              <span class="sr-only">Yelp</span>
+            {
+              INSTAGRAM_URL && (
+                <a href={INSTAGRAM_URL} target="_blank" class="hover:brightness-75 text-white">
+                  <span class="sr-only">Instagram</span>
+                  <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      fill-rule="evenodd"
+                      d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+              )
+            }
+            {
+              YOUTUBE_URL && (
+                <a href={YOUTUBE_URL} target="_blank" class="hover:brightness-75 text-white">
+                  <span class="sr-only">Youtube</span>
+                  <svg class="size-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                      fill="currentColor"
+                      d="m10 15l5.19-3L10 9zm11.56-7.83c.13.47.22 1.1.28 1.9c.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83c-.25.9-.83 1.48-1.73 1.73c-.47.13-1.33.22-2.65.28c-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44c-.9-.25-1.48-.83-1.73-1.73c-.13-.47-.22-1.1-.28-1.9c-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83c.25-.9.83-1.48 1.73-1.73c.47-.13 1.33-.22 2.65-.28c1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44c.9.25 1.48.83 1.73 1.73"
+                    />
+                  </svg>
+                </a>
+              )
+            }
+            {
+              YELP_URL && (
+                <a href={YELP_URL} target="_blank" class="hover:brightness-75 text-white">
+                  <span class="sr-only">Yelp</span>
 
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6"
-                viewBox="0 0 24 24"
-                ><path
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
-                  d="M4.12 12.496a8 8 0 0 0-.103 1.899c.053.801.08 1.202.47 1.467c.388.265.831.118 1.716-.176l.81-.27c1.967-.652 2.95-.979 2.986-1.639s-.905-1.093-2.788-1.96l-.777-.36c-.848-.39-1.272-.585-1.688-.365s-.486.615-.626 1.404m14.203-.178l-.472.114c-2.228.544-3.343.816-3.738.27c-.396-.545.275-1.429 1.617-3.195l.282-.37c.566-.746.85-1.119 1.337-1.136c.488-.018.755.282 1.289.882q.503.565.882 1.216c.4.685.599 1.027.405 1.451s-.663.538-1.602.768M17.94 19.1q.317-.42.581-.885c.379-.667.568-1 .438-1.444l-.017-.054c-.152-.434-.547-.579-1.336-.869c-2.057-.755-3.085-1.133-3.47-.595l-.043.065c-.344.571.287 1.553 1.549 3.517c.484.753.726 1.13 1.142 1.163l.052.002c.417.005.646-.297 1.104-.9m-5.94.977v-.298c0-2.341 0-3.512-.585-3.744c-.585-.231-1.234.683-2.53 2.51l-.167.234c-.531.75-.797 1.124-.697 1.593c.1.47.43.64 1.09.977q.556.285 1.157.458c.704.203 1.056.304 1.394.007c.338-.296.338-.776.338-1.737m0-16.195v2.682c0 2.813 0 4.22-.777 4.415c-.778.196-1.573-1.01-3.163-3.421L6.633 5.394c-.486-.738-.73-1.106-.597-1.513c.132-.406.507-.574 1.257-.908a12 12 0 0 1 2.601-.819c.88-.169 1.321-.253 1.714.037c.392.29.392.757.392 1.69"
-                  color="currentColor"></path></svg
-              >
-            </a>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24">
+                    <path
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                      d="M4.12 12.496a8 8 0 0 0-.103 1.899c.053.801.08 1.202.47 1.467c.388.265.831.118 1.716-.176l.81-.27c1.967-.652 2.95-.979 2.986-1.639s-.905-1.093-2.788-1.96l-.777-.36c-.848-.39-1.272-.585-1.688-.365s-.486.615-.626 1.404m14.203-.178l-.472.114c-2.228.544-3.343.816-3.738.27c-.396-.545.275-1.429 1.617-3.195l.282-.37c.566-.746.85-1.119 1.337-1.136c.488-.018.755.282 1.289.882q.503.565.882 1.216c.4.685.599 1.027.405 1.451s-.663.538-1.602.768M17.94 19.1q.317-.42.581-.885c.379-.667.568-1 .438-1.444l-.017-.054c-.152-.434-.547-.579-1.336-.869c-2.057-.755-3.085-1.133-3.47-.595l-.043.065c-.344.571.287 1.553 1.549 3.517c.484.753.726 1.13 1.142 1.163l.052.002c.417.005.646-.297 1.104-.9m-5.94.977v-.298c0-2.341 0-3.512-.585-3.744c-.585-.231-1.234.683-2.53 2.51l-.167.234c-.531.75-.797 1.124-.697 1.593c.1.47.43.64 1.09.977q.556.285 1.157.458c.704.203 1.056.304 1.394.007c.338-.296.338-.776.338-1.737m0-16.195v2.682c0 2.813 0 4.22-.777 4.415c-.778.196-1.573-1.01-3.163-3.421L6.633 5.394c-.486-.738-.73-1.106-.597-1.513c.132-.406.507-.574 1.257-.908a12 12 0 0 1 2.601-.819c.88-.169 1.321-.253 1.714.037c.392.29.392.757.392 1.69"
+                      color="currentColor"
+                    />
+                  </svg>
+                </a>
+              )
+            }
           </div>
         </div>
 
         <div class="grid lg:grid-cols-3 lg:mr-20 gap-10">
           <div class="flex flex-col gap-3">
-            <h3 class="font-bold text-lg mb-3">Training</h3>
+            <p class="font-bold text-lg mb-3">Training</p>
             <ul class="flex flex-col gap-4">
               {
                 programs.map((program) => (
                   <li>
-                    <a
-                      href={program.data.url}
-                      class="hover:brightness-75 duration-200"
-                    >
+                    <a href={program.data.url} class="hover:brightness-75 duration-200">
                       {program.data.title}
                     </a>
                   </li>
                 ))
               }
               <li>
-                <a
-                  href="/the-blitz-program"
-                  class="hover:brightness-75 duration-200"
-                >
-                  Zero to Hero Program
-                </a>
+                <a href="/the-blitz-program" class="hover:brightness-75 duration-200"> Zero to Hero Program </a>
               </li>
               <li>
-                <a
-                  href="/programs/accelerated-programs"
-                  class="hover:brightness-75 duration-200"
-                >
+                <a href="/programs/accelerated-programs" class="hover:brightness-75 duration-200">
                   Accelerated Programs
                 </a>
               </li>
             </ul>
           </div>
           <div class="flex flex-col gap-3">
-            <h3 class="font-bold text-lg mb-3">About Us</h3>
+            <p class="font-bold text-lg mb-3">About Us</p>
             <ul class="flex flex-col gap-4">
               {
-                (
-                  navbarLinks.find((link) => link.name === "About")?.submenu ??
-                  []
-                ).map((link) => (
+                (navbarLinks.find((link) => link.name === "About")?.submenu ?? []).map((link) => (
                   <li>
-                    <a
-                      href={link.link}
-                      class="hover:brightness-75 duration-200"
-                    >
+                    <a href={link.link} class="hover:brightness-75 duration-200">
                       {link.name}
                     </a>
                   </li>
@@ -142,26 +124,15 @@ const today = new Date();
             </ul>
           </div>
           <div class="flex flex-col gap-3">
-            <h3 class="font-bold text-lg mb-3">Contact</h3>
+            <p class="font-bold text-lg mb-3">Contact</p>
             <ul class="flex flex-col gap-4">
               <li class="flex gap-2 group items-center">
-                <FaPhone
-                  className="size-4 group-hover:brightness-75 duration-200"
-                />
-                <a
-                  class="group-hover:brightness-75 duration-200"
-                  href=`tel:${PHONE_NUMBER}`>{PHONE_NUMBER}</a
-                >
+                <FaPhone className="size-4 group-hover:brightness-75 duration-200" />
+                <a class="group-hover:brightness-75 duration-200" href=`tel:${PHONE_NUMBER}`>{PHONE_NUMBER}</a>
               </li>
               <li class="flex gap-2 group max-w-sm">
-                <IoLocationSharp
-                  className="size-4 group-hover:brightness-75 duration-200 mt-1 flex-shrink-0"
-                />
-                <a
-                  class="group-hover:brightness-75 duration-200"
-                  href={GOOGLE_MAPS_URL}
-                  target="_blank"
-                >
+                <IoLocationSharp className="size-4 group-hover:brightness-75 duration-200 mt-1 flex-shrink-0" />
+                <a class="group-hover:brightness-75 duration-200" href={GOOGLE_MAPS_URL} target="_blank">
                   <p>{ADDRESS_LINE_1}</p>
                   <p>{ADDRESS_LINE_2}</p>
                 </a>
@@ -170,16 +141,10 @@ const today = new Date();
           </div>
         </div>
       </div>
-      <div
-        class="flex flex-col sm:flex-row justify-between border-t border-main-black/50 py-5 mt-10 gap-2"
-      >
+      <div class="flex flex-col sm:flex-row justify-between border-t border-main-black/50 py-5 mt-10 gap-2">
         <p class="text-sm">
-          <span class="font-semibold">{SITE_TITLE}</span> &copy; {
-            today.getFullYear()
-          }. All rights reserved.
-          <a
-            class="hover:underline duration-200 hover:brightness-75"
-            href="/privacy-policy-and-terms-of-service"
+          <span class="font-semibold">{SITE_TITLE}</span> &copy; {today.getFullYear()}. All rights reserved.
+          <a class="hover:underline duration-200 hover:brightness-75" href="/privacy-policy-and-terms-of-service"
             >Privacy Policy & Terms of Service</a
           >
         </p>
@@ -187,8 +152,7 @@ const today = new Date();
           Powered by <a
             href="https://rightruddermarketing.com/"
             target="_blank"
-            class="font-semibold hover:underline duration-200 hover:brightness-75"
-            >More Right Rudder</a
+            class="font-semibold hover:underline duration-200 hover:brightness-75">More Right Rudder</a
           >
         </p>
       </div>

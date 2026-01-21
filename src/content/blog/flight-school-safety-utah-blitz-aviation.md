@@ -2,7 +2,8 @@
 title: "Flight School Safety in Utah: How Blitz Aviation Keeps Students Confident and Secure"
 description: "Discover how Blitz Aviation prioritizes student safety in Utah flight training. Learn about our safety protocols, experienced instructors, and confidence-building approach."
 pubDate: "Nov 19 2025"
-heroImage: "/src/assets/images/cessna-172-panel.jpeg"
+heroImage: "/src/assets/images/cessna-172-panel-blitz-aviation-davis-county-commercial-pilot.jpeg"
+heroImageAlt: "View of the instrument panel from inside the cockpit of an aircraft"
 category: "Flight School"
 tags:
   [
@@ -17,7 +18,7 @@ author: "Blitz Aviation Team"
 readingTime: 7
 difficulty: "beginner"
 audience: "Aspiring pilots, parents, and aviation enthusiasts"
-socialImage: "/src/assets/images/cessna-172-panel.jpeg"
+socialImage: "/src/assets/images/cessna-172-panel-blitz-aviation-davis-county-commercial-pilot.jpeg"
 keywords:
   [
     "flight school safety Utah",

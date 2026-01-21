@@ -63,8 +63,8 @@ const instrumentRating = {
       link: "/enrollment-form",
       linkText: "Enroll Now",
       imagePath:
-        "/src/assets/images/Student Checkride Paxton Instrument Rating.webp",
-      imageAlt: "Student with CFI after passing checkride",
+        "/src/assets/images/student-checkride-paxton-instrument-rating-blitz-aviation-northern-utah-discovery-flight.webp",
+      imageAlt: "Student and CFI standing in front of an airplane while holding a poster with \"Instrument Rated\" written on it",
     },
   },
 };

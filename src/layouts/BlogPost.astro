@@ -12,7 +12,7 @@ type Props = CollectionEntry<"blog">["data"] & {
   content?: string;
 };
 
-const { title, description, pubDate, updatedDate, heroImage, content = "" } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, heroImageAlt, content = "" } = Astro.props;
 
 // Create breadcrumbs for this blog post
 const postSlug = Astro.url.pathname.split('/').pop() || '';
@@ -55,7 +55,7 @@ const primaryCategory = categories[0] || "Flight Training";
   <div class="flex">
     <ImageComp
       src={heroImage}
-      alt={title}
+      alt={heroImageAlt}
       classes="object-cover w-full aspect-square"
     />
   </div>
@@ -68,7 +68,7 @@ const primaryCategory = categories[0] || "Flight Training";
         </div>
       )}
     </div>
-    <h1>{title}</h1>
+    <h2>{title}</h2>
     <!-- Reading time and metadata -->
     <div class="flex flex-wrap gap-4 text-sm text-gray-500 mt-4">
       <span>{readingStats.readingTimeText}</span>
@@ -94,7 +94,7 @@ const primaryCategory = categories[0] || "Flight Training";
   <div class="mt-12 p-6 bg-gray-50 rounded-lg">
     <div class="flex items-center space-x-4">
       <img 
-        src="/blitz-logo.png" 
+        src="/blitz-logo-blitz-aviation-ogden-private-pilot.png" 
         alt="Blitz Aviation Logo" 
         class="w-16 h-16 rounded-full"
         itemprop="image"
@@ -102,7 +102,7 @@ const primaryCategory = categories[0] || "Flight Training";
       <div>
         <h3 class="text-lg font-semibold" itemprop="name">Blitz Aviation</h3>
         <p class="text-gray-600" itemprop="description">
-          Professional flight training school in Ogden, Utah, specializing in accelerated pilot programs. 
+          Professional flight training school in Salt Lake City, Utah, specializing in accelerated pilot programs. 
           Get your pilot license faster with our experienced instructors and modern fleet.
         </p>
         <div class="flex space-x-4 mt-2">

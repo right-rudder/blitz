@@ -19,5 +19,6 @@ export default defineConfig({
     "/contact": "/#contactUs",
     "/rates": "/",
     "/planes-%26-instructors": "/about/our-team",
+    "/about/our-story": "/about",
   },
 });

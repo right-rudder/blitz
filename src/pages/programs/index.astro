@@ -27,7 +27,7 @@ const headerData = {
   title: " Blitz Training Programs",
   subtitle: "Start Your Aviation Journey",
   primaryImage:
-    "/src/assets/images/view-of-the-mountains-from-ogden-airport.webp",
+    "/src/assets/images/view-of-the-mountains-from-airport-blitz-aviation-wasatch-front-accelerated-flight-training.webp",
   primaryAlt: " Blitz Training Programs",
 };
 ---
@@ -72,7 +72,7 @@ const headerData = {
   </section>
 
   <section
-    class="relative bg-[url(/src/assets/images/view-from-the-skies-discovery-flight-blitz-aviation.webp)] bg-cover bg-center text-white flex flex-col"
+    class="relative bg-[url(/src/assets/images/view-from-the-skies-blitz-aviation-blitz-aviation-weber-county-flight-training.webp)] bg-cover bg-center text-white flex flex-col"
   >
     <div
       class="absolute bg-gradient-to-br from-main-blue-700/60 to-main-blue-900/60 w-full h-full z-10"
@@ -88,10 +88,10 @@ const headerData = {
         our comprehensive flight training programs today.
       </p>
       <div class="flex gap-5">
-        <a href="discovery-flight" class="btn-secondary w-fit" target="_blank"
+        <a href="/discovery-flight" class="btn-secondary w-fit" target="_blank"
           >Request</a
         >
-        <a href="enrollment-form" class="btn-secondary w-fit">Enroll</a>
+        <a href="/enrollment-form" class="btn-secondary w-fit">Enroll</a>
       </div>
     </div>
   </section>
@@ -106,6 +106,7 @@ const headerData = {
           programs.map((program) => (
             <ProgramsCard
               imageSrc={program.data.primaryImage}
+              imageAlt={program.data.primaryAlt}
               headline={program.data.title}
               title={program.data.title}
               description={program.data.intro}

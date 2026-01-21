@@ -5,8 +5,8 @@ const acceleratedPrograms = [
       intro:
         "The Accelerated Instrument Course is a 14-day intensive program designed for pilots looking to quickly earn their instrument rating. This course offers daily flight training and structured instruction, helping you gain the skills and confidence to operate under instrument flight rules.",
       primaryImage:
-        "/src/assets/images/student-at-ground-school-blitz-aviation.webp",
-      primaryAlt: "Student at ground school at Blitz Aviation",
+        "/src/assets/images/student-at-ground-school-blitz-aviation-blitz-aviation-davis-county-flying-lessons.webp",
+      primaryAlt: "Teacher making an explanation during class in front of a white board with writing on it",
       details: [
         "Accelerated 14-day instrument course with daily flight training",
         "Includes 40 hours of instrument flight time",
@@ -48,7 +48,7 @@ const acceleratedPrograms = [
         "The Accelerated CFI-I Course is a 7-day, fast-paced program designed for CFIs who want to become Certified Flight Instructors - Instrument. The course offers focused instruction on teaching techniques and flight skills, preparing you for the CFI-I check-ride.",
       primaryImage: "/src/assets/images/cfi-avery-ogden-salt-lake-flight-training.webp",
       primaryAlt:
-        "CFI and student at Blitz Aviation's accelerated training program",
+        "Woman with headset and sunglasses looking back at the camera while piloting an aircraft",
       details: [
         "Accelerated 7-day CFI-I course with daily flight training",
         "Includes 10 hours of flight time in aircraft",
@@ -69,7 +69,7 @@ const acceleratedPrograms = [
       intro:
         "The High Performance Endorsement course is designed for pilots seeking to expand their flying capabilities with a high-performance aircraft. This training focuses on operating the Cessna 172XP with 210 horsepower, enhancing your skills to handle more powerful aircraft with precision.",
       primaryImage:
-        "/src/assets/images/front-view-cessna-172xp-high-performance.webp",
+        "/src/assets/images/front-view-cessna-172xp-high-performance-blitz-aviation-utah-zero-to-hero-pilot-program.webp",
       primaryAlt: "Front view of Cessna 172XP high performance aircraft",
       details: [
         "Includes 5 hours of flight time in aircraft",

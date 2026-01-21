@@ -2,7 +2,8 @@
 title: "Choosing the Right Flight School in Utah: Key Factors to Consider"
 description: "Learn how to choose the best flight school in Utah. Compare programs, instructors, aircraft, location, and costs to make an informed decision for your pilot training."
 pubDate: "Jan 30 2025"
-heroImage: "/src/assets/images/ogden-mountains-view-from-blitz-hangar.webp"
+heroImage: "/src/assets/images/mountains-view-from-blitz-hangar-blitz-aviation-northern-utah-pilot-training.webp"
+heroImageAlt: "View from the ground of a hangar with mountains on the background"
 category: "Flight Training"
 tags:
   [
@@ -16,7 +17,7 @@ author: "Blitz Aviation Team"
 readingTime: 7
 difficulty: "beginner"
 audience: "Aspiring pilots and aviation enthusiasts"
-socialImage: "/src/assets/images/ogden-mountains-view-from-blitz-hangar.webp"
+socialImage: "/src/assets/images/mountains-view-from-blitz-hangar-blitz-aviation-northern-utah-pilot-training.webp"
 keywords:
   [
     "best flight school Utah",

@@ -57,8 +57,8 @@ const cfi = {
 
       link: "/enrollment-form",
       linkText: "Enroll Now",
-      imagePath: "/src/assets/images/Student Checkride CFI Tim.webp",
-      imageAlt: "Student with CFI after passing checkride",
+      imagePath: "/src/assets/images/student-checkride-cfi-tim-blitz-aviation-ogden-pilot-training.webp",
+      imageAlt: "Student in front of an airplane while holding a poster with \"Certified Flight Instructor Instrument Rated\" on it",
     },
   },
 };

@@ -14,7 +14,7 @@ const team = [
     certificatesAndRatings: ["Co-Founder"],
     image:
       "/src/assets/images/michael-pittman-jr-at-blitz-aviation-blitz-aviation-weber-county-flight-training.webp",
-    bio: "Michael Pittman Jr. is a professional NFL wide receiver currently playing for the Indianapolis Colts. Beyond football, he's also pursuing a passion for aviation. Alongside his brother Mycah Pittman, Michael co-founded Blitz Aviation. Inspired by Mycah’s rapid success in aviation, Michael is currently working toward his Private Pilot License (PPL).",
+    bio: "Michael Pittman Jr. is a professional NFL wide receiver currently playing for the Indianapolis Colts. Beyond football, he's also pursuing a passion for aviation. Alongside his brother Mycah Pittman, Michael co-founded Blitz Aviation. Inspired by Mycah’s success in aviation, Michael became a licensed Private Pilot and continues to expand his ratings while growing the Blitz community.",
     facebook: "https://www.facebook.com/michaelpittmanjr/",
     instagram: "https://www.instagram.com/michael_pittman_jr/?hl=en",
     x: "https://x.com/mikepitt_jr?lang=en",
